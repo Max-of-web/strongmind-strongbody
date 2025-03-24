@@ -8,16 +8,21 @@ interface FeatureCardProps {
   title: string;
   description: string;
   isBadge?: boolean;
+  isSmall?: boolean;
 }
 
-const FeatureCard: React.FC<FeatureCardProps> = ({ icon: Icon, title, description, isBadge = false }) => {
+const FeatureCard: React.FC<FeatureCardProps> = ({ icon: Icon, title, description, isBadge = false, isSmall = false }) => {
   if (isBadge) {
+    const badgeSize = isSmall ? "w-6 h-6" : "w-8 h-8";
+    const iconSize = isSmall ? 12 : 16;
+    const textSize = isSmall ? "text-xs" : "text-sm";
+    
     return (
       <div className="flex items-center gap-2 bg-elegant-charcoal bg-opacity-70 px-3 py-2 rounded-full border border-elegant-silver border-opacity-20 shadow-sm">
-        <div className="w-8 h-8 bg-elegant-gold bg-opacity-20 rounded-full flex items-center justify-center">
-          <Icon size={16} className="text-elegant-gold" />
+        <div className={`${badgeSize} bg-elegant-gold bg-opacity-20 rounded-full flex items-center justify-center`}>
+          <Icon size={iconSize} className="text-elegant-gold" />
         </div>
-        <span className="text-sm font-semibold text-elegant-light">{title}</span>
+        <span className={`${textSize} font-semibold text-elegant-light`}>{title}</span>
       </div>
     );
   }

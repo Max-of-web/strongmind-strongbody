@@ -1,3 +1,4 @@
+
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Brain, Dumbbell, Heart, Timer, Check, ChevronRight, Award, GraduationCap, BookOpen, Briefcase } from 'lucide-react';
@@ -36,33 +37,6 @@ const Index = () => {
         <section className="hero-section">
           <div className="container-width px-4 md:px-8 flex flex-col justify-center items-start h-full">
             <div className="max-w-3xl animate-fade-in-up">
-              <div className="flex flex-wrap gap-2 mb-6">
-                <FeatureCard 
-                  icon={GraduationCap}
-                  title="BSc Physiotherapy"
-                  description=""
-                  isBadge
-                />
-                <FeatureCard 
-                  icon={Award}
-                  title="NASM Certificate"
-                  description=""
-                  isBadge
-                />
-                <FeatureCard 
-                  icon={BookOpen}
-                  title="MSc Precision Nutrition"
-                  description=""
-                  isBadge
-                />
-                <FeatureCard 
-                  icon={Briefcase}
-                  title="Personal Trainer (OTA Academy)"
-                  description=""
-                  isBadge
-                />
-              </div>
-              
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
                 Train Your Body. Strengthen Your Mind. Transform Your Life.
               </h1>
@@ -240,6 +214,36 @@ const Index = () => {
               
               <div className="md:w-2/3 scroll-fade-in">
                 <h2 className="section-title">About Paulius Lipskis</h2>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <FeatureCard 
+                    icon={GraduationCap}
+                    title="BSc Physiotherapy"
+                    description=""
+                    isBadge
+                    isSmall
+                  />
+                  <FeatureCard 
+                    icon={Award}
+                    title="NASM Certificate"
+                    description=""
+                    isBadge
+                    isSmall
+                  />
+                  <FeatureCard 
+                    icon={BookOpen}
+                    title="MSc Precision Nutrition"
+                    description=""
+                    isBadge
+                    isSmall
+                  />
+                  <FeatureCard 
+                    icon={Briefcase}
+                    title="Personal Trainer (OTA Academy)"
+                    description=""
+                    isBadge
+                    isSmall
+                  />
+                </div>
                 <p className="mb-6">
                   With a background in both physiotherapy and psychology, I've spent the last decade helping people transform their relationship with their bodies. I believe in training that respects your body's signals while challenging your limits.
                 </p>
