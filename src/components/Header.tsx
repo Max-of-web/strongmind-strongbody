@@ -21,34 +21,34 @@ const Header = () => {
   return (
     <header
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-coach-navy bg-opacity-95 shadow-md py-3' : 'bg-transparent py-5'
+        isScrolled ? 'bg-elegant-charcoal bg-opacity-95 shadow-md py-3' : 'bg-transparent py-5'
       }`}
     >
       <div className="container-width flex justify-between items-center px-4 md:px-8">
         <Link 
           to="/" 
-          className="text-coach-light font-display text-xl md:text-2xl font-bold hover:text-opacity-80 transition-all"
+          className="text-elegant-light font-display text-xl md:text-2xl font-bold hover:text-opacity-80 transition-all"
         >
-          Paulius<span className="text-coach-accent">Lipskis</span>
+          Paulius<span className="text-elegant-gold">Lipskis</span>
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           <Link 
             to="/" 
-            className="text-coach-light hover:text-coach-accent transition-colors"
+            className="text-elegant-light hover:text-elegant-gold transition-colors"
           >
             Home
           </Link>
           <Link 
             to="/coaching" 
-            className="text-coach-light hover:text-coach-accent transition-colors"
+            className="text-elegant-light hover:text-elegant-gold transition-colors"
           >
             1-on-1 Coaching
           </Link>
           <Link 
             to="/#about" 
-            className="text-coach-light hover:text-coach-accent transition-colors"
+            className="text-elegant-light hover:text-elegant-gold transition-colors"
           >
             About
           </Link>
@@ -64,7 +64,7 @@ const Header = () => {
 
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden text-coach-light"
+          className="md:hidden text-elegant-light"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -73,25 +73,25 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-coach-navy bg-opacity-95 absolute top-full left-0 right-0 py-4 px-4 shadow-md animate-fade-in">
+        <div className="md:hidden bg-elegant-charcoal bg-opacity-95 absolute top-full left-0 right-0 py-4 px-4 shadow-md animate-fade-in">
           <nav className="flex flex-col space-y-4">
             <Link 
               to="/" 
-              className="text-coach-light hover:text-coach-accent transition-colors py-2"
+              className="text-elegant-light hover:text-elegant-gold transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               Home
             </Link>
             <Link 
               to="/coaching" 
-              className="text-coach-light hover:text-coach-accent transition-colors py-2"
+              className="text-elegant-light hover:text-elegant-gold transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               1-on-1 Coaching
             </Link>
             <Link 
               to="/#about" 
-              className="text-coach-light hover:text-coach-accent transition-colors py-2"
+              className="text-elegant-light hover:text-elegant-gold transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               About

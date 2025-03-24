@@ -103,7 +103,7 @@
 @layer components {
   .hero-section {
     @apply min-h-[85vh] flex flex-col justify-center relative overflow-hidden;
-    background: linear-gradient(to bottom, rgba(15, 28, 63, 0.9), rgba(33, 33, 33, 0.95)), url('/public/lovable-uploads/b4413382-3998-4c2e-a754-75a067048c2d.png');
+    background: linear-gradient(to bottom, rgba(33, 33, 33, 0.9), rgba(33, 33, 33, 0.95)), url('/public/lovable-uploads/b4413382-3998-4c2e-a754-75a067048c2d.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -134,7 +134,7 @@
   }
   
   .form-input {
-    @apply w-full p-3 rounded-md bg-elegant-charcoal bg-opacity-50 border border-elegant-silver border-opacity-20 text-elegant-light focus:outline-none focus:ring-2 focus:ring-elegant-navy focus:border-transparent;
+    @apply w-full p-3 rounded-md bg-elegant-charcoal bg-opacity-50 border border-elegant-silver border-opacity-20 text-elegant-light focus:outline-none focus:ring-2 focus:ring-elegant-gold focus:border-transparent;
   }
   
   .testimonial-card {

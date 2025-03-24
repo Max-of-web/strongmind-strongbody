@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="bg-coach-navy py-12 px-4">
+    <footer className="bg-elegant-charcoal py-12 px-4">
       <div className="container-width">
         {/* CTA Section */}
         <div className="mb-16 text-center">
@@ -37,18 +37,18 @@ const Footer = () => {
             <h4 className="text-xl font-semibold mb-4">Contact</h4>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <Phone size={18} className="text-coach-accent" />
-                <a href="tel:+37067951040" className="hover:text-coach-accent transition-colors">
+                <Phone size={18} className="text-elegant-gold" />
+                <a href="tel:+37067951040" className="hover:text-elegant-gold transition-colors">
                   +370 6795 1040
                 </a>
               </div>
               <div className="flex items-center space-x-3">
-                <MessageSquare size={18} className="text-coach-accent" />
+                <MessageSquare size={18} className="text-elegant-gold" />
                 <a 
                   href="https://wa.me/37067951040" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="hover:text-coach-accent transition-colors"
+                  className="hover:text-elegant-gold transition-colors"
                 >
                   WhatsApp Chat
                 </a>
@@ -70,12 +70,12 @@ const Footer = () => {
             <h4 className="text-xl font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="hover:text-coach-accent transition-colors">
+                <Link to="/" className="hover:text-elegant-gold transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/coaching" className="hover:text-coach-accent transition-colors">
+                <Link to="/coaching" className="hover:text-elegant-gold transition-colors">
                   1-on-1 Coaching
                 </Link>
               </li>
@@ -84,7 +84,7 @@ const Footer = () => {
                   href="https://calendly.com/lipskis-paulius/asmenine-treniruote" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="hover:text-coach-accent transition-colors"
+                  className="hover:text-elegant-gold transition-colors"
                 >
                   Book a Call
                 </a>

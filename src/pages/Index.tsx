@@ -64,7 +64,7 @@ const Index = () => {
         </section>
         
         {/* What Makes This Coaching Different */}
-        <section className="section-padding bg-elegant-navy">
+        <section className="section-padding bg-elegant-charcoal">
           <div className="container-width">
             <div className="text-center mb-12 scroll-fade-in">
               <h2 className="section-title mx-auto after:left-1/2 after:-translate-x-1/2">
@@ -158,7 +158,7 @@ const Index = () => {
         </section>
         
         {/* Testimonials Preview */}
-        <section className="section-padding bg-elegant-navy">
+        <section className="section-padding bg-elegant-charcoal">
           <div className="container-width">
             <div className="text-center mb-12 scroll-fade-in">
               <h2 className="section-title mx-auto after:left-1/2 after:-translate-x-1/2">
