@@ -18,7 +18,7 @@ const CTABanner: React.FC<CTABannerProps> = ({ message, buttonText, buttonLink }
           href={buttonLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-coach-accent text-coach-navy font-semibold px-6 py-3 rounded-md hover:bg-opacity-90 transition-all duration-300 shadow-md"
+          className="inline-block bg-coach-accent text-coach-charcoal font-semibold px-6 py-3 rounded-md hover:bg-opacity-90 transition-all duration-300 shadow-md"
         >
           {buttonText}
         </a>
