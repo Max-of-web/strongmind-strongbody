@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 import CTABanner from '../components/CTABanner';
 import FeatureCard from '../components/FeatureCard';
 import TestimonialCard from '../components/TestimonialCard';
-import EmailSubscription from '../components/EmailSubscription';
+import LowerBackGuide from '../components/LowerBackGuide';
 
 const Index = () => {
   useEffect(() => {
@@ -40,7 +40,7 @@ const Index = () => {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
                 Train Your Body. Strengthen Your Mind. Transform Your Life.
               </h1>
-              <p className="text-xl md:text-2xl mb-10 text-coach-light text-opacity-90">
+              <p className="text-xl md:text-2xl mb-10 text-elegant-silver text-opacity-90">
                 Personalized coaching that combines physiotherapy expertise with psychological support for lasting transformation.
               </p>
               <div className="flex flex-wrap gap-4">
@@ -64,7 +64,7 @@ const Index = () => {
         </section>
         
         {/* What Makes This Coaching Different */}
-        <section className="section-padding bg-coach-navy">
+        <section className="section-padding bg-elegant-navy">
           <div className="container-width">
             <div className="text-center mb-12 scroll-fade-in">
               <h2 className="section-title mx-auto after:left-1/2 after:-translate-x-1/2">
@@ -109,30 +109,30 @@ const Index = () => {
         </section>
         
         {/* What You'll Achieve */}
-        <section className="section-padding bg-coach-charcoal">
+        <section className="section-padding bg-elegant-charcoal">
           <div className="container-width">
             <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-center">
               <div className="md:w-1/2 scroll-fade-in">
                 <h2 className="section-title">What You'll Achieve</h2>
                 <ul className="space-y-4">
                   <li className="flex items-start">
-                    <Check size={24} className="text-coach-accent shrink-0 mt-1 mr-3" />
+                    <Check size={24} className="text-elegant-gold shrink-0 mt-1 mr-3" />
                     <span>Reduced pain and discomfort through proper movement patterns</span>
                   </li>
                   <li className="flex items-start">
-                    <Check size={24} className="text-coach-accent shrink-0 mt-1 mr-3" />
+                    <Check size={24} className="text-elegant-gold shrink-0 mt-1 mr-3" />
                     <span>Smarter training approach that adapts to your energy levels</span>
                   </li>
                   <li className="flex items-start">
-                    <Check size={24} className="text-coach-accent shrink-0 mt-1 mr-3" />
+                    <Check size={24} className="text-elegant-gold shrink-0 mt-1 mr-3" />
                     <span>Sustainable habits that fit into your lifestyle</span>
                   </li>
                   <li className="flex items-start">
-                    <Check size={24} className="text-coach-accent shrink-0 mt-1 mr-3" />
+                    <Check size={24} className="text-elegant-gold shrink-0 mt-1 mr-3" />
                     <span>Stronger body awareness and connection</span>
                   </li>
                   <li className="flex items-start">
-                    <Check size={24} className="text-coach-accent shrink-0 mt-1 mr-3" />
+                    <Check size={24} className="text-elegant-gold shrink-0 mt-1 mr-3" />
                     <span>Increased confidence in your movement abilities</span>
                   </li>
                 </ul>
@@ -145,34 +145,20 @@ const Index = () => {
                     alt="Client training with weights" 
                     className="w-full h-auto"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-coach-charcoal via-transparent to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-elegant-charcoal via-transparent to-transparent"></div>
                 </div>
               </div>
             </div>
           </div>
         </section>
         
-        {/* Free Lead Magnet Section */}
-        <section id="free-guide" className="section-padding bg-coach-accent bg-opacity-90">
-          <div className="container-width">
-            <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
-              <div className="md:w-1/2">
-                <img 
-                  src="/public/lovable-uploads/34e100b8-948a-4472-9e8b-3f5f397eebdc.png"
-                  alt="Training session"
-                  className="rounded-lg shadow-xl max-w-full h-auto"
-                />
-              </div>
-              
-              <div className="md:w-1/2 scroll-fade-in">
-                <EmailSubscription />
-              </div>
-            </div>
-          </div>
+        {/* Lower Back Pain Guide Section */}
+        <section id="free-guide">
+          <LowerBackGuide />
         </section>
         
         {/* Testimonials Preview */}
-        <section className="section-padding bg-coach-navy">
+        <section className="section-padding bg-elegant-navy">
           <div className="container-width">
             <div className="text-center mb-12 scroll-fade-in">
               <h2 className="section-title mx-auto after:left-1/2 after:-translate-x-1/2">
@@ -204,7 +190,7 @@ const Index = () => {
             </div>
             
             <div className="text-center scroll-fade-in">
-              <Link to="/coaching" className="inline-flex items-center text-coach-accent hover:underline font-semibold">
+              <Link to="/coaching" className="inline-flex items-center text-elegant-gold hover:underline font-semibold">
                 See more testimonials
                 <ChevronRight size={20} className="ml-1" />
               </Link>
@@ -213,11 +199,11 @@ const Index = () => {
         </section>
         
         {/* Mini About Section */}
-        <section id="about" className="section-padding bg-coach-charcoal">
+        <section id="about" className="section-padding bg-elegant-charcoal">
           <div className="container-width">
             <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
               <div className="md:w-1/3 scroll-fade-in">
-                <div className="rounded-full overflow-hidden w-56 h-56 mx-auto md:mx-0 border-4 border-coach-accent">
+                <div className="rounded-full overflow-hidden w-56 h-56 mx-auto md:mx-0 border-4 border-elegant-gold">
                   <img 
                     src="/public/lovable-uploads/ff6b5571-dd3d-4852-b785-1fee300184fe.png" 
                     alt="Paulius Lipskis" 

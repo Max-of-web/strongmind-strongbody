@@ -22,10 +22,10 @@ const EmailSubscription = () => {
 
   return (
     <div className="max-w-md mx-auto">
-      <h3 className="text-xl md:text-2xl font-semibold mb-4">
+      <h3 className="text-xl md:text-2xl font-semibold mb-4 text-elegant-charcoal">
         Get Your Free Guide Now
       </h3>
-      <p className="mb-6">
+      <p className="mb-6 text-elegant-charcoal">
         Enter your email to receive "Fix Your Lower Back in 7 Steps" PDF guide immediately.
       </p>
       <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
@@ -35,7 +35,7 @@ const EmailSubscription = () => {
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Your email address"
           required
-          className="form-input"
+          className="form-input bg-white/80 border border-elegant-darksilver text-elegant-charcoal"
         />
         <button
           type="submit"

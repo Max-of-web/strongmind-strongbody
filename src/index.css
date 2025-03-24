@@ -92,18 +92,18 @@
   }
 
   body {
-    @apply bg-coach-charcoal text-coach-light font-sans;
+    @apply bg-elegant-charcoal text-elegant-silver font-sans;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display font-semibold text-coach-light;
+    @apply font-display font-semibold text-elegant-light;
   }
 }
 
 @layer components {
   .hero-section {
     @apply min-h-[85vh] flex flex-col justify-center relative overflow-hidden;
-    background: linear-gradient(to bottom, rgba(58, 26, 57, 0.9), rgba(43, 43, 43, 0.95)), url('/public/lovable-uploads/b4413382-3998-4c2e-a754-75a067048c2d.png');
+    background: linear-gradient(to bottom, rgba(15, 28, 63, 0.9), rgba(33, 33, 33, 0.95)), url('/public/lovable-uploads/b4413382-3998-4c2e-a754-75a067048c2d.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -118,15 +118,15 @@
   }
 
   .cta-button-primary {
-    @apply bg-coach-accent text-coach-charcoal font-semibold px-6 py-3 rounded-md transition-all duration-300 hover:bg-opacity-90 hover:translate-y-[-2px] shadow-md;
+    @apply bg-elegant-gold text-elegant-charcoal font-semibold px-6 py-3 rounded-md transition-all duration-300 hover:bg-opacity-90 hover:translate-y-[-2px] shadow-md;
   }
 
   .cta-button-secondary {
-    @apply bg-transparent text-coach-light border border-coach-light font-semibold px-6 py-3 rounded-md transition-all duration-300 hover:bg-coach-light hover:text-coach-charcoal hover:translate-y-[-2px];
+    @apply bg-transparent text-elegant-silver border border-elegant-silver font-semibold px-6 py-3 rounded-md transition-all duration-300 hover:bg-elegant-silver hover:text-elegant-charcoal hover:translate-y-[-2px];
   }
 
   .section-title {
-    @apply text-3xl md:text-4xl font-bold mb-6 relative inline-block after:content-[''] after:absolute after:bottom-[-8px] after:left-0 after:w-20 after:h-1 after:bg-coach-accent;
+    @apply text-3xl md:text-4xl font-bold mb-6 relative inline-block after:content-[''] after:absolute after:bottom-[-8px] after:left-0 after:w-20 after:h-1 after:bg-elegant-gold;
   }
 
   .card-hover {
@@ -134,11 +134,15 @@
   }
   
   .form-input {
-    @apply w-full p-3 rounded-md bg-coach-navy bg-opacity-50 border border-coach-light border-opacity-20 text-coach-light focus:outline-none focus:ring-2 focus:ring-coach-accent focus:border-transparent;
+    @apply w-full p-3 rounded-md bg-elegant-navy bg-opacity-50 border border-elegant-silver border-opacity-20 text-elegant-light focus:outline-none focus:ring-2 focus:ring-elegant-gold focus:border-transparent;
   }
   
   .testimonial-card {
-    @apply bg-coach-navy bg-opacity-50 p-6 rounded-lg shadow-md border border-coach-light border-opacity-10;
+    @apply bg-elegant-navy bg-opacity-50 p-6 rounded-lg shadow-md border border-elegant-silver border-opacity-10;
+  }
+
+  .elegant-card {
+    @apply bg-elegant-charcoal bg-opacity-70 rounded-lg p-8 border border-elegant-darksilver border-opacity-20 shadow-lg;
   }
 }
 
