@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -63,16 +62,15 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// New elegant color scheme
 				elegant: {
-					charcoal: '#212121',     // Main dark background
-					silver: '#E0E0E0',       // Light text and accents
+					charcoal: '#212121',     // Main dark background 
+					silver: '#E0E0E0',       // Light silver for text and accents
 					lightsilver: '#F5F5F5',  // Lighter silver for subtle contrasts
-					gold: '#D4AF37',         // Gold for CTAs and important elements
-					navy: '#0F1C3F',         // Deep navy for tertiary elements
+					navy: '#0F1C3F',         // Deep navy for CTA buttons only
 					darksilver: '#9E9E9E',   // Medium silver for muted elements
 					light: '#FFFFFF',        // Pure white for contrast
-					offwhite: '#F8F8F8'      // Off-white for backgrounds
+					offwhite: '#F8F8F8',     // Off-white for backgrounds
+					gold: '#D4AF37'          // Gold for secondary accents
 				}
 			},
 			borderRadius: {

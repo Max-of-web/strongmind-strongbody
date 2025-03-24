@@ -40,7 +40,7 @@ const EmailSubscription = () => {
         <button
           type="submit"
           disabled={isSubmitting}
-          className={`cta-button-primary ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
+          className={`bg-elegant-navy text-elegant-light font-semibold px-6 py-3 rounded-md transition-all duration-300 hover:bg-opacity-90 hover:translate-y-[-2px] shadow-md ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
         >
           {isSubmitting ? 'Sending...' : 'Download Free Guide'}
         </button>

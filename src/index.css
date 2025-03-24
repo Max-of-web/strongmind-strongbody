@@ -118,7 +118,7 @@
   }
 
   .cta-button-primary {
-    @apply bg-elegant-gold text-elegant-charcoal font-semibold px-6 py-3 rounded-md transition-all duration-300 hover:bg-opacity-90 hover:translate-y-[-2px] shadow-md;
+    @apply bg-elegant-navy text-elegant-light font-semibold px-6 py-3 rounded-md transition-all duration-300 hover:bg-opacity-90 hover:translate-y-[-2px] shadow-md;
   }
 
   .cta-button-secondary {
@@ -134,11 +134,11 @@
   }
   
   .form-input {
-    @apply w-full p-3 rounded-md bg-elegant-navy bg-opacity-50 border border-elegant-silver border-opacity-20 text-elegant-light focus:outline-none focus:ring-2 focus:ring-elegant-gold focus:border-transparent;
+    @apply w-full p-3 rounded-md bg-elegant-charcoal bg-opacity-50 border border-elegant-silver border-opacity-20 text-elegant-light focus:outline-none focus:ring-2 focus:ring-elegant-navy focus:border-transparent;
   }
   
   .testimonial-card {
-    @apply bg-elegant-navy bg-opacity-50 p-6 rounded-lg shadow-md border border-elegant-silver border-opacity-10;
+    @apply bg-elegant-charcoal bg-opacity-50 p-6 rounded-lg shadow-md border border-elegant-silver border-opacity-10;
   }
 
   .elegant-card {
