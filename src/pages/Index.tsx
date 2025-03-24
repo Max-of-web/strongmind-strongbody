@@ -45,7 +45,7 @@ const Index = () => {
               </p>
               <div className="flex flex-wrap gap-4">
                 <a 
-                  href="https://calendly.com" 
+                  href="https://calendly.com/lipskis-paulius/asmenine-treniruote" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="cta-button-primary"
@@ -246,7 +246,7 @@ const Index = () => {
         <CTABanner 
           message="Ready to train with purpose and feel in control of your body again?"
           buttonText="Book Your Free Discovery Call"
-          buttonLink="https://calendly.com"
+          buttonLink="https://calendly.com/lipskis-paulius/asmenine-treniruote"
         />
       </main>
       <Footer />

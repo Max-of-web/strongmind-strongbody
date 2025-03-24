@@ -13,7 +13,7 @@ const Footer = () => {
           </h3>
           <div className="flex flex-wrap justify-center gap-4 mt-6">
             <a 
-              href="https://calendly.com" 
+              href="https://calendly.com/lipskis-paulius/asmenine-treniruote" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="cta-button-primary"
@@ -21,7 +21,7 @@ const Footer = () => {
               Book a Discovery Call
             </a>
             <a 
-              href="https://wa.me/37061234567" 
+              href="https://wa.me/37067951040" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="cta-button-secondary"
@@ -38,14 +38,14 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone size={18} className="text-coach-accent" />
-                <a href="tel:+37061234567" className="hover:text-coach-accent transition-colors">
-                  +370 6123 4567
+                <a href="tel:+37067951040" className="hover:text-coach-accent transition-colors">
+                  +370 6795 1040
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <MessageSquare size={18} className="text-coach-accent" />
                 <a 
-                  href="https://wa.me/37061234567" 
+                  href="https://wa.me/37067951040" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="hover:text-coach-accent transition-colors"
@@ -81,7 +81,7 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="https://calendly.com" 
+                  href="https://calendly.com/lipskis-paulius/asmenine-treniruote" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="hover:text-coach-accent transition-colors"

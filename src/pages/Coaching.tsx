@@ -170,7 +170,7 @@ const Coaching = () => {
                 
                 <div className="text-center">
                   <a 
-                    href="https://calendly.com" 
+                    href="https://calendly.com/lipskis-paulius/asmenine-treniruote" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="cta-button-secondary w-full"
@@ -208,7 +208,7 @@ const Coaching = () => {
                 
                 <div className="text-center">
                   <a 
-                    href="https://calendly.com" 
+                    href="https://calendly.com/lipskis-paulius/asmenine-treniruote" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="cta-button-secondary w-full"
@@ -258,7 +258,7 @@ const Coaching = () => {
                 
                 <div className="text-center">
                   <a 
-                    href="https://calendly.com" 
+                    href="https://calendly.com/lipskis-paulius/asmenine-treniruote" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="inline-block bg-coach-light text-coach-accent font-semibold px-6 py-3 rounded-md hover:bg-opacity-90 transition-all duration-300 shadow-md w-full"
@@ -400,8 +400,8 @@ const Coaching = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold mb-1">Phone</h4>
-                      <a href="tel:+37061234567" className="hover:text-coach-accent transition-colors">
-                        +370 6123 4567
+                      <a href="tel:+37067951040" className="hover:text-coach-accent transition-colors">
+                        +370 6795 1040
                       </a>
                     </div>
                   </div>
@@ -413,7 +413,7 @@ const Coaching = () => {
                     <div>
                       <h4 className="font-semibold mb-1">WhatsApp</h4>
                       <a 
-                        href="https://wa.me/37061234567" 
+                        href="https://wa.me/37067951040" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="hover:text-coach-accent transition-colors"
@@ -430,7 +430,7 @@ const Coaching = () => {
                     <div>
                       <h4 className="font-semibold mb-1">Discovery Call</h4>
                       <a 
-                        href="https://calendly.com" 
+                        href="https://calendly.com/lipskis-paulius/asmenine-treniruote" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="hover:text-coach-accent transition-colors"

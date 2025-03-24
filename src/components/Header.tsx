@@ -53,7 +53,7 @@ const Header = () => {
             About
           </Link>
           <a 
-            href="https://calendly.com" 
+            href="https://calendly.com/lipskis-paulius/asmenine-treniruote" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="cta-button-primary"
@@ -97,7 +97,7 @@ const Header = () => {
               About
             </Link>
             <a 
-              href="https://calendly.com" 
+              href="https://calendly.com/lipskis-paulius/asmenine-treniruote" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="cta-button-primary text-center"
