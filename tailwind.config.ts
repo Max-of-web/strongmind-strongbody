@@ -64,13 +64,13 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				coach: {
-					navy: '#1A2A40',
-					charcoal: '#2C3333',
-					sage: '#4F6F52',
-					beige: '#F2F2F2',
-					light: '#FAFAFA',
-					accent: '#3A7CA5',
-					muted: '#6C757D'
+					navy: '#1E392A',     // Updated to deep emerald green
+					charcoal: '#2C3026', // Updated to ash black with green undertone
+					sage: '#3A5F41',     // Medium emerald green
+					beige: '#F5F1E6',    // Soft cream/beige
+					light: '#FAFAF5',    // Warm light tone
+					accent: '#D4B254',   // Soft gold accent
+					muted: '#6C7563'     // Muted earthy green-gray
 				}
 			},
 			borderRadius: {
