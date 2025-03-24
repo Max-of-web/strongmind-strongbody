@@ -1,7 +1,6 @@
-
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Brain, Dumbbell, Heart, Timer, Check, ChevronRight } from 'lucide-react';
+import { Brain, Dumbbell, Heart, Timer, Check, ChevronRight, Award, GraduationCap, BookOpen, Briefcase } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import CTABanner from '../components/CTABanner';
@@ -37,6 +36,33 @@ const Index = () => {
         <section className="hero-section">
           <div className="container-width px-4 md:px-8 flex flex-col justify-center items-start h-full">
             <div className="max-w-3xl animate-fade-in-up">
+              <div className="flex flex-wrap gap-2 mb-6">
+                <FeatureCard 
+                  icon={GraduationCap}
+                  title="BSc Physiotherapy"
+                  description=""
+                  isBadge
+                />
+                <FeatureCard 
+                  icon={Award}
+                  title="NASM Certificate"
+                  description=""
+                  isBadge
+                />
+                <FeatureCard 
+                  icon={BookOpen}
+                  title="MSc Precision Nutrition"
+                  description=""
+                  isBadge
+                />
+                <FeatureCard 
+                  icon={Briefcase}
+                  title="Personal Trainer (OTA Academy)"
+                  description=""
+                  isBadge
+                />
+              </div>
+              
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
                 Train Your Body. Strengthen Your Mind. Transform Your Life.
               </h1>
