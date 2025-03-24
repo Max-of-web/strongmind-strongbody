@@ -141,7 +141,7 @@ const Index = () => {
               <div className="md:w-1/2 scroll-fade-in">
                 <div className="relative rounded-lg overflow-hidden shadow-xl">
                   <img 
-                    src="/public/lovable-uploads/92dd7281-aa00-42c3-aa94-41ea33b2d176.png" 
+                    src="/lovable-uploads/92dd7281-aa00-42c3-aa94-41ea33b2d176.png" 
                     alt="Client training with weights" 
                     className="w-full h-auto"
                   />
@@ -205,7 +205,7 @@ const Index = () => {
               <div className="md:w-1/3 scroll-fade-in">
                 <div className="rounded-full overflow-hidden w-56 h-56 mx-auto md:mx-0 border-4 border-elegant-gold">
                   <img 
-                    src="/public/lovable-uploads/ff6b5571-dd3d-4852-b785-1fee300184fe.png" 
+                    src="/lovable-uploads/ff6b5571-dd3d-4852-b785-1fee300184fe.png" 
                     alt="Paulius Lipskis" 
                     className="w-full h-full object-cover"
                   />
