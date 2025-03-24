@@ -40,9 +40,15 @@ const Coaching = () => {
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 1-on-1 Personal Coaching With Paulius Lipskis
               </h1>
-              <p className="text-xl md:text-2xl text-coach-light text-opacity-90">
+              <p className="text-xl md:text-2xl text-coach-light text-opacity-90 mb-8">
                 Personalized training that addresses your unique physical needs and mental barriers, designed for long-term sustainable results.
               </p>
+              <a 
+                href="#contact-section" 
+                className="cta-button-primary inline-block"
+              >
+                Book Your First Session
+              </a>
             </div>
           </div>
         </section>
@@ -121,7 +127,7 @@ const Coaching = () => {
               <div className="md:w-1/2 scroll-fade-in">
                 <div className="relative rounded-lg overflow-hidden shadow-xl">
                   <img 
-                    src="/public/lovable-uploads/b4413382-3998-4c2e-a754-75a067048c2d.png" 
+                    src="/lovable-uploads/b4413382-3998-4c2e-a754-75a067048c2d.png" 
                     alt="Personal training session" 
                     className="w-full h-auto"
                   />
@@ -384,7 +390,7 @@ const Coaching = () => {
         </section>
         
         {/* Contact & Application */}
-        <section className="section-padding bg-coach-navy">
+        <section id="contact-section" className="section-padding bg-coach-navy">
           <div className="container-width">
             <div className="flex flex-col lg:flex-row gap-10 lg:gap-16">
               <div className="lg:w-2/5 scroll-fade-in">
