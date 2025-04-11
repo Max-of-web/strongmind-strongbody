@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Settings } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
 import ThemeToggle from './ThemeToggle';
@@ -57,6 +57,13 @@ const Header = () => {
             >
               {t('header.about')}
             </Link>
+            <Link 
+              to="/admin" 
+              className="text-theme-textlight hover:text-theme-tangerine dark:hover:text-theme-lighttangerine transition-colors flex items-center"
+            >
+              <Settings size={16} className="mr-1" />
+              Admin
+            </Link>
           </div>
           
           <div className="flex items-center space-x-3">
@@ -110,6 +117,14 @@ const Header = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               {t('header.about')}
+            </Link>
+            <Link 
+              to="/admin" 
+              className="text-theme-textlight hover:text-theme-tangerine dark:hover:text-theme-lighttangerine transition-colors py-2 flex items-center"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <Settings size={16} className="mr-1" />
+              Admin
             </Link>
             <a 
               href="https://calendly.com/lipskis-paulius/asmenine-treniruote" 

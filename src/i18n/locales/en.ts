@@ -66,7 +66,7 @@ const translation = {
     },
     successToast: {
       title: 'Application Successfully Submitted!',
-      description: 'I\'ll contact you soon to discuss next steps.'
+      description: "I'll contact you soon to discuss next steps."
     },
     errorToast: {
       title: 'Something went wrong',
@@ -76,6 +76,27 @@ const translation = {
   theme: {
     dark: 'Dark Mode',
     light: 'Light Mode'
+  },
+  admin: {
+    title: 'Admin Panel',
+    login: 'Admin Login',
+    password: 'Enter admin password',
+    loginButton: 'Login',
+    logout: 'Logout',
+    contentEditor: 'Language Content Editor',
+    applyChanges: 'Apply Changes',
+    resetOriginal: 'Reset to Original',
+    changesApplied: 'Changes Applied',
+    translationsReset: 'Translations Reset',
+    currentLanguage: 'Currently editing in',
+    loginSuccess: 'Login Successful',
+    loginFailed: 'Login Failed',
+    welcomeMessage: 'Welcome to the admin panel',
+    incorrectPassword: 'Incorrect password',
+    logoutMessage: 'You have been logged out of the admin panel',
+    english: 'English',
+    lithuanian: 'Lithuanian',
+    storageNotice: 'Changes will be stored in local browser storage'
   }
 };
 

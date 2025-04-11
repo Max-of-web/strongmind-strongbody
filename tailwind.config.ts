@@ -73,7 +73,7 @@ export default {
 					offwhite: '#F8F8F8',     // Off-white for backgrounds
 					gold: '#D4AF37'          // Gold for secondary accents
 				},
-				// New theme colors
+				// Theme colors
 				theme: {
 					navy: '#0A2342',          // Primary Navy Blue
 					marine: '#1C5B5A',         // Marine Green

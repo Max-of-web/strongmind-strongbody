@@ -178,3 +178,18 @@ html {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Add some additional variables for better light/dark mode support */
+:root {
+  /* Theme-specific colors for light mode */
+  --theme-lightnavy: #1E3A5F;
+  --theme-lighttangerine: #FFA553;
+  --theme-lightmarine: #2C7F7E;
+}
+
+.dark {
+  /* Theme-specific colors for dark mode */
+  --theme-darknavy: #051326;
+  --theme-darktangerine: #D17122;
+  --theme-darkmarine: #133B3A;
+}
