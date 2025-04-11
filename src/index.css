@@ -23,9 +23,6 @@
     --secondary: 175 53% 23%;
     --secondary-foreground: 210 20% 98%;
 
-    --muted: 215 16% 90%;
-    --muted-foreground: 215 25% 27%;
-
     --accent: 33 92% 57%;
     --accent-foreground: 215 25% 27%;
 
@@ -64,9 +61,6 @@
 
     --secondary: 175 53% 35%;
     --secondary-foreground: 210 20% 98%;
-
-    --muted: 215 30% 18%;
-    --muted-foreground: 210 20% 98%;
 
     --accent: 33 92% 50%;
     --accent-foreground: 215 30% 12%;
@@ -222,7 +216,7 @@ html {
 
 /* Typography improvements */
 p, li, span {
-  @apply text-base md:text-lg leading-relaxed;
+  @apply text-base md:text-lg leading-relaxed font-medium;
   min-font-size: 16px;
 }
 

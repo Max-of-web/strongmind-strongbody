@@ -37,10 +37,6 @@ export default {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))'
 				},
-				muted: {
-					DEFAULT: 'hsl(var(--muted))',
-					foreground: 'hsl(var(--muted-foreground))'
-				},
 				accent: {
 					DEFAULT: 'hsl(var(--accent))',
 					foreground: 'hsl(var(--accent-foreground))'
@@ -68,7 +64,7 @@ export default {
 					silver: '#E0E0E0',       // Light silver for text and accents
 					lightsilver: '#F5F5F5',  // Lighter silver for subtle contrasts
 					navy: '#0F1C3F',         // Deep navy for CTA buttons only
-					darksilver: '#9E9E9E',   // Medium silver for muted elements
+					darksilver: '#9E9E9E',   // Medium silver for secondary elements
 					light: '#FFFFFF',        // Pure white for contrast
 					offwhite: '#F8F8F8',     // Off-white for backgrounds
 					gold: '#D4AF37'          // Gold for secondary accents

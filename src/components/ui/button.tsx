@@ -1,3 +1,4 @@
+
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
@@ -9,15 +10,16 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        default: "bg-theme-marine text-white hover:bg-theme-lightmarine dark:bg-theme-lightmarine dark:hover:bg-theme-marine",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+          "border border-theme-marine bg-background hover:bg-theme-lightmarine/20 text-theme-marine dark:border-theme-lightmarine dark:text-theme-lightmarine dark:hover:bg-theme-lightmarine/20",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
+          "bg-theme-navy text-white hover:bg-theme-lightnavy dark:bg-theme-lightnavy dark:hover:bg-theme-navy",
+        ghost: "hover:bg-theme-lightmarine/20 hover:text-theme-marine dark:hover:bg-theme-lightmarine/20 dark:hover:text-theme-lightmarine",
+        link: "text-theme-marine underline-offset-4 hover:underline dark:text-theme-lightmarine",
+        cta: "bg-theme-tangerine text-white hover:bg-theme-lighttangerine dark:bg-theme-lighttangerine dark:hover:bg-theme-tangerine dark:text-theme-navy shadow-md",
       },
       size: {
         default: "h-10 px-4 py-2",
