@@ -73,21 +73,21 @@ export default {
 					offwhite: '#F8F8F8',     // Off-white for backgrounds
 					gold: '#D4AF37'          // Gold for secondary accents
 				},
-				// Theme colors
+				// Updated theme colors based on brand guidelines
 				theme: {
 					navy: '#0A2342',          // Primary Navy Blue
-					marine: '#1C5B5A',         // Marine Green
+					marine: '#1C5B5A',         // Marine Green (Primary brand color)
 					tangerine: '#F7882F',      // Tangerine accent
-					darknavy: '#051326',       // Darker Navy for dark mode
-					lightnavy: '#1E3A5F',      // Lighter Navy for hover states
-					darkmarine: '#133B3A',     // Darker Marine for dark mode
-					lightmarine: '#2C7F7E',    // Lighter Marine for hover states
-					darktangerine: '#D17122',  // Darker Tangerine for dark mode
-					lighttangerine: '#FFA553', // Lighter Tangerine for hover states
+					darknavy: '#061528',       // Darker Navy for dark mode
+					lightnavy: '#375177',      // Lighter Navy for hover states
+					darkmarine: '#164948',     // Darker Marine for pressed states
+					lightmarine: '#76A4A3',    // Lighter Marine for hover states
+					darktangerine: '#C56D26',  // Darker Tangerine for pressed states
+					lighttangerine: '#F89F4F', // Lighter Tangerine for hover states
 					lightgray: '#F0F2F5',      // Light background for light mode
 					darkgray: '#121212',       // Dark background for dark mode
 					textlight: '#FFFFFF',      // Light text
-					textdark: '#2D3748'        // Dark text
+					textdark: '#0A2342'        // Dark text
 				}
 			},
 			borderRadius: {

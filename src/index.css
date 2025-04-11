@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,7 +7,7 @@
 
 @layer base {
   :root {
-    /* Light Mode Variables */
+    /* Light Mode Variables - Updated for better contrast */
     --background: 210 20% 98%;
     --foreground: 215 25% 27%;
 
@@ -24,7 +24,7 @@
     --secondary-foreground: 210 20% 98%;
 
     --muted: 215 16% 90%;
-    --muted-foreground: 215 16% 46.9%;
+    --muted-foreground: 215 25% 27%;
 
     --accent: 33 92% 57%;
     --accent-foreground: 215 25% 27%;
@@ -49,6 +49,7 @@
   }
 
   .dark {
+    /* Dark Mode Variables - Updated for better contrast */
     --background: 215 30% 8%;
     --foreground: 210 20% 98%;
 
@@ -65,7 +66,7 @@
     --secondary-foreground: 210 20% 98%;
 
     --muted: 215 30% 18%;
-    --muted-foreground: 215 20% 65.1%;
+    --muted-foreground: 210 20% 98%;
 
     --accent: 33 92% 50%;
     --accent-foreground: 215 30% 12%;
@@ -127,15 +128,15 @@
   }
 
   .cta-button-primary {
-    @apply bg-theme-navy dark:bg-theme-lightnavy text-theme-textlight font-semibold px-6 py-3 rounded-md transition-all duration-300 hover:bg-theme-lightnavy dark:hover:bg-theme-navy hover:translate-y-[-2px] shadow-md;
+    @apply bg-theme-marine dark:bg-theme-lightmarine text-white font-semibold px-6 py-3 rounded-md transition-all duration-300 hover:bg-theme-lightmarine dark:hover:bg-theme-marine hover:translate-y-[-2px] shadow-md;
   }
 
   .cta-button-secondary {
-    @apply bg-transparent text-foreground border border-theme-navy dark:border-theme-textlight font-semibold px-6 py-3 rounded-md transition-all duration-300 hover:bg-theme-marine hover:text-theme-textlight dark:hover:bg-theme-marine hover:border-transparent hover:translate-y-[-2px];
+    @apply bg-transparent text-foreground border border-theme-marine dark:border-white font-semibold px-6 py-3 rounded-md transition-all duration-300 hover:bg-theme-tangerine hover:text-white dark:hover:bg-theme-tangerine hover:border-transparent hover:translate-y-[-2px];
   }
 
   .section-title {
-    @apply text-3xl md:text-4xl font-bold mb-6 relative inline-block after:content-[''] after:absolute after:bottom-[-8px] after:left-0 after:w-20 after:h-1 after:bg-theme-tangerine dark:after:bg-theme-darktangerine;
+    @apply text-3xl md:text-4xl font-bold mb-6 relative inline-block after:content-[''] after:absolute after:bottom-[-8px] after:left-0 after:w-20 after:h-1 after:bg-theme-tangerine dark:after:bg-theme-tangerine;
   }
 
   .card-hover {
@@ -143,23 +144,23 @@
   }
   
   .form-input {
-    @apply w-full p-3 rounded-md bg-background border border-muted text-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent;
+    @apply w-full p-3 rounded-md bg-background border border-input text-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent;
   }
   
   .testimonial-card {
-    @apply bg-card p-6 rounded-lg shadow-md border border-muted;
+    @apply bg-card p-6 rounded-lg shadow-md border border-input;
   }
 
   .elegant-card {
-    @apply bg-card rounded-lg p-8 border border-muted shadow-lg;
+    @apply bg-card rounded-lg p-8 border border-input shadow-lg;
   }
   
   .language-selector {
-    @apply flex items-center gap-2 bg-theme-navy dark:bg-theme-darknavy text-theme-textlight px-3 py-2 rounded-md cursor-pointer transition-colors duration-200 hover:bg-theme-tangerine dark:hover:bg-theme-darktangerine;
+    @apply flex items-center gap-2 bg-theme-marine dark:bg-theme-marine text-white px-3 py-2 rounded-md cursor-pointer transition-colors duration-200 hover:bg-theme-tangerine dark:hover:bg-theme-tangerine;
   }
   
   .theme-toggle {
-    @apply flex items-center gap-2 bg-theme-marine dark:bg-theme-darkmarine text-theme-textlight px-3 py-2 rounded-md cursor-pointer transition-colors duration-200 hover:bg-theme-lightmarine dark:hover:bg-theme-marine;
+    @apply flex items-center gap-2 bg-theme-navy dark:bg-theme-darknavy text-white px-3 py-2 rounded-md cursor-pointer transition-colors duration-200 hover:bg-theme-lightnavy dark:hover:bg-theme-navy;
   }
 }
 
@@ -182,35 +183,32 @@ html {
 /* Add some additional variables for better light/dark mode support */
 :root {
   /* Theme-specific colors for light mode */
-  --theme-lightnavy: #1E3A5F;
-  --theme-lighttangerine: #FFA553;
-  --theme-lightmarine: #2C7F7E;
+  --theme-lightnavy: #375177;
+  --theme-lighttangerine: #F89F4F;
+  --theme-lightmarine: #76A4A3;
 }
 
 .dark {
   /* Theme-specific colors for dark mode */
-  --theme-darknavy: #051326;
-  --theme-darktangerine: #D17122;
-  --theme-darkmarine: #133B3A;
+  --theme-darknavy: #061528;
+  --theme-darktangerine: #C56D26;
+  --theme-darkmarine: #164948;
 }
 
 /* Improved dark mode text readability */
 .dark {
   --theme-text-high-contrast: #FFFFFF;
-  --theme-text-medium-contrast: #E4E4E7;
-  --theme-text-low-contrast: #A1A1AA;
+  --theme-text-medium-contrast: #FFFFFF;
+  --theme-text-low-contrast: #E4E4E7;
 }
 
-.dark p, .dark span, .dark li:not(.text-theme-textlight) {
+.dark p, .dark span, .dark li {
   color: var(--theme-text-medium-contrast);
+  font-weight: 500;
 }
 
 .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
   color: var(--theme-text-high-contrast);
-}
-
-.dark .text-muted-foreground {
-  color: var(--theme-text-low-contrast);
 }
 
 /* Improved dark mode background contrast */
@@ -219,5 +217,27 @@ html {
 }
 
 .dark .border-muted {
-  border-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Typography improvements */
+p, li, span {
+  @apply text-base md:text-lg leading-relaxed;
+  min-font-size: 16px;
+}
+
+h1 {
+  @apply text-4xl md:text-5xl leading-tight font-bold;
+}
+
+h2 {
+  @apply text-3xl md:text-4xl leading-tight font-bold;
+}
+
+h3 {
+  @apply text-2xl md:text-3xl leading-tight font-semibold;
+}
+
+h4 {
+  @apply text-xl md:text-2xl leading-tight font-semibold;
 }

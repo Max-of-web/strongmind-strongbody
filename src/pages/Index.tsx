@@ -33,15 +33,15 @@ const Index = () => {
     <>
       <Header />
       <main>
-        {/* Hero Section */}
+        {/* Hero Section - Updated with new messaging */}
         <section className="hero-section">
           <div className="container-width px-4 md:px-8 flex flex-col justify-center items-start h-full">
             <div className="max-w-3xl animate-fade-in-up">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                Train Your Body. Strengthen Your Mind. Transform Your Life.
+                Level Up Your Life – Build Habits, Gain Momentum
               </h1>
-              <p className="text-xl md:text-2xl mb-10 text-elegant-silver text-opacity-90">
-                Personalized coaching that combines physiotherapy expertise with psychological support for lasting transformation.
+              <p className="text-xl md:text-2xl mb-10 text-white">
+                Through consistent guidance, smart movement, and practical mindset shifts, I help you take control of your physical health and fitness journey.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a 
@@ -63,7 +63,7 @@ const Index = () => {
           </div>
         </section>
         
-        {/* What Makes This Coaching Different */}
+        {/* What Makes This Coaching Different - Updated approach */}
         <section className="section-padding bg-elegant-charcoal">
           <div className="container-width">
             <div className="text-center mb-12 scroll-fade-in">
@@ -76,8 +76,8 @@ const Index = () => {
               <div className="scroll-fade-in">
                 <FeatureCard 
                   icon={Brain}
-                  title="Dual Expertise"
-                  description="Combining physiotherapy knowledge with psychology background for a holistic approach to training."
+                  title="Smart Movement"
+                  description="Training that respects your body's mechanics and adapts to your unique structure and patterns."
                 />
               </div>
               
@@ -92,47 +92,50 @@ const Index = () => {
               <div className="scroll-fade-in">
                 <FeatureCard 
                   icon={Heart}
-                  title="Emotional Support"
-                  description="Addressing the mental barriers that often prevent physical progress and long-term success."
+                  title="Mindset Coaching"
+                  description="Practical strategies to overcome mental barriers that often prevent physical progress."
                 />
               </div>
               
               <div className="scroll-fade-in">
                 <FeatureCard 
                   icon={Timer}
-                  title="Long-term Mindset"
-                  description="Building sustainable habits rather than quick fixes, focusing on lifelong health and fitness."
+                  title="Habit Building"
+                  description="Creating sustainable routines rather than quick fixes, focusing on lifelong health and fitness."
                 />
               </div>
             </div>
           </div>
         </section>
         
-        {/* What You'll Achieve */}
+        {/* What You'll Achieve - Updated messaging */}
         <section className="section-padding bg-elegant-charcoal">
           <div className="container-width">
             <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-center">
               <div className="md:w-1/2 scroll-fade-in">
                 <h2 className="section-title">What You'll Achieve</h2>
+                <p className="mb-6">
+                  "This isn't about perfection. It's about showing up, one real step at a time."
+                </p>
                 <ul className="space-y-4">
                   <li className="flex items-start">
-                    <Check size={24} className="text-elegant-gold shrink-0 mt-1 mr-3" />
+                    <Check size={24} className="text-theme-tangerine shrink-0 mt-1 mr-3" />
                     <span>Reduced pain and discomfort through proper movement patterns</span>
                   </li>
                   <li className="flex items-start">
-                    <Check size={24} className="text-elegant-gold shrink-0 mt-1 mr-3" />
+                    <Check size={24} className="text-theme-tangerine shrink-0 mt-1 mr-3" />
                     <span>Smarter training approach that adapts to your energy levels</span>
                   </li>
                   <li className="flex items-start">
-                    <Check size={24} className="text-elegant-gold shrink-0 mt-1 mr-3" />
+                    <Check size={24} className="text-theme-tangerine shrink-0 mt-1 mr-3" />
                     <span>Sustainable habits that fit into your lifestyle</span>
                   </li>
                   <li className="flex items-start">
-                    <Check size={24} className="text-elegant-gold shrink-0 mt-1 mr-3" />
+                    <Check size={24} className="text-theme-tangerine shrink-0 mt-1 mr-3" />
                     <span>Stronger body awareness and connection</span>
                   </li>
                   <li className="flex items-start">
-                    <Check size={24} className="text-elegant-gold shrink-0 mt-1 mr-3" />
+                    <Check size={24} className="text-theme-tangerine shrink-0 mt-1 mr-3" />
                     <span>Increased confidence in your movement abilities</span>
                   </li>
                 </ul>
@@ -157,7 +160,7 @@ const Index = () => {
           <LowerBackGuide />
         </section>
         
-        {/* Testimonials Preview */}
+        {/* Testimonials Preview - Updated for higher contrast */}
         <section className="section-padding bg-elegant-charcoal">
           <div className="container-width">
             <div className="text-center mb-12 scroll-fade-in">
@@ -183,14 +186,14 @@ const Index = () => {
               
               <div className="scroll-fade-in">
                 <TestimonialCard 
-                  quote="The mental aspect of his coaching was unexpected but exactly what I needed. I've not only gotten stronger physically but also developed a healthier relationship with exercise."
+                  quote="The mindset coaching aspect of his training was exactly what I needed. I've not only gotten stronger physically but also developed a healthier relationship with exercise and movement."
                   name="Milda P."
                 />
               </div>
             </div>
             
             <div className="text-center scroll-fade-in">
-              <Link to="/coaching" className="inline-flex items-center text-elegant-gold hover:underline font-semibold">
+              <Link to="/coaching" className="inline-flex items-center text-theme-tangerine hover:underline font-semibold">
                 See more testimonials
                 <ChevronRight size={20} className="ml-1" />
               </Link>
@@ -198,12 +201,12 @@ const Index = () => {
           </div>
         </section>
         
-        {/* Mini About Section */}
+        {/* Mini About Section - Updated with clearer role definition */}
         <section id="about" className="section-padding bg-elegant-charcoal">
           <div className="container-width">
             <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
               <div className="md:w-1/3 scroll-fade-in">
-                <div className="rounded-full overflow-hidden w-56 h-56 mx-auto md:mx-0 border-4 border-elegant-gold">
+                <div className="rounded-full overflow-hidden w-56 h-56 mx-auto md:mx-0 border-4 border-theme-tangerine">
                   <img 
                     src="/lovable-uploads/ff6b5571-dd3d-4852-b785-1fee300184fe.png" 
                     alt="Paulius Lipskis" 
@@ -245,10 +248,10 @@ const Index = () => {
                   />
                 </div>
                 <p className="mb-6">
-                  With a background in both physiotherapy and psychology, I've spent the last decade helping people transform their relationship with their bodies. I believe in training that respects your body's signals while challenging your limits.
+                  With a background in physiotherapy, I've spent the last decade helping people transform their relationship with their bodies. I believe in training that respects your body's signals while challenging your limits.
                 </p>
                 <p className="mb-6">
-                  My approach combines evidence-based exercise science with practical psychology to create sustainable programs that go beyond physical results—they change how you perceive yourself and your capabilities.
+                  Whether you're healing, training, or just trying to feel more like yourself again — this is where it all clicks together. My approach combines evidence-based exercise science with practical mindset coaching to create sustainable programs.
                 </p>
                 <p>
                   Based in Vilnius, I work with clients at Reformatas Gym and SEB Arena, providing personalized coaching that addresses both movement mechanics and the mental aspects of physical transformation.
@@ -260,7 +263,7 @@ const Index = () => {
         
         {/* Final CTA Banner */}
         <CTABanner 
-          message="Ready to train with purpose and feel in control of your body again?"
+          message="Ready to level up your life and build momentum with sustainable habits?"
           buttonText="Book Your Free Discovery Call"
           buttonLink="https://calendly.com/lipskis-paulius/asmenine-treniruote"
         />
