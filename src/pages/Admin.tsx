@@ -7,63 +7,126 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
-import { Globe, CheckCircle, Languages } from 'lucide-react';
+import { Globe, CheckCircle, Languages, Loader2 } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import AdminLanguageEditor from '@/components/AdminLanguageEditor';
-import { useLanguage } from '@/hooks/useLanguage';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { supabase } from '@/integrations/supabase/client';
 
 const Admin = () => {
   const [password, setPassword] = useState('');
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const { toast } = useToast();
   const navigate = useNavigate();
   const { t } = useTranslation();
   const { language } = useLanguage();
 
-  // Simple authentication check - in a real app, use proper auth
-  const handleLogin = (e: React.FormEvent) => {
+  // Simple authentication check - initially check localStorage for auth status
+  useEffect(() => {
+    const checkAuthStatus = async () => {
+      setIsLoading(true);
+      
+      // First check if we have a Supabase session
+      const { data } = await supabase.auth.getSession();
+      
+      if (data.session) {
+        setIsAuthenticated(true);
+      } else {
+        // Fallback to localStorage for backward compatibility
+        const authStatus = localStorage.getItem('adminAuth');
+        if (authStatus === 'true') {
+          setIsAuthenticated(true);
+        }
+      }
+      
+      setIsLoading(false);
+    };
+    
+    checkAuthStatus();
+  }, []);
+
+  // Function to handle login
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (password === 'admin123') { // In a real app, this would be a proper auth system
-      setIsAuthenticated(true);
-      toast({
-        title: "Login Successful",
-        description: "Welcome to the admin panel",
-      });
+    
+    // Simple password check - in a real app, use proper auth
+    if (password === 'admin123') {
+      // For demo purposes, we'll use anonymous sign-in to Supabase
+      try {
+        const { error } = await supabase.auth.signInWithPassword({
+          email: 'admin@example.com',
+          password: password,
+        });
+        
+        if (error) {
+          // If Supabase auth fails, fallback to localStorage
+          localStorage.setItem('adminAuth', 'true');
+        }
+        
+        setIsAuthenticated(true);
+        
+        toast({
+          title: t('admin.loginSuccess'),
+          description: t('admin.welcomeMessage'),
+        });
+      } catch (error) {
+        console.error('Auth error:', error);
+        
+        // Fallback to localStorage
+        localStorage.setItem('adminAuth', 'true');
+        setIsAuthenticated(true);
+        
+        toast({
+          title: t('admin.loginSuccess'),
+          description: t('admin.welcomeMessage'),
+        });
+      }
     } else {
       toast({
-        title: "Login Failed",
-        description: "Incorrect password",
+        title: t('admin.loginFailed'),
+        description: t('admin.incorrectPassword'),
         variant: "destructive",
       });
     }
   };
 
-  // Check if user is already logged in (from localStorage in this demo)
-  useEffect(() => {
-    const authStatus = localStorage.getItem('adminAuth');
-    if (authStatus === 'true') {
-      setIsAuthenticated(true);
-    }
-  }, []);
-
-  // Save auth status to localStorage
-  useEffect(() => {
-    if (isAuthenticated) {
-      localStorage.setItem('adminAuth', 'true');
-    }
-  }, [isAuthenticated]);
-
   // Log out function
-  const handleLogout = () => {
-    setIsAuthenticated(false);
+  const handleLogout = async () => {
+    try {
+      // Sign out from Supabase
+      await supabase.auth.signOut();
+    } catch (error) {
+      console.error('Error signing out:', error);
+    }
+    
+    // Clear localStorage fallback
     localStorage.removeItem('adminAuth');
+    setIsAuthenticated(false);
+    
     toast({
       title: "Logged Out",
-      description: "You have been logged out of the admin panel",
+      description: t('admin.logoutMessage'),
     });
+    
     navigate('/');
   };
+
+  if (isLoading) {
+    return (
+      <>
+        <Header />
+        <main className="section-padding min-h-screen bg-background">
+          <div className="container-width flex justify-center items-center py-20">
+            <Loader2 className="h-8 w-8 animate-spin text-theme-navy dark:text-theme-lightnavy" />
+            <span className="ml-2">Loading...</span>
+          </div>
+        </main>
+        <Footer />
+      </>
+    );
+  }
 
   return (
     <>
@@ -75,7 +138,7 @@ const Admin = () => {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Globe className="text-theme-navy dark:text-theme-lightnavy" size={24} />
-                  Admin Login
+                  {t('admin.login')}
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -83,7 +146,7 @@ const Admin = () => {
                   <div className="space-y-2">
                     <Input
                       type="password"
-                      placeholder="Enter admin password"
+                      placeholder={t('admin.password')}
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                       className="form-input"
@@ -93,7 +156,7 @@ const Admin = () => {
                     type="submit" 
                     className="w-full bg-theme-navy dark:bg-theme-lightnavy hover:bg-theme-marine dark:hover:bg-theme-lightmarine"
                   >
-                    Login
+                    {t('admin.loginButton')}
                   </Button>
                 </form>
               </CardContent>
@@ -103,14 +166,14 @@ const Admin = () => {
               <div className="flex justify-between items-center">
                 <h1 className="text-3xl font-bold flex items-center gap-2">
                   <Languages className="text-theme-tangerine dark:text-theme-lighttangerine" size={28} />
-                  <span>Content Administration</span>
+                  <span>{t('admin.title')}</span>
                 </h1>
                 <Button 
                   onClick={handleLogout}
                   variant="outline" 
                   className="border-theme-navy dark:border-theme-lightnavy text-theme-navy dark:text-theme-lightnavy"
                 >
-                  Logout
+                  {t('admin.logout')}
                 </Button>
               </div>
               
@@ -118,7 +181,7 @@ const Admin = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Languages className="text-theme-tangerine dark:text-theme-lighttangerine" size={24} />
-                    Language Content Editor
+                    {t('admin.contentEditor')}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -126,11 +189,11 @@ const Admin = () => {
                     <TabsList className="grid w-full grid-cols-2 mb-4">
                       <TabsTrigger value="en" className="flex items-center gap-2">
                         <img src="/flag-en.svg" alt="English" className="w-5 h-5" onError={(e) => { e.currentTarget.src = "https://flagcdn.com/w40/us.png" }} />
-                        English
+                        {t('admin.english')}
                       </TabsTrigger>
                       <TabsTrigger value="lt" className="flex items-center gap-2">
                         <img src="/flag-lt.svg" alt="Lithuanian" className="w-5 h-5" onError={(e) => { e.currentTarget.src = "https://flagcdn.com/w40/lt.png" }} />
-                        Lithuanian
+                        {t('admin.lithuanian')}
                       </TabsTrigger>
                     </TabsList>
                     <TabsContent value="en">
@@ -145,8 +208,8 @@ const Admin = () => {
               
               <div className="text-center p-4 mt-8 rounded-lg bg-muted">
                 <p className="text-muted-foreground text-sm">
-                  Currently editing in: {language === 'en' ? 'English' : 'Lithuanian'} | 
-                  Changes will be stored in local browser storage
+                  {t('admin.currentLanguage')}: {language === 'en' ? t('admin.english') : t('admin.lithuanian')} | 
+                  {t('admin.storageNotice')}
                 </p>
               </div>
             </div>

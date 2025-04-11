@@ -23,8 +23,8 @@ const translation = {
   },
   homepage: {
     hero: {
-      title: 'Treniruokite Kūną. Stiprinkite Protą. Keiskite Gyvenimą.',
-      subtitle: 'Individualizuotos treniruotės, kurios jungia fizioterapijos žinias su psichologiniu palaikymu ilgalaikei transformacijai.',
+      title: 'Pakelk Savo Gyvenimą – Formuok Įpročius, Įgyk Pagreitį',
+      subtitle: 'Per nuoseklų vadovavimą, protingą judėjimą ir praktinius mąstymo pokyčius, padedu žmonėms perimti kontrolę. Čia ne apie tobulumą. Tai apie dalyvavimą, po vieną realų žingsnį.',
       bookCallButton: 'Užsisakyti Konsultaciją',
       getFreeGuideButton: 'Gauti Nemokamą Gidą'
     },
@@ -111,6 +111,10 @@ const translation = {
       directCommunication: {
         title: 'Tiesioginė Komunikacija',
         description: 'Prieiga prie manęs per WhatsApp klausimams, technikos patikrinimams ir atskaitomybei. Jūs niekada nebūsite vieni savo kelionėje.'
+      },
+      personalCoachAI: {
+        title: 'Asmeninis Treneris AI',
+        description: 'Prieiga prie personalizuoto dirbtinio intelekto asistento, kuris padeda sekti jūsų progresą, atsako į klausimus apie treniruotes ir suteikia motyvacijos tarp sesijų.'
       }
     },
     target: {
@@ -126,32 +130,47 @@ const translation = {
     pricing: {
       sectionTitle: 'Paketai ir Kainos',
       starter: {
-        title: 'Pradedantysis',
-        price: '€50',
-        period: 'už treniruotę',
+        title: 'Pirmoji Sesija',
+        price: '€60',
+        period: '90 minučių',
         features: [
-          'Viena treniruotė',
-          'Formos įvertinimas',
-          'Bazinės judesių korekcijos',
-          'Treniruočių rekomendacijos'
+          'Išsami konsultacija',
+          'Pradinė treniruotė',
+          'Judesių įvertinimas',
+          'Tikslų nustatymas ir motyvacijos planavimas',
+          'Programos sukūrimas',
+          'Prieiga prie Asmeninio Trenerio AI'
         ],
-        buttonText: 'Užsakyti Treniruotę'
+        buttonText: 'Užsakyti Pirmąją Sesiją'
+      },
+      additionalSession: {
+        title: 'Papildoma Sesija',
+        price: '€50',
+        period: '60 minučių',
+        features: [
+          'Tolesnė treniruotė',
+          'Programos koregavimai',
+          'Formos pataisymai',
+          'Progreso įvertinimas'
+        ],
+        buttonText: 'Užsakyti Po Pirmosios Sesijos'
       },
       monthly: {
         title: 'Mėnesinis',
-        price: '€150',
+        price: '€200',
         period: 'per mėnesį',
         features: [
           '4 treniruotės per mėnesį',
-          'Individualizuota programa',
+          'Individuali programa',
           'WhatsApp palaikymas',
-          'Savaitiniai programos patikslinimai'
+          'Savaitiniai programos patikslinimai',
+          'Asmeninis Treneris AI'
         ],
         buttonText: 'Užsakyti Konsultaciją'
       },
       transformation: {
         title: 'Transformacija',
-        price: '€250',
+        price: '€360',
         period: 'per mėnesį',
         recommended: 'REKOMENDUOJAMA',
         features: [
@@ -160,7 +179,8 @@ const translation = {
           'Pažangi programos kūrimas',
           'Prioritetinis WhatsApp palaikymas',
           'Įpročių formavimo koučingas',
-          'Mitybos gairės'
+          'Mitybos gairės',
+          'Asmeninis Treneris AI'
         ],
         buttonText: 'Užsakyti Konsultaciją'
       }
@@ -240,6 +260,18 @@ const translation = {
           'SEB Arena, Vilnius'
         ]
       }
+    },
+    personalCoachAI: {
+      sectionTitle: 'Asmeninis Treneris AI',
+      intro: 'Kaip jūsų treniruočių paketo dalį, gausite prieigą prie pažangaus dirbtinio intelekto asistento, sukurto palaikyti jūsų sporto kelionę:',
+      features: [
+        'Prieinamas 24/7 atsakyti į jūsų treniruočių klausimus',
+        'Padeda sekti jūsų treniruotes ir progresą',
+        'Teikia formos patarimus ir pratimų alternatyvas',
+        'Suteikia motyvacijos ir atskaitomybės tarp sesijų',
+        'Pritaikytas pagal mano treniravimo filosofiją ir metodą'
+      ],
+      disclaimer: 'Asmeninis Treneris AI yra papildoma priemonė, skirta pagerinti jūsų treniruočių patirtį, o ne pakeisti žmogaus vadovavimą.'
     }
   },
   cta: {
@@ -327,7 +359,7 @@ const translation = {
     logoutMessage: 'Jūs atsijungėte nuo administravimo skydelio',
     english: 'Anglų',
     lithuanian: 'Lietuvių',
-    storageNotice: 'Pakeitimai bus saugomi naršyklės atmintyje'
+    storageNotice: 'Pakeitimai bus saugomi duomenų bazėje'
   }
 };
 

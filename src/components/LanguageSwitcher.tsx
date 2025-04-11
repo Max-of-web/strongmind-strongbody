@@ -1,10 +1,10 @@
 
-import { Flag } from 'lucide-react';
+import { Flag, Loader2 } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslation } from 'react-i18next';
 
 const LanguageSwitcher = () => {
-  const { language, changeLanguage } = useLanguage();
+  const { language, changeLanguage, isLoading } = useLanguage();
   const { t } = useTranslation();
 
   const toggleLanguage = () => {
@@ -16,8 +16,13 @@ const LanguageSwitcher = () => {
       onClick={toggleLanguage}
       className="language-selector"
       aria-label={`Switch to ${language === 'en' ? 'Lithuanian' : 'English'} language`}
+      disabled={isLoading}
     >
-      <Flag size={18} />
+      {isLoading ? (
+        <Loader2 size={18} className="animate-spin" />
+      ) : (
+        <Flag size={18} />
+      )}
       <span>{language === 'en' ? 'LT' : 'EN'}</span>
     </button>
   );

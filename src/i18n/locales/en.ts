@@ -23,8 +23,8 @@ const translation = {
   },
   homepage: {
     hero: {
-      title: 'Train Your Body. Strengthen Your Mind. Transform Your Life.',
-      subtitle: 'Personalized coaching that combines physiotherapy expertise with psychological support for lasting transformation.',
+      title: 'Level Up Your Life – Build Habits, Gain Momentum',
+      subtitle: 'Through consistent guidance, smart movement, and practical mindset shifts, I help people take control. This isn\'t about perfection. It\'s about showing up, one real step at a time.',
       bookCallButton: 'Book a Discovery Call',
       getFreeGuideButton: 'Get Free Guide'
     },
@@ -111,6 +111,10 @@ const translation = {
       directCommunication: {
         title: 'Direct Communication',
         description: 'Access to me via WhatsApp for questions, form checks, and accountability. You\'re never alone in your journey.'
+      },
+      personalCoachAI: {
+        title: 'Personal Coach AI',
+        description: 'Access to a personalized AI assistant that helps track your progress, answers training questions, and provides motivation between sessions.'
       }
     },
     target: {
@@ -126,32 +130,47 @@ const translation = {
     pricing: {
       sectionTitle: 'Packages & Pricing',
       starter: {
-        title: 'Starter',
-        price: '€50',
-        period: 'per session',
+        title: 'First Session',
+        price: '€60',
+        period: '90 minutes',
         features: [
-          'Single training session',
-          'Form assessment',
-          'Basic movement corrections',
-          'Workout recommendations'
+          'Comprehensive consultation',
+          'Initial training session',
+          'Movement assessment',
+          'Goal setting and motivation mapping',
+          'Program creation',
+          'Access to Personal Coach AI'
         ],
-        buttonText: 'Book Session'
+        buttonText: 'Book First Session'
+      },
+      additionalSession: {
+        title: 'Additional Session',
+        price: '€50',
+        period: '60 minutes',
+        features: [
+          'Follow-up training session',
+          'Program adjustments',
+          'Form corrections',
+          'Progress evaluation'
+        ],
+        buttonText: 'Book After First Session'
       },
       monthly: {
         title: 'Monthly',
-        price: '€150',
+        price: '€200',
         period: 'per month',
         features: [
           '4 sessions per month',
-          'Personalized program',
+          'Individual program',
           'WhatsApp support',
-          'Weekly program adjustments'
+          'Weekly program adjustments',
+          'Personal Coach AI'
         ],
         buttonText: 'Book Consultation'
       },
       transformation: {
         title: 'Transformation',
-        price: '€250',
+        price: '€360',
         period: 'per month',
         recommended: 'RECOMMENDED',
         features: [
@@ -160,7 +179,8 @@ const translation = {
           'Advanced program design',
           'Priority WhatsApp support',
           'Habit development coaching',
-          'Nutritional guidance'
+          'Nutritional guidance',
+          'Personal Coach AI'
         ],
         buttonText: 'Book Consultation'
       }
@@ -240,6 +260,18 @@ const translation = {
           'SEB Arena, Vilnius'
         ]
       }
+    },
+    personalCoachAI: {
+      sectionTitle: 'Personal Coach AI',
+      intro: 'As part of your coaching package, you\'ll get access to a cutting-edge AI assistant designed to support your fitness journey:',
+      features: [
+        'Available 24/7 to answer your training questions',
+        'Helps track your workouts and progress',
+        'Provides form tips and exercise alternatives',
+        'Offers motivation and accountability between sessions',
+        'Customized with my coaching philosophy and approach'
+      ],
+      disclaimer: 'The Personal Coach AI is a supplementary tool designed to enhance your coaching experience, not replace human guidance.'
     }
   },
   cta: {
@@ -327,7 +359,7 @@ const translation = {
     logoutMessage: 'You have been logged out of the admin panel',
     english: 'English',
     lithuanian: 'Lithuanian',
-    storageNotice: 'Changes will be stored in local browser storage'
+    storageNotice: 'Changes will be stored in database'
   }
 };
 
