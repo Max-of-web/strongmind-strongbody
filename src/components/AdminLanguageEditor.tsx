@@ -94,7 +94,6 @@ const AdminLanguageEditor = ({ language }: AdminLanguageEditorProps) => {
           </AccordionItem>
         );
       } else {
-        // Fix: Properly check the type of value before using length property
         const isLongText = typeof value === 'string' && value.length > 50;
         
         return (
@@ -123,16 +122,8 @@ const AdminLanguageEditor = ({ language }: AdminLanguageEditorProps) => {
     });
   };
 
-  // Categories of translations
-  const contentCategories = {
-    header: translations.header || {},
-    footer: translations.footer || {},
-    homepage: translations.homepage || {},
-    coaching: translations.coaching || {},
-    cta: translations.cta || {},
-    forms: translations.forms || {},
-    common: translations.common || {}
-  };
+  // Get all top-level keys from the translation object for tabs
+  const mainSections = Object.keys(translations);
 
   return (
     <div className="space-y-4">
@@ -155,14 +146,11 @@ const AdminLanguageEditor = ({ language }: AdminLanguageEditorProps) => {
       </div>
       
       <Tabs defaultValue="all">
-        <TabsList className="w-full mb-4 grid grid-cols-4 md:grid-cols-7">
+        <TabsList className="w-full mb-4 grid grid-cols-3 md:grid-cols-7">
           <TabsTrigger value="all">All</TabsTrigger>
-          <TabsTrigger value="header">Header</TabsTrigger>
-          <TabsTrigger value="homepage">Homepage</TabsTrigger>
-          <TabsTrigger value="coaching">Coaching</TabsTrigger>
-          <TabsTrigger value="cta">CTA</TabsTrigger>
-          <TabsTrigger value="forms">Forms</TabsTrigger>
-          <TabsTrigger value="common">Common</TabsTrigger>
+          {mainSections.map(section => (
+            <TabsTrigger key={section} value={section}>{section.charAt(0).toUpperCase() + section.slice(1)}</TabsTrigger>
+          ))}
         </TabsList>
         
         <TabsContent value="all" className="border rounded-md">
@@ -171,10 +159,10 @@ const AdminLanguageEditor = ({ language }: AdminLanguageEditorProps) => {
           </Accordion>
         </TabsContent>
         
-        {Object.entries(contentCategories).map(([category, content]) => (
-          <TabsContent key={category} value={category} className="border rounded-md">
+        {mainSections.map(section => (
+          <TabsContent key={section} value={section} className="border rounded-md">
             <Accordion type="multiple" className="w-full">
-              {renderTranslationFields(content, [category])}
+              {renderTranslationFields(translations[section], [section])}
             </Accordion>
           </TabsContent>
         ))}
