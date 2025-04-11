@@ -193,3 +193,31 @@ html {
   --theme-darktangerine: #D17122;
   --theme-darkmarine: #133B3A;
 }
+
+/* Improved dark mode text readability */
+.dark {
+  --theme-text-high-contrast: #FFFFFF;
+  --theme-text-medium-contrast: #E4E4E7;
+  --theme-text-low-contrast: #A1A1AA;
+}
+
+.dark p, .dark span, .dark li:not(.text-theme-textlight) {
+  color: var(--theme-text-medium-contrast);
+}
+
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+  color: var(--theme-text-high-contrast);
+}
+
+.dark .text-muted-foreground {
+  color: var(--theme-text-low-contrast);
+}
+
+/* Improved dark mode background contrast */
+.dark .bg-elegant-charcoal {
+  background-color: hsl(215 30% 12%);
+}
+
+.dark .border-muted {
+  border-color: rgba(255, 255, 255, 0.1);
+}

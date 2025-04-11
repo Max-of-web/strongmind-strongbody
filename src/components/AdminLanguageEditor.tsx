@@ -7,6 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
 import { Save, RefreshCcw } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 // Import the original translation files for reference
 import enTranslation from '@/i18n/locales/en';
@@ -122,6 +123,17 @@ const AdminLanguageEditor = ({ language }: AdminLanguageEditorProps) => {
     });
   };
 
+  // Categories of translations
+  const contentCategories = {
+    header: translations.header || {},
+    footer: translations.footer || {},
+    homepage: translations.homepage || {},
+    coaching: translations.coaching || {},
+    cta: translations.cta || {},
+    forms: translations.forms || {},
+    common: translations.common || {}
+  };
+
   return (
     <div className="space-y-4">
       <div className="flex space-x-2 justify-end mb-4">
@@ -142,11 +154,31 @@ const AdminLanguageEditor = ({ language }: AdminLanguageEditorProps) => {
         </Button>
       </div>
       
-      <div className="border rounded-md">
-        <Accordion type="multiple" className="w-full">
-          {renderTranslationFields(translations)}
-        </Accordion>
-      </div>
+      <Tabs defaultValue="all">
+        <TabsList className="w-full mb-4 grid grid-cols-4 md:grid-cols-7">
+          <TabsTrigger value="all">All</TabsTrigger>
+          <TabsTrigger value="header">Header</TabsTrigger>
+          <TabsTrigger value="homepage">Homepage</TabsTrigger>
+          <TabsTrigger value="coaching">Coaching</TabsTrigger>
+          <TabsTrigger value="cta">CTA</TabsTrigger>
+          <TabsTrigger value="forms">Forms</TabsTrigger>
+          <TabsTrigger value="common">Common</TabsTrigger>
+        </TabsList>
+        
+        <TabsContent value="all" className="border rounded-md">
+          <Accordion type="multiple" className="w-full">
+            {renderTranslationFields(translations)}
+          </Accordion>
+        </TabsContent>
+        
+        {Object.entries(contentCategories).map(([category, content]) => (
+          <TabsContent key={category} value={category} className="border rounded-md">
+            <Accordion type="multiple" className="w-full">
+              {renderTranslationFields(content, [category])}
+            </Accordion>
+          </TabsContent>
+        ))}
+      </Tabs>
     </div>
   );
 };
