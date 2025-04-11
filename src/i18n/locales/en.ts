@@ -66,7 +66,7 @@ const translation = {
     },
     successToast: {
       title: 'Application Successfully Submitted!',
-      description: 'I'll contact you soon to discuss next steps.'
+      description: 'I\'ll contact you soon to discuss next steps.'
     },
     errorToast: {
       title: 'Something went wrong',

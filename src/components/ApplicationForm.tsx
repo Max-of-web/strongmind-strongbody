@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { toast } from 'sonner';
 import { Calendar, MessageSquare } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
+import { useTranslation } from 'react-i18next';
 import {
   Dialog,
   DialogContent,
@@ -22,6 +23,7 @@ const ApplicationForm = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showThankYouDialog, setShowThankYouDialog] = useState(false);
+  const { t } = useTranslation();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -57,8 +59,8 @@ const ApplicationForm = () => {
       
       if (error) throw error;
       
-      toast.success("Application submitted successfully!", {
-        description: "I'll contact you soon to discuss next steps."
+      toast.success(t('applicationForm.successToast.title'), {
+        description: t('applicationForm.successToast.description')
       });
 
       setFormData({
@@ -72,8 +74,8 @@ const ApplicationForm = () => {
       setShowThankYouDialog(true);
     } catch (error: any) {
       console.error('Error submitting form:', error);
-      toast.error("Something went wrong", {
-        description: error.message || "Please try again later."
+      toast.error(t('applicationForm.errorToast.title'), {
+        description: error.message || t('applicationForm.errorToast.description')
       });
     } finally {
       setIsSubmitting(false);
@@ -84,12 +86,12 @@ const ApplicationForm = () => {
     <>
       <div className="bg-elegant-charcoal bg-opacity-40 p-6 md:p-8 rounded-lg border border-elegant-light border-opacity-10">
         <h3 className="text-2xl font-semibold mb-6">
-          Apply for 1-on-1 Coaching
+          {t('applicationForm.title')}
         </h3>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label htmlFor="name" className="block mb-2">
-              Your Name
+              {t('applicationForm.name')}
             </label>
             <input
               type="text"
@@ -104,7 +106,7 @@ const ApplicationForm = () => {
           
           <div>
             <label htmlFor="email" className="block mb-2">
-              Email Address
+              {t('applicationForm.email')}
             </label>
             <input
               type="email"
@@ -119,7 +121,7 @@ const ApplicationForm = () => {
           
           <div>
             <label htmlFor="goal" className="block mb-2">
-              What is your main goal?
+              {t('applicationForm.goal')}
             </label>
             <textarea
               id="goal"
@@ -128,13 +130,14 @@ const ApplicationForm = () => {
               onChange={handleChange}
               required
               rows={3}
+              placeholder={t('applicationForm.goalPlaceholder')}
               className="form-input"
             />
           </div>
           
           <div>
             <label htmlFor="challenge" className="block mb-2">
-              What is your current challenge?
+              {t('applicationForm.challenge')}
             </label>
             <textarea
               id="challenge"
@@ -143,6 +146,7 @@ const ApplicationForm = () => {
               onChange={handleChange}
               required
               rows={3}
+              placeholder={t('applicationForm.challengePlaceholder')}
               className="form-input"
             />
           </div>
@@ -158,7 +162,7 @@ const ApplicationForm = () => {
               className="mt-1 mr-3"
             />
             <label htmlFor="readyForChange">
-              I am ready to commit to a structured program and make changes to achieve my goals.
+              {t('applicationForm.change')}
             </label>
           </div>
           
@@ -167,7 +171,7 @@ const ApplicationForm = () => {
             disabled={isSubmitting}
             className={`cta-button-primary w-full ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
           >
-            {isSubmitting ? 'Submitting...' : 'Submit Application'}
+            {isSubmitting ? t('applicationForm.submitting') : t('applicationForm.submit')}
           </button>
         </form>
       </div>
@@ -175,13 +179,13 @@ const ApplicationForm = () => {
       <Dialog open={showThankYouDialog} onOpenChange={setShowThankYouDialog}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
-            <DialogTitle className="text-xl">Application Received!</DialogTitle>
+            <DialogTitle className="text-xl">{t('applicationForm.thankYou.title')}</DialogTitle>
             <DialogDescription>
-              Thank you for your interest in personal coaching. I'll review your application and get back to you soon.
+              {t('applicationForm.thankYou.description')}
             </DialogDescription>
           </DialogHeader>
           <div className="grid gap-4 py-4">
-            <p>If you'd like to speed up the process, you can connect with me directly:</p>
+            <p>{t('applicationForm.thankYou.connect')}</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <a 
                 href="https://wa.me/37067951040" 
@@ -190,25 +194,25 @@ const ApplicationForm = () => {
                 className="flex items-center justify-center gap-2 bg-green-600 text-white font-semibold px-4 py-3 rounded-md hover:bg-green-700 transition-colors"
               >
                 <MessageSquare size={18} />
-                <span>WhatsApp Chat</span>
+                <span>{t('applicationForm.thankYou.whatsApp')}</span>
               </a>
               <a 
                 href="https://calendly.com/lipskis-paulius/asmenine-treniruote" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 bg-elegant-navy text-white font-semibold px-4 py-3 rounded-md hover:bg-opacity-90 transition-colors"
+                className="flex items-center justify-center gap-2 bg-theme-navy dark:bg-theme-lightnavy text-white font-semibold px-4 py-3 rounded-md hover:bg-opacity-90 transition-colors"
               >
                 <Calendar size={18} />
-                <span>Book a Call</span>
+                <span>{t('applicationForm.thankYou.bookCall')}</span>
               </a>
             </div>
           </div>
           <DialogFooter>
             <button 
               onClick={() => setShowThankYouDialog(false)} 
-              className="w-full sm:w-auto text-elegant-charcoal bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-md transition-colors"
+              className="w-full sm:w-auto text-foreground bg-muted hover:bg-muted/80 px-4 py-2 rounded-md transition-colors"
             >
-              Close
+              {t('applicationForm.thankYou.close')}
             </button>
           </DialogFooter>
         </DialogContent>
