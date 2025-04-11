@@ -93,12 +93,15 @@ const AdminLanguageEditor = ({ language }: AdminLanguageEditorProps) => {
           </AccordionItem>
         );
       } else {
+        // Fix: Properly check the type of value before using length property
+        const isLongText = typeof value === 'string' && value.length > 50;
+        
         return (
           <div key={pathString} className="p-2 border-b border-muted">
             <div className="flex items-center space-x-2">
               <div className="w-1/3 text-sm font-medium text-muted-foreground">{key}:</div>
               <div className="w-2/3">
-                {value && value.length > 50 ? (
+                {isLongText ? (
                   <Textarea 
                     value={value as string} 
                     onChange={(e) => handleTranslationChange(currentPath, e.target.value)}
