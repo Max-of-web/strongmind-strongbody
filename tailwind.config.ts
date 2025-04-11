@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -71,6 +72,22 @@ export default {
 					light: '#FFFFFF',        // Pure white for contrast
 					offwhite: '#F8F8F8',     // Off-white for backgrounds
 					gold: '#D4AF37'          // Gold for secondary accents
+				},
+				// New theme colors
+				theme: {
+					navy: '#0A2342',          // Primary Navy Blue
+					marine: '#1C5B5A',         // Marine Green
+					tangerine: '#F7882F',      // Tangerine accent
+					darknavy: '#051326',       // Darker Navy for dark mode
+					lightnavy: '#1E3A5F',      // Lighter Navy for hover states
+					darkmarine: '#133B3A',     // Darker Marine for dark mode
+					lightmarine: '#2C7F7E',    // Lighter Marine for hover states
+					darktangerine: '#D17122',  // Darker Tangerine for dark mode
+					lighttangerine: '#FFA553', // Lighter Tangerine for hover states
+					lightgray: '#F0F2F5',      // Light background for light mode
+					darkgray: '#121212',       // Dark background for dark mode
+					textlight: '#FFFFFF',      // Light text
+					textdark: '#2D3748'        // Dark text
 				}
 			},
 			borderRadius: {

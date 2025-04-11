@@ -7,33 +7,34 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Light Mode Variables */
+    --background: 210 20% 98%;
+    --foreground: 215 25% 27%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 215 25% 27%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 215 25% 27%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 210 65% 15%;
+    --primary-foreground: 210 20% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 175 53% 23%;
+    --secondary-foreground: 210 20% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 215 16% 90%;
+    --muted-foreground: 215 16% 46.9%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 33 92% 57%;
+    --accent-foreground: 215 25% 27%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 210 20% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 215 25% 27%;
 
     --radius: 0.5rem;
 
@@ -48,33 +49,34 @@
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 215 30% 8%;
+    --foreground: 210 20% 98%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 215 30% 12%;
+    --card-foreground: 210 20% 98%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 215 30% 12%;
+    --popover-foreground: 210 20% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 210 65% 25%;
+    --primary-foreground: 210 20% 98%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 175 53% 35%;
+    --secondary-foreground: 210 20% 98%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 215 30% 18%;
+    --muted-foreground: 215 20% 65.1%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 33 92% 50%;
+    --accent-foreground: 215 30% 12%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 210 20% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
+    --border: 215 30% 18%;
+    --input: 215 30% 18%;
     --ring: 212.7 26.8% 83.9%;
+    
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -92,18 +94,25 @@
   }
 
   body {
-    @apply bg-elegant-charcoal text-elegant-silver font-sans;
+    @apply bg-background text-foreground font-sans transition-colors duration-300;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display font-semibold text-elegant-light;
+    @apply font-display font-semibold text-foreground;
   }
 }
 
 @layer components {
   .hero-section {
     @apply min-h-[85vh] flex flex-col justify-center relative overflow-hidden;
-    background: linear-gradient(to bottom, rgba(33, 33, 33, 0.9), rgba(33, 33, 33, 0.95)), url('/lovable-uploads/b4413382-3998-4c2e-a754-75a067048c2d.png');
+    background: linear-gradient(to bottom, rgba(10, 35, 66, 0.9), rgba(10, 35, 66, 0.95)), url('/lovable-uploads/b4413382-3998-4c2e-a754-75a067048c2d.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .dark .hero-section {
+    background: linear-gradient(to bottom, rgba(5, 19, 38, 0.92), rgba(5, 19, 38, 0.97)), url('/lovable-uploads/b4413382-3998-4c2e-a754-75a067048c2d.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -118,15 +127,15 @@
   }
 
   .cta-button-primary {
-    @apply bg-elegant-navy text-elegant-light font-semibold px-6 py-3 rounded-md transition-all duration-300 hover:bg-opacity-90 hover:translate-y-[-2px] shadow-md;
+    @apply bg-theme-navy dark:bg-theme-lightnavy text-theme-textlight font-semibold px-6 py-3 rounded-md transition-all duration-300 hover:bg-theme-lightnavy dark:hover:bg-theme-navy hover:translate-y-[-2px] shadow-md;
   }
 
   .cta-button-secondary {
-    @apply bg-transparent text-elegant-silver border border-elegant-silver font-semibold px-6 py-3 rounded-md transition-all duration-300 hover:bg-elegant-silver hover:text-elegant-charcoal hover:translate-y-[-2px];
+    @apply bg-transparent text-foreground border border-theme-navy dark:border-theme-textlight font-semibold px-6 py-3 rounded-md transition-all duration-300 hover:bg-theme-marine hover:text-theme-textlight dark:hover:bg-theme-marine hover:border-transparent hover:translate-y-[-2px];
   }
 
   .section-title {
-    @apply text-3xl md:text-4xl font-bold mb-6 relative inline-block after:content-[''] after:absolute after:bottom-[-8px] after:left-0 after:w-20 after:h-1 after:bg-elegant-gold;
+    @apply text-3xl md:text-4xl font-bold mb-6 relative inline-block after:content-[''] after:absolute after:bottom-[-8px] after:left-0 after:w-20 after:h-1 after:bg-theme-tangerine dark:after:bg-theme-darktangerine;
   }
 
   .card-hover {
@@ -134,15 +143,23 @@
   }
   
   .form-input {
-    @apply w-full p-3 rounded-md bg-elegant-charcoal bg-opacity-50 border border-elegant-silver border-opacity-20 text-elegant-light focus:outline-none focus:ring-2 focus:ring-elegant-gold focus:border-transparent;
+    @apply w-full p-3 rounded-md bg-background border border-muted text-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent;
   }
   
   .testimonial-card {
-    @apply bg-elegant-charcoal bg-opacity-50 p-6 rounded-lg shadow-md border border-elegant-silver border-opacity-10;
+    @apply bg-card p-6 rounded-lg shadow-md border border-muted;
   }
 
   .elegant-card {
-    @apply bg-elegant-charcoal bg-opacity-70 rounded-lg p-8 border border-elegant-darksilver border-opacity-20 shadow-lg;
+    @apply bg-card rounded-lg p-8 border border-muted shadow-lg;
+  }
+  
+  .language-selector {
+    @apply flex items-center gap-2 bg-theme-navy dark:bg-theme-darknavy text-theme-textlight px-3 py-2 rounded-md cursor-pointer transition-colors duration-200 hover:bg-theme-tangerine dark:hover:bg-theme-darktangerine;
+  }
+  
+  .theme-toggle {
+    @apply flex items-center gap-2 bg-theme-marine dark:bg-theme-darkmarine text-theme-textlight px-3 py-2 rounded-md cursor-pointer transition-colors duration-200 hover:bg-theme-lightmarine dark:hover:bg-theme-marine;
   }
 }
 
