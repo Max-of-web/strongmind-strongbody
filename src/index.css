@@ -93,8 +93,8 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display font-semibold text-foreground dark:text-white;
-  }
+    @apply font-display font-semibold text-foreground dark:text-white leading-tight tracking-tight;
+  }  
 }
 
 @layer components {
@@ -136,8 +136,9 @@
   }
 
   .cta-button-primary {
-    @apply bg-theme-tangerine text-white font-semibold px-6 py-3 rounded-md transition-all duration-300 hover:bg-theme-lighttangerine dark:hover:bg-theme-lighttangerine hover:translate-y-[-2px] shadow-md;
+    @apply bg-theme-tangerine text-white font-semibold px-6 py-3 rounded-md transition-all duration-300 hover:bg-theme-lighttangerine dark:hover:bg-theme-lighttangerine hover:translate-y-[-2px] shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-theme-tangerine;
   }
+  
 
   .cta-button-secondary {
     @apply bg-transparent text-theme-navy dark:text-white border border-theme-marine dark:border-white font-semibold px-6 py-3 rounded-md transition-all duration-300 hover:bg-theme-tangerine hover:text-white dark:hover:bg-theme-tangerine hover:border-transparent hover:translate-y-[-2px];
@@ -157,8 +158,9 @@
   }
   
   .form-input {
-    @apply w-full p-3 rounded-md bg-background border border-input text-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent;
+    @apply w-full p-3 rounded-md bg-background border border-input text-foreground placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent;
   }
+  
   
   .testimonial-card {
     @apply bg-background p-6 rounded-lg shadow-md border border-input text-foreground dark:text-white;
