@@ -1,9 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Tailwind directives have been moved to App.css */
 
 @layer base {
   :root {
@@ -84,29 +82,41 @@
 }
 
 @layer base {
-  * {
-    /* Removed border-border to fix unwanted borders */
-  }
-
   body {
-    @apply bg-background text-foreground font-sans transition-colors duration-300;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: 'Inter', sans-serif;
+    transition: colors 300ms;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display font-semibold text-foreground dark:text-white leading-tight tracking-tight;
-  }  
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: hsl(var(--foreground));
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+
+  .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+    color: hsl(var(--foreground));
+  }
 }
 
 @layer components {
   .hero-section {
-    @apply min-h-[85vh] flex flex-col justify-center relative overflow-hidden;
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
     background: linear-gradient(to bottom, rgba(10, 35, 66, 0.9), rgba(10, 35, 66, 0.95)), url('/lovable-uploads/b4413382-3998-4c2e-a754-75a067048c2d.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
   }
 
-  /* Instead of blanket override, we use scoped selectors */
+  /* Scoped selectors for hero section */
   .hero-section h1,
   .hero-section h2,
   .hero-section h3,
@@ -117,7 +127,7 @@
   .hero-section span,
   .hero-section div,
   .hero-section a:not(.bg-theme-tangerine) {
-    @apply text-white;
+    color: white;
   }
 
   .dark .hero-section {
@@ -128,20 +138,81 @@
   }
 
   .section-padding {
-    @apply py-16 md:py-20 px-4 md:px-8 lg:px-12;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .section-padding {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .section-padding {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
   }
 
   .container-width {
-    @apply max-w-7xl mx-auto w-full;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
   }
 
   .cta-button-primary {
-    @apply bg-theme-tangerine text-white font-semibold px-6 py-3 rounded-md transition-all duration-300 hover:bg-theme-lighttangerine dark:hover:bg-theme-lighttangerine hover:translate-y-[-2px] shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-theme-tangerine;
+    background-color: hsl(33, 92%, 57%);
+    color: white;
+    font-weight: 600;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-radius: 0.375rem;
+    transition: all 300ms;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
   
+  .cta-button-primary:hover {
+    background-color: hsl(33, 90%, 62%);
+    transform: translateY(-2px);
+  }
+
+  .cta-button-primary:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(247, 136, 47, 0.5);
+  }
 
   .cta-button-secondary {
-    @apply bg-transparent text-theme-navy dark:text-white border border-theme-marine dark:border-white font-semibold px-6 py-3 rounded-md transition-all duration-300 hover:bg-theme-tangerine hover:text-white dark:hover:bg-theme-tangerine hover:border-transparent hover:translate-y-[-2px];
+    background-color: transparent;
+    color: hsl(210, 65%, 15%);
+    border: 1px solid hsl(175, 53%, 23%);
+    font-weight: 600;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-radius: 0.375rem;
+    transition: all 300ms;
+  }
+
+  .dark .cta-button-secondary {
+    color: white;
+    border-color: white;
+  }
+  
+  .cta-button-secondary:hover {
+    background-color: hsl(33, 92%, 57%);
+    color: white;
+    border-color: transparent;
+    transform: translateY(-2px);
   }
 
   .cta-button-secondary:disabled {
@@ -150,32 +221,114 @@
   }
   
   .section-title {
-    @apply text-3xl md:text-4xl font-bold mb-6 relative inline-block after:content-[''] after:absolute after:bottom-[-8px] after:left-0 after:w-20 after:h-1 after:bg-theme-tangerine dark:after:bg-theme-tangerine text-foreground dark:text-white;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+    color: hsl(var(--foreground));
+  }
+  
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 5rem;
+    height: 0.25rem;
+    background-color: hsl(33, 92%, 57%);
+  }
+
+  .dark .section-title {
+    color: white;
+  }
+  
+  .dark .section-title::after {
+    background-color: hsl(33, 92%, 57%);
   }
 
   .card-hover {
-    @apply transition-all duration-300 hover:translate-y-[-5px] hover:shadow-lg text-foreground dark:text-white;
+    transition: all 300ms;
+    color: hsl(var(--foreground));
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  .dark .card-hover {
+    color: white;
   }
   
   .form-input {
-    @apply w-full p-3 rounded-md bg-background border border-input text-foreground placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent;
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 0.375rem;
+    background-color: hsl(var(--background));
+    border: 1px solid hsl(var(--input));
+    color: hsl(var(--foreground));
   }
   
+  .form-input::placeholder {
+    color: #9CA3AF;
+  }
+  
+  .form-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px hsl(var(--accent));
+    border-color: transparent;
+  }
   
   .testimonial-card {
-    @apply bg-background p-6 rounded-lg shadow-md border border-input text-foreground dark:text-white;
+    background-color: hsl(var(--background));
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    border: 1px solid hsl(var(--input));
+    color: hsl(var(--foreground));
+  }
+
+  .dark .testimonial-card {
+    background-color: var(--theme-darknavy, #0A2342); 
+    border-color: var(--theme-lightnavy, #375177);
+    color: white;
   }
 
   .elegant-card {
-    @apply bg-white rounded-lg p-8 border border-input shadow-lg text-foreground dark:text-white;
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    border: 1px solid hsl(var(--input));
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    color: hsl(var(--foreground));
+  }
+  
+  .dark .elegant-card {
+    color: white;
   }
   
   .language-selector {
-    @apply flex items-center gap-2 text-white px-3 py-2 rounded-md cursor-pointer transition-colors duration-200;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    padding: 0.75rem 0.75rem;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 200ms;
   }
   
   .theme-toggle {
-    @apply flex items-center gap-2 text-white px-3 py-2 rounded-md cursor-pointer transition-colors duration-200;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    padding: 0.75rem 0.75rem;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 200ms;
   }
 }
 
@@ -237,24 +390,63 @@ html {
 
 /* Typography improvements */
 p, li, span {
-  @apply text-base md:text-lg leading-relaxed font-medium;
-  /* Removed invalid min-font-size property */
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  p, li, span {
+    font-size: 1.125rem;
+  }
 }
 
 h1 {
-  @apply text-4xl md:text-5xl leading-tight font-bold;
+  font-size: 2.25rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
 }
 
 h2 {
-  @apply text-3xl md:text-4xl leading-tight font-bold;
+  font-size: 1.875rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  h2 {
+    font-size: 2.25rem;
+  }
 }
 
 h3 {
-  @apply text-2xl md:text-3xl leading-tight font-semibold;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  h3 {
+    font-size: 1.875rem;
+  }
 }
 
 h4 {
-  @apply text-xl md:text-2xl leading-tight font-semibold;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  h4 {
+    font-size: 1.5rem;
+  }
 }
 
 /* Fix for testimonial cards using CSS variables */
@@ -278,12 +470,13 @@ h4 {
 
 /* Feature cards dark mode fixes with CSS variables */
 .feature-card-dark {
-  @apply text-foreground dark:text-white;
+  color: hsl(var(--foreground));
 }
 
 .dark .feature-card-dark {
   background-color: var(--theme-darknavy, #0A2342);
   border-color: var(--theme-lightnavy, #1C345F);
+  color: white;
 }
 
 .dark .feature-card-dark h3,
@@ -293,7 +486,7 @@ h4 {
 
 /* Credential badges with proper contrast */
 .credential-badge {
-  @apply text-white dark:text-white;
+  color: white;
 }
 
 .dark .credential-badge {
@@ -332,7 +525,7 @@ h4 {
 
 /* Price cards with consistent text colors */
 .price-card {
-  @apply text-foreground dark:text-white;
+  color: hsl(var(--foreground));
 }
 
 .dark .price-card {
@@ -358,7 +551,7 @@ h4 {
 [class*="bg-theme-navy"],
 [class*="bg-theme-darknavy"],
 .bg-elegant-charcoal {
-  @apply text-white;
+  color: white;
 }
 
 [class*="bg-theme-navy"] p,
