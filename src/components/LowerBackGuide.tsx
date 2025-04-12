@@ -1,16 +1,13 @@
-
 import { useState } from 'react';
 import { Check, Shield } from 'lucide-react';
 import { toast } from 'sonner';
-
 const LowerBackGuide = () => {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate API call
     setTimeout(() => {
       toast.success("Success! Check your email for the PDF guide.", {
@@ -20,13 +17,11 @@ const LowerBackGuide = () => {
       setIsSubmitting(false);
     }, 800);
   };
-
-  return (
-    <section className="py-20 bg-elegant-offwhite">
+  return <section className="py-20 bg-elegant-offwhite">
       <div className="container-width px-4 md:px-8">
         <div className="flex flex-col md:flex-row gap-10 items-stretch">
           {/* Left column - Guide information */}
-          <div className="md:w-1/2">
+          <div className="md:w-1/2 bg-slate-900 rounded-md mx-0 px-[35px] py-[30px]">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-elegant-charcoal">
               Get Your Free Lower Back Pain Guide
             </h2>
@@ -63,7 +58,7 @@ const LowerBackGuide = () => {
 
             <div className="flex items-center text-elegant-charcoal opacity-70 text-sm mt-10 border-t border-elegant-darksilver pt-4">
               <Shield size={18} className="mr-2 text-elegant-gold" />
-              <span>Your email is safe with me. I'll never share it with anyone else.</span>
+              <span className="text-white">Your email is safe with me. I'll never share it with anyone else.</span>
             </div>
           </div>
 
@@ -78,19 +73,8 @@ const LowerBackGuide = () => {
               </p>
               
               <form onSubmit={handleSubmit} className="flex flex-col space-y-4 mt-auto">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Your email address"
-                  required
-                  className="form-input"
-                />
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className={`cta-button-primary ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
-                >
+                <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Your email address" required className="form-input" />
+                <button type="submit" disabled={isSubmitting} className={`cta-button-primary ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}>
                   {isSubmitting ? 'Sending...' : 'Download Free Guide'}
                 </button>
                 <p className="text-xs text-elegant-darksilver mt-2">
@@ -101,8 +85,6 @@ const LowerBackGuide = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default LowerBackGuide;
