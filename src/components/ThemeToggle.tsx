@@ -14,7 +14,7 @@ const ThemeToggle = () => {
       aria-label={theme === 'light' ? t('theme.dark') : t('theme.light')}
     >
       {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
-      <span className="sr-only md:not-sr-only">
+      <span className="sr-only md:not-sr-only text-white">
         {theme === 'light' ? t('theme.dark') : t('theme.light')}
       </span>
     </button>
