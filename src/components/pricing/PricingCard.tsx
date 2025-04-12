@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import PricingFeatureList from './PricingFeatureList';
 import { useTheme } from '@/hooks/useTheme';
+import BookingButton from './BookingButton';
 
 interface PricingCardProps {
   pricingKey: string;
@@ -95,33 +96,11 @@ const PricingCard = ({
         />
       </CardContent>
       <CardFooter>
-        <button 
+        <BookingButton 
           onClick={onBookingClick}
-          style={{
-            backgroundColor: '#0A2342', // Navy blue - always dark
-            color: '#FFFFFF',           // White text - always light
-            fontWeight: '600',
-            width: '100%',
-            padding: '0.75rem 1.5rem',
-            borderRadius: '0.375rem',
-            border: 'none',
-            boxShadow: '0 1px 3px rgba(0,0,0,0.1)',
-            cursor: 'pointer',
-            transition: 'all 300ms ease'
-          }}
-          onMouseOver={(e) => {
-            e.currentTarget.style.backgroundColor = '#375177'; // Lighter navy for hover
-            e.currentTarget.style.transform = 'translateY(-1px)';
-            e.currentTarget.style.boxShadow = '0 2px 4px rgba(0,0,0,0.15)';
-          }}
-          onMouseOut={(e) => {
-            e.currentTarget.style.backgroundColor = '#0A2342'; // Back to navy
-            e.currentTarget.style.transform = 'translateY(0)';
-            e.currentTarget.style.boxShadow = '0 1px 3px rgba(0,0,0,0.1)';
-          }}
-        >
-          {t(`coaching.pricing.${pricingKey}.buttonText`)}
-        </button>
+          buttonText={t(`coaching.pricing.${pricingKey}.buttonText`)}
+          packageType={pricingKey as any}
+        />
       </CardFooter>
     </Card>
   );
