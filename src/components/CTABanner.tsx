@@ -1,6 +1,7 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import CTAButton from './CTAButton';
+import { useTheme } from '@/hooks/useTheme';
 
 interface CTABannerProps {
   message: string;
@@ -9,18 +10,10 @@ interface CTABannerProps {
 }
 
 const CTABanner: React.FC<CTABannerProps> = ({ message, buttonText, buttonLink }) => {
+  const { theme } = useTheme();
+
   // Define styles using CSS variables via a style object
-  const bannerStyle = {
-    backgroundColor: 'var(--banner-bg, #1e293b)',
-    color: 'var(--banner-text, white)'
-  };
-
-  const headingStyle = {
-    color: 'var(--banner-heading, white)'
-  };
-
-  // Create a style element to inject CSS variables
-  React.useEffect(() => {
+  useEffect(() => {
     // Add CSS variables to document root if not already present
     const root = document.documentElement;
     if (!root.style.getPropertyValue('--banner-bg')) {
@@ -30,7 +23,6 @@ const CTABanner: React.FC<CTABannerProps> = ({ message, buttonText, buttonLink }
     }
 
     // Add dark mode specific variables
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     const handleChange = () => {
       if (document.documentElement.classList.contains('dark')) {
         root.style.setProperty('--banner-bg', '#0f172a');
@@ -49,6 +41,15 @@ const CTABanner: React.FC<CTABannerProps> = ({ message, buttonText, buttonLink }
       document.removeEventListener('themeChange', handleChange);
     };
   }, []);
+
+  const bannerStyle: React.CSSProperties = {
+    backgroundColor: 'var(--banner-bg, #1e293b)',
+    color: 'var(--banner-text, white)'
+  };
+
+  const headingStyle: React.CSSProperties = {
+    color: 'var(--banner-heading, white)'
+  };
 
   return (
     <section 

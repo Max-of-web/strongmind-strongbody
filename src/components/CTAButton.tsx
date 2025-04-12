@@ -49,7 +49,7 @@ const CTAButton: React.FC<CTAButtonProps> = ({
   }, [theme]);
 
   // Define inline styles based on props
-  const buttonStyle = {
+  const buttonStyle: React.CSSProperties = {
     display: 'inline-flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -59,7 +59,7 @@ const CTAButton: React.FC<CTAButtonProps> = ({
     transition: 'all 300ms',
     cursor: disabled ? 'not-allowed' : 'pointer',
     opacity: disabled ? '0.5' : '1',
-    backgroundColor: secondary ? 'transparent' : 'var(--primary-btn-bg, #f97316)',
+    backgroundColor: secondary ? 'var(--secondary-btn-bg, transparent)' : 'var(--primary-btn-bg, #f97316)',
     color: secondary ? 'var(--secondary-btn-text, #1e293b)' : 'var(--primary-btn-text, white)',
     border: secondary ? '1px solid var(--secondary-btn-border, #1e293b)' : 'none',
     boxShadow: secondary ? 'none' : '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
