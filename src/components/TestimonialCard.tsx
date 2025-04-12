@@ -14,7 +14,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ quote, name, image })
       <div className="flex flex-col h-full">
         <div className="mb-4">
           <Quote 
-            className="w-8 h-8 text-theme-tangerine" 
+            className="w-8 h-8 text-theme-tangerine dark:text-theme-lighttangerine" 
             aria-hidden="true"
           />
         </div>

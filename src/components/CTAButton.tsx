@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useTheme } from '@/contexts/ThemeContext';
 
 interface CTAButtonProps {
   children: React.ReactNode;
@@ -24,11 +23,9 @@ const CTAButton: React.FC<CTAButtonProps> = ({
   type = 'button',
   external = false,
 }) => {
-  const { theme } = useTheme();
-  
   const baseStyles = secondary
-    ? "inline-flex items-center justify-center px-6 py-3 rounded-md font-semibold transition-all duration-300 bg-transparent border border-theme-marine dark:border-white text-theme-darknavy dark:text-white hover:bg-theme-tangerine hover:text-white hover:border-transparent hover:transform hover:-translate-y-1 disabled:opacity-50 disabled:pointer-events-none"
-    : "inline-flex items-center justify-center px-6 py-3 rounded-md font-semibold transition-all duration-300 bg-theme-tangerine dark:bg-theme-tangerine text-white shadow-md hover:bg-theme-lighttangerine dark:hover:bg-theme-lighttangerine hover:transform hover:-translate-y-1 disabled:opacity-50 disabled:pointer-events-none";
+    ? "inline-flex items-center justify-center px-6 py-3 rounded-md font-semibold transition-all duration-300 bg-transparent border border-theme-marine dark:border-slate-400 text-theme-darknavy dark:text-white hover:bg-theme-tangerine hover:border-theme-tangerine dark:hover:bg-theme-tangerine hover:text-white dark:hover:text-white disabled:opacity-50 disabled:pointer-events-none"
+    : "inline-flex items-center justify-center px-6 py-3 rounded-md font-semibold transition-all duration-300 bg-theme-tangerine text-white shadow-md hover:bg-theme-lighttangerine dark:hover:bg-theme-lighttangerine hover:transform hover:-translate-y-1 disabled:opacity-50 disabled:pointer-events-none";
 
   const styles = `${baseStyles} ${className}`;
 

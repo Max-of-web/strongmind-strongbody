@@ -2,7 +2,6 @@
 import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Check } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import CTAButton from './CTAButton';
 
 const PricingCards = () => {
@@ -25,7 +24,7 @@ const PricingCards = () => {
         </CardHeader>
         <CardContent className="space-y-2">
           <ul className="space-y-2">
-            {[0,, 1, 2, 3, 4, 5].map((index) => (
+            {[0, 1, 2, 3, 4, 5].map((index) => (
               t(`coaching.pricing.starter.features.${index}`) ? (
                 <li key={index} className="flex items-start">
                   <Check className="h-5 w-5 text-theme-tangerine dark:text-theme-lighttangerine mr-2 mt-0.5" />
@@ -135,7 +134,7 @@ const PricingCards = () => {
         <CardFooter>
           <CTAButton 
             onClick={openBookingLink}
-            className="w-full bg-theme-tangerine dark:bg-theme-lighttangerine hover:bg-theme-tangerine/90 dark:hover:bg-theme-lighttangerine/90 text-white"
+            className="w-full"
           >
             {t('coaching.pricing.transformation.buttonText')}
           </CTAButton>
