@@ -238,23 +238,25 @@ h4 {
 
 /* Fix for testimonial cards and other dark elements */
 .dark .testimonial-card {
-  @apply bg-theme-navy border-theme-lightnavy;
+  background-color: #0A2342; /* Using direct color value instead of theme class */
+  border-color: #375177; /* Using direct color value instead of theme class */
 }
 
+/* Fix for the circular dependency - using direct color values instead of @apply */
 .dark .bg-elegant-charcoal p,
-.dark .bg-theme-navy p, 
-.dark .bg-theme-darknavy p {
-  @apply text-white;
+.dark [class*="bg-theme-navy"] p, 
+.dark [class*="bg-theme-darknavy"] p {
+  color: white;
 }
 
 .dark .bg-elegant-charcoal .section-title,
-.dark .bg-theme-navy .section-title, 
-.dark .bg-theme-darknavy .section-title {
-  @apply text-white;
+.dark [class*="bg-theme-navy"] .section-title, 
+.dark [class*="bg-theme-darknavy"] .section-title {
+  color: white;
 }
 
 .dark .bg-elegant-charcoal h3,
-.dark .bg-theme-navy h3, 
-.dark .bg-theme-darknavy h3 {
-  @apply text-white;
+.dark [class*="bg-theme-navy"] h3, 
+.dark [class*="bg-theme-darknavy"] h3 {
+  color: white;
 }
