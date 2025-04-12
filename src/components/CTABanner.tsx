@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface CTABannerProps {
@@ -9,9 +8,9 @@ interface CTABannerProps {
 
 const CTABanner: React.FC<CTABannerProps> = ({ message, buttonText, buttonLink }) => {
   return (
-    <section className="py-12 bg-elegant-charcoal dark:bg-theme-navy">
+    <section className="py-12 bg-elegant-charcoal text-white dark:bg-theme-navy">
       <div className="container-width px-4 text-center">
-        <h3 className="text-xl md:text-2xl font-semibold mb-6 text-white">
+        <h3 className="text-xl md:text-2xl font-semibold mb-6">
           {message}
         </h3>
         <a
@@ -22,7 +21,6 @@ const CTABanner: React.FC<CTABannerProps> = ({ message, buttonText, buttonLink }
         >
           {buttonText}
         </a>
-
       </div>
     </section>
   );

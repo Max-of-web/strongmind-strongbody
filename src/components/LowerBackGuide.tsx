@@ -67,38 +67,43 @@ const LowerBackGuide = () => {
             </div>
           </div>
 
-          {/* Right column - Form */}
-          <div className="md:w-1/2">
-            <div className="elegant-card h-full flex flex-col">
-              <h3 className="text-2xl font-semibold mb-4 text-foreground">
-                Fix Your Lower Back in 7 Steps
-              </h3>
-              <p className="mb-6 text-foreground">
-                Get instant access to my proven guide for relieving lower back pain and preventing future injuries.
-              </p>
-              
-              <form onSubmit={handleSubmit} className="flex flex-col space-y-4 mt-auto">
-                <input 
-                  type="email" 
-                  value={email} 
-                  onChange={e => setEmail(e.target.value)} 
-                  placeholder="Your email address" 
-                  required 
-                  className="form-input" 
-                />
-                <button 
-                  type="submit" 
-                  disabled={isSubmitting} 
-                  className={`cta-button-primary ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
-                >
-                  {isSubmitting ? 'Sending...' : 'Download Free Guide'}
-                </button>
-                <p className="text-xs text-foreground mt-2">
-                  By submitting, you agree to receive the PDF guide via email. You can unsubscribe at any time.
+            {/* Right column - Form */}
+            <div className="md:w-1/2">
+              <div className="elegant-card h-full flex flex-col bg-white dark:bg-theme-darknavy">
+                <h3 className="text-2xl font-semibold mb-4 text-theme-darknavy dark:text-white">
+                  Fix Your Lower Back in 7 Steps
+                </h3>
+                <p className="mb-6 text-theme-darknavy dark:text-white">
+                  Get instant access to my proven guide for relieving lower back pain and preventing future injuries.
                 </p>
-              </form>
+
+                <form onSubmit={handleSubmit} className="flex flex-col space-y-4 mt-auto">
+                  <input 
+                    type="email" 
+                    value={email} 
+                    onChange={e => setEmail(e.target.value)} 
+                    placeholder="Your email address" 
+                    required 
+                    className="w-full p-3 rounded-md bg-slate-100 dark:bg-theme-darknavy text-theme-darknavy dark:text-white placeholder:text-slate-500 dark:placeholder:text-slate-300 border border-input focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+                  />
+                  
+                  <div className="bg-white dark:bg-transparent p-1 rounded-md">
+                    <button 
+                      type="submit" 
+                      disabled={isSubmitting} 
+                      className={`cta-button-primary w-full ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
+                    >
+                      {isSubmitting ? 'Sending...' : 'Download Free Guide'}
+                    </button>
+                  </div>
+
+                  <p className="text-xs text-theme-darknavy dark:text-white mt-2">
+                    By submitting, you agree to receive the PDF guide via email. You can unsubscribe at any time.
+                  </p>
+                </form>
+              </div>
             </div>
-          </div>
+
         </div>
       </div>
     </section>
