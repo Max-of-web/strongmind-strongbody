@@ -16,7 +16,8 @@ const LanguageSwitcher = () => {
   return (
     <Button 
       onClick={toggleLanguage}
-      variant="secondary"
+      variant="outline"
+      className="flex items-center gap-2 border-white/80 dark:text-white" 
       disabled={isLoading}
       aria-label={`Switch to ${language === 'en' ? 'Lithuanian' : 'English'} language`}
     >

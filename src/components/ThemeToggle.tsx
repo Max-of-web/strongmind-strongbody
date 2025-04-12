@@ -11,8 +11,8 @@ const ThemeToggle = () => {
   return (
     <Button 
       onClick={toggleTheme}
-      variant="secondary"
-      className="flex items-center gap-2"
+      variant={theme === 'light' ? "secondary" : "outline"}
+      className="flex items-center gap-2 border-white/80"
       aria-label={theme === 'light' ? t('theme.dark') : t('theme.light')}
     >
       {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}

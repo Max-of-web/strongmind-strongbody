@@ -142,19 +142,19 @@
   }
   
   .testimonial-card {
-    @apply bg-background dark:bg-theme-darknavy p-6 rounded-lg shadow-md border border-input text-foreground dark:text-white;
+    @apply bg-background p-6 rounded-lg shadow-md border border-input text-foreground;
   }
 
   .elegant-card {
-    @apply bg-white dark:bg-theme-darknavy rounded-lg p-8 border border-input shadow-lg text-theme-navy dark:text-white;
+    @apply bg-white rounded-lg p-8 border border-input shadow-lg text-theme-navy;
   }
   
   .language-selector {
-    @apply flex items-center gap-2 bg-theme-navy dark:bg-theme-lightnavy text-white px-3 py-2 rounded-md cursor-pointer transition-colors duration-200 hover:bg-theme-lightnavy dark:hover:bg-theme-navy;
+    @apply flex items-center gap-2 text-white px-3 py-2 rounded-md cursor-pointer transition-colors duration-200;
   }
   
   .theme-toggle {
-    @apply flex items-center gap-2 bg-theme-navy dark:bg-theme-lightnavy text-white px-3 py-2 rounded-md cursor-pointer transition-colors duration-200 hover:bg-theme-lightnavy dark:hover:bg-theme-navy;
+    @apply flex items-center gap-2 text-white px-3 py-2 rounded-md cursor-pointer transition-colors duration-200;
   }
 }
 
@@ -193,7 +193,7 @@ html {
 .dark {
   --theme-text-high-contrast: #FFFFFF;
   --theme-text-medium-contrast: #FFFFFF;
-  --theme-text-low-contrast: #FFFFFF;
+  --theme-text-low-contrast: rgba(255, 255, 255, 0.85);
 }
 
 .dark p, .dark span, .dark li {
@@ -238,11 +238,11 @@ h4 {
 
 /* Fix for testimonial cards and other dark elements */
 .dark .testimonial-card {
-  background-color: #0A2342; /* Using direct color value instead of theme class */
-  border-color: #375177; /* Using direct color value instead of theme class */
+  background-color: #0A2342; /* Direct color value */
+  border-color: #375177; /* Direct color value */
+  color: white;
 }
 
-/* Fix for the circular dependency - using direct color values instead of @apply */
 .dark .bg-elegant-charcoal p,
 .dark [class*="bg-theme-navy"] p, 
 .dark [class*="bg-theme-darknavy"] p {
@@ -259,4 +259,90 @@ h4 {
 .dark [class*="bg-theme-navy"] h3, 
 .dark [class*="bg-theme-darknavy"] h3 {
   color: white;
+}
+
+/* Additional dark mode improvements */
+.dark .testimonial-card p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.dark .testimonial-card svg {
+  color: #F7882F;
+  opacity: 0.8;
+}
+
+.dark .feature-card-dark {
+  background-color: #0A2342;
+  border-color: #1C345F;
+}
+
+.dark .feature-card-dark h3,
+.dark .feature-card-dark p {
+  color: white;
+}
+
+.dark .credential-badge {
+  background-color: #1C345F;
+  color: white;
+}
+
+.dark .timeline-item {
+  color: white;
+}
+
+.dark .timeline-number {
+  background-color: rgba(247, 136, 47, 0.3);
+  color: #F7882F;
+}
+
+/* Form element improvements for dark mode */
+.dark .form-label {
+  color: white;
+}
+
+.dark .form-input {
+  background-color: #0A2342;
+  border-color: #1C345F;
+  color: white;
+}
+
+.dark .form-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.dark .checkbox-label {
+  color: white;
+}
+
+/* Price cards for dark mode */
+.dark .price-card {
+  background-color: #0A2342;
+  border-color: #1C345F;
+}
+
+.dark .price-card h3,
+.dark .price-card .price-amount,
+.dark .price-card li {
+  color: white;
+}
+
+.dark .price-card .price-period {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.dark .price-card .check-icon {
+  color: #F7882F;
+}
+
+/* Enhanced button contrast for dark mode */
+.dark .secondary-button {
+  background-color: transparent;
+  border-color: white;
+  color: white;
+}
+
+.dark .secondary-button:hover {
+  background-color: #F7882F;
+  color: white;
+  border-color: transparent;
 }
