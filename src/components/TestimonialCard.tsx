@@ -14,11 +14,11 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ quote, name, image })
       <div className="flex flex-col h-full">
         <div className="mb-4">
           <Quote 
-            className="w-8 h-8 text-theme-tangerine dark:text-theme-lighttangerine" 
+            className="w-8 h-8 text-theme-tangerine dark:text-theme-tangerine" 
             aria-hidden="true"
           />
         </div>
-        <p className="flex-grow mb-4 italic text-slate-700 dark:text-slate-200 font-medium">"{quote}"</p>
+        <p className="flex-grow mb-4 italic text-slate-700 dark:text-slate-100 font-medium">"{quote}"</p>
         <div className="flex items-center mt-auto">
           {image && (
             <div className="w-12 h-12 rounded-full overflow-hidden mr-3 border border-slate-200 dark:border-slate-700">

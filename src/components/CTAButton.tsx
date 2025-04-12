@@ -23,9 +23,10 @@ const CTAButton: React.FC<CTAButtonProps> = ({
   type = 'button',
   external = false,
 }) => {
+  // Define completely new base styles with explicit dark mode handling
   const baseStyles = secondary
-    ? "inline-flex items-center justify-center px-6 py-3 rounded-md font-semibold transition-all duration-300 bg-transparent border border-theme-marine dark:border-slate-400 text-theme-darknavy dark:text-white hover:bg-theme-tangerine hover:border-theme-tangerine dark:hover:bg-theme-tangerine hover:text-white dark:hover:text-white disabled:opacity-50 disabled:pointer-events-none"
-    : "inline-flex items-center justify-center px-6 py-3 rounded-md font-semibold transition-all duration-300 bg-theme-tangerine text-white shadow-md hover:bg-theme-lighttangerine dark:hover:bg-theme-lighttangerine hover:transform hover:-translate-y-1 disabled:opacity-50 disabled:pointer-events-none";
+    ? "inline-flex items-center justify-center px-6 py-3 rounded-md font-semibold transition-all duration-300 bg-transparent border border-theme-marine dark:border-white text-theme-navy dark:text-white hover:bg-theme-tangerine hover:border-theme-tangerine dark:hover:bg-theme-tangerine hover:text-white dark:hover:text-white disabled:opacity-50 disabled:pointer-events-none"
+    : "inline-flex items-center justify-center px-6 py-3 rounded-md font-semibold transition-all duration-300 bg-theme-tangerine text-white shadow-md hover:bg-theme-lighttangerine dark:hover:bg-theme-tangerine/90 hover:transform hover:-translate-y-1 disabled:opacity-50 disabled:pointer-events-none";
 
   const styles = `${baseStyles} ${className}`;
 

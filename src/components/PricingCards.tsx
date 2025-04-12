@@ -1,6 +1,6 @@
 
 import { useTranslation } from 'react-i18next';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Check } from 'lucide-react';
 import CTAButton from './CTAButton';
 
@@ -16,9 +16,9 @@ const PricingCards = () => {
       {/* First Session */}
       <Card className="border border-theme-navy/20 dark:border-theme-lightnavy/20 shadow-sm hover:shadow-md transition-shadow">
         <CardHeader>
-          <CardTitle className="text-xl">{t('coaching.pricing.starter.title')}</CardTitle>
+          <CardTitle className="text-xl text-foreground">{t('coaching.pricing.starter.title')}</CardTitle>
           <div className="flex items-baseline mt-2">
-            <span className="text-3xl font-bold">{t('coaching.pricing.starter.price')}</span>
+            <span className="text-3xl font-bold text-foreground">{t('coaching.pricing.starter.price')}</span>
             <span className="text-muted-foreground ml-1">{t('coaching.pricing.starter.period')}</span>
           </div>
         </CardHeader>
@@ -28,7 +28,7 @@ const PricingCards = () => {
               t(`coaching.pricing.starter.features.${index}`) ? (
                 <li key={index} className="flex items-start">
                   <Check className="h-5 w-5 text-theme-tangerine dark:text-theme-lighttangerine mr-2 mt-0.5" />
-                  <span>{t(`coaching.pricing.starter.features.${index}`)}</span>
+                  <span className="text-foreground">{t(`coaching.pricing.starter.features.${index}`)}</span>
                 </li>
               ) : null
             ))}
@@ -47,9 +47,9 @@ const PricingCards = () => {
       {/* Additional Session */}
       <Card className="border border-theme-navy/20 dark:border-theme-lightnavy/20 shadow-sm hover:shadow-md transition-shadow">
         <CardHeader>
-          <CardTitle className="text-xl">{t('coaching.pricing.additionalSession.title')}</CardTitle>
+          <CardTitle className="text-xl text-foreground">{t('coaching.pricing.additionalSession.title')}</CardTitle>
           <div className="flex items-baseline mt-2">
-            <span className="text-3xl font-bold">{t('coaching.pricing.additionalSession.price')}</span>
+            <span className="text-3xl font-bold text-foreground">{t('coaching.pricing.additionalSession.price')}</span>
             <span className="text-muted-foreground ml-1">{t('coaching.pricing.additionalSession.period')}</span>
           </div>
         </CardHeader>
@@ -59,7 +59,7 @@ const PricingCards = () => {
               t(`coaching.pricing.additionalSession.features.${index}`) ? (
                 <li key={index} className="flex items-start">
                   <Check className="h-5 w-5 text-theme-tangerine dark:text-theme-lighttangerine mr-2 mt-0.5" />
-                  <span>{t(`coaching.pricing.additionalSession.features.${index}`)}</span>
+                  <span className="text-foreground">{t(`coaching.pricing.additionalSession.features.${index}`)}</span>
                 </li>
               ) : null
             ))}
@@ -79,9 +79,9 @@ const PricingCards = () => {
       {/* Monthly */}
       <Card className="border border-theme-navy/20 dark:border-theme-lightnavy/20 shadow-sm hover:shadow-md transition-shadow">
         <CardHeader>
-          <CardTitle className="text-xl">{t('coaching.pricing.monthly.title')}</CardTitle>
+          <CardTitle className="text-xl text-foreground">{t('coaching.pricing.monthly.title')}</CardTitle>
           <div className="flex items-baseline mt-2">
-            <span className="text-3xl font-bold">{t('coaching.pricing.monthly.price')}</span>
+            <span className="text-3xl font-bold text-foreground">{t('coaching.pricing.monthly.price')}</span>
             <span className="text-muted-foreground ml-1">{t('coaching.pricing.monthly.period')}</span>
           </div>
         </CardHeader>
@@ -91,7 +91,7 @@ const PricingCards = () => {
               t(`coaching.pricing.monthly.features.${index}`) ? (
                 <li key={index} className="flex items-start">
                   <Check className="h-5 w-5 text-theme-tangerine dark:text-theme-lighttangerine mr-2 mt-0.5" />
-                  <span>{t(`coaching.pricing.monthly.features.${index}`)}</span>
+                  <span className="text-foreground">{t(`coaching.pricing.monthly.features.${index}`)}</span>
                 </li>
               ) : null
             ))}
@@ -113,9 +113,9 @@ const PricingCards = () => {
           {t('coaching.pricing.transformation.recommended')}
         </div>
         <CardHeader>
-          <CardTitle className="text-xl">{t('coaching.pricing.transformation.title')}</CardTitle>
+          <CardTitle className="text-xl text-foreground">{t('coaching.pricing.transformation.title')}</CardTitle>
           <div className="flex items-baseline mt-2">
-            <span className="text-3xl font-bold">{t('coaching.pricing.transformation.price')}</span>
+            <span className="text-3xl font-bold text-foreground">{t('coaching.pricing.transformation.price')}</span>
             <span className="text-muted-foreground ml-1">{t('coaching.pricing.transformation.period')}</span>
           </div>
         </CardHeader>
@@ -125,7 +125,7 @@ const PricingCards = () => {
               t(`coaching.pricing.transformation.features.${index}`) ? (
                 <li key={index} className="flex items-start">
                   <Check className="h-5 w-5 text-theme-tangerine dark:text-theme-lighttangerine mr-2 mt-0.5" />
-                  <span>{t(`coaching.pricing.transformation.features.${index}`)}</span>
+                  <span className="text-foreground">{t(`coaching.pricing.transformation.features.${index}`)}</span>
                 </li>
               ) : null
             ))}
