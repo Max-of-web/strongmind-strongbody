@@ -41,6 +41,13 @@ const PricingCards = () => {
     height: '1.25rem',
   };
 
+  // Consistent booking button style - dark background with white text
+  const bookingButtonStyle = {
+    backgroundColor: '#0A2342', // Navy dark background
+    color: 'white',
+    borderColor: 'transparent',
+  };
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
       {/* First Session */}
@@ -84,6 +91,7 @@ const PricingCards = () => {
           <CTAButton 
             onClick={openBookingLink}
             className="w-full"
+            style={bookingButtonStyle}
           >
             {t('coaching.pricing.starter.buttonText')}
           </CTAButton>
@@ -130,8 +138,8 @@ const PricingCards = () => {
         <CardFooter>
           <CTAButton 
             onClick={openBookingLink}
-            secondary={true}
             className="w-full"
+            style={bookingButtonStyle}
           >
             {t('coaching.pricing.additionalSession.buttonText')}
           </CTAButton>
@@ -179,6 +187,7 @@ const PricingCards = () => {
           <CTAButton 
             onClick={openBookingLink}
             className="w-full"
+            style={bookingButtonStyle}
           >
             {t('coaching.pricing.monthly.buttonText')}
           </CTAButton>
@@ -243,6 +252,7 @@ const PricingCards = () => {
           <CTAButton 
             onClick={openBookingLink}
             className="w-full"
+            style={bookingButtonStyle}
           >
             {t('coaching.pricing.transformation.buttonText')}
           </CTAButton>
