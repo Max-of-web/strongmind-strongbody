@@ -1,7 +1,7 @@
 
 import React from 'react';
-import CTAButton from './CTAButton';
-import { useTheme } from '@/hooks/useTheme';
+import { Button } from '@/components/ui/button';
+import { ExternalLink } from 'lucide-react';
 
 interface CTABannerProps {
   message: string;
@@ -10,37 +10,55 @@ interface CTABannerProps {
 }
 
 const CTABanner: React.FC<CTABannerProps> = ({ message, buttonText, buttonLink }) => {
-  const { theme } = useTheme();
-  
-  // Define banner styles with guaranteed contrast for both modes
+  // Fixed banner style that works in both themes
   const bannerStyle = {
-    backgroundColor: '#061528', // Dark navy (works in both modes)
+    backgroundColor: '#061528', // Dark navy - high contrast in both modes
     color: '#FFFFFF', // White text for maximum contrast
     padding: '3rem 1rem',
   };
 
-  const headingStyle = {
-    color: '#FFFFFF', // White text for maximum contrast
-    fontSize: '1.5rem',
+  // Button style with fixed colors for maximum visibility
+  const buttonStyle = {
+    backgroundColor: '#F7882F', // Tangerine
+    color: '#FFFFFF', // White
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: '0.5rem',
+    padding: '0.75rem 1.5rem',
+    borderRadius: '0.375rem',
     fontWeight: 600,
-    marginBottom: '1.5rem',
+    border: 'none',
+    cursor: 'pointer',
+    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+    transition: 'all 300ms ease',
   };
 
   return (
-    <section 
-      className="py-12 text-white"
-      style={bannerStyle}
-    >
+    <section className="py-12 text-white" style={bannerStyle}>
       <div className="container-width px-4 text-center">
-        <h3 
-          className="text-xl md:text-2xl font-semibold mb-6"
-          style={headingStyle}
-        >
+        <h3 className="text-xl md:text-2xl font-semibold mb-6 text-white">
           {message}
         </h3>
-        <CTAButton href={buttonLink} external>
+        <a 
+          href={buttonLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={buttonStyle}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = '#F89F4F'; // Lighter tangerine
+            e.currentTarget.style.transform = 'translateY(-2px)';
+            e.currentTarget.style.boxShadow = '0 6px 8px rgba(0, 0, 0, 0.15)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.backgroundColor = '#F7882F';
+            e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+          }}
+        >
           {buttonText}
-        </CTAButton>
+          <ExternalLink size={16} />
+        </a>
       </div>
     </section>
   );

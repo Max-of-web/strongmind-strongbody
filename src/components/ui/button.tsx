@@ -45,7 +45,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
     
-    // Hard-coded style overrides to ensure visibility in all contexts
+    // Direct style mappings for guaranteed visibility regardless of theme
     const getStyleOverrides = () => {
       const styleMap: Record<string, React.CSSProperties> = {
         default: {
@@ -53,7 +53,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           color: 'white',
         },
         destructive: {
-          backgroundColor: '#ef4444', // destructive
+          backgroundColor: '#ef4444', // destructive red
           color: 'white',
         },
         secondary: {
@@ -67,22 +67,98 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         },
         outline: {
           backgroundColor: 'transparent',
-          color: document.documentElement.classList.contains('dark') ? 'white' : '#0A2342', // navy
-          borderColor: document.documentElement.classList.contains('dark') ? 'white' : '#1C5B5A', // marine
+          color: document.documentElement.classList.contains('dark') ? 'white' : '#0A2342', // navy in light, white in dark
+          borderColor: document.documentElement.classList.contains('dark') ? 'white' : '#1C5B5A', // marine in light, white in dark
           border: '2px solid',
         },
         ghost: {
           backgroundColor: 'transparent',
-          color: document.documentElement.classList.contains('dark') ? 'white' : '#0A2342', // navy
+          color: document.documentElement.classList.contains('dark') ? 'white' : '#0A2342', // navy in light, white in dark
         },
         link: {
           backgroundColor: 'transparent',
-          color: document.documentElement.classList.contains('dark') ? 'white' : '#1C5B5A', // marine
+          color: document.documentElement.classList.contains('dark') ? 'white' : '#1C5B5A', // marine in light, white in dark
+          textDecoration: 'underline',
+        },
+      };
+
+      // Apply hover effects
+      const hoverEffects = {
+        default: {
+          backgroundColor: '#76A4A3', // lightmarine
+        },
+        destructive: {
+          backgroundColor: '#f87171', // lighter red
+        },
+        secondary: {
+          backgroundColor: '#375177', // lightnavy
+        },
+        cta: {
+          backgroundColor: '#F89F4F', // lighter tangerine
+          transform: 'translateY(-2px)',
+          boxShadow: '0 6px 8px rgba(0, 0, 0, 0.15)',
+        },
+        outline: {
+          backgroundColor: document.documentElement.classList.contains('dark') ? 'rgba(255, 255, 255, 0.2)' : 'rgba(28, 91, 90, 0.1)',
+        },
+        ghost: {
+          backgroundColor: document.documentElement.classList.contains('dark') ? 'rgba(255, 255, 255, 0.1)' : 'rgba(28, 91, 90, 0.1)',
+        },
+        link: {
           textDecoration: 'underline',
         },
       };
 
       return variant ? styleMap[variant] : styleMap.default;
+    };
+
+    // Handle hover effects
+    const handleMouseEnter = (e: React.MouseEvent<HTMLButtonElement>) => {
+      if (props.disabled) return;
+      
+      const hoverEffects: Record<string, React.CSSProperties> = {
+        default: {
+          backgroundColor: '#76A4A3', // lightmarine
+        },
+        destructive: {
+          backgroundColor: '#f87171', // lighter red
+        },
+        secondary: {
+          backgroundColor: '#375177', // lightnavy
+        },
+        cta: {
+          backgroundColor: '#F89F4F', // lighter tangerine
+          transform: 'translateY(-2px)',
+          boxShadow: '0 6px 8px rgba(0, 0, 0, 0.15)',
+        },
+        outline: {
+          backgroundColor: document.documentElement.classList.contains('dark') ? 'rgba(255, 255, 255, 0.2)' : 'rgba(28, 91, 90, 0.1)',
+        },
+        ghost: {
+          backgroundColor: document.documentElement.classList.contains('dark') ? 'rgba(255, 255, 255, 0.1)' : 'rgba(28, 91, 90, 0.1)',
+        },
+        link: {
+          textDecoration: 'underline',
+        },
+      };
+
+      if (variant && hoverEffects[variant]) {
+        Object.entries(hoverEffects[variant]).forEach(([key, value]) => {
+          // @ts-ignore
+          e.currentTarget.style[key] = value;
+        });
+      }
+    };
+
+    const handleMouseLeave = (e: React.MouseEvent<HTMLButtonElement>) => {
+      if (props.disabled) return;
+      
+      const baseStyles = getStyleOverrides();
+      
+      Object.entries(baseStyles).forEach(([key, value]) => {
+        // @ts-ignore
+        e.currentTarget.style[key] = value;
+      });
     };
 
     return (
@@ -94,6 +170,8 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           ...getStyleOverrides(),
           ...(props.style || {})
         }}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       />
     );
   }
