@@ -1,7 +1,6 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import { ThemeProvider } from './contexts/ThemeContext';
 import './App.css'; // Tailwind directives
@@ -18,10 +17,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <QueryClientProvider client={queryClient}>
       <I18nextProvider i18n={i18n}>
         <ThemeProvider>
-          <BrowserRouter>
-            <App />
-            <Toaster position="top-right" richColors closeButton />
-          </BrowserRouter>
+          <App />
+          <Toaster position="top-right" richColors closeButton />
         </ThemeProvider>
       </I18nextProvider>
     </QueryClientProvider>
