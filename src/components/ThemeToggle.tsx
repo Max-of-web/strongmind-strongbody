@@ -12,11 +12,11 @@ const ThemeToggle = () => {
     <Button 
       onClick={toggleTheme}
       variant={theme === 'light' ? "secondary" : "outline"}
-      className="flex items-center gap-2 border-white/80 text-white dark:text-white"
+      className="flex items-center gap-2 border-white/80 hover:bg-white/10"
       aria-label={theme === 'light' ? t('theme.dark') : t('theme.light')}
     >
-      {theme === 'light' ? <Moon size={18} className="text-white" /> : <Sun size={18} className="text-white" />}
-      <span className="sr-only md:not-sr-only text-white">
+      {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
+      <span className="sr-only md:not-sr-only">
         {theme === 'light' ? t('theme.dark') : t('theme.light')}
       </span>
     </Button>

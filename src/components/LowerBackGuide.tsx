@@ -26,7 +26,7 @@ const LowerBackGuide = () => {
       <div className="container-width px-4 md:px-8">
         <div className="flex flex-col md:flex-row gap-10 items-stretch">
           {/* Left column - Guide information */}
-          <div className="md:w-1/2 bg-white dark:bg-slate-800 rounded-md mx-0 px-[35px] py-[30px]">
+          <div className="md:w-1/2 bg-white dark:bg-slate-800 rounded-md shadow-md px-[35px] py-[30px]">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-theme-darknavy dark:text-white">
               Get Your Free Lower Back Pain Guide
             </h2>
@@ -67,42 +67,42 @@ const LowerBackGuide = () => {
             </div>
           </div>
 
-            {/* Right column - Form */}
-            <div className="md:w-1/2">
-              <div className="h-full flex flex-col bg-white dark:bg-theme-darknavy border border-slate-200 dark:border-theme-lightnavy/30 rounded-md shadow-md p-6">
-                <h3 className="text-2xl font-semibold mb-4 text-theme-darknavy dark:text-white">
-                  Fix Your Lower Back in 7 Steps
-                </h3>
-                <p className="mb-6 text-theme-darknavy dark:text-white">
-                  Get instant access to my proven guide for relieving lower back pain and preventing future injuries.
+          {/* Right column - Form */}
+          <div className="md:w-1/2">
+            <div className="h-full flex flex-col bg-white dark:bg-theme-darknavy border border-slate-200 dark:border-theme-lightnavy/30 rounded-md shadow-md p-6">
+              <h3 className="text-2xl font-semibold mb-4 text-theme-darknavy dark:text-white">
+                Fix Your Lower Back in 7 Steps
+              </h3>
+              <p className="mb-6 text-theme-darknavy dark:text-white">
+                Get instant access to my proven guide for relieving lower back pain and preventing future injuries.
+              </p>
+
+              <form onSubmit={handleSubmit} className="flex flex-col space-y-4 mt-auto">
+                <input 
+                  type="email" 
+                  value={email} 
+                  onChange={e => setEmail(e.target.value)} 
+                  placeholder="Your email address" 
+                  required 
+                  className="w-full p-3 rounded-md bg-slate-100 dark:bg-theme-darknavy/70 text-theme-darknavy dark:text-white placeholder:text-slate-500 dark:placeholder:text-slate-300 border border-slate-200 dark:border-theme-lightnavy/30 focus:outline-none focus:ring-2 focus:ring-theme-tangerine focus:border-transparent"
+                />
+                
+                <div className="bg-white dark:bg-transparent p-1 rounded-md">
+                  <button 
+                    type="submit" 
+                    disabled={isSubmitting} 
+                    className="w-full bg-theme-tangerine hover:bg-theme-lighttangerine text-white font-semibold px-4 py-3 rounded-md transition-colors shadow-md disabled:opacity-70 disabled:cursor-not-allowed"
+                  >
+                    {isSubmitting ? 'Sending...' : 'Download Free Guide'}
+                  </button>
+                </div>
+
+                <p className="text-xs text-theme-darknavy dark:text-white mt-2">
+                  By submitting, you agree to receive the PDF guide via email. You can unsubscribe at any time.
                 </p>
-
-                <form onSubmit={handleSubmit} className="flex flex-col space-y-4 mt-auto">
-                  <input 
-                    type="email" 
-                    value={email} 
-                    onChange={e => setEmail(e.target.value)} 
-                    placeholder="Your email address" 
-                    required 
-                    className="w-full p-3 rounded-md bg-slate-100 dark:bg-theme-darknavy/70 text-theme-darknavy dark:text-white placeholder:text-slate-500 dark:placeholder:text-slate-300 border border-slate-200 dark:border-theme-lightnavy/30 focus:outline-none focus:ring-2 focus:ring-theme-tangerine focus:border-transparent"
-                  />
-                  
-                  <div className="bg-white dark:bg-transparent p-1 rounded-md">
-                    <button 
-                      type="submit" 
-                      disabled={isSubmitting} 
-                      className={`w-full bg-theme-tangerine hover:bg-theme-lighttangerine text-white font-semibold px-4 py-3 rounded-md transition-colors shadow-md ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
-                    >
-                      {isSubmitting ? 'Sending...' : 'Download Free Guide'}
-                    </button>
-                  </div>
-
-                  <p className="text-xs text-theme-darknavy dark:text-white mt-2">
-                    By submitting, you agree to receive the PDF guide via email. You can unsubscribe at any time.
-                  </p>
-                </form>
-              </div>
+              </form>
             </div>
+          </div>
 
         </div>
       </div>
