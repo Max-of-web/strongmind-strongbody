@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Check } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import CTAButton from './CTAButton';
 
 const PricingCards = () => {
   const { t } = useTranslation();
@@ -24,7 +25,7 @@ const PricingCards = () => {
         </CardHeader>
         <CardContent className="space-y-2">
           <ul className="space-y-2">
-            {[0, 1, 2, 3, 4, 5].map((index) => (
+            {[0,, 1, 2, 3, 4, 5].map((index) => (
               t(`coaching.pricing.starter.features.${index}`) ? (
                 <li key={index} className="flex items-start">
                   <Check className="h-5 w-5 text-theme-tangerine dark:text-theme-lighttangerine mr-2 mt-0.5" />
@@ -35,12 +36,12 @@ const PricingCards = () => {
           </ul>
         </CardContent>
         <CardFooter>
-          <Button 
-            className="w-full bg-theme-navy dark:bg-theme-lightnavy hover:bg-theme-marine dark:hover:bg-theme-lightmarine"
+          <CTAButton 
             onClick={openBookingLink}
+            className="w-full"
           >
             {t('coaching.pricing.starter.buttonText')}
-          </Button>
+          </CTAButton>
         </CardFooter>
       </Card>
 
@@ -66,13 +67,13 @@ const PricingCards = () => {
           </ul>
         </CardContent>
         <CardFooter>
-          <Button 
-            variant="outline"
-            className="w-full border-theme-navy dark:border-theme-lightnavy text-theme-navy dark:text-theme-lightnavy"
+          <CTAButton 
             onClick={openBookingLink}
+            secondary={true}
+            className="w-full"
           >
             {t('coaching.pricing.additionalSession.buttonText')}
-          </Button>
+          </CTAButton>
         </CardFooter>
       </Card>
 
@@ -98,12 +99,12 @@ const PricingCards = () => {
           </ul>
         </CardContent>
         <CardFooter>
-          <Button 
-            className="w-full bg-theme-navy dark:bg-theme-lightnavy hover:bg-theme-marine dark:hover:bg-theme-lightmarine"
+          <CTAButton 
             onClick={openBookingLink}
+            className="w-full"
           >
             {t('coaching.pricing.monthly.buttonText')}
-          </Button>
+          </CTAButton>
         </CardFooter>
       </Card>
 
@@ -132,12 +133,12 @@ const PricingCards = () => {
           </ul>
         </CardContent>
         <CardFooter>
-          <Button 
-            className="w-full bg-theme-tangerine dark:bg-theme-lighttangerine hover:bg-theme-tangerine/90 dark:hover:bg-theme-lighttangerine/90 text-white"
+          <CTAButton 
             onClick={openBookingLink}
+            className="w-full bg-theme-tangerine dark:bg-theme-lighttangerine hover:bg-theme-tangerine/90 dark:hover:bg-theme-lighttangerine/90 text-white"
           >
             {t('coaching.pricing.transformation.buttonText')}
-          </Button>
+          </CTAButton>
         </CardFooter>
       </Card>
     </div>

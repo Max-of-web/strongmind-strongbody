@@ -2,6 +2,7 @@
 import { Phone, MessageSquare } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import CTAButton from './CTAButton';
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -12,47 +13,44 @@ const Footer = () => {
       <div className="container-width">
         {/* CTA Section */}
         <div className="mb-16 text-center">
-          <h3 className="text-2xl md:text-3xl font-display font-bold mb-4">
+          <h3 className="text-2xl md:text-3xl font-display font-bold mb-4 text-white">
             {t('footer.cta')}
           </h3>
           <div className="flex flex-wrap justify-center gap-4 mt-6">
-            <a 
+            <CTAButton 
               href="https://calendly.com/lipskis-paulius/asmenine-treniruote" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="cta-button-primary"
+              external={true}
             >
               {t('footer.bookCall')}
-            </a>
-            <a 
+            </CTAButton>
+            <CTAButton 
               href="https://wa.me/37067951040" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="cta-button-secondary"
+              external={true}
+              secondary={true}
             >
               {t('footer.messageWhatsApp')}
-            </a>
+            </CTAButton>
           </div>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Contact Info */}
           <div>
-            <h4 className="text-xl font-semibold mb-4">{t('footer.contact')}</h4>
+            <h4 className="text-xl font-semibold mb-4 text-white">{t('footer.contact')}</h4>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <Phone size={18} className="text-theme-tangerine dark:text-theme-darktangerine" />
-                <a href="tel:+37067951040" className="hover:text-theme-tangerine dark:hover:text-theme-darktangerine transition-colors">
+                <Phone size={18} className="text-theme-tangerine dark:text-theme-lighttangerine" />
+                <a href="tel:+37067951040" className="text-white hover:text-theme-tangerine dark:hover:text-theme-lighttangerine transition-colors">
                   {t('footer.phone')}
                 </a>
               </div>
               <div className="flex items-center space-x-3">
-                <MessageSquare size={18} className="text-theme-tangerine dark:text-theme-darktangerine" />
+                <MessageSquare size={18} className="text-theme-tangerine dark:text-theme-lighttangerine" />
                 <a 
                   href="https://wa.me/37067951040" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="hover:text-theme-tangerine dark:hover:text-theme-darktangerine transition-colors"
+                  className="text-white hover:text-theme-tangerine dark:hover:text-theme-lighttangerine transition-colors"
                 >
                   {t('footer.whatsAppChat')}
                 </a>
@@ -62,8 +60,8 @@ const Footer = () => {
 
           {/* Locations */}
           <div>
-            <h4 className="text-xl font-semibold mb-4">{t('footer.locations')}</h4>
-            <ul className="space-y-2">
+            <h4 className="text-xl font-semibold mb-4 text-white">{t('footer.locations')}</h4>
+            <ul className="space-y-2 text-white">
               <li>{t('footer.location1')}</li>
               <li>{t('footer.location2')}</li>
             </ul>
@@ -71,15 +69,15 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-xl font-semibold mb-4">{t('footer.quickLinks')}</h4>
+            <h4 className="text-xl font-semibold mb-4 text-white">{t('footer.quickLinks')}</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="hover:text-theme-tangerine dark:hover:text-theme-darktangerine transition-colors">
+                <Link to="/" className="text-white hover:text-theme-tangerine dark:hover:text-theme-lighttangerine transition-colors">
                   {t('footer.home')}
                 </Link>
               </li>
               <li>
-                <Link to="/coaching" className="hover:text-theme-tangerine dark:hover:text-theme-darktangerine transition-colors">
+                <Link to="/coaching" className="text-white hover:text-theme-tangerine dark:hover:text-theme-lighttangerine transition-colors">
                   {t('footer.coaching')}
                 </Link>
               </li>
@@ -88,7 +86,7 @@ const Footer = () => {
                   href="https://calendly.com/lipskis-paulius/asmenine-treniruote" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="hover:text-theme-tangerine dark:hover:text-theme-darktangerine transition-colors"
+                  className="text-white hover:text-theme-tangerine dark:hover:text-theme-lighttangerine transition-colors"
                 >
                   {t('footer.bookCall')}
                 </a>
@@ -97,7 +95,7 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="mt-12 pt-6 border-t border-gray-600 text-center text-sm text-muted-foreground">
+        <div className="mt-12 pt-6 border-t border-gray-600 text-center text-sm text-white">
           <p>© {currentYear} Paulius Lipskis. {t('footer.rights')}</p>
         </div>
       </div>
