@@ -5,6 +5,7 @@ import { Menu, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
 import ThemeToggle from './ThemeToggle';
+import { Button } from './ui/button';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -42,13 +43,13 @@ const Header = () => {
           <div className="flex items-center space-x-8 mr-4">
             <Link 
               to="/" 
-              className="text-white hover:text-theme-tangerine dark:hover:text-theme-lighttangerine transition-colors"
+              className="text-white hover:text-theme-tangerine dark:hover:text-theme-tangerine transition-colors"
             >
               {t('header.home')}
             </Link>
             <Link 
               to="/coaching" 
-              className="text-white hover:text-theme-tangerine dark:hover:text-theme-lighttangerine transition-colors"
+              className="text-white hover:text-theme-tangerine dark:hover:text-theme-tangerine transition-colors"
             >
               {t('header.coaching')}
             </Link>
@@ -57,14 +58,18 @@ const Header = () => {
           <div className="flex items-center space-x-3">
             <LanguageSwitcher />
             <ThemeToggle />
-            <a 
-              href="https://calendly.com/lipskis-paulius/asmenine-treniruote" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="cta-button-primary"
+            <Button 
+              asChild
+              variant="cta"
             >
-              {t('header.bookCall')}
-            </a>
+              <a 
+                href="https://calendly.com/lipskis-paulius/asmenine-treniruote" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                {t('header.bookCall')}
+              </a>
+            </Button>
           </div>
         </nav>
 
@@ -84,30 +89,36 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-theme-navy dark:bg-theme-darknavy bg-opacity-95 absolute top-full left-0 right-0 py-4 px-4 shadow-md animate-fade-in">
+        <div className="md:hidden bg-theme-navy dark:bg-theme-darknavy absolute top-full left-0 right-0 py-4 px-4 shadow-md animate-fade-in">
           <nav className="flex flex-col space-y-4">
             <Link 
               to="/" 
-              className="text-white hover:text-theme-tangerine dark:hover:text-theme-lighttangerine transition-colors py-2" 
+              className="text-white hover:text-theme-tangerine dark:hover:text-theme-tangerine transition-colors py-2" 
               onClick={() => setIsMenuOpen(false)}
             >
               {t('header.home')}
             </Link>
             <Link 
               to="/coaching" 
-              className="text-white hover:text-theme-tangerine dark:hover:text-theme-lighttangerine transition-colors py-2" 
+              className="text-white hover:text-theme-tangerine dark:hover:text-theme-tangerine transition-colors py-2" 
               onClick={() => setIsMenuOpen(false)}
             >
               {t('header.coaching')}
             </Link>
-            <a 
-              href="https://calendly.com/lipskis-paulius/asmenine-treniruote" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="cta-button-primary text-center"
+            <Button 
+              asChild
+              variant="cta"
+              className="w-full justify-center"
+              onClick={() => setIsMenuOpen(false)}
             >
-              {t('header.bookCall')}
-            </a>
+              <a 
+                href="https://calendly.com/lipskis-paulius/asmenine-treniruote" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                {t('header.bookCall')}
+              </a>
+            </Button>
           </nav>
         </div>
       )}

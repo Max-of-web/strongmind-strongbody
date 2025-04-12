@@ -7,15 +7,15 @@
 
 @layer base {
   :root {
-    /* Light Mode Variables - Updated for better contrast */
+    /* Light Mode Variables - High contrast */
     --background: 210 20% 98%;
-    --foreground: 215 25% 27%;
+    --foreground: 215 25% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 25% 27%;
+    --card-foreground: 215 25% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 27%;
+    --popover-foreground: 215 25% 10%;
 
     --primary: 210 65% 15%;
     --primary-foreground: 210 20% 98%;
@@ -24,14 +24,14 @@
     --secondary-foreground: 210 20% 98%;
 
     --accent: 33 92% 57%;
-    --accent-foreground: 215 25% 27%;
+    --accent-foreground: 215 25% 10%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 20% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 215 25% 27%;
+    --ring: 215 25% 10%;
 
     --radius: 0.5rem;
 
@@ -46,7 +46,7 @@
   }
 
   .dark {
-    /* Dark Mode Variables - Updated for better contrast */
+    /* Dark Mode Variables - High contrast */
     --background: 215 30% 8%;
     --foreground: 0 0% 100%;
 
@@ -56,8 +56,8 @@
     --popover: 215 30% 12%;
     --popover-foreground: 0 0% 100%;
 
-    --primary: 210 65% 25%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 215 30% 12%;
 
     --secondary: 175 53% 35%;
     --secondary-foreground: 0 0% 100%;
@@ -68,8 +68,8 @@
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 215 30% 18%;
-    --input: 215 30% 18%;
+    --border: 215 30% 25%;
+    --input: 215 30% 25%;
     --ring: 0 0% 100%;
     
     --sidebar-background: 240 5.9% 10%;
@@ -122,11 +122,11 @@
   }
 
   .cta-button-primary {
-    @apply bg-theme-marine text-white font-semibold px-6 py-3 rounded-md transition-all duration-300 hover:bg-theme-lightmarine dark:hover:bg-theme-marine hover:translate-y-[-2px] shadow-md;
+    @apply bg-theme-tangerine text-white font-semibold px-6 py-3 rounded-md transition-all duration-300 hover:bg-theme-lighttangerine dark:hover:bg-theme-lighttangerine hover:translate-y-[-2px] shadow-md;
   }
 
   .cta-button-secondary {
-    @apply bg-transparent text-foreground border border-theme-marine dark:border-white font-semibold px-6 py-3 rounded-md transition-all duration-300 hover:bg-theme-tangerine hover:text-white dark:hover:bg-theme-tangerine hover:border-transparent hover:translate-y-[-2px];
+    @apply bg-transparent text-theme-navy dark:text-white border border-theme-marine dark:border-white font-semibold px-6 py-3 rounded-md transition-all duration-300 hover:bg-theme-tangerine hover:text-white dark:hover:bg-theme-tangerine hover:border-transparent hover:translate-y-[-2px];
   }
 
   .section-title {
@@ -142,19 +142,19 @@
   }
   
   .testimonial-card {
-    @apply bg-card p-6 rounded-lg shadow-md border border-input;
+    @apply bg-background dark:bg-theme-darknavy p-6 rounded-lg shadow-md border border-input text-foreground dark:text-white;
   }
 
   .elegant-card {
-    @apply bg-card rounded-lg p-8 border border-input shadow-lg;
+    @apply bg-white dark:bg-theme-darknavy rounded-lg p-8 border border-input shadow-lg text-theme-navy dark:text-white;
   }
   
   .language-selector {
-    @apply flex items-center gap-2 bg-theme-marine dark:bg-theme-marine text-white px-3 py-2 rounded-md cursor-pointer transition-colors duration-200 hover:bg-theme-tangerine dark:hover:bg-theme-tangerine;
+    @apply flex items-center gap-2 bg-theme-navy dark:bg-theme-lightnavy text-white px-3 py-2 rounded-md cursor-pointer transition-colors duration-200 hover:bg-theme-lightnavy dark:hover:bg-theme-navy;
   }
   
   .theme-toggle {
-    @apply flex items-center gap-2 bg-theme-navy dark:bg-theme-darknavy text-white px-3 py-2 rounded-md cursor-pointer transition-colors duration-200 hover:bg-theme-lightnavy dark:hover:bg-theme-navy;
+    @apply flex items-center gap-2 bg-theme-navy dark:bg-theme-lightnavy text-white px-3 py-2 rounded-md cursor-pointer transition-colors duration-200 hover:bg-theme-lightnavy dark:hover:bg-theme-navy;
   }
 }
 
@@ -234,4 +234,27 @@ h3 {
 
 h4 {
   @apply text-xl md:text-2xl leading-tight font-semibold;
+}
+
+/* Fix for testimonial cards and other dark elements */
+.dark .testimonial-card {
+  @apply bg-theme-navy border-theme-lightnavy;
+}
+
+.dark .bg-elegant-charcoal p,
+.dark .bg-theme-navy p, 
+.dark .bg-theme-darknavy p {
+  @apply text-white;
+}
+
+.dark .bg-elegant-charcoal .section-title,
+.dark .bg-theme-navy .section-title, 
+.dark .bg-theme-darknavy .section-title {
+  @apply text-white;
+}
+
+.dark .bg-elegant-charcoal h3,
+.dark .bg-theme-navy h3, 
+.dark .bg-theme-darknavy h3 {
+  @apply text-white;
 }

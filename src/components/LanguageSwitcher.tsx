@@ -1,30 +1,28 @@
 
-import { Flag, Loader2 } from 'lucide-react';
+import { Flag } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslation } from 'react-i18next';
+import { Button } from "@/components/ui/button";
 
 const LanguageSwitcher = () => {
   const { language, changeLanguage, isLoading } = useLanguage();
   const { t } = useTranslation();
 
   const toggleLanguage = () => {
-    changeLanguage(language === 'en' ? 'lt' : 'en');
+    const newLang = language === 'en' ? 'lt' : 'en';
+    changeLanguage(newLang);
   };
 
   return (
-    <button 
+    <Button 
       onClick={toggleLanguage}
-      className="flex items-center gap-2 bg-theme-navy dark:bg-theme-lightnavy text-white px-3 py-2 rounded-md cursor-pointer transition-colors duration-200 hover:bg-theme-tangerine dark:hover:bg-theme-darktangerine"
-      aria-label={`Switch to ${language === 'en' ? 'Lithuanian' : 'English'} language`}
+      variant="secondary"
       disabled={isLoading}
+      aria-label={`Switch to ${language === 'en' ? 'Lithuanian' : 'English'} language`}
     >
-      {isLoading ? (
-        <Loader2 size={18} className="animate-spin" />
-      ) : (
-        <Flag size={18} />
-      )}
+      <Flag size={18} className="mr-2" />
       <span>{language === 'en' ? 'LT' : 'EN'}</span>
-    </button>
+    </Button>
   );
 };
 

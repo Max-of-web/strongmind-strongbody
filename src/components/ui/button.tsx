@@ -6,20 +6,20 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
-        default: "bg-theme-marine text-white hover:bg-theme-lightmarine dark:bg-theme-lightmarine dark:text-white dark:hover:bg-theme-marine",
+        default: "bg-theme-marine text-white hover:bg-theme-lightmarine dark:bg-theme-marine dark:text-white dark:hover:bg-theme-lightmarine",
         destructive:
-          "bg-destructive text-white hover:bg-destructive/90 dark:text-white",
+          "bg-destructive text-white hover:bg-destructive/90 dark:bg-destructive dark:text-white",
         outline:
-          "border border-theme-marine bg-background hover:bg-theme-lightmarine/20 text-theme-marine dark:border-theme-lightmarine dark:text-white dark:hover:bg-theme-lightmarine/20",
+          "border border-theme-marine bg-white hover:bg-theme-lightmarine/20 text-theme-navy dark:border-white dark:bg-theme-navy dark:text-white dark:hover:bg-theme-marine/80",
         secondary:
           "bg-theme-navy text-white hover:bg-theme-lightnavy dark:bg-theme-lightnavy dark:text-white dark:hover:bg-theme-navy",
-        ghost: "hover:bg-theme-lightmarine/20 hover:text-theme-marine dark:hover:bg-theme-lightmarine/20 dark:text-white dark:hover:text-white",
-        link: "text-theme-marine underline-offset-4 hover:underline dark:text-theme-lightmarine",
-        cta: "bg-theme-tangerine text-white hover:bg-theme-lighttangerine dark:bg-theme-tangerine dark:text-white dark:hover:bg-theme-lighttangerine shadow-md",
+        ghost: "text-theme-navy hover:bg-theme-lightmarine/20 hover:text-theme-marine dark:text-white dark:hover:bg-theme-lightmarine/20 dark:hover:text-white",
+        link: "text-theme-marine underline-offset-4 hover:underline dark:text-white",
+        cta: "bg-theme-tangerine text-white hover:bg-theme-lighttangerine dark:bg-theme-tangerine dark:text-white dark:hover:bg-theme-lighttangerine shadow-md font-semibold",
       },
       size: {
         default: "h-10 px-4 py-2",

@@ -15,7 +15,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const { i18n } = useTranslation();
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   
   // Initialize language from localStorage or browser
   const [language, setLanguage] = useState<Language>(() => {
@@ -80,7 +80,9 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   }, [language, i18n]);
 
   const changeLanguage = (lang: Language) => {
+    setIsLoading(true);
     setLanguage(lang);
+    // The useEffect will handle the actual language change
   };
 
   return (
