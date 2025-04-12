@@ -1,6 +1,7 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useTheme } from '@/hooks/useTheme';
 
 interface CTAButtonProps {
   children: React.ReactNode;
@@ -23,6 +24,30 @@ const CTAButton: React.FC<CTAButtonProps> = ({
   type = 'button',
   external = false,
 }) => {
+  const { theme } = useTheme();
+
+  // Create CSS variables for theming
+  useEffect(() => {
+    const root = document.documentElement;
+    
+    // Set base variables
+    root.style.setProperty('--primary-btn-bg', '#f97316');
+    root.style.setProperty('--primary-btn-text', 'white');
+    root.style.setProperty('--primary-btn-hover-bg', '#fb923c');
+    root.style.setProperty('--secondary-btn-bg', 'transparent');
+    root.style.setProperty('--secondary-btn-text', '#1e293b');
+    root.style.setProperty('--secondary-btn-border', '#1e293b');
+    root.style.setProperty('--secondary-btn-hover-bg', '#f97316');
+    root.style.setProperty('--secondary-btn-hover-border', '#f97316');
+    root.style.setProperty('--secondary-btn-hover-text', 'white');
+    
+    // Adjust for dark mode
+    if (theme === 'dark') {
+      root.style.setProperty('--secondary-btn-text', 'white');
+      root.style.setProperty('--secondary-btn-border', 'white');
+    }
+  }, [theme]);
+
   // Define inline styles based on props
   const buttonStyle = {
     display: 'inline-flex',
@@ -117,33 +142,6 @@ const CTAButton: React.FC<CTAButtonProps> = ({
       onMouseLeave={removeHoverStyles}
     >
       {children}
-
-      {/* Add CSS variables for theming */}
-      <style jsx>{`
-        :root {
-          --primary-btn-bg: #f97316;
-          --primary-btn-text: white;
-          --primary-btn-hover-bg: #fb923c;
-          --secondary-btn-bg: transparent;
-          --secondary-btn-text: #1e293b;
-          --secondary-btn-border: #1e293b;
-          --secondary-btn-hover-bg: #f97316;
-          --secondary-btn-hover-border: #f97316;
-          --secondary-btn-hover-text: white;
-        }
-        
-        .dark {
-          --primary-btn-bg: #f97316;
-          --primary-btn-text: white;
-          --primary-btn-hover-bg: #fb923c;
-          --secondary-btn-bg: transparent;
-          --secondary-btn-text: white;
-          --secondary-btn-border: white;
-          --secondary-btn-hover-bg: #f97316;
-          --secondary-btn-hover-border: #f97316;
-          --secondary-btn-hover-text: white;
-        }
-      `}</style>
     </button>
   );
 };
