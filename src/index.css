@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap');
 
 @tailwind base;
@@ -84,7 +85,7 @@
 
 @layer base {
   * {
-    @apply border-border;
+    /* Removed border-border to fix unwanted borders */
   }
 
   body {
@@ -92,20 +93,30 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display font-semibold text-foreground;
+    @apply font-display font-semibold text-foreground dark:text-white;
   }
 }
 
 @layer components {
   .hero-section {
-    @apply min-h-[85vh] flex flex-col justify-center relative overflow-hidden text-white;
+    @apply min-h-[85vh] flex flex-col justify-center relative overflow-hidden;
     background: linear-gradient(to bottom, rgba(10, 35, 66, 0.9), rgba(10, 35, 66, 0.95)), url('/lovable-uploads/b4413382-3998-4c2e-a754-75a067048c2d.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
   }
 
-  .hero-section * {
+  /* Instead of blanket override, we use scoped selectors */
+  .hero-section h1,
+  .hero-section h2,
+  .hero-section h3,
+  .hero-section h4,
+  .hero-section h5,
+  .hero-section h6,
+  .hero-section p,
+  .hero-section span,
+  .hero-section div,
+  .hero-section a:not(.bg-theme-tangerine) {
     @apply text-white;
   }
 
@@ -133,7 +144,7 @@
   }
 
   .section-title {
-    @apply text-3xl md:text-4xl font-bold mb-6 relative inline-block after:content-[''] after:absolute after:bottom-[-8px] after:left-0 after:w-20 after:h-1 after:bg-theme-tangerine dark:after:bg-theme-tangerine;
+    @apply text-3xl md:text-4xl font-bold mb-6 relative inline-block after:content-[''] after:absolute after:bottom-[-8px] after:left-0 after:w-20 after:h-1 after:bg-theme-tangerine dark:after:bg-theme-tangerine text-foreground dark:text-white;
   }
 
   .card-hover {
@@ -145,7 +156,7 @@
   }
   
   .testimonial-card {
-    @apply bg-background p-6 rounded-lg shadow-md border border-input text-foreground;
+    @apply bg-background p-6 rounded-lg shadow-md border border-input text-foreground dark:text-white;
   }
 
   .elegant-card {
@@ -200,7 +211,7 @@ html {
 }
 
 .dark p, .dark span, .dark li {
-  color: var(--theme-text-medium-contrast);
+  color: var(--theme-text-high-contrast);
   font-weight: 500;
 }
 
@@ -208,7 +219,7 @@ html {
   color: var(--theme-text-high-contrast);
 }
 
-/* Improved dark mode background contrast */
+/* Improved dark mode background contrast with CSS variables */
 .dark .bg-elegant-charcoal {
   background-color: hsl(215 30% 12%);
 }
@@ -220,7 +231,7 @@ html {
 /* Typography improvements */
 p, li, span {
   @apply text-base md:text-lg leading-relaxed font-medium;
-  min-font-size: 16px;
+  /* Removed invalid min-font-size property */
 }
 
 h1 {
@@ -239,101 +250,101 @@ h4 {
   @apply text-xl md:text-2xl leading-tight font-semibold;
 }
 
-/* Fix for testimonial cards and other dark elements */
+/* Fix for testimonial cards using CSS variables */
 .dark .testimonial-card {
-  background-color: #0A2342; /* Direct color value to avoid circular dependency */
-  border-color: #375177; /* Direct color value */
-  color: white;
+  background-color: var(--theme-darknavy, #0A2342); 
+  border-color: var(--theme-lightnavy, #375177);
+  color: var(--theme-text-high-contrast, white);
 }
 
 .dark .testimonial-card p {
-  color: rgba(255, 255, 255, 0.95);
+  color: var(--theme-text-high-contrast, white);
 }
 
 .dark .testimonial-card svg {
-  color: #F7882F;
+  color: var(--theme-tangerine, #F7882F);
 }
 
 .dark .testimonial-card .font-semibold {
-  color: white;
+  color: var(--theme-text-high-contrast, white);
 }
 
-/* Feature cards dark mode fixes */
+/* Feature cards dark mode fixes with CSS variables */
 .feature-card-dark {
   @apply text-foreground dark:text-white;
 }
 
 .dark .feature-card-dark {
-  background-color: #0A2342;
-  border-color: #1C345F;
+  background-color: var(--theme-darknavy, #0A2342);
+  border-color: var(--theme-lightnavy, #1C345F);
 }
 
 .dark .feature-card-dark h3,
 .dark .feature-card-dark p {
-  color: white;
+  color: var(--theme-text-high-contrast, white);
 }
 
-/* Credential badges */
+/* Credential badges with proper contrast */
 .credential-badge {
-  @apply text-foreground dark:text-white;
+  @apply text-white dark:text-white;
 }
 
 .dark .credential-badge {
-  background-color: #1C345F;
-  color: white;
+  background-color: var(--theme-lightnavy, #1C345F);
+  color: var(--theme-text-high-contrast, white);
 }
 
-/* Timeline elements */
+/* Timeline elements with better contrast */
 .dark .timeline-item {
-  color: white;
+  color: var(--theme-text-high-contrast, white);
 }
 
 .dark .timeline-number {
   background-color: rgba(247, 136, 47, 0.3);
-  color: #F7882F;
+  color: var(--theme-tangerine, #F7882F);
 }
 
 /* Form element improvements for dark mode */
 .dark .form-label {
-  color: white;
+  color: var(--theme-text-high-contrast, white);
 }
 
 .dark .form-input {
-  background-color: #0A2342;
-  border-color: #1C345F;
-  color: white;
+  background-color: var(--theme-darknavy, #0A2342);
+  border-color: var(--theme-lightnavy, #1C345F);
+  color: var(--theme-text-high-contrast, white);
 }
 
 .dark .form-input::placeholder {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--theme-text-medium-contrast, rgba(255, 255, 255, 0.7));
 }
 
 .dark .checkbox-label {
-  color: white;
+  color: var(--theme-text-high-contrast, white);
 }
 
-/* Price cards for dark mode */
+/* Price cards with consistent text colors */
 .price-card {
   @apply text-foreground dark:text-white;
 }
 
 .dark .price-card {
-  background-color: #0A2342;
-  border-color: #1C345F;
+  background-color: var(--theme-darknavy, #0A2342);
+  border-color: var(--theme-lightnavy, #1C345F);
 }
 
 .dark .price-card h3,
 .dark .price-card .price-amount,
 .dark .price-card li {
-  color: white;
+  color: var(--theme-text-high-contrast, white);
 }
 
 .dark .price-card .price-period {
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--theme-text-medium-contrast, rgba(255, 255, 255, 0.8));
 }
 
 .dark .price-card .check-icon {
-  color: #F7882F;
+  color: var(--theme-tangerine, #F7882F);
 }
 
 /* Section backgrounds with text contrast fixes */
@@ -352,7 +363,7 @@ h4 {
 [class*="bg-theme-navy"] li,
 [class*="bg-theme-darknavy"] li,
 .bg-elegant-charcoal li {
-  color: rgba(255, 255, 255, 0.95);
+  color: var(--theme-text-high-contrast, rgba(255, 255, 255, 0.95));
 }
 
 [class*="bg-theme-navy"] h1,
@@ -367,18 +378,18 @@ h4 {
 [class*="bg-theme-navy"] h4,
 [class*="bg-theme-darknavy"] h4,
 .bg-elegant-charcoal h4 {
-  color: white;
+  color: var(--theme-text-high-contrast, white);
 }
 
 /* Enhanced button contrast for dark mode */
 .dark .secondary-button {
   background-color: transparent;
-  border-color: white;
-  color: white;
+  border-color: var(--theme-text-high-contrast, white);
+  color: var(--theme-text-high-contrast, white);
 }
 
 .dark .secondary-button:hover {
-  background-color: #F7882F;
-  color: white;
+  background-color: var(--theme-tangerine, #F7882F);
+  color: var(--theme-text-high-contrast, white);
   border-color: transparent;
 }

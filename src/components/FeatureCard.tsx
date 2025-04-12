@@ -22,7 +22,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ icon: Icon, title, descriptio
         <div className={`${badgeSize} bg-theme-tangerine bg-opacity-20 dark:bg-theme-tangerine dark:bg-opacity-30 rounded-full flex items-center justify-center`}>
           <Icon size={iconSize} className="text-theme-tangerine" />
         </div>
-        <span className={`${textSize} font-semibold text-foreground dark:text-white`}>{title}</span>
+        <span className={`${textSize} font-semibold text-white dark:text-white`}>{title}</span>
       </div>
     );
   }
@@ -32,8 +32,8 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ icon: Icon, title, descriptio
       <div className="w-12 h-12 bg-theme-tangerine bg-opacity-20 dark:bg-theme-tangerine dark:bg-opacity-30 rounded-full flex items-center justify-center mb-4">
         <Icon size={24} className="text-theme-tangerine" />
       </div>
-      <h3 className="text-xl font-semibold mb-3 dark:text-white">{title}</h3>
-      <p className="text-foreground dark:text-white dark:text-opacity-90">{description}</p>
+      <h3 className="text-xl font-semibold mb-3 text-white dark:text-white">{title}</h3>
+      <p className="text-white dark:text-white dark:text-opacity-90">{description}</p>
     </div>
   );
 };
