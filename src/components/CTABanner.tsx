@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import CTAButton from './CTAButton';
 import { useTheme } from '@/hooks/useTheme';
 
@@ -11,49 +11,24 @@ interface CTABannerProps {
 
 const CTABanner: React.FC<CTABannerProps> = ({ message, buttonText, buttonLink }) => {
   const { theme } = useTheme();
-
-  // Define styles using CSS variables via a style object
-  useEffect(() => {
-    // Add CSS variables to document root if not already present
-    const root = document.documentElement;
-    if (!root.style.getPropertyValue('--banner-bg')) {
-      root.style.setProperty('--banner-bg', '#1e293b');
-      root.style.setProperty('--banner-text', 'white');
-      root.style.setProperty('--banner-heading', 'white');
-    }
-
-    // Add dark mode specific variables
-    const handleChange = () => {
-      if (document.documentElement.classList.contains('dark')) {
-        root.style.setProperty('--banner-bg', '#0f172a');
-      } else {
-        root.style.setProperty('--banner-bg', '#1e293b');
-      }
-    };
-
-    // Initialize
-    handleChange();
-
-    // Listen for theme changes
-    document.addEventListener('themeChange', handleChange);
-    
-    return () => {
-      document.removeEventListener('themeChange', handleChange);
-    };
-  }, []);
-
-  const bannerStyle: React.CSSProperties = {
-    backgroundColor: 'var(--banner-bg, #1e293b)',
-    color: 'var(--banner-text, white)'
+  
+  // Define banner styles with better contrast for both modes
+  const bannerStyle = {
+    backgroundColor: theme === 'dark' ? '#061528' : '#0A2342', // Dark navy in dark mode, Navy in light
+    color: '#FFFFFF', // White text for maximum contrast
+    padding: '3rem 1rem',
   };
 
-  const headingStyle: React.CSSProperties = {
-    color: 'var(--banner-heading, white)'
+  const headingStyle = {
+    color: '#FFFFFF', // White text for maximum contrast
+    fontSize: '1.5rem',
+    fontWeight: 600,
+    marginBottom: '1.5rem',
   };
 
   return (
     <section 
-      className="py-12 bg-theme-navy dark:bg-theme-darknavy text-white"
+      className="py-12 text-white"
       style={bannerStyle}
     >
       <div className="container-width px-4 text-center">

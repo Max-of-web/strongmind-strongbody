@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTheme } from '@/hooks/useTheme';
 
@@ -25,121 +25,119 @@ const CTAButton: React.FC<CTAButtonProps> = ({
   external = false,
 }) => {
   const { theme } = useTheme();
-
-  // Create CSS variables for theming
-  useEffect(() => {
-    const root = document.documentElement;
-    
-    // Set base variables
-    root.style.setProperty('--primary-btn-bg', '#f97316');
-    root.style.setProperty('--primary-btn-text', 'white');
-    root.style.setProperty('--primary-btn-hover-bg', '#fb923c');
-    root.style.setProperty('--secondary-btn-bg', 'transparent');
-    root.style.setProperty('--secondary-btn-text', '#1e293b');
-    root.style.setProperty('--secondary-btn-border', '#1e293b');
-    root.style.setProperty('--secondary-btn-hover-bg', '#f97316');
-    root.style.setProperty('--secondary-btn-hover-border', '#f97316');
-    root.style.setProperty('--secondary-btn-hover-text', 'white');
-    
-    // Adjust for dark mode
-    if (theme === 'dark') {
-      root.style.setProperty('--secondary-btn-text', 'white');
-      root.style.setProperty('--secondary-btn-border', 'white');
-    }
-  }, [theme]);
-
-  // Define inline styles based on props
-  const buttonStyle: React.CSSProperties = {
-    display: 'inline-flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: '0.75rem 1.5rem',
-    borderRadius: '0.375rem',
-    fontWeight: '600',
-    transition: 'all 300ms',
-    cursor: disabled ? 'not-allowed' : 'pointer',
-    opacity: disabled ? '0.5' : '1',
-    backgroundColor: secondary ? 'var(--secondary-btn-bg, transparent)' : 'var(--primary-btn-bg, #f97316)',
-    color: secondary ? 'var(--secondary-btn-text, #1e293b)' : 'var(--primary-btn-text, white)',
-    border: secondary ? '1px solid var(--secondary-btn-border, #1e293b)' : 'none',
-    boxShadow: secondary ? 'none' : '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+  
+  // Define base style classes
+  const baseClasses = `
+    inline-flex items-center justify-center 
+    px-6 py-3 rounded-md font-semibold
+    transition-all duration-300 ease-in-out
+    ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
+    ${className}
+  `;
+  
+  // Define primary button styles with strong contrast in both modes
+  const primaryStyles = {
+    backgroundColor: theme === 'dark' ? '#F7882F' : '#F7882F', // Tangerine in both modes
+    color: '#FFFFFF', // White text for contrast
+    border: 'none',
+    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+    transform: 'translateY(0)',
   };
-
-  // Define hover styles to be applied with JavaScript
-  const applyHoverStyles = (e: React.MouseEvent) => {
+  
+  // Define secondary button styles with strong contrast in both modes
+  const secondaryStyles = {
+    backgroundColor: 'transparent',
+    color: theme === 'dark' ? '#FFFFFF' : '#0A2342', // White in dark mode, Navy in light
+    border: `1px solid ${theme === 'dark' ? '#FFFFFF' : '#0A2342'}`, // White in dark mode, Navy in light
+    boxShadow: 'none',
+  };
+  
+  // Define hover styles
+  const primaryHoverStyles = {
+    backgroundColor: theme === 'dark' ? '#F89F4F' : '#F89F4F', // Lighter tangerine in both modes
+    transform: 'translateY(-2px)',
+    boxShadow: '0 6px 8px rgba(0, 0, 0, 0.15)',
+  };
+  
+  const secondaryHoverStyles = {
+    backgroundColor: theme === 'dark' ? '#F7882F' : '#F7882F', // Tangerine in both modes
+    color: '#FFFFFF', // White text
+    borderColor: theme === 'dark' ? '#F7882F' : '#F7882F', // Tangerine in both modes
+  };
+  
+  // Choose the base style based on the secondary prop
+  const baseStyle = secondary ? secondaryStyles : primaryStyles;
+  
+  // Create event handlers for hover effects
+  const handleMouseEnter = (e: React.MouseEvent<HTMLElement>) => {
     if (disabled) return;
     
-    const target = e.currentTarget as HTMLElement;
-    if (secondary) {
-      target.style.backgroundColor = 'var(--secondary-btn-hover-bg, #f97316)';
-      target.style.borderColor = 'var(--secondary-btn-hover-border, #f97316)';
-      target.style.color = 'var(--secondary-btn-hover-text, white)';
-    } else {
-      target.style.backgroundColor = 'var(--primary-btn-hover-bg, #fb923c)';
-      target.style.transform = 'translateY(-2px)';
-    }
+    const target = e.currentTarget;
+    const hoverStyles = secondary ? secondaryHoverStyles : primaryHoverStyles;
+    
+    Object.entries(hoverStyles).forEach(([key, value]) => {
+      // @ts-ignore - dynamically setting style properties
+      target.style[key] = value;
+    });
   };
-
-  // Define leave styles to revert hover effects
-  const removeHoverStyles = (e: React.MouseEvent) => {
+  
+  const handleMouseLeave = (e: React.MouseEvent<HTMLElement>) => {
     if (disabled) return;
     
-    const target = e.currentTarget as HTMLElement;
-    if (secondary) {
-      target.style.backgroundColor = 'transparent';
-      target.style.borderColor = 'var(--secondary-btn-border, #1e293b)';
-      target.style.color = 'var(--secondary-btn-text, #1e293b)';
-    } else {
-      target.style.backgroundColor = 'var(--primary-btn-bg, #f97316)';
-      target.style.transform = 'translateY(0)';
-    }
+    const target = e.currentTarget;
+    const defaultStyles = secondary ? secondaryStyles : primaryStyles;
+    
+    Object.entries(defaultStyles).forEach(([key, value]) => {
+      // @ts-ignore - dynamically setting style properties
+      target.style[key] = value;
+    });
   };
-
-  // Handle external links
+  
+  // External link rendering
   if (href && external) {
     return (
       <a
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className={className}
+        className={baseClasses}
         onClick={onClick}
         aria-disabled={disabled}
-        style={buttonStyle}
-        onMouseEnter={applyHoverStyles}
-        onMouseLeave={removeHoverStyles}
+        style={baseStyle}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
         {children}
       </a>
     );
   }
 
-  // Handle internal links
+  // Internal link rendering
   if (href && !disabled) {
     return (
       <Link 
         to={href} 
-        className={className}
+        className={baseClasses}
         onClick={onClick}
-        style={buttonStyle}
-        onMouseEnter={applyHoverStyles}
-        onMouseLeave={removeHoverStyles}
+        style={baseStyle}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
         {children}
       </Link>
     );
   }
 
-  // Handle buttons
+  // Regular button rendering
   return (
     <button
       type={type}
-      className={className}
+      className={baseClasses}
       onClick={onClick}
       disabled={disabled}
-      style={buttonStyle}
-      onMouseEnter={applyHoverStyles}
-      onMouseLeave={removeHoverStyles}
+      style={baseStyle}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       {children}
     </button>

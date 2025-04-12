@@ -44,22 +44,55 @@ export interface ButtonProps
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
+    
+    // Enhanced style overrides to ensure visibility in all theme contexts
+    const getStyleOverrides = () => {
+      // Base styles that ensure proper contrast
+      const styleMap: Record<string, React.CSSProperties> = {
+        default: {
+          backgroundColor: 'var(--theme-marine, #1C5B5A)',
+          color: 'white',
+        },
+        destructive: {
+          backgroundColor: 'var(--destructive, #ef4444)',
+          color: 'white',
+        },
+        secondary: {
+          backgroundColor: 'var(--theme-navy, #0A2342)',
+          color: 'white',
+        },
+        cta: {
+          backgroundColor: 'var(--theme-tangerine, #F7882F)',
+          color: 'white',
+          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+        },
+        outline: {
+          backgroundColor: 'transparent',
+          color: document.documentElement.classList.contains('dark') ? 'white' : 'var(--theme-navy, #0A2342)',
+          borderColor: document.documentElement.classList.contains('dark') ? 'white' : 'var(--theme-marine, #1C5B5A)',
+          border: '1px solid',
+        },
+        ghost: {
+          backgroundColor: 'transparent',
+          color: document.documentElement.classList.contains('dark') ? 'white' : 'var(--theme-navy, #0A2342)',
+        },
+        link: {
+          backgroundColor: 'transparent',
+          color: document.documentElement.classList.contains('dark') ? 'white' : 'var(--theme-marine, #1C5B5A)',
+          textDecoration: 'underline',
+        },
+      };
+
+      return variant ? styleMap[variant] : styleMap.default;
+    };
+
     return (
       <Comp
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
         {...props}
         style={{
-          // Add explicit styles for themes
-          backgroundColor: variant === 'default' ? 'var(--btn-bg, #0891b2)' : 
-                          variant === 'destructive' ? 'var(--destructive-btn-bg, #ef4444)' :
-                          variant === 'secondary' ? 'var(--secondary-btn-bg, #1e293b)' :
-                          variant === 'cta' ? 'var(--cta-btn-bg, #f97316)' :
-                          variant === 'outline' || variant === 'ghost' ? 'transparent' : undefined,
-          color: variant === 'ghost' || variant === 'outline' || variant === 'link' ? 
-                'var(--text-btn-color, #0891b2)' : 'var(--btn-text-color, white)',
-          borderColor: variant === 'outline' ? 'var(--outline-border, #0891b2)' : undefined,
-          border: variant === 'outline' ? '1px solid var(--outline-border, #0891b2)' : 'none',
+          ...getStyleOverrides(),
           ...(props.style || {})
         }}
       />
