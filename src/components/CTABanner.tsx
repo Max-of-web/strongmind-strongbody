@@ -1,4 +1,6 @@
+
 import React from 'react';
+import CTAButton from './CTAButton';
 
 interface CTABannerProps {
   message: string;
@@ -8,19 +10,14 @@ interface CTABannerProps {
 
 const CTABanner: React.FC<CTABannerProps> = ({ message, buttonText, buttonLink }) => {
   return (
-    <section className="py-12 bg-elegant-charcoal text-white dark:bg-theme-navy">
+    <section className="py-12 bg-theme-navy dark:bg-theme-darknavy text-white">
       <div className="container-width px-4 text-center">
-        <h3 className="text-xl md:text-2xl font-semibold mb-6">
+        <h3 className="text-xl md:text-2xl font-semibold mb-6 text-white">
           {message}
         </h3>
-        <a
-          href={buttonLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="cta-button-primary"
-        >
+        <CTAButton href={buttonLink} external>
           {buttonText}
-        </a>
+        </CTAButton>
       </div>
     </section>
   );

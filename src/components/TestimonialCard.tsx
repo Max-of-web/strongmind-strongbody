@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 interface TestimonialCardProps {
@@ -8,18 +9,18 @@ interface TestimonialCardProps {
 
 const TestimonialCard: React.FC<TestimonialCardProps> = ({ quote, name, image }) => {
   return (
-    <div className="testimonial-card card-hover bg-white text-theme-darknavy dark:bg-theme-darknavy dark:text-theme-text-medium-contrast border border-border dark:border-theme-darkmarine shadow-md">
+    <div className="card-hover bg-white dark:bg-theme-darknavy border border-slate-200 dark:border-theme-lightnavy/30 shadow-md rounded-lg p-6">
       <div className="flex flex-col h-full">
         <div className="mb-4">
           <svg 
-            className="w-8 h-8 text-theme-tangerine opacity-80" 
+            className="w-8 h-8 text-theme-tangerine" 
             fill="currentColor" 
             viewBox="0 0 24 24"
           >
             <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
           </svg>
         </div>
-        <p className="flex-grow mb-4 italic text-theme-darknavy dark:text-theme-text-medium-contrast">"{quote}"</p>
+        <p className="flex-grow mb-4 italic text-theme-darknavy dark:text-white">"{quote}"</p>
         <div className="flex items-center mt-auto">
           {image && (
             <div className="w-12 h-12 rounded-full overflow-hidden mr-3">
@@ -30,7 +31,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ quote, name, image })
               />
             </div>
           )}
-          <span className="font-semibold text-theme-darknavy dark:text-theme-text-high-contrast">{name}</span>
+          <span className="font-semibold text-theme-darknavy dark:text-white">{name}</span>
         </div>
       </div>
     </div>
