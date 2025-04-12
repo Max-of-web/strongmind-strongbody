@@ -1,8 +1,8 @@
 
 import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import CTAButton from '../CTAButton';
 import PricingFeatureList from './PricingFeatureList';
+import { useTheme } from '@/hooks/useTheme';
 
 interface PricingCardProps {
   pricingKey: string;
@@ -18,6 +18,7 @@ const PricingCard = ({
   onBookingClick 
 }: PricingCardProps) => {
   const { t } = useTranslation();
+  const { theme } = useTheme();
 
   // Get correct card style based on theme
   const getCardStyle = () => {
@@ -34,7 +35,7 @@ const PricingCard = ({
       color: 'white'
     };
     
-    return document.documentElement.classList.contains('dark') 
+    return theme === 'dark'
       ? {...cardStyle, ...darkCardStyle}
       : cardStyle;
   };
@@ -50,16 +51,6 @@ const PricingCard = ({
     return isHighlighted 
       ? {...baseStyle, ...highlightStyle}
       : baseStyle;
-  };
-
-  // Button styles that will remain consistent in both light and dark mode
-  const buttonStyle = {
-    backgroundColor: '#0A2342', // Navy - dark background
-    color: 'white',            // White text
-    border: 'none',
-    fontWeight: '600',
-    width: '100%',
-    transition: 'all 300ms ease'
   };
 
   return (
@@ -80,18 +71,18 @@ const PricingCard = ({
       )}
       <CardHeader>
         <CardTitle className="text-xl" style={{ 
-          color: document.documentElement.classList.contains('dark') ? 'white' : 'inherit' 
+          color: theme === 'dark' ? 'white' : 'inherit' 
         }}>
           {t(`coaching.pricing.${pricingKey}.title`)}
         </CardTitle>
         <div className="flex items-baseline mt-2">
           <span className="text-3xl font-bold" style={{ 
-            color: document.documentElement.classList.contains('dark') ? 'white' : 'inherit' 
+            color: theme === 'dark' ? 'white' : 'inherit' 
           }}>
             {t(`coaching.pricing.${pricingKey}.price`)}
           </span>
           <span style={{ 
-            color: document.documentElement.classList.contains('dark') ? 'rgba(255,255,255,0.7)' : 'rgba(0,0,0,0.6)' 
+            color: theme === 'dark' ? 'rgba(255,255,255,0.7)' : 'rgba(0,0,0,0.6)' 
           }} className="ml-1">
             {t(`coaching.pricing.${pricingKey}.period`)}
           </span>
@@ -106,8 +97,28 @@ const PricingCard = ({
       <CardFooter>
         <button 
           onClick={onBookingClick}
-          style={buttonStyle}
-          className="px-6 py-3 rounded-md shadow-md hover:bg-[#375177]"
+          style={{
+            backgroundColor: '#0A2342', // Navy blue - always dark
+            color: '#FFFFFF',           // White text - always light
+            fontWeight: '600',
+            width: '100%',
+            padding: '0.75rem 1.5rem',
+            borderRadius: '0.375rem',
+            border: 'none',
+            boxShadow: '0 1px 3px rgba(0,0,0,0.1)',
+            cursor: 'pointer',
+            transition: 'all 300ms ease'
+          }}
+          onMouseOver={(e) => {
+            e.currentTarget.style.backgroundColor = '#375177'; // Lighter navy for hover
+            e.currentTarget.style.transform = 'translateY(-1px)';
+            e.currentTarget.style.boxShadow = '0 2px 4px rgba(0,0,0,0.15)';
+          }}
+          onMouseOut={(e) => {
+            e.currentTarget.style.backgroundColor = '#0A2342'; // Back to navy
+            e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.boxShadow = '0 1px 3px rgba(0,0,0,0.1)';
+          }}
         >
           {t(`coaching.pricing.${pricingKey}.buttonText`)}
         </button>
