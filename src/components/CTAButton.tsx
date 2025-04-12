@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTheme } from '@/hooks/useTheme';
@@ -11,6 +12,7 @@ interface CTAButtonProps {
   className?: string;
   type?: 'button' | 'submit' | 'reset';
   external?: boolean;
+  isWhatsApp?: boolean;
 }
 
 const CTAButton: React.FC<CTAButtonProps> = ({
@@ -22,6 +24,7 @@ const CTAButton: React.FC<CTAButtonProps> = ({
   className = '',
   type = 'button',
   external = false,
+  isWhatsApp = false,
 }) => {
   const { theme } = useTheme();
 
@@ -36,7 +39,9 @@ const CTAButton: React.FC<CTAButtonProps> = ({
       ? 'bg-transparent text-white border-2 border-white hover:bg-white/10'
       : 'bg-transparent text-theme-navy border-2 border-theme-navy hover:bg-theme-navy/10';
 
-  const finalClasses = `${baseClasses} ${secondary ? secondaryClasses : primaryClasses} ${disabled ? 'opacity-60 cursor-not-allowed' : ''} ${className}`;
+  const whatsAppClasses = 'bg-[#25D366] text-white border-none hover:bg-[#128C7E] shadow-md';
+
+  const finalClasses = `${baseClasses} ${isWhatsApp ? whatsAppClasses : (secondary ? secondaryClasses : primaryClasses)} ${disabled ? 'opacity-60 cursor-not-allowed' : ''} ${className}`;
 
   // External Link
   if (href && external) {

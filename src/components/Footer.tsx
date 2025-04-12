@@ -32,6 +32,7 @@ const Footer = () => {
               href="https://wa.me/37067951040" 
               external={true}
               secondary={true}
+              isWhatsApp={true}
             >
               {t('footer.messageWhatsApp')}
             </CTAButton>
@@ -55,13 +56,13 @@ const Footer = () => {
                 </a>
               </div>
               <div className="flex items-center space-x-3">
-                <MessageSquare size={18} style={{ color: '#F7882F' }} />
+                <MessageSquare size={18} style={{ color: '#25D366' }} />
                 <a 
                   href="https://wa.me/37067951040" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   style={{ 
-                    color: 'white',
+                    color: '#25D366',
                     transition: 'color 150ms',
                   }}
                 >
