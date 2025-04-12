@@ -140,7 +140,7 @@
   }
 
   .cta-button-secondary {
-    @apply bg-transparent text-theme-navy dark:text-white border border-theme-marine dark:border-white; font-semibold px-6 py-3 rounded-md transition-all duration-300 hover:bg-theme-tangerine hover:text-white dark:hover:bg-theme-tangerine hover:border-transparent hover:translate-y-[-2px];
+    @apply bg-transparent text-theme-navy dark:text-white border border-theme-marine dark:border-white font-semibold px-6 py-3 rounded-md transition-all duration-300 hover:bg-theme-tangerine hover:text-white dark:hover:bg-theme-tangerine hover:border-transparent hover:translate-y-[-2px];
   }
 
   .cta-button-secondary:disabled {
