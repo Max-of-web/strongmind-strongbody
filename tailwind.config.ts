@@ -86,6 +86,17 @@ export default {
 					textdark: '#0A2342'        // Dark text
 				}
 			},
+			textColor: {
+				'theme-darknavy': '#061528',
+				'theme-text-medium-contrast': 'rgba(255, 255, 255, 0.95)',
+				'theme-text-high-contrast': '#FFFFFF'
+			  },
+			  backgroundColor: {
+				'theme-darknavy': '#061528'
+			  },
+			  borderColor: {
+				'theme-darkmarine': '#164948'
+			  },
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
