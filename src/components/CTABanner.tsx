@@ -12,9 +12,9 @@ interface CTABannerProps {
 const CTABanner: React.FC<CTABannerProps> = ({ message, buttonText, buttonLink }) => {
   const { theme } = useTheme();
   
-  // Define banner styles with better contrast for both modes
+  // Define banner styles with guaranteed contrast for both modes
   const bannerStyle = {
-    backgroundColor: theme === 'dark' ? '#061528' : '#0A2342', // Dark navy in dark mode, Navy in light
+    backgroundColor: '#061528', // Dark navy (works in both modes)
     color: '#FFFFFF', // White text for maximum contrast
     padding: '3rem 1rem',
   };

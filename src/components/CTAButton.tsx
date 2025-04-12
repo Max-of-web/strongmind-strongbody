@@ -35,34 +35,34 @@ const CTAButton: React.FC<CTAButtonProps> = ({
     ${className}
   `;
   
-  // Define primary button styles with strong contrast in both modes
+  // Fixed high contrast styles that work in both modes
   const primaryStyles = {
-    backgroundColor: theme === 'dark' ? '#F7882F' : '#F7882F', // Tangerine in both modes
+    backgroundColor: '#F7882F', // Tangerine color - consistent in both modes
     color: '#FFFFFF', // White text for contrast
     border: 'none',
     boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
     transform: 'translateY(0)',
   };
   
-  // Define secondary button styles with strong contrast in both modes
+  // Fixed high contrast secondary styles that work in both modes
   const secondaryStyles = {
     backgroundColor: 'transparent',
-    color: theme === 'dark' ? '#FFFFFF' : '#0A2342', // White in dark mode, Navy in light
-    border: `1px solid ${theme === 'dark' ? '#FFFFFF' : '#0A2342'}`, // White in dark mode, Navy in light
+    color: theme === 'dark' ? '#FFFFFF' : '#0A2342', // White in dark, Navy in light
+    border: `2px solid ${theme === 'dark' ? '#FFFFFF' : '#0A2342'}`, // White in dark, Navy in light
     boxShadow: 'none',
   };
   
-  // Define hover styles
+  // Fixed hover styles with high contrast
   const primaryHoverStyles = {
-    backgroundColor: theme === 'dark' ? '#F89F4F' : '#F89F4F', // Lighter tangerine in both modes
+    backgroundColor: '#F89F4F', // Lighter tangerine
     transform: 'translateY(-2px)',
     boxShadow: '0 6px 8px rgba(0, 0, 0, 0.15)',
   };
   
   const secondaryHoverStyles = {
-    backgroundColor: theme === 'dark' ? '#F7882F' : '#F7882F', // Tangerine in both modes
-    color: '#FFFFFF', // White text
-    borderColor: theme === 'dark' ? '#F7882F' : '#F7882F', // Tangerine in both modes
+    backgroundColor: theme === 'dark' ? 'rgba(255, 255, 255, 0.2)' : 'rgba(10, 35, 66, 0.1)',
+    color: theme === 'dark' ? '#FFFFFF' : '#0A2342',
+    borderColor: theme === 'dark' ? '#FFFFFF' : '#0A2342',
   };
   
   // Choose the base style based on the secondary prop

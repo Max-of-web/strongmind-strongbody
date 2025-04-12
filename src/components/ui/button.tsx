@@ -45,40 +45,39 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
     
-    // Enhanced style overrides to ensure visibility in all theme contexts
+    // Hard-coded style overrides to ensure visibility in all contexts
     const getStyleOverrides = () => {
-      // Base styles that ensure proper contrast
       const styleMap: Record<string, React.CSSProperties> = {
         default: {
-          backgroundColor: 'var(--theme-marine, #1C5B5A)',
+          backgroundColor: '#1C5B5A', // marine
           color: 'white',
         },
         destructive: {
-          backgroundColor: 'var(--destructive, #ef4444)',
+          backgroundColor: '#ef4444', // destructive
           color: 'white',
         },
         secondary: {
-          backgroundColor: 'var(--theme-navy, #0A2342)',
+          backgroundColor: '#0A2342', // navy
           color: 'white',
         },
         cta: {
-          backgroundColor: 'var(--theme-tangerine, #F7882F)',
+          backgroundColor: '#F7882F', // tangerine
           color: 'white',
           boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
         },
         outline: {
           backgroundColor: 'transparent',
-          color: document.documentElement.classList.contains('dark') ? 'white' : 'var(--theme-navy, #0A2342)',
-          borderColor: document.documentElement.classList.contains('dark') ? 'white' : 'var(--theme-marine, #1C5B5A)',
-          border: '1px solid',
+          color: document.documentElement.classList.contains('dark') ? 'white' : '#0A2342', // navy
+          borderColor: document.documentElement.classList.contains('dark') ? 'white' : '#1C5B5A', // marine
+          border: '2px solid',
         },
         ghost: {
           backgroundColor: 'transparent',
-          color: document.documentElement.classList.contains('dark') ? 'white' : 'var(--theme-navy, #0A2342)',
+          color: document.documentElement.classList.contains('dark') ? 'white' : '#0A2342', // navy
         },
         link: {
           backgroundColor: 'transparent',
-          color: document.documentElement.classList.contains('dark') ? 'white' : 'var(--theme-marine, #1C5B5A)',
+          color: document.documentElement.classList.contains('dark') ? 'white' : '#1C5B5A', // marine
           textDecoration: 'underline',
         },
       };
