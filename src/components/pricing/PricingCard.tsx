@@ -52,6 +52,16 @@ const PricingCard = ({
       : baseStyle;
   };
 
+  // Button styles that will remain consistent in both light and dark mode
+  const buttonStyle = {
+    backgroundColor: '#0A2342', // Navy - dark background
+    color: 'white',            // White text
+    border: 'none',
+    fontWeight: '600',
+    width: '100%',
+    transition: 'all 300ms ease'
+  };
+
   return (
     <Card style={getHighlightedCardStyle()}>
       {isHighlighted && (
@@ -94,13 +104,13 @@ const PricingCard = ({
         />
       </CardContent>
       <CardFooter>
-        <CTAButton 
+        <button 
           onClick={onBookingClick}
-          className="w-full"
-          navyBg={true}
+          style={buttonStyle}
+          className="px-6 py-3 rounded-md shadow-md hover:bg-[#375177]"
         >
           {t(`coaching.pricing.${pricingKey}.buttonText`)}
-        </CTAButton>
+        </button>
       </CardFooter>
     </Card>
   );
