@@ -4,8 +4,8 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import { ThemeProvider } from './contexts/ThemeContext';
-import './App.css';
-import './index.css';
+import './App.css'; // Tailwind directives
+import './index.css'; // Custom styles
 import { I18nextProvider } from 'react-i18next';
 import i18n from './i18n';
 import { Toaster } from 'sonner';
