@@ -182,7 +182,7 @@ const Coaching = () => {
                     href="https://calendly.com/lipskis-paulius/asmenine-treniruote" 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="inline-block bg-theme-navy text-white font-semibold px-6 py-3 rounded-md hover:bg-theme-navy/80 transition-all duration-300 shadow-md w-full"
+                    className="cta-button-secondary w-full"
                   >
                     Book Session
                   </a>
@@ -220,7 +220,7 @@ const Coaching = () => {
                     href="https://calendly.com/lipskis-paulius/asmenine-treniruote" 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="inline-block bg-theme-navy text-white font-semibold px-6 py-3 rounded-md hover:bg-theme-navy/80 transition-all duration-300 shadow-md w-full"
+                    className="cta-button-secondary w-full"
                   >
                     Book Consultation
                   </a>
@@ -270,7 +270,7 @@ const Coaching = () => {
                     href="https://calendly.com/lipskis-paulius/asmenine-treniruote" 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="inline-block bg-theme-navy text-white font-semibold px-6 py-3 rounded-md hover:bg-theme-navy/80 transition-all duration-300 shadow-md w-full"
+                    className="inline-block bg-white text-theme-navy font-semibold px-6 py-3 rounded-md hover:bg-opacity-90 transition-all duration-300 shadow-md w-full"
                   >
                     Book Consultation
                   </a>

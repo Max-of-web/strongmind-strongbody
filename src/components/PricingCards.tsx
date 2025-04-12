@@ -130,6 +130,7 @@ const PricingCards = () => {
         <CardFooter>
           <CTAButton 
             onClick={openBookingLink}
+            secondary={true}
             className="w-full"
           >
             {t('coaching.pricing.additionalSession.buttonText')}
