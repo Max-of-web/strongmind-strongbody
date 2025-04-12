@@ -13,6 +13,7 @@ interface CTAButtonProps {
   type?: 'button' | 'submit' | 'reset';
   external?: boolean;
   isWhatsApp?: boolean;
+  navyBg?: boolean;
 }
 
 const CTAButton: React.FC<CTAButtonProps> = ({
@@ -25,6 +26,7 @@ const CTAButton: React.FC<CTAButtonProps> = ({
   type = 'button',
   external = false,
   isWhatsApp = false,
+  navyBg = false,
 }) => {
   const { theme } = useTheme();
 
@@ -40,8 +42,16 @@ const CTAButton: React.FC<CTAButtonProps> = ({
       : 'bg-transparent text-theme-navy border-2 border-theme-navy hover:bg-theme-navy/10';
 
   const whatsAppClasses = 'bg-[#25D366] text-white border-none hover:bg-[#128C7E] shadow-md';
+  
+  const navyBgClasses = 'bg-[#0A2342] text-white border-none hover:bg-[#375177] shadow-md';
 
-  const finalClasses = `${baseClasses} ${isWhatsApp ? whatsAppClasses : (secondary ? secondaryClasses : primaryClasses)} ${disabled ? 'opacity-60 cursor-not-allowed' : ''} ${className}`;
+  const finalClasses = `${baseClasses} ${
+    isWhatsApp 
+      ? whatsAppClasses 
+      : navyBg 
+        ? navyBgClasses 
+        : (secondary ? secondaryClasses : primaryClasses)
+  } ${disabled ? 'opacity-60 cursor-not-allowed' : ''} ${className}`;
 
   // External Link
   if (href && external) {
