@@ -13,7 +13,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ quote, name, image })
       <div className="flex flex-col h-full">
         <div className="mb-4">
           <svg 
-            className="w-8 h-8 text-theme-tangerine opacity-70 dark:opacity-80" 
+            className="w-8 h-8 text-theme-tangerine opacity-80" 
             fill="currentColor" 
             viewBox="0 0 24 24"
           >
@@ -31,7 +31,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ quote, name, image })
               />
             </div>
           )}
-          <span className="font-semibold dark:text-white">{name}</span>
+          <span className="font-semibold text-foreground dark:text-white">{name}</span>
         </div>
       </div>
     </div>

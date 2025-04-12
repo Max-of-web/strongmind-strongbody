@@ -17,12 +17,12 @@ const LanguageSwitcher = () => {
     <Button 
       onClick={toggleLanguage}
       variant="outline"
-      className="flex items-center gap-2 border-white/80 dark:text-white" 
+      className="flex items-center gap-2 border-white/80 text-white dark:text-white" 
       disabled={isLoading}
       aria-label={`Switch to ${language === 'en' ? 'Lithuanian' : 'English'} language`}
     >
-      <Flag size={18} className="mr-2" />
-      <span>{language === 'en' ? 'LT' : 'EN'}</span>
+      <Flag size={18} className="mr-2 text-white" />
+      <span className="text-white">{language === 'en' ? 'LT' : 'EN'}</span>
     </Button>
   );
 };
