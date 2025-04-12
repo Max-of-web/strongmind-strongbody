@@ -49,6 +49,19 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
         {...props}
+        style={{
+          // Add explicit styles for themes
+          backgroundColor: variant === 'default' ? 'var(--btn-bg, #0891b2)' : 
+                          variant === 'destructive' ? 'var(--destructive-btn-bg, #ef4444)' :
+                          variant === 'secondary' ? 'var(--secondary-btn-bg, #1e293b)' :
+                          variant === 'cta' ? 'var(--cta-btn-bg, #f97316)' :
+                          variant === 'outline' || variant === 'ghost' ? 'transparent' : undefined,
+          color: variant === 'ghost' || variant === 'outline' || variant === 'link' ? 
+                'var(--text-btn-color, #0891b2)' : 'var(--btn-text-color, white)',
+          borderColor: variant === 'outline' ? 'var(--outline-border, #0891b2)' : undefined,
+          border: variant === 'outline' ? '1px solid var(--outline-border, #0891b2)' : 'none',
+          ...(props.style || {})
+        }}
       />
     );
   }

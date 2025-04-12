@@ -8,20 +8,36 @@ const ThemeToggle = () => {
   const { theme, toggleTheme } = useTheme();
   const { t } = useTranslation();
 
+  // Use explicit inline styles to ensure proper styling in both modes
+  const buttonStyle = {
+    backgroundColor: theme === 'light' ? '#e2e8f0' : '#334155',
+    color: theme === 'light' ? '#1e293b' : '#f8fafc',
+    border: `1px solid ${theme === 'light' ? '#cbd5e1' : '#475569'}`,
+    transition: 'all 200ms',
+    display: 'flex',
+    alignItems: 'center',
+    gap: '0.5rem',
+    padding: '0.375rem 0.75rem',
+    borderRadius: '0.375rem',
+    fontSize: '0.875rem',
+    fontWeight: '500',
+  };
+
+  const iconStyle = {
+    width: '18px',
+    height: '18px'
+  };
+
   return (
     <Button 
       onClick={toggleTheme}
       variant="outline"
       size="sm"
-      className={`
-        flex items-center gap-2
-        ${theme === 'light' 
-          ? 'bg-slate-200 hover:bg-slate-300 text-slate-800 border-slate-300' 
-          : 'bg-slate-700 hover:bg-slate-600 text-white border-slate-600'}
-      `}
+      className="flex items-center gap-2"
+      style={buttonStyle}
       aria-label={theme === 'light' ? t('theme.dark') : t('theme.light')}
     >
-      {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
+      {theme === 'light' ? <Moon style={iconStyle} /> : <Sun style={iconStyle} />}
       <span className="sr-only md:not-sr-only">
         {theme === 'light' ? t('theme.dark') : t('theme.light')}
       </span>
