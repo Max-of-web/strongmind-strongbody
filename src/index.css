@@ -140,9 +140,14 @@
   }
 
   .cta-button-secondary {
-    @apply bg-transparent text-theme-navy dark:text-white border border-theme-marine dark:border-white font-semibold px-6 py-3 rounded-md transition-all duration-300 hover:bg-theme-tangerine hover:text-white dark:hover:bg-theme-tangerine hover:border-transparent hover:translate-y-[-2px];
+    @apply bg-transparent text-theme-navy dark:text-white border border-theme-marine dark:border-white; font-semibold px-6 py-3 rounded-md transition-all duration-300 hover:bg-theme-tangerine hover:text-white dark:hover:bg-theme-tangerine hover:border-transparent hover:translate-y-[-2px];
   }
 
+  .cta-button-secondary:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  
   .section-title {
     @apply text-3xl md:text-4xl font-bold mb-6 relative inline-block after:content-[''] after:absolute after:bottom-[-8px] after:left-0 after:w-20 after:h-1 after:bg-theme-tangerine dark:after:bg-theme-tangerine text-foreground dark:text-white;
   }

@@ -43,7 +43,7 @@ const Index = () => {
                 <a href="https://calendly.com/lipskis-paulius/asmenine-treniruote" target="_blank" rel="noopener noreferrer" className="cta-button-primary">
                   Book a Discovery Call
                 </a>
-                <a href="#free-guide" className="cta-button-secondary">
+                <a href="#free-guide" className="cta-button-secondary border border-white text-white hover:text-white">
                   Get Free Guide
                 </a>
               </div>

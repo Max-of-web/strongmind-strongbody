@@ -18,10 +18,11 @@ const CTABanner: React.FC<CTABannerProps> = ({ message, buttonText, buttonLink }
           href={buttonLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-theme-tangerine text-white font-semibold px-6 py-3 rounded-md transition-all duration-300 hover:bg-theme-lighttangerine hover:translate-y-[-2px] shadow-md"
+          className="cta-button-primary"
         >
           {buttonText}
         </a>
+
       </div>
     </section>
   );
