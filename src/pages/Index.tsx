@@ -1,3 +1,4 @@
+
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
@@ -18,6 +19,7 @@ import CTABanner from '../components/CTABanner';
 import FeatureCard from '../components/FeatureCard';
 import TestimonialCard from '../components/TestimonialCard';
 import LowerBackGuide from '../components/LowerBackGuide';
+import VideoBackground from '../components/VideoBackground';
 
 const Index = () => {
   useEffect(() => {
@@ -43,9 +45,12 @@ const Index = () => {
     <>
       <Header />
       <main>
-        {/* Hero Section */}
-        <section className="hero-section">
-          <div className="container-width px-4 md:px-8 flex flex-col justify-center items-start h-full">
+        {/* Hero Section with Video Background */}
+        <VideoBackground
+          videoUrl="https://res.cloudinary.com/dhnkuonev/video/upload/v1735152266/personal-trainer-background_iuvs5h.mp4"
+          fallbackImage="/lovable-uploads/b4413382-3998-4c2e-a754-75a067048c2d.png"
+        >
+          <div className="container-width px-4 md:px-8 flex flex-col justify-center items-start h-full min-h-[85vh]">
             <div className="max-w-3xl animate-fade-in-up">
               <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6 text-zinc-50 lg:text-6xl">
                 Level Up Your Life – Build Habits, Gain Momentum
@@ -68,7 +73,7 @@ const Index = () => {
               </div>
             </div>
           </div>
-        </section>
+        </VideoBackground>
 
         {/* What Makes This Coaching Different */}
         <section className="section-padding bg-elegant-charcoal">
