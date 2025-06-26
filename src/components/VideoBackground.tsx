@@ -154,7 +154,7 @@ const VideoBackground = ({ videoUrl, fallbackImage, children }: VideoBackgroundP
       </div>
 
       {/* Custom CSS for Cloudinary player */}
-      <style jsx>{`
+      <style>{`
         .cld-video-player {
           width: 100% !important;
           height: 100% !important;
