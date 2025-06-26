@@ -11,7 +11,8 @@ const VideoBackground = ({ videoUrl, fallbackImage, children }: VideoBackgroundP
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
   const [shouldShowVideo, setShouldShowVideo] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const playerRef = useRef<any>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Check if user prefers reduced motion
@@ -26,14 +27,82 @@ const VideoBackground = ({ videoUrl, fallbackImage, children }: VideoBackgroundP
     }
   }, []);
 
-  const handleVideoLoad = () => {
-    setIsVideoLoaded(true);
-  };
+  useEffect(() => {
+    if (shouldShowVideo && !hasError && containerRef.current) {
+      // Load Cloudinary video player script
+      const script = document.createElement('script');
+      script.src = 'https://unpkg.com/cloudinary-video-player@2/cld-video-player.min.js';
+      script.async = true;
+      
+      script.onload = () => {
+        // Initialize Cloudinary video player
+        try {
+          const cld = (window as any).cloudinary;
+          if (cld) {
+            // Extract public ID from Cloudinary URL
+            const publicId = videoUrl.split('/').pop()?.split('.')[0] || '';
+            
+            playerRef.current = cld.videoPlayer(containerRef.current, {
+              cloudName: 'dhnkuonev',
+              publicId: publicId,
+              autoplay: true,
+              muted: true,
+              loop: true,
+              controls: false,
+              fluid: true,
+              hideContextMenu: true,
+              seekThumbnails: false,
+              playsinline: true,
+            });
 
-  const handleVideoError = () => {
-    console.warn('Video failed to load, falling back to image');
-    setHasError(true);
-  };
+            // Handle player events
+            playerRef.current.on('loadstart', () => {
+              console.log('Video loading started');
+            });
+
+            playerRef.current.on('canplay', () => {
+              console.log('Video can start playing');
+              setIsVideoLoaded(true);
+            });
+
+            playerRef.current.on('error', (error: any) => {
+              console.warn('Cloudinary video player error:', error);
+              setHasError(true);
+            });
+          }
+        } catch (error) {
+          console.warn('Failed to initialize Cloudinary player:', error);
+          setHasError(true);
+        }
+      };
+
+      script.onerror = () => {
+        console.warn('Failed to load Cloudinary video player script');
+        setHasError(true);
+      };
+
+      document.head.appendChild(script);
+
+      // Load CSS
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = 'https://unpkg.com/cloudinary-video-player@2/cld-video-player.min.css';
+      document.head.appendChild(link);
+
+      return () => {
+        // Cleanup
+        if (playerRef.current) {
+          try {
+            playerRef.current.destroy();
+          } catch (error) {
+            console.warn('Error destroying video player:', error);
+          }
+        }
+        script.remove();
+        link.remove();
+      };
+    }
+  }, [shouldShowVideo, hasError, videoUrl]);
 
   return (
     <section className="hero-section relative">
@@ -41,23 +110,17 @@ const VideoBackground = ({ videoUrl, fallbackImage, children }: VideoBackgroundP
       <div className="absolute inset-0 z-0">
         {shouldShowVideo && !hasError ? (
           <>
-            {/* Video Background */}
-            <video
-              ref={videoRef}
-              autoPlay
-              muted
-              loop
-              playsInline
-              onLoadedData={handleVideoLoad}
-              onError={handleVideoError}
-              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+            {/* Cloudinary Video Background */}
+            <div
+              ref={containerRef}
+              className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ${
                 isVideoLoaded ? 'opacity-100' : 'opacity-0'
               }`}
-              style={{ zIndex: -2 }}
-            >
-              <source src={videoUrl} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+              style={{ 
+                zIndex: -2,
+                background: 'transparent'
+              }}
+            />
             
             {/* Fallback image shown while video loads or if video fails */}
             <div
@@ -89,6 +152,32 @@ const VideoBackground = ({ videoUrl, fallbackImage, children }: VideoBackgroundP
       <div className="relative z-10">
         {children}
       </div>
+
+      {/* Custom CSS for Cloudinary player */}
+      <style jsx>{`
+        .cld-video-player {
+          width: 100% !important;
+          height: 100% !important;
+          position: absolute !important;
+          top: 0 !important;
+          left: 0 !important;
+          object-fit: cover !important;
+        }
+        
+        .cld-video-player video {
+          width: 100% !important;
+          height: 100% !important;
+          object-fit: cover !important;
+        }
+        
+        .cld-video-player .cld-controls {
+          display: none !important;
+        }
+        
+        .cld-video-player .vjs-poster {
+          display: none !important;
+        }
+      `}</style>
     </section>
   );
 };
