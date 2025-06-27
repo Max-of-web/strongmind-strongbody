@@ -9,105 +9,65 @@ interface UseCloudinaryPlayerProps {
 export const useCloudinaryPlayer = ({ videoUrl, shouldShowVideo }: UseCloudinaryPlayerProps) => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
-  const [isScriptLoaded, setIsScriptLoaded] = useState(false);
-  const playerRef = useRef<any>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (shouldShowVideo && !hasError && !isScriptLoaded) {
-      console.log('Loading Cloudinary video player...');
+    if (videoRef.current && shouldShowVideo && !hasError) {
+      const video = videoRef.current;
       
-      // Load Cloudinary video player script
-      const script = document.createElement('script');
-      script.src = 'https://unpkg.com/cloudinary-video-player@2/cld-video-player.min.js';
-      script.async = true;
-      
-      script.onload = () => {
-        console.log('Cloudinary script loaded successfully');
-        setIsScriptLoaded(true);
+      const handleCanPlay = () => {
+        console.log('Video can play');
+        setIsVideoLoaded(true);
+        // Auto-play the video
+        video.play().catch((error) => {
+          console.warn('Video autoplay failed:', error);
+        });
       };
 
-      script.onerror = () => {
-        console.warn('Failed to load Cloudinary video player script');
+      const handleError = (error: any) => {
+        console.warn('Video error:', error);
         setHasError(true);
       };
 
-      document.head.appendChild(script);
+      const handleLoadStart = () => {
+        console.log('Video loading started');
+      };
 
-      // Load CSS
-      const link = document.createElement('link');
-      link.rel = 'stylesheet';
-      link.href = 'https://unpkg.com/cloudinary-video-player@2/cld-video-player.min.css';
-      document.head.appendChild(link);
+      video.addEventListener('canplay', handleCanPlay);
+      video.addEventListener('error', handleError);
+      video.addEventListener('loadstart', handleLoadStart);
 
       return () => {
-        script.remove();
-        link.remove();
+        video.removeEventListener('canplay', handleCanPlay);
+        video.removeEventListener('error', handleError);
+        video.removeEventListener('loadstart', handleLoadStart);
       };
     }
-  }, [shouldShowVideo, hasError, isScriptLoaded]);
+  }, [shouldShowVideo, hasError]);
 
-  useEffect(() => {
-    if (isScriptLoaded && containerRef.current && shouldShowVideo && !hasError) {
-      console.log('Initializing Cloudinary video player...');
-      
-      // Initialize Cloudinary video player
-      try {
-        const cld = (window as any).cloudinary;
-        if (cld && containerRef.current) {
-          // Extract public ID from Cloudinary URL
-          const publicId = videoUrl.split('/').pop()?.split('.')[0] || '';
-          console.log('Video public ID:', publicId);
-          
-          // Clear any existing content
-          containerRef.current.innerHTML = '';
-          
-          playerRef.current = cld.videoPlayer(containerRef.current, {
-            cloudName: 'dhnkuonev',
-            publicId: publicId,
-            autoplay: true,
-            muted: true,
-            loop: true,
-            controls: false,
-            fluid: false,
-            width: '100%',
-            height: '100%',
-            hideContextMenu: true,
-            seekThumbnails: false,
-            playsinline: true,
-            poster: '',
-          });
+  const renderVideo = () => {
+    if (!shouldShowVideo || hasError) return null;
 
-          // Handle player events
-          playerRef.current.on('loadstart', () => {
-            console.log('Video loading started');
-          });
-
-          playerRef.current.on('canplay', () => {
-            console.log('Video can start playing');
-            setIsVideoLoaded(true);
-          });
-
-          playerRef.current.on('play', () => {
-            console.log('Video started playing');
-          });
-
-          playerRef.current.on('error', (error: any) => {
-            console.warn('Cloudinary video player error:', error);
-            setHasError(true);
-          });
-        }
-      } catch (error) {
-        console.warn('Failed to initialize Cloudinary player:', error);
-        setHasError(true);
-      }
-    }
-  }, [isScriptLoaded, shouldShowVideo, hasError, videoUrl]);
+    return (
+      <video
+        ref={videoRef}
+        src={videoUrl}
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+        style={{ zIndex: 1 }}
+      />
+    );
+  };
 
   return {
     isVideoLoaded,
     hasError,
     containerRef,
-    playerRef
+    videoRef,
+    renderVideo
   };
 };

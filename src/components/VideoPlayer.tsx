@@ -7,7 +7,7 @@ interface VideoPlayerProps {
 }
 
 const VideoPlayer = ({ videoUrl, shouldShowVideo }: VideoPlayerProps) => {
-  const { containerRef } = useCloudinaryPlayer({ videoUrl, shouldShowVideo });
+  const { containerRef, renderVideo } = useCloudinaryPlayer({ videoUrl, shouldShowVideo });
 
   return (
     <div
@@ -16,7 +16,9 @@ const VideoPlayer = ({ videoUrl, shouldShowVideo }: VideoPlayerProps) => {
       style={{ 
         zIndex: 1,
       }}
-    />
+    >
+      {renderVideo()}
+    </div>
   );
 };
 
