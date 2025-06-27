@@ -1,5 +1,7 @@
+
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import {
   Brain,
   Dumbbell,
@@ -20,6 +22,8 @@ import TestimonialCard from '../components/TestimonialCard';
 import LowerBackGuide from '../components/LowerBackGuide';
 
 const Index = () => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -48,10 +52,10 @@ const Index = () => {
           <div className="container-width px-4 md:px-8 flex flex-col justify-center items-start h-full">
             <div className="max-w-3xl animate-fade-in-up">
               <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6 text-zinc-50 lg:text-6xl">
-                Level Up Your Life – Build Habits, Gain Momentum
+                {t('homepage.hero.title')}
               </h1>
               <p className="text-xl md:text-2xl mb-10 text-white">
-                Through consistent guidance, smart movement, and practical mindset shifts, I help you take control of your physical health and fitness journey.
+                {t('homepage.hero.subtitle')}
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
@@ -60,10 +64,10 @@ const Index = () => {
                   rel="noopener noreferrer"
                   className="cta-button-primary"
                 >
-                  Book a Discovery Call
+                  {t('homepage.hero.bookCallButton')}
                 </a>
                 <a href="#free-guide" className="cta-button-secondary">
-                  Get Free Guide
+                  {t('homepage.hero.getFreeGuideButton')}
                 </a>
               </div>
             </div>
@@ -75,36 +79,36 @@ const Index = () => {
           <div className="container-width">
             <div className="text-center mb-12 scroll-fade-in">
               <h2 className="section-title mx-auto after:left-1/2 after:-translate-x-1/2">
-                What Makes This Coaching Different
+                {t('homepage.features.sectionTitle')}
               </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
               <div className="scroll-fade-in">
                 <FeatureCard
                   icon={Brain}
-                  title="Smart Movement"
-                  description="Training that respects your body's mechanics and adapts to your unique structure and patterns."
+                  title={t('homepage.features.dualExpertise.title')}
+                  description={t('homepage.features.dualExpertise.description')}
                 />
               </div>
               <div className="scroll-fade-in">
                 <FeatureCard
                   icon={Dumbbell}
-                  title="Adaptive Programs"
-                  description="Training programs that evolve as you progress, always keeping you challenged and engaged."
+                  title={t('homepage.features.adaptivePrograms.title')}
+                  description={t('homepage.features.adaptivePrograms.description')}
                 />
               </div>
               <div className="scroll-fade-in">
                 <FeatureCard
                   icon={Heart}
-                  title="Mindset Coaching"
-                  description="Practical strategies to overcome mental barriers that often prevent physical progress."
+                  title={t('homepage.features.emotionalSupport.title')}
+                  description={t('homepage.features.emotionalSupport.description')}
                 />
               </div>
               <div className="scroll-fade-in">
                 <FeatureCard
                   icon={Timer}
-                  title="Habit Building"
-                  description="Creating sustainable routines rather than quick fixes, focusing on lifelong health and fitness."
+                  title={t('homepage.features.longTermMindset.title')}
+                  description={t('homepage.features.longTermMindset.description')}
                 />
               </div>
             </div>
@@ -116,18 +120,12 @@ const Index = () => {
           <div className="container-width">
             <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-center">
               <div className="md:w-1/2 scroll-fade-in">
-                <h2 className="section-title">What You'll Achieve</h2>
+                <h2 className="section-title">{t('homepage.achievements.sectionTitle')}</h2>
                 <p className="mb-6">
-                  "This isn't about perfection. It's about showing up, one real step at a time."
+                  "{t('homepage.hero.subtitle')}"
                 </p>
                 <ul className="space-y-4">
-                  {[
-                    "Reduced pain and discomfort through proper movement patterns",
-                    "Smarter training approach that adapts to your energy levels",
-                    "Sustainable habits that fit into your lifestyle",
-                    "Stronger body awareness and connection",
-                    "Increased confidence in your movement abilities",
-                  ].map((item, idx) => (
+                  {t('homepage.achievements.items', { returnObjects: true }).map((item: string, idx: number) => (
                     <li key={idx} className="flex items-start">
                       <Check size={24} className="text-theme-tangerine shrink-0 mt-1 mr-3" />
                       <span>{item}</span>
@@ -159,21 +157,21 @@ const Index = () => {
           <div className="container-width">
             <div className="text-center mb-12 scroll-fade-in">
               <h2 className="section-title mx-auto after:left-1/2 after:-translate-x-1/2">
-                What Clients Say
+                {t('homepage.testimonials.sectionTitle')}
               </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
               <TestimonialCard
-                quote="Paulius understood my back pain like no other trainer before. His approach is methodical yet flexible, and I've made more progress in 3 months than in years of traditional therapy."
-                name="Laura K."
+                quote={t('homepage.testimonials.laura.quote')}
+                name={t('homepage.testimonials.laura.name')}
               />
               <TestimonialCard
-                quote="What makes Paulius different is how he adapts to your mood and energy. Some days we go hard, others we focus on technique. It's always productive and never feels like wasted time."
-                name="Tomas B."
+                quote={t('homepage.testimonials.tomas.quote')}
+                name={t('homepage.testimonials.tomas.name')}
               />
               <TestimonialCard
-                quote="The mindset coaching aspect of his training was exactly what I needed. I've not only gotten stronger physically but also developed a healthier relationship with exercise and movement."
-                name="Milda P."
+                quote={t('homepage.testimonials.milda.quote')}
+                name={t('homepage.testimonials.milda.name')}
               />
             </div>
             <div className="text-center scroll-fade-in">
@@ -181,7 +179,7 @@ const Index = () => {
                 to="/coaching"
                 className="inline-flex items-center text-theme-tangerine hover:underline font-semibold"
               >
-                See more testimonials
+                {t('homepage.testimonials.viewMoreLink')}
                 <ChevronRight size={20} className="ml-1" />
               </Link>
             </div>
@@ -202,27 +200,18 @@ const Index = () => {
                 </div>
               </div>
               <div className="md:w-2/3 scroll-fade-in">
-                <h2 className="section-title">About Paulius Lipskis</h2>
+                <h2 className="section-title">{t('homepage.about.sectionTitle')}</h2>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <FeatureCard icon={GraduationCap} title="BSc Physiotherapy" description="" isBadge isSmall />
-                  <FeatureCard icon={Award} title="NASM Certificate" description="" isBadge isSmall />
-                  <FeatureCard icon={BookOpen} title="MSc Precision Nutrition" description="" isBadge isSmall />
-                  <FeatureCard icon={Briefcase} title="Personal Trainer (OTA Academy)" description="" isBadge isSmall />
+                  <FeatureCard icon={GraduationCap} title={t('homepage.about.qualifications.physiotherapy')} description="" isBadge isSmall />
+                  <FeatureCard icon={Award} title={t('homepage.about.qualifications.nasm')} description="" isBadge isSmall />
+                  <FeatureCard icon={BookOpen} title={t('homepage.about.qualifications.nutrition')} description="" isBadge isSmall />
+                  <FeatureCard icon={Briefcase} title={t('homepage.about.qualifications.personalTrainer')} description="" isBadge isSmall />
                 </div>
-                <p className="mb-6">
-                  With a background in physiotherapy, I've spent the last decade helping people transform their
-                  relationship with their bodies. I believe in training that respects your body's signals while
-                  challenging your limits.
-                </p>
-                <p className="mb-6">
-                  Whether you're healing, training, or just trying to feel more like yourself again — this is where it
-                  all clicks together. My approach combines evidence-based exercise science with practical mindset
-                  coaching to create sustainable programs.
-                </p>
-                <p>
-                  Based in Vilnius, I work with clients at Reformatas Gym and SEB Arena, providing personalized coaching
-                  that addresses both movement mechanics and the mental aspects of physical transformation.
-                </p>
+                {t('homepage.about.bio', { returnObjects: true }).map((paragraph: string, idx: number) => (
+                  <p key={idx} className="mb-6">
+                    {paragraph}
+                  </p>
+                ))}
               </div>
             </div>
           </div>
@@ -230,8 +219,8 @@ const Index = () => {
 
         {/* Final CTA */}
         <CTABanner
-          message="Ready to level up your life and build momentum with sustainable habits?"
-          buttonText="Book Your Free Discovery Call"
+          message={t('cta.finalCta.message')}
+          buttonText={t('cta.finalCta.buttonText')}
           buttonLink="https://calendly.com/lipskis-paulius/asmenine-treniruote"
         />
       </main>

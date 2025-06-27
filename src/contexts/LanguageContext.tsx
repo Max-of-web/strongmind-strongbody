@@ -17,13 +17,13 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const { i18n } = useTranslation();
   const [isLoading, setIsLoading] = useState(false);
   
-  // Initialize language from localStorage or browser
+  // Initialize language with Lithuanian as default
   const [language, setLanguage] = useState<Language>(() => {
     if (typeof window !== 'undefined') {
       const savedLang = localStorage.getItem('language') as Language;
-      return savedLang || (navigator.language.startsWith('lt') ? 'lt' : 'en');
+      return savedLang || 'lt'; // Default to Lithuanian
     }
-    return 'en';
+    return 'lt';
   });
 
   // Load custom translations from Supabase
@@ -72,7 +72,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
     // Update i18next language
     i18n.changeLanguage(language);
     
-    // Update localStorage for fallback
+    // Update localStorage
     localStorage.setItem('language', language);
     
     // Load any custom translations from Supabase
