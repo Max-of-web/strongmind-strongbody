@@ -49,17 +49,35 @@ export const useCloudinaryPlayer = ({ videoUrl, shouldShowVideo }: UseCloudinary
   const renderVideo = () => {
     if (!shouldShowVideo || hasError) return null;
 
+    // Extract the video ID from the Cloudinary URL
+    const cloudinaryUrlPattern = /\/([^\/]+)\.mp4$/;
+    const match = videoUrl.match(cloudinaryUrlPattern);
+    const videoId = match ? match[1] : 'personal-trainer-background_iuvs5h';
+    const cloudName = 'dhnkuonev'; // Your cloud name
+
     return (
       <video
         ref={videoRef}
-        src={videoUrl}
         autoPlay
         muted
         loop
         playsInline
         className="absolute inset-0 w-full h-full object-cover"
         style={{ zIndex: 1 }}
-      />
+      >
+        <source 
+          src={`https://res.cloudinary.com/${cloudName}/video/upload/vc_h265/${videoId}.mp4`} 
+          type="video/mp4; codecs=hvc1" 
+        />
+        <source 
+          src={`https://res.cloudinary.com/${cloudName}/video/upload/vc_vp9/${videoId}.webm`} 
+          type="video/webm; codecs=vp9" 
+        />
+        <source 
+          src={`https://res.cloudinary.com/${cloudName}/video/upload/vc_h264/${videoId}.mp4`} 
+          type="video/mp4" 
+        />
+      </video>
     );
   };
 
