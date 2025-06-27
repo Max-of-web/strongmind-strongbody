@@ -3,23 +3,18 @@ import 'react-i18next';
 
 declare module 'react-i18next' {
   interface CustomTypeOptions {
-    defaultNS: 'common';
-    returnNull: false;
+    defaultNS: 'translation';
+    resources: {
+      translation: typeof import('../i18n/locales/en').default;
+    };
   }
 }
 
-// Override global JSX types to prevent react-i18next from interfering with React's JSX
+// Completely disable JSX namespace augmentation from react-i18next
 declare global {
   namespace JSX {
-    interface Element extends React.ReactElement<any, any> {}
-    interface ElementClass extends React.Component<any> {}
-    interface ElementAttributesProperty {
-      props: {};
+    interface IntrinsicElements {
+      // Force TypeScript to use React's built-in JSX types only
     }
-    interface ElementChildrenAttribute {
-      children: {};
-    }
-    interface IntrinsicAttributes extends React.Attributes {}
-    interface IntrinsicClassAttributes<T> extends React.ClassAttributes<T> {}
   }
 }
