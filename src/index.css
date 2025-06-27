@@ -119,9 +119,13 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   position: relative;
   overflow: hidden;
+  background: linear-gradient(to bottom, rgba(10, 35, 66, 0.9), rgba(10, 35, 66, 0.95)), url('/lovable-uploads/b4413382-3998-4c2e-a754-75a067048c2d.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-/* Scoped selectors for hero section text */
+/* Scoped selectors for hero section */
 .hero-section h1,
 .hero-section h2,
 .hero-section h3,
@@ -133,6 +137,13 @@ h1, h2, h3, h4, h5, h6 {
 .hero-section div,
 .hero-section a:not(.bg-theme-tangerine) {
   color: white;
+}
+
+.dark .hero-section {
+  background: linear-gradient(to bottom, rgba(5, 19, 38, 0.92), rgba(5, 19, 38, 0.97)), url('/lovable-uploads/b4413382-3998-4c2e-a754-75a067048c2d.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .section-padding {

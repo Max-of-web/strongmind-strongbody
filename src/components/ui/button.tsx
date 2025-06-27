@@ -39,11 +39,10 @@ export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   asChild?: boolean;
-  children: React.ReactNode;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, children, ...props }, ref) => {
+  ({ className, variant, size, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
     
     // Direct style mappings for guaranteed visibility regardless of theme
@@ -79,6 +78,33 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         link: {
           backgroundColor: 'transparent',
           color: document.documentElement.classList.contains('dark') ? 'white' : '#1C5B5A', // marine in light, white in dark
+          textDecoration: 'underline',
+        },
+      };
+
+      // Apply hover effects
+      const hoverEffects = {
+        default: {
+          backgroundColor: '#76A4A3', // lightmarine
+        },
+        destructive: {
+          backgroundColor: '#f87171', // lighter red
+        },
+        secondary: {
+          backgroundColor: '#375177', // lightnavy
+        },
+        cta: {
+          backgroundColor: '#F89F4F', // lighter tangerine
+          transform: 'translateY(-2px)',
+          boxShadow: '0 6px 8px rgba(0, 0, 0, 0.15)',
+        },
+        outline: {
+          backgroundColor: document.documentElement.classList.contains('dark') ? 'rgba(255, 255, 255, 0.2)' : 'rgba(28, 91, 90, 0.1)',
+        },
+        ghost: {
+          backgroundColor: document.documentElement.classList.contains('dark') ? 'rgba(255, 255, 255, 0.1)' : 'rgba(28, 91, 90, 0.1)',
+        },
+        link: {
           textDecoration: 'underline',
         },
       };
@@ -146,9 +172,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         }}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-      >
-        {children}
-      </Comp>
+      />
     );
   }
 );

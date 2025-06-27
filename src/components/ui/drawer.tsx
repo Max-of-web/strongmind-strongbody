@@ -1,4 +1,3 @@
-
 import * as React from "react"
 import { Drawer as DrawerPrimitive } from "vaul"
 
@@ -35,9 +34,7 @@ DrawerOverlay.displayName = DrawerPrimitive.Overlay.displayName
 
 const DrawerContent = React.forwardRef<
   React.ElementRef<typeof DrawerPrimitive.Content>,
-  React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Content> & {
-    children: React.ReactNode
-  }
+  React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Content>
 >(({ className, children, ...props }, ref) => (
   <DrawerPortal>
     <DrawerOverlay />

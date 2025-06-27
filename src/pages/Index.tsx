@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
@@ -19,7 +18,6 @@ import CTABanner from '../components/CTABanner';
 import FeatureCard from '../components/FeatureCard';
 import TestimonialCard from '../components/TestimonialCard';
 import LowerBackGuide from '../components/LowerBackGuide';
-import VideoBackground from '../components/VideoBackground';
 
 const Index = () => {
   useEffect(() => {
@@ -45,18 +43,15 @@ const Index = () => {
     <>
       <Header />
       <main>
-        {/* Hero Section with Video Background */}
-        <VideoBackground
-          videoUrl="https://res.cloudinary.com/dhnkuonev/video/upload/v1735152266/personal-trainer-background_iuvs5h.mp4"
-          fallbackImage="/lovable-uploads/b4413382-3998-4c2e-a754-75a067048c2d.png"
-        >
-          <div className="container-width px-4 md:px-8 flex flex-col justify-center items-start h-full min-h-[85vh]">
+        {/* Hero Section */}
+        <section className="hero-section">
+          <div className="container-width px-4 md:px-8 flex flex-col justify-center items-start h-full">
             <div className="max-w-3xl animate-fade-in-up">
               <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6 text-zinc-50 lg:text-6xl">
-                Pakelk Savo Gyvenimą – Formuok Įpročius, Įgyk Pagreitį
+                Level Up Your Life – Build Habits, Gain Momentum
               </h1>
               <p className="text-xl md:text-2xl mb-10 text-white">
-                Per nuoseklų vadovavimą, protingą judėjimą ir praktinius mąstymo pokyčius, padedu žmonėms perimti kontrolę savo fizinės sveikatos ir sporto kelyje.
+                Through consistent guidance, smart movement, and practical mindset shifts, I help you take control of your physical health and fitness journey.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
@@ -65,48 +60,11 @@ const Index = () => {
                   rel="noopener noreferrer"
                   className="cta-button-primary"
                 >
-                  Noriu Plano
+                  Book a Discovery Call
                 </a>
-                <Link to="/coaching" className="cta-button-secondary">
-                  Nežinau Nuo Ko Pradėti
-                </Link>
                 <a href="#free-guide" className="cta-button-secondary">
-                  Gauti Nemokamą Gidą
+                  Get Free Guide
                 </a>
-              </div>
-            </div>
-          </div>
-        </VideoBackground>
-
-        {/* Training Introduction Video Block */}
-        <section className="section-padding bg-elegant-charcoal">
-          <div className="container-width">
-            <div className="flex flex-col lg:flex-row gap-12 items-center">
-              <div className="lg:w-1/2 scroll-fade-in">
-                <div className="relative rounded-lg overflow-hidden shadow-xl">
-                  <img
-                    src="/lovable-uploads/92dd7281-aa00-42c3-aa94-41ea33b2d176.png"
-                    alt="Paulius training with client"
-                    className="w-full h-auto"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-elegant-charcoal via-transparent to-transparent" />
-                </div>
-              </div>
-              <div className="lg:w-1/2 scroll-fade-in">
-                <h2 className="section-title">Kodėl Verta Dirbti Su Manimi?</h2>
-                <p className="text-lg mb-6">
-                  "Čia ne apie tobulumą. Tai apie dalyvavimą, po vieną realų žingsnį."
-                </p>
-                <p className="mb-8">
-                  Fizioterapijos išsilavinimas kartu su psichologijos žiniomis leidžia man suprasti ne tik kaip jūsų kūnas juda, bet ir kodėl kartais nepavyksta išlaikyti motyvacijos ar įveikti barjerus.
-                </p>
-                <Link
-                  to="/about"
-                  className="inline-flex items-center text-theme-tangerine hover:underline font-semibold"
-                >
-                  Sužinoti daugiau apie mane
-                  <ChevronRight size={20} className="ml-1" />
-                </Link>
               </div>
             </div>
           </div>
@@ -117,36 +75,36 @@ const Index = () => {
           <div className="container-width">
             <div className="text-center mb-12 scroll-fade-in">
               <h2 className="section-title mx-auto after:left-1/2 after:-translate-x-1/2">
-                Kuo Mano Treniruotės Skiriasi
+                What Makes This Coaching Different
               </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
               <div className="scroll-fade-in">
                 <FeatureCard
                   icon={Brain}
-                  title="Protingas Judėjimas"
-                  description="Treniruotės, kurios gerbia jūsų kūno mechaniką ir prisitaiko prie unikalių poreikių."
+                  title="Smart Movement"
+                  description="Training that respects your body's mechanics and adapts to your unique structure and patterns."
                 />
               </div>
               <div className="scroll-fade-in">
                 <FeatureCard
                   icon={Dumbbell}
-                  title="Adaptyvios Programos"
-                  description="Programos, kurios vystosi kartu su jumis, visada išlaikant tinkamą iššūkį."
+                  title="Adaptive Programs"
+                  description="Training programs that evolve as you progress, always keeping you challenged and engaged."
                 />
               </div>
               <div className="scroll-fade-in">
                 <FeatureCard
                   icon={Heart}
-                  title="Mąstymo Koučingas"
-                  description="Praktinės strategijos mentaliniams barjerams įveikti, kurie dažnai stabdo progresą."
+                  title="Mindset Coaching"
+                  description="Practical strategies to overcome mental barriers that often prevent physical progress."
                 />
               </div>
               <div className="scroll-fade-in">
                 <FeatureCard
                   icon={Timer}
-                  title="Įpročių Formavimas"
-                  description="Tvarių rutinų kūrimas vietoj greitų sprendimų, orientuojantis į visą gyvenimą."
+                  title="Habit Building"
+                  description="Creating sustainable routines rather than quick fixes, focusing on lifelong health and fitness."
                 />
               </div>
             </div>
