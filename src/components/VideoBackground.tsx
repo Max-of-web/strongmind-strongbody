@@ -14,27 +14,23 @@ const VideoBackground = ({ videoUrl, fallbackImage, children }: VideoBackgroundP
   const [shouldShowVideo, setShouldShowVideo] = useState(true);
 
   useEffect(() => {
-    // Always show video, remove mobile and reduced motion checks
+    console.log('VideoBackground mounted, showing video');
     setShouldShowVideo(true);
   }, []);
 
   return (
-    <section className="hero-section relative min-h-screen overflow-hidden">
-      {/* Background Layer - Only Video */}
-      <div className="absolute inset-0">
-        {/* Cloudinary Video Background */}
+    <section className="hero-section relative min-h-screen overflow-hidden bg-slate-900">
+      {/* Background Layer - Video */}
+      <div className="absolute inset-0" style={{ zIndex: 0 }}>
         <VideoPlayer videoUrl={videoUrl} shouldShowVideo={shouldShowVideo} />
-        
-        {/* Gradient Overlay */}
         <VideoOverlay />
       </div>
 
       {/* Content */}
-      <div className="relative z-10" style={{ zIndex: 10 }}>
+      <div className="relative" style={{ zIndex: 10 }}>
         {children}
       </div>
 
-      {/* Custom CSS for Cloudinary player */}
       <VideoStyles />
     </section>
   );

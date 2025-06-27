@@ -26,7 +26,7 @@ export const useCloudinaryPlayer = ({ videoUrl, shouldShowVideo }: UseCloudinary
       };
 
       const handleError = (error: any) => {
-        console.warn('Video error:', error);
+        console.error('Video error:', error);
         setHasError(true);
       };
 
@@ -34,14 +34,20 @@ export const useCloudinaryPlayer = ({ videoUrl, shouldShowVideo }: UseCloudinary
         console.log('Video loading started');
       };
 
+      const handleLoadedData = () => {
+        console.log('Video data loaded');
+      };
+
       video.addEventListener('canplay', handleCanPlay);
       video.addEventListener('error', handleError);
       video.addEventListener('loadstart', handleLoadStart);
+      video.addEventListener('loadeddata', handleLoadedData);
 
       return () => {
         video.removeEventListener('canplay', handleCanPlay);
         video.removeEventListener('error', handleError);
         video.removeEventListener('loadstart', handleLoadStart);
+        video.removeEventListener('loadeddata', handleLoadedData);
       };
     }
   }, [shouldShowVideo, hasError]);
@@ -49,11 +55,8 @@ export const useCloudinaryPlayer = ({ videoUrl, shouldShowVideo }: UseCloudinary
   const renderVideo = () => {
     if (!shouldShowVideo || hasError) return null;
 
-    // Extract the video ID from the Cloudinary URL
-    const cloudinaryUrlPattern = /\/([^\/]+)\.mp4$/;
-    const match = videoUrl.match(cloudinaryUrlPattern);
-    const videoId = match ? match[1] : 'personal-trainer-background_iuvs5h';
-    const cloudName = 'dhnkuonev'; // Your cloud name
+    // Use the direct Cloudinary URL without additional transformations
+    const cloudinaryUrl = "https://res.cloudinary.com/dhnkuonev/video/upload/v1735152266/personal-trainer-background_iuvs5h.mp4";
 
     return (
       <video
@@ -62,21 +65,17 @@ export const useCloudinaryPlayer = ({ videoUrl, shouldShowVideo }: UseCloudinary
         muted
         loop
         playsInline
+        preload="metadata"
         className="absolute inset-0 w-full h-full object-cover"
-        style={{ zIndex: 1 }}
+        style={{ zIndex: 0 }}
+        onError={(e) => {
+          console.error('Video element error:', e);
+          setHasError(true);
+        }}
+        onLoadStart={() => console.log('Video load started')}
+        onCanPlay={() => console.log('Video can play event')}
       >
-        <source 
-          src={`https://res.cloudinary.com/${cloudName}/video/upload/vc_h265/${videoId}.mp4`} 
-          type="video/mp4; codecs=hvc1" 
-        />
-        <source 
-          src={`https://res.cloudinary.com/${cloudName}/video/upload/vc_vp9/${videoId}.webm`} 
-          type="video/webm; codecs=vp9" 
-        />
-        <source 
-          src={`https://res.cloudinary.com/${cloudName}/video/upload/vc_h264/${videoId}.mp4`} 
-          type="video/mp4" 
-        />
+        <source src={cloudinaryUrl} type="video/mp4" />
       </video>
     );
   };

@@ -7,15 +7,18 @@ interface VideoPlayerProps {
 }
 
 const VideoPlayer = ({ videoUrl, shouldShowVideo }: VideoPlayerProps) => {
-  const { containerRef, renderVideo } = useCloudinaryPlayer({ videoUrl, shouldShowVideo });
+  const { containerRef, renderVideo, hasError } = useCloudinaryPlayer({ videoUrl, shouldShowVideo });
+
+  if (hasError) {
+    console.error('VideoPlayer: Video has error, not rendering');
+    return null;
+  }
 
   return (
     <div
       ref={containerRef}
-      className="absolute inset-0 w-full h-full"
-      style={{ 
-        zIndex: 1,
-      }}
+      className="absolute inset-0 w-full h-full overflow-hidden"
+      style={{ zIndex: 0 }}
     >
       {renderVideo()}
     </div>
