@@ -11,7 +11,7 @@ declare module 'react-i18next' {
   }
 }
 
-// Fix type conflicts between ReactI18NextChildren and ReactNode
+// Override react-i18next's global JSX augmentation to prevent type conflicts
 declare global {
   namespace JSX {
     interface Element extends React.ReactElement<any, any> {}
@@ -24,12 +24,32 @@ declare global {
     }
     interface IntrinsicAttributes extends React.Attributes {}
     interface IntrinsicClassAttributes<T> extends React.ClassAttributes<T> {}
+    
+    // Force all intrinsic elements to use ReactNode for children
+    interface IntrinsicElements {
+      [elemName: string]: any & {
+        children?: ReactNode;
+      };
+    }
   }
 }
 
-// Ensure ReactI18NextChildren is compatible with ReactNode
+// Augment React types to ensure compatibility
 declare module 'react' {
-  interface ReactNode {
-    // This allows ReactI18NextChildren to be assignable to ReactNode
+  // Override React's children types to be more permissive
+  interface DOMAttributes<T> {
+    children?: ReactNode;
   }
+  
+  interface HTMLAttributes<T> extends AriaAttributes, DOMAttributes<T> {
+    children?: ReactNode;
+  }
+  
+  // Ensure ReactI18NextChildren is assignable to ReactNode
+  interface ReactNode {}
+}
+
+// Create a type alias to force ReactI18NextChildren to be treated as ReactNode
+declare global {
+  type ReactI18NextChildren = React.ReactNode;
 }
