@@ -1,4 +1,3 @@
-
 const translation = {
   header: {
     home: 'Pradžia',
@@ -23,10 +22,10 @@ const translation = {
   },
   homepage: {
     hero: {
-      title: 'Pakelk Savo Gyvenimą – Formuok Įpročius, Įgyk Pagreitį',
-      subtitle: 'Per nuoseklų vadovavimą, protingą judėjimą ir praktinius mąstymo pokyčius, padedu žmonėms perimti kontrolę. Čia ne apie tobulumą. Tai apie dalyvavimą, po vieną realų žingsnį.',
-      bookCallButton: 'Užsisakyti Konsultaciją',
-      getFreeGuideButton: 'Gauti Nemokamą Gidą'
+      title: 'Padedu žmonėms po traumų ir tiems, kuriems sunku prisijaukinti judėjimą, atgauti pasitikėjimą savo kūnu ir tapti stipresniais nei bet kada anksčiau.',
+      subtitle: 'Kineziterapija, asmeninės treniruotės, mažos grupės ir aiškiai struktūruotos sporto programos – paremtos mokslu ir tavo patirtimi, kad kiekvienas planas būtų pritaikytas tavo kūnui ir tikslams.',
+      bookCallButton: 'Nežinau nuo ko pradėti',
+      getFreeGuideButton: 'Noriu plano'
     },
     features: {
       sectionTitle: 'Kuo Šios Treniruotės Skiriasi',
