@@ -43,6 +43,14 @@ const Index = () => {
     return () => observer.disconnect();
   }, []);
 
+  // Get achievements as array with proper typing
+  const achievementItems = t('homepage.achievements.items', { returnObjects: true });
+  const achievementsArray = Array.isArray(achievementItems) ? achievementItems : [];
+
+  // Get bio paragraphs as array with proper typing
+  const bioParagraphs = t('homepage.about.bio', { returnObjects: true });
+  const bioArray = Array.isArray(bioParagraphs) ? bioParagraphs : [];
+
   return (
     <>
       <Header />
@@ -125,7 +133,7 @@ const Index = () => {
                   "{t('homepage.hero.subtitle')}"
                 </p>
                 <ul className="space-y-4">
-                  {t('homepage.achievements.items', { returnObjects: true }).map((item: string, idx: number) => (
+                  {achievementsArray.map((item: string, idx: number) => (
                     <li key={idx} className="flex items-start">
                       <Check size={24} className="text-theme-tangerine shrink-0 mt-1 mr-3" />
                       <span>{item}</span>
@@ -207,7 +215,7 @@ const Index = () => {
                   <FeatureCard icon={BookOpen} title={t('homepage.about.qualifications.nutrition')} description="" isBadge isSmall />
                   <FeatureCard icon={Briefcase} title={t('homepage.about.qualifications.personalTrainer')} description="" isBadge isSmall />
                 </div>
-                {t('homepage.about.bio', { returnObjects: true }).map((paragraph: string, idx: number) => (
+                {bioArray.map((paragraph: string, idx: number) => (
                   <p key={idx} className="mb-6">
                     {paragraph}
                   </p>
