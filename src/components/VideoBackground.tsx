@@ -10,22 +10,14 @@ interface VideoBackgroundProps {
 const VideoBackground = ({ videoUrl, fallbackImage, children }: VideoBackgroundProps) => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
-  const [shouldShowVideo, setShouldShowVideo] = useState(false);
+  const [shouldShowVideo, setShouldShowVideo] = useState(true);
   const [isScriptLoaded, setIsScriptLoaded] = useState(false);
   const playerRef = useRef<any>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Check if user prefers reduced motion
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    
-    // Check if device is mobile/tablet (typically slower connections)
-    const isMobile = window.innerWidth <= 768;
-    
-    // Only show video if user doesn't prefer reduced motion and it's not a mobile device
-    if (!prefersReducedMotion && !isMobile) {
-      setShouldShowVideo(true);
-    }
+    // Always show video, remove mobile and reduced motion checks
+    setShouldShowVideo(true);
   }, []);
 
   useEffect(() => {
@@ -121,42 +113,16 @@ const VideoBackground = ({ videoUrl, fallbackImage, children }: VideoBackgroundP
 
   return (
     <section className="hero-section relative min-h-screen overflow-hidden">
-      {/* Background Layer */}
+      {/* Background Layer - Only Video */}
       <div className="absolute inset-0">
-        {shouldShowVideo && !hasError ? (
-          <>
-            {/* Cloudinary Video Background */}
-            <div
-              ref={containerRef}
-              className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ${
-                isVideoLoaded ? 'opacity-100' : 'opacity-0'
-              }`}
-              style={{ 
-                zIndex: 1,
-              }}
-            />
-            
-            {/* Fallback image shown while video loads or if video fails */}
-            <div
-              className={`absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-1000 ${
-                isVideoLoaded ? 'opacity-0' : 'opacity-100'
-              }`}
-              style={{
-                backgroundImage: `url('${fallbackImage}')`,
-                zIndex: 2
-              }}
-            />
-          </>
-        ) : (
-          /* Static image for mobile, reduced motion preference, or video error */
-          <div
-            className="absolute inset-0 w-full h-full bg-cover bg-center"
-            style={{
-              backgroundImage: `url('${fallbackImage}')`,
-              zIndex: 1
-            }}
-          />
-        )}
+        {/* Cloudinary Video Background */}
+        <div
+          ref={containerRef}
+          className="absolute inset-0 w-full h-full"
+          style={{ 
+            zIndex: 1,
+          }}
+        />
         
         {/* Gradient Overlay */}
         <div 
