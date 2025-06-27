@@ -12,9 +12,9 @@ const PricingFeatureList = ({ featurePrefix, featureCount }: PricingFeatureListP
   const { t } = useTranslation();
   const { theme } = useTheme();
 
-  // Define check icon style
+  // Define check icon style with deep blue color
   const checkIconStyle = {
-    color: '#F7882F', // Tangerine
+    color: '#3B82F6', // Light blue
     marginRight: '0.5rem',
     marginTop: '0.125rem',
     width: '1.25rem',
@@ -28,7 +28,7 @@ const PricingFeatureList = ({ featurePrefix, featureCount }: PricingFeatureListP
           <li key={index} className="flex items-start">
             <Check style={checkIconStyle} />
             <span style={{ 
-              color: theme === 'dark' ? 'white' : 'inherit' 
+              color: theme === 'dark' ? 'white' : 'white' 
             }}>
               {t(`${featurePrefix}.${index}`)}
             </span>

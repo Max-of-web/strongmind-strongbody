@@ -59,44 +59,30 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				elegant: {
-					charcoal: '#212121',     // Main dark background 
-					silver: '#E0E0E0',       // Light silver for text and accents
-					lightsilver: '#F5F5F5',  // Lighter silver for subtle contrasts
-					navy: '#0F1C3F',         // Deep navy for CTA buttons only
-					darksilver: '#9E9E9E',   // Medium silver for secondary elements
-					light: '#FFFFFF',        // Pure white for contrast
-					offwhite: '#F8F8F8',     // Off-white for backgrounds
-					gold: '#D4AF37'          // Gold for secondary accents
-				},
-				// Updated theme colors with gold replacing orange
+				// Updated theme colors - modern dark theme with deep blue accents
 				theme: {
-					navy: '#0A2342',          // Primary Navy Blue
-					marine: '#1C5B5A',         // Marine Green (Primary brand color)
-					gold: '#D4AF37',           // Gold accent (replaces tangerine)
-					darknavy: '#000000',       // Pure black for backgrounds
-					lightnavy: '#375177',      // Lighter Navy for hover states
-					darkmarine: '#164948',     // Darker Marine for pressed states
-					lightmarine: '#76A4A3',    // Lighter Marine for hover states
-					darkgold: '#B8941F',       // Darker Gold for pressed states
-					lightgold: '#E6C757',      // Lighter Gold for hover states
-					lightgray: '#F0F2F5',      // Light background for light mode
-					darkgray: '#000000',       // Pure black background
-					textlight: '#FFFFFF',      // Light text
-					textdark: '#000000'        // Dark text
+					darkbg: '#0A0A0A',         // Near black background
+					navy: '#1E3A8A',           // Deep blue (primary accent)
+					lightnavy: '#3B82F6',      // Lighter blue for hover states
+					darknavy: '#1E40AF',       // Darker blue for pressed states
+					white: '#FFFFFF',          // Pure white text
+					lightgray: '#F8FAFC',      // Light background for light elements
+					darkgray: '#1F2937',       // Dark gray for secondary elements
+					border: '#374151',         // Border color
+					muted: '#6B7280'           // Muted text color
 				}
 			},
 			textColor: {
-				'theme-darknavy': '#000000',
-				'theme-text-medium-contrast': 'rgba(255, 255, 255, 0.95)',
-				'theme-text-high-contrast': '#FFFFFF'
-			  },
-			  backgroundColor: {
-				'theme-darknavy': '#000000'
-			  },
-			  borderColor: {
-				'theme-darkmarine': '#164948'
-			  },
+				'theme-white': '#FFFFFF',
+				'theme-muted': '#6B7280'
+			},
+			backgroundColor: {
+				'theme-darkbg': '#0A0A0A',
+				'theme-darkgray': '#1F2937'
+			},
+			borderColor: {
+				'theme-border': '#374151'
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',

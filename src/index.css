@@ -1,99 +1,84 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap');
 
-/* CSS Variables */
+/* CSS Variables - Dark theme */
 :root {
-  /* Black theme with high contrast */
-  --background: 0 0% 0%;
+  --background: 0 0% 4%;
   --foreground: 0 0% 100%;
 
-  --card: 0 0% 5%;
+  --card: 0 0% 8%;
   --card-foreground: 0 0% 100%;
 
-  --popover: 0 0% 5%;
+  --popover: 0 0% 8%;
   --popover-foreground: 0 0% 100%;
 
-  --primary: 51 88% 53%;
-  --primary-foreground: 0 0% 0%;
+  --primary: 217 91% 60%;
+  --primary-foreground: 0 0% 100%;
 
-  --secondary: 0 0% 10%;
+  --secondary: 0 0% 12%;
   --secondary-foreground: 0 0% 100%;
 
-  --accent: 51 88% 53%;
-  --accent-foreground: 0 0% 0%;
+  --accent: 217 91% 60%;
+  --accent-foreground: 0 0% 100%;
 
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 0 0% 100%;
 
-  --border: 0 0% 20%;
-  --input: 0 0% 20%;
-  --ring: 51 88% 53%;
+  --border: 0 0% 22%;
+  --input: 0 0% 22%;
+  --ring: 217 91% 60%;
 
   --radius: 0.5rem;
 
-  --sidebar-background: 0 0% 0%;
+  --sidebar-background: 0 0% 4%;
   --sidebar-foreground: 0 0% 100%;
-  --sidebar-primary: 51 88% 53%;
-  --sidebar-primary-foreground: 0 0% 0%;
-  --sidebar-accent: 0 0% 10%;
+  --sidebar-primary: 217 91% 60%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 0 0% 12%;
   --sidebar-accent-foreground: 0 0% 100%;
-  --sidebar-border: 0 0% 20%;
-  --sidebar-ring: 51 88% 53%;
-  
-  /* Theme-specific colors for black theme */
-  --theme-lightnavy: #375177;
-  --theme-lightgold: #E6C757;
-  --theme-lightmarine: #76A4A3;
-  --theme-gold: #D4AF37;
+  --sidebar-border: 0 0% 22%;
+  --sidebar-ring: 217 91% 60%;
 }
 
 .dark {
-  /* Same colors for dark mode (black theme applies to both) */
-  --background: 0 0% 0%;
+  --background: 0 0% 4%;
   --foreground: 0 0% 100%;
 
-  --card: 0 0% 5%;
+  --card: 0 0% 8%;
   --card-foreground: 0 0% 100%;
 
-  --popover: 0 0% 5%;
+  --popover: 0 0% 8%;
   --popover-foreground: 0 0% 100%;
 
-  --primary: 0 0% 100%;
-  --primary-foreground: 0 0% 0%;
+  --primary: 217 91% 60%;
+  --primary-foreground: 0 0% 100%;
 
-  --secondary: 0 0% 10%;
+  --secondary: 0 0% 12%;
   --secondary-foreground: 0 0% 100%;
 
-  --accent: 51 88% 53%;
-  --accent-foreground: 0 0% 0%;
+  --accent: 217 91% 60%;
+  --accent-foreground: 0 0% 100%;
 
   --destructive: 0 62.8% 30.6%;
   --destructive-foreground: 0 0% 100%;
 
-  --border: 0 0% 20%;
-  --input: 0 0% 20%;
-  --ring: 0 0% 100%;
+  --border: 0 0% 22%;
+  --input: 0 0% 22%;
+  --ring: 217 91% 60%;
   
-  --sidebar-background: 0 0% 0%;
+  --sidebar-background: 0 0% 4%;
   --sidebar-foreground: 0 0% 100%;
-  --sidebar-primary: 51 88% 53%;
-  --sidebar-primary-foreground: 0 0% 0%;
-  --sidebar-accent: 0 0% 10%;
+  --sidebar-primary: 217 91% 60%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 0 0% 12%;
   --sidebar-accent-foreground: 0 0% 100%;
-  --sidebar-border: 0 0% 20%;
-  --sidebar-ring: 51 88% 53%;
-  
-  /* Theme-specific colors for black theme */
-  --theme-darknavy: #000000;
-  --theme-darkgold: #B8941F;
-  --theme-darkmarine: #164948;
-  --theme-text-high-contrast: #FFFFFF;
-  --theme-text-medium-contrast: rgba(255, 255, 255, 0.95);
-  --theme-text-low-contrast: rgba(255, 255, 255, 0.85);
+  --sidebar-border: 0 0% 22%;
+  --sidebar-ring: 217 91% 60%;
 }
 
 /* Base styles */
 body {
-  background-color: #000000;
+  background-color: #0A0A0A;
   color: #FFFFFF;
   font-family: 'Inter', sans-serif;
   transition: colors 300ms;
@@ -115,13 +100,12 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.95)), url('/lovable-uploads/b4413382-3998-4c2e-a754-75a067048c2d.png');
+  background: linear-gradient(to bottom, rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.95)), url('/lovable-uploads/b4413382-3998-4c2e-a754-75a067048c2d.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
 
-/* Scoped selectors for hero section */
 .hero-section h1,
 .hero-section h2,
 .hero-section h3,
@@ -131,7 +115,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-section p,
 .hero-section span,
 .hero-section div,
-.hero-section a:not(.bg-theme-gold) {
+.hero-section a:not(.bg-theme-navy) {
   color: white;
 }
 
@@ -166,8 +150,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .cta-button-primary {
-  background-color: #D4AF37;
-  color: #000000;
+  background-color: #1E3A8A;
+  color: #FFFFFF;
   font-weight: 700;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -179,19 +163,19 @@ h1, h2, h3, h4, h5, h6 {
 }
   
 .cta-button-primary:hover {
-  background-color: #B8941F;
+  background-color: #1E40AF;
   transform: translateY(-2px);
 }
 
 .cta-button-primary:focus {
   outline: none;
-  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.5);
+  box-shadow: 0 0 0 2px rgba(30, 58, 138, 0.5);
 }
 
 .cta-button-secondary {
   background-color: transparent;
   color: #FFFFFF;
-  border: 1px solid #D4AF37;
+  border: 1px solid #1E3A8A;
   font-weight: 600;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -202,8 +186,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .cta-button-secondary:hover {
-  background-color: #D4AF37;
-  color: #000000;
+  background-color: #1E3A8A;
+  color: #FFFFFF;
   border-color: transparent;
   transform: translateY(-2px);
 }
@@ -230,7 +214,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   width: 5rem;
   height: 0.25rem;
-  background-color: #D4AF37;
+  background-color: #1E3A8A;
 }
 
 .card-hover {
@@ -247,47 +231,37 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   padding: 0.75rem;
   border-radius: 0.375rem;
-  background-color: hsl(var(--background));
-  border: 1px solid hsl(var(--input));
-  color: hsl(var(--foreground));
+  background-color: #1F2937;
+  border: 1px solid #374151;
+  color: #FFFFFF;
 }
 
 .form-input::placeholder {
-  color: #9CA3AF;
+  color: #6B7280;
 }
 
 .form-input:focus {
   outline: none;
-  box-shadow: 0 0 0 2px hsl(var(--accent));
-  border-color: transparent;
+  box-shadow: 0 0 0 2px #1E3A8A;
+  border-color: #1E3A8A;
 }
 
 .testimonial-card {
-  background-color: hsl(var(--background));
+  background-color: #1F2937;
   padding: 1.5rem;
   border-radius: 0.5rem;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  border: 1px solid hsl(var(--input));
-  color: hsl(var(--foreground));
-}
-
-.dark .testimonial-card {
-  background-color: var(--theme-darknavy, #0A2342); 
-  border-color: var(--theme-lightnavy, #375177);
-  color: white;
+  border: 1px solid #374151;
+  color: #FFFFFF;
 }
 
 .elegant-card {
-  background-color: white;
+  background-color: #1F2937;
   border-radius: 0.5rem;
   padding: 2rem;
-  border: 1px solid hsl(var(--input));
+  border: 1px solid #374151;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  color: hsl(var(--foreground));
-}
-
-.dark .elegant-card {
-  color: white;
+  color: #FFFFFF;
 }
 
 .language-selector {
@@ -316,7 +290,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Fade in animations for sections */
 .scroll-fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -333,6 +306,7 @@ p, li, span {
   font-size: 1rem;
   line-height: 1.5;
   font-weight: 500;
+  color: #FFFFFF;
 }
 
 @media (min-width: 768px) {
@@ -389,11 +363,11 @@ h4 {
   }
 }
 
-/* Feature cards with black theme */
+/* Feature cards with dark theme */
 .feature-card-dark {
   color: #FFFFFF;
-  background-color: #0A0A0A;
-  border-color: #333333;
+  background-color: #1F2937;
+  border-color: #374151;
 }
 
 .feature-card-dark h3,
@@ -401,46 +375,36 @@ h4 {
   color: #FFFFFF;
 }
 
-/* Credential badges with proper contrast */
+/* Credential badges */
 .credential-badge {
   color: white;
-  background-color: #1A1A1A;
+  background-color: #1F2937;
+  border-color: #374151;
 }
 
-/* Timeline elements with better contrast */
+/* Timeline elements */
 .timeline-item {
   color: #FFFFFF;
 }
 
 .timeline-number {
-  background-color: rgba(212, 175, 55, 0.3);
-  color: #D4AF37;
+  background-color: rgba(30, 58, 138, 0.3);
+  color: #3B82F6;
 }
 
-/* Form element improvements for black theme */
 .form-label {
   color: #FFFFFF;
-}
-
-.form-input {
-  background-color: #0A0A0A;
-  border-color: #333333;
-  color: #FFFFFF;
-}
-
-.form-input::placeholder {
-  color: rgba(255, 255, 255, 0.7);
 }
 
 .checkbox-label {
   color: #FFFFFF;
 }
 
-/* Price cards with consistent text colors */
+/* Price cards */
 .price-card {
   color: #FFFFFF;
-  background-color: #0A0A0A;
-  border-color: #333333;
+  background-color: #1F2937;
+  border-color: #374151;
 }
 
 .price-card h3,
@@ -454,14 +418,14 @@ h4 {
 }
 
 .price-card .check-icon {
-  color: #D4AF37;
+  color: #3B82F6;
 }
 
-/* Section backgrounds with text contrast fixes */
+/* Section backgrounds */
 [class*="bg-theme-navy"],
 [class*="bg-theme-darknavy"],
 .bg-elegant-charcoal {
-  background-color: #000000;
+  background-color: #0A0A0A;
   color: white;
 }
 
@@ -477,7 +441,6 @@ h4 {
   color: rgba(255, 255, 255, 0.95);
 }
 
-/* Enhanced button contrast */
 .secondary-button {
   background-color: transparent;
   border-color: #FFFFFF;
@@ -485,7 +448,7 @@ h4 {
 }
 
 .secondary-button:hover {
-  background-color: #D4AF37;
-  color: #000000;
+  background-color: #1E3A8A;
+  color: #FFFFFF;
   border-color: transparent;
 }

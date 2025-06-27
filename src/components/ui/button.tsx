@@ -10,16 +10,16 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-theme-marine text-white hover:bg-theme-lightmarine",
+        default: "bg-theme-navy text-white hover:bg-theme-lightnavy",
         destructive:
           "bg-destructive text-white hover:bg-destructive/90",
         outline:
-          "border border-theme-gold bg-transparent hover:bg-theme-gold hover:text-black text-white",
+          "border border-theme-navy bg-transparent hover:bg-theme-navy hover:text-white text-white",
         secondary:
-          "bg-theme-navy text-white hover:bg-theme-lightnavy",
-        ghost: "text-white hover:bg-theme-gold/20 hover:text-theme-gold",
-        link: "text-theme-gold underline-offset-4 hover:underline",
-        cta: "bg-theme-gold text-black hover:bg-theme-darkgold font-bold shadow-md",
+          "bg-theme-darkgray text-white hover:bg-theme-border",
+        ghost: "text-white hover:bg-theme-navy/20 hover:text-white",
+        link: "text-theme-lightnavy underline-offset-4 hover:underline",
+        cta: "bg-theme-navy text-white hover:bg-theme-darknavy font-bold shadow-md",
       },
       size: {
         default: "h-10 px-4 py-2",
@@ -46,11 +46,11 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, children, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
     
-    // Direct style mappings for guaranteed visibility
+    // Direct style mappings for the new color scheme
     const getStyleOverrides = () => {
       const styleMap: Record<string, React.CSSProperties> = {
         default: {
-          backgroundColor: '#1C5B5A', // marine
+          backgroundColor: '#1E3A8A', // theme-navy
           color: 'white',
         },
         destructive: {
@@ -58,19 +58,19 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           color: 'white',
         },
         secondary: {
-          backgroundColor: '#0A2342', // navy
+          backgroundColor: '#1F2937', // theme-darkgray
           color: 'white',
         },
         cta: {
-          backgroundColor: '#D4AF37', // gold
-          color: '#000000', // black text
+          backgroundColor: '#1E3A8A', // theme-navy
+          color: '#FFFFFF', // white text
           fontWeight: 'bold',
           boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
         },
         outline: {
           backgroundColor: 'transparent',
           color: '#FFFFFF', // white
-          borderColor: '#D4AF37', // gold border
+          borderColor: '#1E3A8A', // theme-navy border
           border: '2px solid',
         },
         ghost: {
@@ -79,7 +79,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         },
         link: {
           backgroundColor: 'transparent',
-          color: '#D4AF37', // gold
+          color: '#3B82F6', // theme-lightnavy
           textDecoration: 'underline',
         },
       };
@@ -93,26 +93,26 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       
       const hoverEffects: Record<string, React.CSSProperties> = {
         default: {
-          backgroundColor: '#76A4A3', // lightmarine
+          backgroundColor: '#3B82F6', // theme-lightnavy
         },
         destructive: {
           backgroundColor: '#f87171', // lighter red
         },
         secondary: {
-          backgroundColor: '#375177', // lightnavy
+          backgroundColor: '#374151', // theme-border
         },
         cta: {
-          backgroundColor: '#B8941F', // darker gold
+          backgroundColor: '#1E40AF', // theme-darknavy
           transform: 'translateY(-2px)',
           boxShadow: '0 6px 8px rgba(0, 0, 0, 0.15)',
         },
         outline: {
-          backgroundColor: '#D4AF37', // gold background
-          color: '#000000', // black text
+          backgroundColor: '#1E3A8A', // theme-navy background
+          color: '#FFFFFF', // white text
         },
         ghost: {
-          backgroundColor: 'rgba(212, 175, 55, 0.2)',
-          color: '#D4AF37',
+          backgroundColor: 'rgba(30, 58, 138, 0.2)',
+          color: '#FFFFFF',
         },
         link: {
           textDecoration: 'underline',
