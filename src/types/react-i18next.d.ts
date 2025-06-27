@@ -2,18 +2,24 @@
 import 'react-i18next';
 import { ReactNode } from 'react';
 
+// Extend the react-i18next module to include our custom namespace structure
 declare module 'react-i18next' {
   interface CustomTypeOptions {
     defaultNS: 'translation';
     resources: {
-      translation: typeof import('../i18n/locales/en').default;
+      translation: {
+        [key: string]: any;
+      };
     };
+    // Disable react-i18next's JSX augmentation to prevent type conflicts
+    allowObjectInHTMLChildren: false;
   }
 }
 
-// Override react-i18next's global JSX augmentation to prevent type conflicts
+// Completely override react-i18next's global JSX augmentation
 declare global {
   namespace JSX {
+    // Reset all JSX elements to use standard React types
     interface Element extends React.ReactElement<any, any> {}
     interface ElementClass extends React.Component<any> {}
     interface ElementAttributesProperty {
@@ -25,31 +31,14 @@ declare global {
     interface IntrinsicAttributes extends React.Attributes {}
     interface IntrinsicClassAttributes<T> extends React.ClassAttributes<T> {}
     
-    // Force all intrinsic elements to use ReactNode for children
+    // Ensure all intrinsic elements use ReactNode for children
     interface IntrinsicElements {
-      [elemName: string]: any & {
-        children?: ReactNode;
-      };
+      [elemName: string]: any;
     }
   }
 }
 
-// Augment React types to ensure compatibility
-declare module 'react' {
-  // Override React's children types to be more permissive
-  interface DOMAttributes<T> {
-    children?: ReactNode;
-  }
-  
-  interface HTMLAttributes<T> extends AriaAttributes, DOMAttributes<T> {
-    children?: ReactNode;
-  }
-  
-  // Ensure ReactI18NextChildren is assignable to ReactNode
-  interface ReactNode {}
-}
-
-// Create a type alias to force ReactI18NextChildren to be treated as ReactNode
-declare global {
-  type ReactI18NextChildren = React.ReactNode;
+// Explicitly type ReactI18NextChildren as ReactNode to prevent conflicts
+declare module 'react-i18next' {
+  type ReactI18NextChildren = ReactNode;
 }
