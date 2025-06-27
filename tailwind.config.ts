@@ -69,30 +69,30 @@ export default {
 					offwhite: '#F8F8F8',     // Off-white for backgrounds
 					gold: '#D4AF37'          // Gold for secondary accents
 				},
-				// Updated theme colors based on brand guidelines
+				// Updated theme colors with gold replacing orange
 				theme: {
 					navy: '#0A2342',          // Primary Navy Blue
 					marine: '#1C5B5A',         // Marine Green (Primary brand color)
-					tangerine: '#F7882F',      // Tangerine accent
-					darknavy: '#061528',       // Darker Navy for dark mode
+					gold: '#D4AF37',           // Gold accent (replaces tangerine)
+					darknavy: '#000000',       // Pure black for backgrounds
 					lightnavy: '#375177',      // Lighter Navy for hover states
 					darkmarine: '#164948',     // Darker Marine for pressed states
 					lightmarine: '#76A4A3',    // Lighter Marine for hover states
-					darktangerine: '#C56D26',  // Darker Tangerine for pressed states
-					lighttangerine: '#F89F4F', // Lighter Tangerine for hover states
+					darkgold: '#B8941F',       // Darker Gold for pressed states
+					lightgold: '#E6C757',      // Lighter Gold for hover states
 					lightgray: '#F0F2F5',      // Light background for light mode
-					darkgray: '#121212',       // Dark background for dark mode
+					darkgray: '#000000',       // Pure black background
 					textlight: '#FFFFFF',      // Light text
-					textdark: '#0A2342'        // Dark text
+					textdark: '#000000'        // Dark text
 				}
 			},
 			textColor: {
-				'theme-darknavy': '#061528',
+				'theme-darknavy': '#000000',
 				'theme-text-medium-contrast': 'rgba(255, 255, 255, 0.95)',
 				'theme-text-high-contrast': '#FFFFFF'
 			  },
 			  backgroundColor: {
-				'theme-darknavy': '#061528'
+				'theme-darknavy': '#000000'
 			  },
 			  borderColor: {
 				'theme-darkmarine': '#164948'

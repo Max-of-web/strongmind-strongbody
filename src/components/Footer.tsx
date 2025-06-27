@@ -12,7 +12,7 @@ const Footer = () => {
 
   return (
     <footer className="py-12 px-4 text-white" style={{ 
-      backgroundColor: '#061528',  // Dark navy background (works in both modes)
+      backgroundColor: '#000000',  // Pure black background
       color: 'white' 
     }}>
       <div className="container-width">
@@ -47,7 +47,7 @@ const Footer = () => {
             </h4>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <Phone size={18} style={{ color: '#F7882F' }} />
+                <Phone size={18} style={{ color: '#D4AF37' }} />
                 <a href="tel:+37067951040" style={{ 
                   color: 'white',
                   transition: 'color 150ms',

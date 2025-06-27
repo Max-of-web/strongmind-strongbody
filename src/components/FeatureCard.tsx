@@ -18,22 +18,22 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ icon: Icon, title, descriptio
     const textSize = isSmall ? "text-xs" : "text-sm";
     
     return (
-      <div className="flex items-center gap-2 bg-elegant-charcoal bg-opacity-70 dark:bg-theme-navy px-3 py-2 rounded-full border border-elegant-silver border-opacity-20 dark:border-theme-lightnavy shadow-sm credential-badge">
-        <div className={`${badgeSize} bg-theme-tangerine bg-opacity-20 dark:bg-theme-tangerine dark:bg-opacity-30 rounded-full flex items-center justify-center`}>
-          <Icon size={iconSize} className="text-theme-tangerine" />
+      <div className="flex items-center gap-2 bg-black bg-opacity-70 px-3 py-2 rounded-full border border-gray-600 shadow-sm credential-badge">
+        <div className={`${badgeSize} bg-theme-gold bg-opacity-20 rounded-full flex items-center justify-center`}>
+          <Icon size={iconSize} className="text-theme-gold" />
         </div>
-        <span className={`${textSize} font-semibold text-white dark:text-white`}>{title}</span>
+        <span className={`${textSize} font-semibold text-white`}>{title}</span>
       </div>
     );
   }
   
   return (
-    <div className="bg-elegant-charcoal bg-opacity-50 dark:bg-theme-navy p-6 rounded-lg border border-elegant-silver border-opacity-10 dark:border-theme-lightnavy/30 card-hover feature-card-dark">
-      <div className="w-12 h-12 bg-theme-tangerine bg-opacity-20 dark:bg-theme-tangerine dark:bg-opacity-30 rounded-full flex items-center justify-center mb-4">
-        <Icon size={24} className="text-theme-tangerine" />
+    <div className="bg-black bg-opacity-50 p-6 rounded-lg border border-gray-600 card-hover feature-card-dark">
+      <div className="w-12 h-12 bg-theme-gold bg-opacity-20 rounded-full flex items-center justify-center mb-4">
+        <Icon size={24} className="text-theme-gold" />
       </div>
-      <h3 className="text-xl font-semibold mb-3 text-white dark:text-white">{title}</h3>
-      <p className="text-white dark:text-white dark:text-opacity-90">{description}</p>
+      <h3 className="text-xl font-semibold mb-3 text-white">{title}</h3>
+      <p className="text-white text-opacity-90">{description}</p>
     </div>
   );
 };

@@ -14,20 +14,20 @@ const ThemeToggle = () => {
       <Sun 
         size={18} 
         className={`transition-opacity duration-300 ${isDark ? 'opacity-40' : 'opacity-100'}`}
-        color={isDark ? "#8E9196" : "#F7882F"}
+        color={isDark ? "#8E9196" : "#D4AF37"}
       />
       
       <Switch 
         checked={isDark}
         onCheckedChange={toggleTheme}
         aria-label={isDark ? t('theme.light') : t('theme.dark')}
-        className="data-[state=checked]:bg-[#0A2342] data-[state=unchecked]:bg-[#F7882F]"
+        className="data-[state=checked]:bg-[#000000] data-[state=unchecked]:bg-[#D4AF37]"
       />
       
       <Moon 
         size={18} 
         className={`transition-opacity duration-300 ${isDark ? 'opacity-100' : 'opacity-40'}`}
-        color={isDark ? "#F7882F" : "#8E9196"}
+        color={isDark ? "#D4AF37" : "#8E9196"}
       />
     </div>
   );

@@ -13,15 +13,15 @@ const BookingButton: React.FC<BookingButtonProps> = ({
   buttonText,
   packageType
 }) => {
-  // Custom button styles - completely independent of any existing styles
+  // Gold styling for Discovery Call buttons
   const bookingButtonStyle = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     gap: '0.5rem',
-    backgroundColor: '#0A2342', // Navy blue - always dark
-    color: '#FFFFFF',           // White text - always light
-    fontWeight: '600',
+    backgroundColor: '#D4AF37', // Gold background
+    color: '#000000',           // Black text
+    fontWeight: 'bold',         // Bold font
     width: '100%',
     padding: '0.75rem 1rem',
     borderRadius: '0.375rem',
@@ -52,12 +52,12 @@ const BookingButton: React.FC<BookingButtonProps> = ({
       onClick={onClick}
       style={bookingButtonStyle}
       onMouseOver={(e) => {
-        e.currentTarget.style.backgroundColor = '#375177'; // Lighter navy for hover
+        e.currentTarget.style.backgroundColor = '#B8941F'; // Darker gold for hover
         e.currentTarget.style.transform = 'translateY(-1px)';
         e.currentTarget.style.boxShadow = '0 2px 4px rgba(0,0,0,0.15)';
       }}
       onMouseOut={(e) => {
-        e.currentTarget.style.backgroundColor = '#0A2342'; // Back to navy
+        e.currentTarget.style.backgroundColor = '#D4AF37'; // Back to gold
         e.currentTarget.style.transform = 'translateY(0)';
         e.currentTarget.style.boxShadow = '0 1px 3px rgba(0,0,0,0.1)';
       }}

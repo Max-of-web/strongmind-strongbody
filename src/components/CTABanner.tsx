@@ -10,24 +10,24 @@ interface CTABannerProps {
 }
 
 const CTABanner: React.FC<CTABannerProps> = ({ message, buttonText, buttonLink }) => {
-  // Fixed banner style that works in both themes
+  // Fixed banner style with black background
   const bannerStyle = {
-    backgroundColor: '#061528', // Dark navy - high contrast in both modes
+    backgroundColor: '#000000',  // Pure black background
     color: '#FFFFFF', // White text for maximum contrast
     padding: '3rem 1rem',
   };
 
-  // Button style with fixed colors for maximum visibility
+  // Button style with gold colors
   const buttonStyle = {
-    backgroundColor: '#F7882F', // Tangerine
-    color: '#FFFFFF', // White
+    backgroundColor: '#D4AF37', // Gold
+    color: '#000000', // Black text
     display: 'inline-flex',
     alignItems: 'center',
     justifyContent: 'center',
     gap: '0.5rem',
     padding: '0.75rem 1.5rem',
     borderRadius: '0.375rem',
-    fontWeight: 600,
+    fontWeight: 'bold',
     border: 'none',
     cursor: 'pointer',
     boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
@@ -46,12 +46,12 @@ const CTABanner: React.FC<CTABannerProps> = ({ message, buttonText, buttonLink }
           rel="noopener noreferrer"
           style={buttonStyle}
           onMouseEnter={(e) => {
-            e.currentTarget.style.backgroundColor = '#F89F4F'; // Lighter tangerine
+            e.currentTarget.style.backgroundColor = '#B8941F'; // Darker gold
             e.currentTarget.style.transform = 'translateY(-2px)';
             e.currentTarget.style.boxShadow = '0 6px 8px rgba(0, 0, 0, 0.15)';
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.backgroundColor = '#F7882F';
+            e.currentTarget.style.backgroundColor = '#D4AF37';
             e.currentTarget.style.transform = 'translateY(0)';
             e.currentTarget.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
           }}

@@ -10,16 +10,16 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-theme-marine text-white hover:bg-theme-lightmarine dark:bg-theme-marine dark:text-white dark:hover:bg-theme-lightmarine",
+        default: "bg-theme-marine text-white hover:bg-theme-lightmarine",
         destructive:
-          "bg-destructive text-white hover:bg-destructive/90 dark:bg-destructive dark:text-white",
+          "bg-destructive text-white hover:bg-destructive/90",
         outline:
-          "border border-theme-marine bg-white hover:bg-theme-lightmarine/20 text-theme-navy dark:border-white dark:bg-transparent dark:text-white dark:hover:bg-white/10",
+          "border border-theme-gold bg-transparent hover:bg-theme-gold hover:text-black text-white",
         secondary:
-          "bg-theme-navy text-white hover:bg-theme-lightnavy dark:bg-theme-lightnavy dark:text-white dark:hover:bg-theme-navy",
-        ghost: "text-theme-navy hover:bg-theme-lightmarine/20 hover:text-theme-marine dark:text-white dark:hover:bg-theme-lightmarine/20 dark:hover:text-white",
-        link: "text-theme-marine underline-offset-4 hover:underline dark:text-white",
-        cta: "bg-theme-tangerine text-white hover:bg-theme-lighttangerine dark:bg-theme-tangerine dark:text-white dark:hover:bg-theme-lighttangerine shadow-md font-semibold",
+          "bg-theme-navy text-white hover:bg-theme-lightnavy",
+        ghost: "text-white hover:bg-theme-gold/20 hover:text-theme-gold",
+        link: "text-theme-gold underline-offset-4 hover:underline",
+        cta: "bg-theme-gold text-black hover:bg-theme-darkgold font-bold shadow-md",
       },
       size: {
         default: "h-10 px-4 py-2",
@@ -46,7 +46,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, children, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
     
-    // Direct style mappings for guaranteed visibility regardless of theme
+    // Direct style mappings for guaranteed visibility
     const getStyleOverrides = () => {
       const styleMap: Record<string, React.CSSProperties> = {
         default: {
@@ -62,23 +62,24 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           color: 'white',
         },
         cta: {
-          backgroundColor: '#F7882F', // tangerine
-          color: 'white',
+          backgroundColor: '#D4AF37', // gold
+          color: '#000000', // black text
+          fontWeight: 'bold',
           boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
         },
         outline: {
           backgroundColor: 'transparent',
-          color: document.documentElement.classList.contains('dark') ? 'white' : '#0A2342', // navy in light, white in dark
-          borderColor: document.documentElement.classList.contains('dark') ? 'white' : '#1C5B5A', // marine in light, white in dark
+          color: '#FFFFFF', // white
+          borderColor: '#D4AF37', // gold border
           border: '2px solid',
         },
         ghost: {
           backgroundColor: 'transparent',
-          color: document.documentElement.classList.contains('dark') ? 'white' : '#0A2342', // navy in light, white in dark
+          color: '#FFFFFF', // white
         },
         link: {
           backgroundColor: 'transparent',
-          color: document.documentElement.classList.contains('dark') ? 'white' : '#1C5B5A', // marine in light, white in dark
+          color: '#D4AF37', // gold
           textDecoration: 'underline',
         },
       };
@@ -101,15 +102,17 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           backgroundColor: '#375177', // lightnavy
         },
         cta: {
-          backgroundColor: '#F89F4F', // lighter tangerine
+          backgroundColor: '#B8941F', // darker gold
           transform: 'translateY(-2px)',
           boxShadow: '0 6px 8px rgba(0, 0, 0, 0.15)',
         },
         outline: {
-          backgroundColor: document.documentElement.classList.contains('dark') ? 'rgba(255, 255, 255, 0.2)' : 'rgba(28, 91, 90, 0.1)',
+          backgroundColor: '#D4AF37', // gold background
+          color: '#000000', // black text
         },
         ghost: {
-          backgroundColor: document.documentElement.classList.contains('dark') ? 'rgba(255, 255, 255, 0.1)' : 'rgba(28, 91, 90, 0.1)',
+          backgroundColor: 'rgba(212, 175, 55, 0.2)',
+          color: '#D4AF37',
         },
         link: {
           textDecoration: 'underline',

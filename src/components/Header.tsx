@@ -26,7 +26,7 @@ const Header = () => {
     <header 
       className={`fixed w-full z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-theme-navy bg-opacity-95 dark:bg-theme-darknavy dark:bg-opacity-95 shadow-md py-3' 
+          ? 'bg-black bg-opacity-95 shadow-md py-3' 
           : 'bg-transparent py-5'
       }`}
     >
@@ -35,7 +35,7 @@ const Header = () => {
           to="/" 
           className="text-white font-display text-xl md:text-2xl font-bold hover:text-opacity-80 transition-all"
         >
-          Paulius<span className="text-theme-tangerine dark:text-theme-tangerine text-2xl font-bold">Lipskis</span>
+          Paulius<span className="text-theme-gold text-2xl font-bold">Lipskis</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -43,13 +43,13 @@ const Header = () => {
           <div className="flex items-center space-x-8 mr-4">
             <Link 
               to="/" 
-              className="text-white hover:text-theme-tangerine dark:hover:text-theme-tangerine transition-colors"
+              className="text-white hover:text-theme-gold transition-colors"
             >
               {t('header.home')}
             </Link>
             <Link 
               to="/coaching" 
-              className="text-white hover:text-theme-tangerine dark:hover:text-theme-tangerine transition-colors"
+              className="text-white hover:text-theme-gold transition-colors"
             >
               {t('header.coaching')}
             </Link>
@@ -89,18 +89,18 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-theme-navy dark:bg-theme-darknavy absolute top-full left-0 right-0 py-4 px-4 shadow-md animate-fade-in">
+        <div className="md:hidden bg-black absolute top-full left-0 right-0 py-4 px-4 shadow-md animate-fade-in">
           <nav className="flex flex-col space-y-4">
             <Link 
               to="/" 
-              className="text-white hover:text-theme-tangerine dark:hover:text-theme-tangerine transition-colors py-2" 
+              className="text-white hover:text-theme-gold transition-colors py-2" 
               onClick={() => setIsMenuOpen(false)}
             >
               {t('header.home')}
             </Link>
             <Link 
               to="/coaching" 
-              className="text-white hover:text-theme-tangerine dark:hover:text-theme-tangerine transition-colors py-2" 
+              className="text-white hover:text-theme-gold transition-colors py-2" 
               onClick={() => setIsMenuOpen(false)}
             >
               {t('header.coaching')}

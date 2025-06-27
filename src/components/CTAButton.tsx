@@ -31,15 +31,13 @@ const CTAButton: React.FC<CTAButtonProps> = ({
   const { theme } = useTheme();
 
   const baseClasses =
-    'inline-flex items-center justify-center px-6 py-3 rounded-md font-semibold transition-all duration-300 text-base';
+    'inline-flex items-center justify-center px-6 py-3 rounded-md font-bold transition-all duration-300 text-base';
   
   const primaryClasses =
-    'bg-theme-tangerine text-white hover:bg-theme-lighttangerine shadow-md';
+    'bg-theme-gold text-black hover:bg-theme-darkgold shadow-md';
 
   const secondaryClasses =
-    theme === 'dark'
-      ? 'bg-transparent text-white border-2 border-white hover:bg-white/10'
-      : 'bg-transparent text-theme-navy border-2 border-theme-navy hover:bg-theme-navy/10';
+    'bg-transparent text-white border-2 border-theme-gold hover:bg-theme-gold hover:text-black';
 
   const whatsAppClasses = 'bg-[#25D366] text-white border-none hover:bg-[#128C7E] shadow-md';
   
