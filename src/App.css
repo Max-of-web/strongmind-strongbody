@@ -6,10 +6,10 @@
 
 @layer components {
   .cta-button-primary {
-    @apply inline-flex items-center justify-center px-6 py-3 rounded-md font-semibold transition-all duration-300 bg-theme-tangerine hover:bg-theme-lighttangerine text-white shadow-md hover:transform hover:-translate-y-1 disabled:opacity-50 disabled:pointer-events-none;
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-md font-semibold transition-all duration-300 bg-theme-gold hover:bg-theme-darkgold text-black shadow-md hover:transform hover:-translate-y-1 disabled:opacity-50 disabled:pointer-events-none;
   }
   
   .cta-button-secondary {
-    @apply inline-flex items-center justify-center px-6 py-3 rounded-md font-semibold transition-all duration-300 bg-transparent border border-theme-marine dark:border-white text-theme-darknavy dark:text-white hover:bg-theme-tangerine hover:text-white hover:border-transparent hover:transform hover:-translate-y-1 disabled:opacity-50 disabled:pointer-events-none;
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-md font-semibold transition-all duration-300 bg-transparent border border-theme-marine dark:border-white text-theme-darknavy dark:text-white hover:bg-theme-gold hover:text-black hover:border-transparent hover:transform hover:-translate-y-1 disabled:opacity-50 disabled:pointer-events-none;
   }
 }
