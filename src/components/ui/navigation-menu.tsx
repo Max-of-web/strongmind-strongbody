@@ -7,7 +7,9 @@ import { cn } from "@/lib/utils"
 
 const NavigationMenu = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Root>,
-  React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Root>
+  React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Root> & {
+    children: React.ReactNode;
+  }
 >(({ className, children, ...props }, ref) => (
   <NavigationMenuPrimitive.Root
     ref={ref}
@@ -46,7 +48,9 @@ const navigationMenuTriggerStyle = cva(
 
 const NavigationMenuTrigger = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Trigger>,
-  React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Trigger>
+  React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Trigger> & {
+    children: React.ReactNode;
+  }
 >(({ className, children, ...props }, ref) => (
   <NavigationMenuPrimitive.Trigger
     ref={ref}
