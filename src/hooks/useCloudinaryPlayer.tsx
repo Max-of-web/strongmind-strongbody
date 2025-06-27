@@ -13,50 +13,13 @@ export const useCloudinaryPlayer = ({ videoUrl, shouldShowVideo }: UseCloudinary
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (videoRef.current && shouldShowVideo && !hasError) {
-      const video = videoRef.current;
-      
-      const handleCanPlay = () => {
-        console.log('Video can play');
-        setIsVideoLoaded(true);
-        // Auto-play the video
-        video.play().catch((error) => {
-          console.warn('Video autoplay failed:', error);
-        });
-      };
-
-      const handleError = (error: any) => {
-        console.error('Video error:', error);
-        setHasError(true);
-      };
-
-      const handleLoadStart = () => {
-        console.log('Video loading started');
-      };
-
-      const handleLoadedData = () => {
-        console.log('Video data loaded');
-      };
-
-      video.addEventListener('canplay', handleCanPlay);
-      video.addEventListener('error', handleError);
-      video.addEventListener('loadstart', handleLoadStart);
-      video.addEventListener('loadeddata', handleLoadedData);
-
-      return () => {
-        video.removeEventListener('canplay', handleCanPlay);
-        video.removeEventListener('error', handleError);
-        video.removeEventListener('loadstart', handleLoadStart);
-        video.removeEventListener('loadeddata', handleLoadedData);
-      };
-    }
-  }, [shouldShowVideo, hasError]);
+    // Reset error state when props change
+    setHasError(false);
+    setIsVideoLoaded(false);
+  }, [videoUrl, shouldShowVideo]);
 
   const renderVideo = () => {
-    if (!shouldShowVideo || hasError) return null;
-
-    // Use the direct Cloudinary URL without additional transformations
-    const cloudinaryUrl = "https://res.cloudinary.com/dhnkuonev/video/upload/v1735152266/personal-trainer-background_iuvs5h.mp4";
+    if (!shouldShowVideo) return null;
 
     return (
       <video
@@ -65,17 +28,20 @@ export const useCloudinaryPlayer = ({ videoUrl, shouldShowVideo }: UseCloudinary
         muted
         loop
         playsInline
-        preload="metadata"
-        className="absolute inset-0 w-full h-full object-cover"
-        style={{ zIndex: 0 }}
+        poster="/lovable-uploads/b4413382-3998-4c2e-a754-75a067048c2d.png"
+        className="w-full h-full object-cover"
+        onCanPlay={() => {
+          console.log('Video can play');
+          setIsVideoLoaded(true);
+        }}
         onError={(e) => {
-          console.error('Video element error:', e);
+          console.error('Video error:', e);
           setHasError(true);
         }}
-        onLoadStart={() => console.log('Video load started')}
-        onCanPlay={() => console.log('Video can play event')}
+        onLoadStart={() => console.log('Video loading started')}
       >
-        <source src={cloudinaryUrl} type="video/mp4" />
+        <source src={videoUrl} type="video/mp4" />
+        Your browser does not support the video tag.
       </video>
     );
   };
