@@ -33,11 +33,12 @@ const VideoPlayer = ({ videoUrl, shouldShowVideo }: VideoPlayerProps) => {
         onError={(e) => {
           console.error('Video failed to load:', e);
           console.error('Video error target:', e.target);
+          const videoElement = e.target as HTMLVideoElement;
           console.error('Video error details:', {
-            error: e.target?.error,
-            networkState: e.target?.networkState,
-            readyState: e.target?.readyState,
-            currentSrc: e.target?.currentSrc
+            error: videoElement?.error,
+            networkState: videoElement?.networkState,
+            readyState: videoElement?.readyState,
+            currentSrc: videoElement?.currentSrc
           });
         }}
         onStalled={() => console.log('Video stalled')}
