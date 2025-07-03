@@ -1,59 +1,60 @@
+
 const translation = {
   header: {
     home: 'Pradžia',
-    coaching: 'Asmeninės Treniruotės',
+    coaching: 'Treniruotės',
     about: 'Apie Mane',
-    bookCall: 'Užsisakyti Skambutį'
+    bookCall: 'Registruotis į treniruotę'
   },
   footer: {
-    cta: 'Noriu padėti jums jaustis stipriems, galingiems ir susijungusiems su savo kūnu.',
-    bookCall: 'Užsisakyti Pažintinį Skambutį',
+    cta: 'Noriu padėti tau vėl susidraugauti su tavo kūnu',
+    bookCall: 'Užsiregistruok treniruotei',
     messageWhatsApp: 'Rašyti WhatsApp',
     contact: 'Kontaktai',
     phone: '+370 6795 1040',
     whatsAppChat: 'WhatsApp Pokalbis',
     locations: 'Treniruočių Vietos',
-    location1: 'Reformatas Gym, Vilnius',
+    location1: 'Reformatas, Vilnius',
     location2: 'SEB Arena, Vilnius',
     quickLinks: 'Greitos Nuorodos',
     home: 'Pradžia',
-    coaching: 'Asmeninės Treniruotės',
+    coaching: 'Treniruotės',
     rights: 'Visos teisės saugomos.'
   },
   homepage: {
     hero: {
-      title: 'Padedu žmonėms po traumų ir tiems, kuriems sunku prisijaukinti judėjimą, atgauti pasitikėjimą savo kūnu ir tapti stipresniais nei bet kada anksčiau.',
-      subtitle: 'Kineziterapija, asmeninės treniruotės, mažos grupės ir aiškiai struktūruotos sporto programos – paremtos mokslu ir tavo patirtimi, kad kiekvienas planas būtų pritaikytas tavo kūnui ir tikslams.',
-      bookCallButton: 'Nežinau nuo ko pradėti',
-      getFreeGuideButton: 'Noriu plano'
+      title: 'Patirk, ką reiškia jaustis stipriu savo kūne – žingsnis po žingsnio.',
+      subtitle: 'Kineziterapija, reabilitacija po traumų, mažos grupės, asmeninės treniruotės ir aiškiai struktūruotos programos – paremtos mokslu ir pritaikytos tavo gyvenimo būdui.',
+      bookCallButton: 'Registruotis į treniruotę',
+      getFreeGuideButton: 'Atsisiųsti nemokamą gidą'
     },
     features: {
-      sectionTitle: 'Kuo Šios Treniruotės Skiriasi',
+      sectionTitle: 'Kuo mano požiūris kitoks',
       dualExpertise: {
-        title: 'Dviguba Kompetencija',
-        description: 'Fizioterapijos žinios kartu su psichologijos išsilavinimu suteikia holistinį požiūrį į treniruotes.'
+        title: 'Dviguba kompetencija',
+        description: 'Kineziterapijos žinios derinamos su psichologijos pagrindais – kad į žmogų žiūrėčiau visapusiškai ir padėčiau kurti ilgalaikį, tikrą pokytį.'
       },
       adaptivePrograms: {
-        title: 'Adaptyvios Programos',
-        description: 'Treniruočių programos, kurios vystosi kartu su jūsų progresu, visada išlaikant iššūkį ir įsitraukimą.'
+        title: 'Pokyčių planas, kuris kinta atsižvelgiant į tave',
+        description: 'Programos keičiasi kartu su tavimi – kad visada jaustum pažangą, iššūkį ir neprarastum motyvacijos.'
       },
       emotionalSupport: {
-        title: 'Emocinis Palaikymas',
-        description: 'Darbas su mentalinėmis kliūtimis, kurios dažnai trukdo fiziniam progresui ir ilgalaikei sėkmei.'
+        title: 'Emocinis palaikymas',
+        description: 'Padedu įveikti vidines kliūtis – baimes, abejojimą savimi ar spaudimą – nes būtent jos dažnai stabdo fizinį progresą.'
       },
       longTermMindset: {
-        title: 'Ilgalaikis Požiūris',
-        description: 'Tvarių įpročių formavimas vietoj greitų sprendimų, orientuojantis į visą gyvenimą trunkančią sveikatą ir fizinę formą.'
+        title: 'Ilgalaikė perspektyva',
+        description: 'Nesiūlau greitų rezultatų. Kuriam tvarius įpročius, džiaugiamės mažais laimėjimais, kurie leidžia išlikti stipriam ir sveikam ilgai, o ne trumpam.'
       }
     },
     achievements: {
-      sectionTitle: 'Ką Pasieksite',
+      sectionTitle: 'Kas tavęs laukia',
       items: [
-        'Sumažintas skausmas ir diskomfortas per taisyklingus judesius',
-        'Protingesnis treniruočių metodas, prisitaikantis prie jūsų energijos lygio',
-        'Tvarūs įpročiai, kurie dera su jūsų gyvenimo būdu',
-        'Stipresnis kūno suvokimas ir ryšys',
-        'Padidėjęs pasitikėjimas savo judesių gebėjimais'
+        'Mažiau skausmo ir diskomforto dėl taisyklingo judėjimo',
+        'Treniruotės, pritaikytos prie tavo energijos ir progreso',
+        'Įpročiai, kuriuos pagaliau galėsi išlaikyti ilgai',
+        'Tvirtesnis ryšys tarp tavęs ir tavo kūno',
+        'Pasitikėjimas, kad judi teisingai'
       ]
     },
     testimonials: {
@@ -73,7 +74,7 @@ const translation = {
       viewMoreLink: 'Peržiūrėti daugiau atsiliepimų'
     },
     about: {
-      sectionTitle: 'Apie Paulių Lipskį',
+      sectionTitle: 'Apie mane',
       qualifications: {
         physiotherapy: 'BSc Fizioterapija',
         nasm: 'NASM Sertifikatas',
@@ -81,9 +82,9 @@ const translation = {
         personalTrainer: 'Asmeninis Treneris (OTA Akademija)'
       },
       bio: [
-        'Turėdamas išsilavinimą tiek fizioterapijoje, tiek psichologijoje, paskutinį dešimtmetį padėjau žmonėms keisti santykį su savo kūnu. Tikiu treniruotėmis, kurios gerbia jūsų kūno signalus, kartu metant iššūkį jūsų riboms.',
-        'Mano metodas jungia įrodymais pagrįstą sporto mokslą su praktine psichologija, kuriant tvarias programas, kurios pranoksta fizinius rezultatus — jos keičia, kaip suvokiate save ir savo galimybes.',
-        'Dirbdamas Vilniuje, Reformatas sporto klube ir SEB arenoje, teikiu individualizuotas treniruotes, kurios sprendžia tiek judesių mechaniką, tiek mentalinius fizinės transformacijos aspektus.'
+        'Tikiu, kad kiekvienas gali pamilti judėjimą – jei tik paiso savo tempo ir išmoksta išgirsti savo kūną. Man pačiam tai nebuvo greitas kelias. Norą treniruotis atradau per asmeninę patirtį – kai pats taisiau laikyseną ir pirmą kartą pajutau, ką reiškia jaustis tvirčiau. Mane įkvėpė mano kineziterapeutė – ir nuo tada gimė noras padėti kitiems jaustis stipriais ir pasitikėti savo kūnu.',
+        'Noriu, kad žmonės patikėtų: jų kūnas gali daugiau, nei atrodo. O tam reikia ne spaudimo, o aiškaus plano, nuoseklumo ir žmogaus šalia – tokio, kuris matytų ne tik kūną, bet ir visą tave.',
+        'Aš noriu, kad žmonės ne tik treniruotųsi, bet ir pakeistų santykį su judėjimu – kad jis taptų jų vertybe visam gyvenimui.'
       ]
     }
   },
@@ -255,7 +256,7 @@ const translation = {
         title: 'Treniruočių Vietos',
         intro: 'Galimos individualios treniruotės:',
         places: [
-          'Reformatas Gym, Vilnius',
+          'Reformatas, Vilnius',
           'SEB Arena, Vilnius'
         ]
       }
@@ -275,19 +276,19 @@ const translation = {
   },
   cta: {
     freeGuide: {
-      title: 'Gaukite Nemokamą Gidą Dabar',
-      description: 'Įveskite savo el. paštą, kad gautumėte "7 žingsniai nugaros skausmui sumažinti" PDF gidą.'
+      title: 'Gauk nemokamą gidą apie nugaros skausmą',
+      description: 'Iki 80 % žmonių bent kartą gyvenime susiduria su nugaros skausmu — bet tai nebūtinai reiškia rimtą problemą. Šiame trumpame gide rasi pagrindinius faktus, kelis praktiškus patarimus bei pratimus, kaip geriau suprasti savo kūną ir judėti be baimės.'
     },
     finalCta: {
-      message: 'Pasiruošę treniruotis tikslingai ir vėl jausti kontrolę savo kūnui?',
-      buttonText: 'Užsisakyti Nemokamą Pažintinį Skambutį'
+      message: 'Pasiruošęs tapti stipriausia savo versija, bet dar nori pasitikrinti? Susisiek',
+      buttonText: 'Užsiregistruok treniruotei'
     }
   },
   emailSubscription: {
-    title: 'Gaukite Nemokamą Gidą',
-    description: 'Įveskite savo el. paštą, kad gautumėte "7 žingsniai nugaros skausmui sumažinti" PDF gidą.',
-    placeholder: 'Jūsų el. pašto adresas',
-    button: 'Atsisiųsti Nemokamą Gidą',
+    title: 'Atsisiųsk 7 žingsnių planą, kaip padėti savo nugarai',
+    description: 'Gauk trumpą gidą su patikrintomis metodikomis, kurios padės sumažinti nugaros skausmą ir geriau suprasti savo kūną.',
+    placeholder: 'Tavo paštas saugus su manimi. Nesidalinsiu juo su niekuo',
+    button: 'Gauk nemokamą gidą',
     sending: 'Siunčiama...',
     thankYou: {
       title: 'Ačiū už Prenumeratą!',
@@ -299,7 +300,7 @@ const translation = {
     },
     successToast: {
       title: 'Sėkmė! Patikrinkite savo el. paštą.',
-      description: "Mes išsiuntėme jums '7 žingsniai nugaros skausmui sumažinti' gidą."
+      description: 'Mes išsiuntėme jums gidą.'
     },
     errorToast: {
       title: 'Kažkas nepavyko',
