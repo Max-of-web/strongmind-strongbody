@@ -144,8 +144,8 @@ const Index = () => {
               <div className="md:w-1/2 scroll-fade-in">
                 <div className="relative rounded-lg overflow-hidden shadow-xl">
                   <img
-                    src="/lovable-uploads/92dd7281-aa00-42c3-aa94-41ea33b2d176.png"
-                    alt="Client training with weights"
+                    src="/lovable-uploads/3694bcc9-6d91-452e-8b51-4da202870714.png"
+                    alt="Group training session with coach and clients"
                     className="w-full h-auto"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-elegant-charcoal via-transparent to-transparent" />
@@ -168,6 +168,19 @@ const Index = () => {
                 {t('homepage.testimonials.sectionTitle')}
               </h2>
             </div>
+            
+            {/* Group training image to show community aspect */}
+            <div className="mb-12 scroll-fade-in">
+              <div className="relative rounded-lg overflow-hidden shadow-xl max-w-4xl mx-auto">
+                <img
+                  src="/lovable-uploads/652c7f10-f762-42d6-b1f0-fe385f04f1f0.png"
+                  alt="Group training session showing community and teamwork"
+                  className="w-full h-auto"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-elegant-charcoal via-transparent to-transparent" />
+              </div>
+            </div>
+            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
               <TestimonialCard
                 quote={t('homepage.testimonials.laura.quote')}
@@ -201,8 +214,8 @@ const Index = () => {
               <div className="md:w-1/3 scroll-fade-in">
                 <div className="rounded-full overflow-hidden w-56 h-56 mx-auto md:mx-0 border-4 border-theme-tangerine">
                   <img
-                    src="/lovable-uploads/ff6b5571-dd3d-4852-b785-1fee300184fe.png"
-                    alt="Paulius Lipskis"
+                    src="/lovable-uploads/6b62735b-caa1-4c49-8a96-b52c2dd5af3b.png"
+                    alt="Paulius Lipskis - Professional Portrait"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -220,6 +233,18 @@ const Index = () => {
                     {paragraph}
                   </p>
                 ))}
+                
+                {/* Artistic personality element */}
+                <div className="mt-8 scroll-fade-in">
+                  <div className="relative rounded-lg overflow-hidden shadow-lg max-w-md">
+                    <img
+                      src="/lovable-uploads/d830177e-dac6-4c7e-ab8e-b7aab18c2027.png"
+                      alt="Unique artistic training approach"
+                      className="w-full h-auto"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-elegant-charcoal via-transparent to-transparent" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>

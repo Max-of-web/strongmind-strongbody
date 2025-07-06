@@ -130,8 +130,8 @@ const Coaching = () => {
               <div className="md:w-1/2 scroll-fade-in">
                 <div className="relative rounded-lg overflow-hidden shadow-xl">
                   <img 
-                    src="/lovable-uploads/b4413382-3998-4c2e-a754-75a067048c2d.png" 
-                    alt="Personal training session" 
+                    src="/lovable-uploads/7a91b7ec-6167-4e40-bd4c-9460ff6826b2.png" 
+                    alt="One-on-one personal training session" 
                     className="w-full h-auto"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-theme-navy via-transparent to-transparent"></div>
@@ -148,6 +148,18 @@ const Coaching = () => {
               <h2 className="section-title mx-auto after:left-1/2 after:-translate-x-1/2">
                 Packages & Pricing
               </h2>
+            </div>
+            
+            {/* 1-on-1 coaching image before pricing cards */}
+            <div className="mb-12 scroll-fade-in">
+              <div className="relative rounded-lg overflow-hidden shadow-xl max-w-4xl mx-auto">
+                <img
+                  src="/lovable-uploads/427ebe58-891e-44b0-85bd-c76e3fcd43ec.png"
+                  alt="Personal training with focused guidance and proper form"
+                  className="w-full h-auto"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-elegant-charcoal via-transparent to-transparent" />
+              </div>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -346,6 +358,18 @@ const Coaching = () => {
               </h2>
             </div>
             
+            {/* Group training community image */}
+            <div className="mb-12 scroll-fade-in">
+              <div className="relative rounded-lg overflow-hidden shadow-xl max-w-4xl mx-auto">
+                <img
+                  src="/lovable-uploads/2a7d58f6-c98a-4706-a5a9-faa7910a150a.png"
+                  alt="Group training session showing community and progress"
+                  className="w-full h-auto"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-elegant-charcoal via-transparent to-transparent" />
+              </div>
+            </div>
+            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="scroll-fade-in">
                 <TestimonialCard 
@@ -441,7 +465,7 @@ const Coaching = () => {
                       <a 
                         href="https://calendly.com/lipskis-paulius/asmenine-treniruote" 
                         target="_blank" 
-                        rel="noopener noreferrer"
+                        rel="noopen noreferrer"
                         className="text-white hover:text-theme-tangerine transition-colors"
                       >
                         Schedule a free 30-minute call
