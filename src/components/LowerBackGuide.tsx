@@ -24,8 +24,22 @@ const LowerBackGuide = () => {
     }, 800);
   };
 
-  // Get the benefits array from translations
-  const benefits = t('cta.freeGuide.benefits', { returnObjects: true }) as string[];
+  // Get the benefits array from translations with fallback
+  let benefits: string[] = [];
+  try {
+    const benefitsData = t('cta.freeGuide.benefits', { returnObjects: true });
+    benefits = Array.isArray(benefitsData) ? benefitsData : [];
+  } catch (error) {
+    console.error('Error loading benefits:', error);
+    // Fallback benefits
+    benefits = [
+      'Reduced pain and discomfort through proper movement patterns',
+      'Smarter training approach that adapts to your energy levels',
+      'Sustainable habits that fit into your lifestyle',
+      'Stronger body awareness and connection',
+      'Increased confidence in your movement abilities'
+    ];
+  }
 
   return (
     <section id="free-guide" className="py-20 bg-slate-100 dark:bg-slate-900">
