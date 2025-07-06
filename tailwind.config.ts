@@ -65,6 +65,7 @@ export default {
 					navy: '#1E3A8A',           // Deep blue (primary accent)
 					lightnavy: '#3B82F6',      // Lighter blue for hover states
 					darknavy: '#1E40AF',       // Darker blue for pressed states
+					tangerine: '#F97316',      // Orange accent color for icons and highlights
 					white: '#FFFFFF',          // Pure white text
 					lightgray: '#F8FAFC',      // Light background for light elements
 					darkgray: '#1F2937',       // Dark gray for secondary elements
@@ -74,7 +75,8 @@ export default {
 			},
 			textColor: {
 				'theme-white': '#FFFFFF',
-				'theme-muted': '#6B7280'
+				'theme-muted': '#6B7280',
+				'theme-tangerine': '#F97316'
 			},
 			backgroundColor: {
 				'theme-darkbg': '#0A0A0A',
