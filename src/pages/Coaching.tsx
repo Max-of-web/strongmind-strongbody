@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import { Calendar, MessageSquare, Check, Phone } from 'lucide-react';
 import Header from '../components/Header';
@@ -33,22 +32,36 @@ const Coaching = () => {
     <>
       <Header />
       <main>
-        {/* Hero Section - Updated with new messaging */}
+        {/* Hero Section - Updated with profile photo */}
         <section className="pt-32 pb-20 bg-theme-navy dark:bg-theme-darknavy">
           <div className="container-width px-4 md:px-8">
-            <div className="max-w-3xl mx-auto text-center animate-fade-in">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                1-on-1 Personal Coaching With Paulius Lipskis
-              </h1>
-              <p className="text-xl md:text-2xl text-white mb-8">
-                Build habits, gain momentum, and level up your life through consistent guidance, smart movement, and practical mindset coaching.
-              </p>
-              <a 
-                href="#contact-section" 
-                className="cta-button-primary inline-block"
-              >
-                Book Your First Session
-              </a>
+            <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 w-full max-w-6xl mx-auto animate-fade-in">
+              {/* Profile Photo - Mobile: Above text, Desktop: Right side */}
+              <div className="order-1 md:order-2 md:w-1/3 flex justify-center md:justify-end">
+                <div className="rounded-full overflow-hidden w-48 h-48 md:w-56 md:h-56 border-4 border-theme-navy shadow-xl">
+                  <img
+                    src="/lovable-uploads/6b62735b-caa1-4c49-8a96-b52c2dd5af3b.png"
+                    alt="Paulius Lipskis - Professional Portrait"
+                    className="w-full h-full object-cover object-[center_20%]"
+                  />
+                </div>
+              </div>
+              
+              {/* Hero Content - Mobile: Below photo, Desktop: Left side */}
+              <div className="order-2 md:order-1 md:w-2/3 text-center md:text-left">
+                <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                  1-on-1 Personal Coaching With Paulius Lipskis
+                </h1>
+                <p className="text-xl md:text-2xl text-white mb-8">
+                  Build habits, gain momentum, and level up your life through consistent guidance, smart movement, and practical mindset coaching.
+                </p>
+                <a 
+                  href="#contact-section" 
+                  className="cta-button-primary inline-block"
+                >
+                  Book Your First Session
+                </a>
+              </div>
             </div>
           </div>
         </section>

@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -54,39 +53,25 @@ const Index = () => {
         {/* Hero Section */}
         <section className="hero-section">
           <div className="container-width px-4 md:px-8 flex flex-col justify-center items-start h-full">
-            <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 w-full max-w-6xl animate-fade-in-up">
-              {/* Profile Photo - Mobile: Above text, Desktop: Right side */}
-              <div className="order-1 md:order-2 md:w-1/3 flex justify-center md:justify-end">
-                <div className="rounded-full overflow-hidden w-48 h-48 md:w-56 md:h-56 border-4 border-theme-navy shadow-xl">
-                  <img
-                    src="/lovable-uploads/6b62735b-caa1-4c49-8a96-b52c2dd5af3b.png"
-                    alt="Paulius Lipskis - Professional Portrait"
-                    className="w-full h-full object-cover object-[center_20%]"
-                  />
-                </div>
-              </div>
-              
-              {/* Hero Content - Mobile: Below photo, Desktop: Left side */}
-              <div className="order-2 md:order-1 md:w-2/3">
-                <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6 text-zinc-50 lg:text-6xl text-center md:text-left">
-                  {t('homepage.hero.title')}
-                </h1>
-                <p className="text-xl md:text-2xl mb-10 text-white text-center md:text-left">
-                  {t('homepage.hero.subtitle')}
-                </p>
-                <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-                  <a
-                    href="https://calendly.com/lipskis-paulius/asmenine-treniruote"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="cta-button-primary"
-                  >
-                    {t('homepage.hero.bookCallButton')}
-                  </a>
-                  <a href="#free-guide" className="cta-button-secondary">
-                    {t('homepage.hero.getFreeGuideButton')}
-                  </a>
-                </div>
+            <div className="max-w-3xl animate-fade-in-up">
+              <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6 text-zinc-50 lg:text-6xl">
+                {t('homepage.hero.title')}
+              </h1>
+              <p className="text-xl md:text-2xl mb-10 text-white">
+                {t('homepage.hero.subtitle')}
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <a
+                  href="https://calendly.com/lipskis-paulius/asmenine-treniruote"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cta-button-primary"
+                >
+                  {t('homepage.hero.bookCallButton')}
+                </a>
+                <a href="#free-guide" className="cta-button-secondary">
+                  {t('homepage.hero.getFreeGuideButton')}
+                </a>
               </div>
             </div>
           </div>
