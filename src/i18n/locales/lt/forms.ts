@@ -20,9 +20,11 @@ const forms = {
   emailSubscription: {
     title: 'Atsisiųsk 7 žingsnių planą, kaip padėti savo nugarai',
     description: 'Gauk trumpą gidą su patikrintomis metodikomis, kurios padės sumažinti nugaros skausmą ir geriau suprasti savo kūną.',
-    placeholder: 'Tavo paštas saugus su manimi. Nesidalinsiu juo su niekuo',
+    placeholder: 'Tavo el. pašto adresas',
     button: 'Gauk nemokamą gidą',
     sending: 'Siunčiama...',
+    privacyText: 'Tavo paštas saugus su manimi. Nesidalinsiu juo su niekuo.',
+    disclaimerText: 'Pateikdamas formą, sutinki gauti PDF gidą el. paštu. Gali bet kada atsisakyti prenumeratos.',
     thankYou: {
       title: 'Ačiū už Prenumeratą!',
       description: 'Gidas išsiųstas į jūsų el. paštą. Ar norėtumėte žengti kitą žingsnį savo fizinio pasirengimo kelyje?',

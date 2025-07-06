@@ -65,7 +65,7 @@ const LowerBackGuide = () => {
 
             <div className="flex items-center text-sm mt-10 border-t border-slate-200 dark:border-slate-700 pt-4">
               <Shield size={18} className="mr-2 text-theme-tangerine" />
-              <span className="text-slate-600 dark:text-slate-300">{t('emailSubscription.placeholder')}</span>
+              <span className="text-slate-600 dark:text-slate-300">{t('emailSubscription.privacyText')}</span>
             </div>
           </div>
 
@@ -85,7 +85,7 @@ const LowerBackGuide = () => {
                     type="email" 
                     value={email} 
                     onChange={e => setEmail(e.target.value)} 
-                    placeholder="Your email address" 
+                    placeholder={t('emailSubscription.placeholder')} 
                     required 
                     className="w-full p-3 rounded-md bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-white border border-slate-300 dark:border-slate-600 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-theme-tangerine focus:border-transparent"
                   />
@@ -101,7 +101,7 @@ const LowerBackGuide = () => {
                 </Button>
 
                 <p className="text-xs text-slate-600 dark:text-slate-400 mt-2">
-                  By submitting, you agree to receive the PDF guide via email. You can unsubscribe at any time.
+                  {t('emailSubscription.disclaimerText')}
                 </p>
               </form>
             </div>

@@ -297,6 +297,8 @@ const translation = {
     placeholder: 'Your email address',
     button: 'Download Free Guide',
     sending: 'Sending...',
+    privacyText: 'Your email is safe with me. I\'ll never share it with anyone else.',
+    disclaimerText: 'By submitting, you agree to receive the PDF guide via email. You can unsubscribe at any time.',
     thankYou: {
       title: 'Thank You for Subscribing!',
       description: 'Your guide has been sent to your email. Would you like to take the next step in your fitness journey?',
