@@ -2,9 +2,11 @@
 import { useState } from 'react';
 import { Check, Shield } from 'lucide-react';
 import { toast } from 'sonner';
+import { useTranslation } from 'react-i18next';
 import { Button } from "@/components/ui/button";
 
 const LowerBackGuide = () => {
+  const { t } = useTranslation();
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   
@@ -14,8 +16,8 @@ const LowerBackGuide = () => {
 
     // Simulate API call
     setTimeout(() => {
-      toast.success("Success! Check your email for the PDF guide.", {
-        description: "We've sent you the 'Fix Your Lower Back in 7 Steps' guide."
+      toast.success(t('emailSubscription.successToast.title'), {
+        description: t('emailSubscription.successToast.description')
       });
       setEmail('');
       setIsSubmitting(false);
@@ -29,14 +31,10 @@ const LowerBackGuide = () => {
           {/* Left column - Guide information */}
           <div className="md:w-1/2 bg-white dark:bg-slate-800 rounded-md shadow-md px-[35px] py-[30px]">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-800 dark:text-white">
-              Get Your Free Lower Back Pain Guide
+              {t('cta.freeGuide.title')}
             </h2>
             <p className="mb-6 text-slate-700 dark:text-slate-200 text-lg">
-              Lower back pain affects up to 80% of adults at some point in their lives. 
-              But you don't have to live with it.
-            </p>
-            <p className="mb-8 text-slate-700 dark:text-slate-200 text-lg">
-              In this comprehensive guide, I share the exact strategies I use with my clients to:
+              {t('cta.freeGuide.description')}
             </p>
             
             <ul className="space-y-4 mb-8">
@@ -64,7 +62,7 @@ const LowerBackGuide = () => {
 
             <div className="flex items-center text-sm mt-10 border-t border-slate-200 dark:border-slate-700 pt-4">
               <Shield size={18} className="mr-2 text-theme-tangerine" />
-              <span className="text-slate-600 dark:text-slate-300">Your email is safe with me. I'll never share it with anyone else.</span>
+              <span className="text-slate-600 dark:text-slate-300">{t('emailSubscription.placeholder')}</span>
             </div>
           </div>
 
@@ -72,10 +70,10 @@ const LowerBackGuide = () => {
           <div className="md:w-1/2">
             <div className="h-full flex flex-col bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-md shadow-md p-6">
               <h3 className="text-2xl font-semibold mb-4 text-slate-800 dark:text-white">
-                Fix Your Lower Back in 7 Steps
+                {t('emailSubscription.title')}
               </h3>
               <p className="mb-6 text-slate-700 dark:text-slate-200">
-                Get instant access to my proven guide for relieving lower back pain and preventing future injuries.
+                {t('emailSubscription.description')}
               </p>
 
               <form onSubmit={handleSubmit} className="flex flex-col space-y-4 mt-auto">
@@ -96,7 +94,7 @@ const LowerBackGuide = () => {
                   variant="cta"
                   className="w-full px-4 py-3 h-auto"
                 >
-                  {isSubmitting ? 'Sending...' : 'Download Free Guide'}
+                  {isSubmitting ? t('emailSubscription.sending') : t('emailSubscription.button')}
                 </Button>
 
                 <p className="text-xs text-slate-600 dark:text-slate-400 mt-2">
