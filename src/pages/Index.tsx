@@ -9,10 +9,6 @@ import {
   Timer,
   Check,
   ChevronRight,
-  Award,
-  GraduationCap,
-  BookOpen,
-  Briefcase,
 } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -212,22 +208,16 @@ const Index = () => {
           <div className="container-width">
             <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
               <div className="md:w-1/3 scroll-fade-in">
-                <div className="rounded-full overflow-hidden w-56 h-56 mx-auto md:mx-0 border-4 border-theme-tangerine">
+                <div className="rounded-full overflow-hidden w-56 h-56 mx-auto md:mx-0 border-4 border-theme-navy">
                   <img
                     src="/lovable-uploads/6b62735b-caa1-4c49-8a96-b52c2dd5af3b.png"
                     alt="Paulius Lipskis - Professional Portrait"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-[center_20%]"
                   />
                 </div>
               </div>
               <div className="md:w-2/3 scroll-fade-in">
                 <h2 className="section-title">{t('homepage.about.sectionTitle')}</h2>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <FeatureCard icon={GraduationCap} title={t('homepage.about.qualifications.physiotherapy')} description="" isBadge isSmall />
-                  <FeatureCard icon={Award} title={t('homepage.about.qualifications.nasm')} description="" isBadge isSmall />
-                  <FeatureCard icon={BookOpen} title={t('homepage.about.qualifications.nutrition')} description="" isBadge isSmall />
-                  <FeatureCard icon={Briefcase} title={t('homepage.about.qualifications.personalTrainer')} description="" isBadge isSmall />
-                </div>
                 {bioArray.map((paragraph: string, idx: number) => (
                   <p key={idx} className="mb-6">
                     {paragraph}
