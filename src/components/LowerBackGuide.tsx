@@ -40,23 +40,23 @@ const LowerBackGuide = () => {
             <ul className="space-y-4 mb-8">
               <li className="flex items-start">
                 <Check size={22} className="text-theme-tangerine shrink-0 mt-1 mr-3" />
-                <span className="text-slate-700 dark:text-slate-200">Identify the root causes of your lower back pain</span>
+                <span className="text-slate-700 dark:text-slate-200">Mažiau skausmo ir diskomforto dėl taisyklingo judėjimo</span>
               </li>
               <li className="flex items-start">
                 <Check size={22} className="text-theme-tangerine shrink-0 mt-1 mr-3" />
-                <span className="text-slate-700 dark:text-slate-200">Implement immediate relief techniques</span>
+                <span className="text-slate-700 dark:text-slate-200">Treniruotės, pritaikytos prie tavo energijos ir progreso</span>
               </li>
               <li className="flex items-start">
                 <Check size={22} className="text-theme-tangerine shrink-0 mt-1 mr-3" />
-                <span className="text-slate-700 dark:text-slate-200">Strengthen key stabilizing muscles</span>
+                <span className="text-slate-700 dark:text-slate-200">Įpročiai, kuriuos pagaliau galėsi išlaikyti ilgai</span>
               </li>
               <li className="flex items-start">
                 <Check size={22} className="text-theme-tangerine shrink-0 mt-1 mr-3" />
-                <span className="text-slate-700 dark:text-slate-200">Modify your daily activities to prevent reinjury</span>
+                <span className="text-slate-700 dark:text-slate-200">Tvirtesnis ryšys tarp tavęs ir tavo kūno</span>
               </li>
               <li className="flex items-start">
                 <Check size={22} className="text-theme-tangerine shrink-0 mt-1 mr-3" />
-                <span className="text-slate-700 dark:text-slate-200">Develop a progressive exercise routine that's safe for your back</span>
+                <span className="text-slate-700 dark:text-slate-200">Pasitikėjimas, kad judi teisingai</span>
               </li>
             </ul>
 
