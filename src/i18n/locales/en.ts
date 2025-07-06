@@ -277,7 +277,14 @@ const translation = {
   cta: {
     freeGuide: {
       title: 'Get Your Free Guide Now',
-      description: 'Enter your email to receive "Fix Your Lower Back in 7 Steps" PDF guide immediately.'
+      description: 'Enter your email to receive "Fix Your Lower Back in 7 Steps" PDF guide immediately.',
+      benefits: [
+        'Reduced pain and discomfort through proper movement patterns',
+        'Smarter training approach that adapts to your energy levels',
+        'Sustainable habits that fit into your lifestyle',
+        'Stronger body awareness and connection',
+        'Increased confidence in your movement abilities'
+      ]
     },
     finalCta: {
       message: 'Ready to train with purpose and feel in control of your body again?',

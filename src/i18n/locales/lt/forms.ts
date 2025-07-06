@@ -3,7 +3,14 @@ const forms = {
   cta: {
     freeGuide: {
       title: 'Gauk nemokamą gidą apie nugaros skausmą',
-      description: 'Iki 80 % žmonių bent kartą gyvenime susiduria su nugaros skausmu — bet tai nebūtinai reiškia rimtą problemą. Šiame trumpame gide rasi pagrindinius faktus, kelis praktiškus patarimus bei pratimus, kaip geriau suprasti savo kūną ir judėti be baimės.'
+      description: 'Iki 80 % žmonių bent kartą gyvenime susiduria su nugaros skausmu — bet tai nebūtinai reiškia rimtą problemą. Šiame trumpame gide rasi pagrindinius faktus, kelis praktiškus patarimus bei pratimus, kaip geriau suprasti savo kūną ir judėti be baimės.',
+      benefits: [
+        'Mažiau skausmo ir diskomforto dėl taisyklingo judėjimo',
+        'Treniruotės, pritaikytos prie tavo energijos ir progreso',
+        'Įpročiai, kuriuos pagaliau galėsi išlaikyti ilgai',
+        'Tvirtesnis ryšys tarp tavęs ir tavo kūno',
+        'Pasitikėjimas, kad judi teisingai'
+      ]
     },
     finalCta: {
       message: 'Pasiruošęs tapti stipriausia savo versija, bet dar nori pasitikrinti? Susisiek',

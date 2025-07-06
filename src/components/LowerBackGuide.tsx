@@ -24,6 +24,9 @@ const LowerBackGuide = () => {
     }, 800);
   };
 
+  // Get the benefits array from translations
+  const benefits = t('cta.freeGuide.benefits', { returnObjects: true }) as string[];
+
   return (
     <section id="free-guide" className="py-20 bg-slate-100 dark:bg-slate-900">
       <div className="container-width px-4 md:px-8">
@@ -38,26 +41,12 @@ const LowerBackGuide = () => {
             </p>
             
             <ul className="space-y-4 mb-8">
-              <li className="flex items-start">
-                <Check size={22} className="text-theme-tangerine shrink-0 mt-1 mr-3" />
-                <span className="text-slate-700 dark:text-slate-200">Mažiau skausmo ir diskomforto dėl taisyklingo judėjimo</span>
-              </li>
-              <li className="flex items-start">
-                <Check size={22} className="text-theme-tangerine shrink-0 mt-1 mr-3" />
-                <span className="text-slate-700 dark:text-slate-200">Treniruotės, pritaikytos prie tavo energijos ir progreso</span>
-              </li>
-              <li className="flex items-start">
-                <Check size={22} className="text-theme-tangerine shrink-0 mt-1 mr-3" />
-                <span className="text-slate-700 dark:text-slate-200">Įpročiai, kuriuos pagaliau galėsi išlaikyti ilgai</span>
-              </li>
-              <li className="flex items-start">
-                <Check size={22} className="text-theme-tangerine shrink-0 mt-1 mr-3" />
-                <span className="text-slate-700 dark:text-slate-200">Tvirtesnis ryšys tarp tavęs ir tavo kūno</span>
-              </li>
-              <li className="flex items-start">
-                <Check size={22} className="text-theme-tangerine shrink-0 mt-1 mr-3" />
-                <span className="text-slate-700 dark:text-slate-200">Pasitikėjimas, kad judi teisingai</span>
-              </li>
+              {benefits.map((benefit, index) => (
+                <li key={index} className="flex items-start">
+                  <Check size={22} className="text-theme-tangerine shrink-0 mt-1 mr-3" />
+                  <span className="text-slate-700 dark:text-slate-200">{benefit}</span>
+                </li>
+              ))}
             </ul>
 
             <div className="flex items-center text-sm mt-10 border-t border-slate-200 dark:border-slate-700 pt-4">
