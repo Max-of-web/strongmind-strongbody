@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import { toast } from 'sonner';
-import { Calendar, MessageSquare } from 'lucide-react';
+import { MessageSquare } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 import { useTranslation } from 'react-i18next';
 import {
@@ -185,8 +185,11 @@ const ApplicationForm = () => {
             </DialogDescription>
           </DialogHeader>
           <div className="grid gap-4 py-4">
+            <div className="bg-theme-navy bg-opacity-20 p-4 rounded-lg border border-theme-navy border-opacity-30">
+              <p className="text-white font-medium mb-2">{t('coaching.contact.nextSteps')}</p>
+            </div>
             <p>{t('applicationForm.thankYou.connect')}</p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 gap-4">
               <a 
                 href="https://wa.me/37067951040" 
                 target="_blank" 
@@ -195,15 +198,6 @@ const ApplicationForm = () => {
               >
                 <MessageSquare size={18} />
                 <span>{t('applicationForm.thankYou.whatsApp')}</span>
-              </a>
-              <a 
-                href="https://calendly.com/lipskis-paulius/asmenine-treniruote" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 bg-theme-navy dark:bg-theme-lightnavy text-white font-semibold px-4 py-3 rounded-md hover:bg-opacity-90 transition-colors"
-              >
-                <Calendar size={18} />
-                <span>{t('applicationForm.thankYou.bookCall')}</span>
               </a>
             </div>
           </div>

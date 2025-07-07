@@ -2,27 +2,28 @@
 const coaching = {
   coaching: {
     hero: {
-      title: 'Individualios Treniruotės Su Pauliumi Lipskiu',
-      subtitle: 'Individualizuotos treniruotės, kurios sprendžia jūsų unikalius fizinius poreikius ir mentalinius barjerus, sukurtos ilgalaikiams ir tvariems rezultatams.',
-      bookButton: 'Užsisakyti Pirmąją Treniruotę'
+      title: '1-on-1 Asmeninis Darbas Su Manimi',
+      subtitle: 'Padėsiu tau susikurti tvirtus įpročius, pajusti pagreitį ir augti nuosekliai. Mano metodas — aiškios treniruotės, išmanus judėjimas ir praktiškas požiūrio keitimas. Be spaudimo siekti tobulumo — tik realūs žingsniai, kurie veikia.',
+      bookButton: 'Užsisakyk Pirmą Treniruotę',
+      ctaButton: 'Registracija'
     },
     services: {
-      sectionTitle: 'Ką Gausite',
+      sectionTitle: 'Ką Tu Gausi',
       personalizedProgram: {
-        title: 'Individualizuota Programa',
-        description: 'Treniruočių programa, sukurta specialiai jūsų tikslams, apribojimams ir gyvenimo būdui, ne viena programa visiems. Apima pratimus, progreso planą ir atsigavimo protokolus.'
+        title: 'Individuali Programa',
+        description: 'Planą sudarau pagal tavo tikslus, stipriąsias puses, apribojimus ir gyvenimo ritmą. Jokių šablonų — tik tai, kas veikia tau.'
       },
       weeklyAdjustments: {
-        title: 'Savaitiniai Patikslinimai',
-        description: 'Reguliarus programos tobulinimas, remiantis jūsų grįžtamuoju ryšiu ir progresu. Jūsų programa vystosi kartu su jumis, užtikrinant nuolatinį iššūkį ir adaptaciją.'
+        title: 'Reguliarios Korekcijos',
+        description: 'Planą nuolat atnaujinu pagal tavo savijautą ir pažangą. Tobulėji tu — prisitaiko ir programa. Taip neprarasi motyvacijos ir nuolat judėsi pirmyn.'
       },
       psychologicalSupport: {
-        title: 'Psichologinis Palaikymas',
-        description: 'Pagalba įveikiant mentalinius barjerus, formuojant tvarius įpročius ir išlaikant motyvaciją per visą jūsų fitneso kelionę.'
+        title: 'Koučingas',
+        description: 'Paprasti, bet veiksmingi patarimai, kaip įveikti vidines kliūtis, formuoti naudingus įpročius ir išlaikyti motyvaciją. Jokios tuščios teorijos — tik tai, kas iš tikrųjų padeda.'
       },
       directCommunication: {
-        title: 'Tiesioginė Komunikacija',
-        description: 'Prieiga prie manęs per WhatsApp klausimams, technikos patikrinimams ir atskaitomybei. Jūs niekada nebūsite vieni savo kelionėje.'
+        title: 'Tiesioginis Kontaktas',
+        description: 'Tiesioginis ryšys per WhatsApp — gali bet kada parašyti klausimus, pasitikrinti techniką ar pasidalinti, kur stringi. Tu niekada nebūsi vienas šiame kelyje.'
       },
       personalCoachAI: {
         title: 'Asmeninis Treneris AI',
@@ -31,12 +32,13 @@ const coaching = {
     },
     target: {
       sectionTitle: 'Kam Tai Skirta',
-      intro: 'Mano treniruotės idealiai tinka asmenims, kurie yra pasiryžę prasmingai keisti savo fizinę sveikatą ir mentalinį požiūrį į sportą. Ši programa ypač naudinga:',
+      intro: 'Nereikia tobulybės. Svarbiausia — judėti mažais, bet tikrą pokytį kuriančiais žingsniais į priekį.',
+      description: 'Mano treniruotės ir koučingas skirti žmonėms, kurie pasiryžę pakeisti santykį su savo kūnu ir kurti įpročius, kurie išlieka. Ši programa ypač naudinga, jei:',
       audiences: [
-        'Profesionalams, susiduriantiems su skausmu ar diskomfortu dėl sėdimo darbo',
-        'Asmenims, besigydantiems po traumų, kuriems reikia saugios, vadovaujamos progresijos',
-        'Žmonėms, kurie išbandė daugybę fitneso metodų be ilgalaikės sėkmės',
-        'Tiems, kurie nori išvystyti sveikesnį santykį su sportu ir savo kūnu'
+        'Dirbi sėdimą darbą ir jauti skausmą ar diskomfortą',
+        'Atsigauni po traumos ir nori tai daryti saugiai bei nuosekliai',
+        'Esi išbandęs daugybę treniruočių metodų, bet ilgalaikio rezultato taip ir nebuvo',
+        'Nori išmokti judėti taip, kad jaustumeisi stiprus ir kurtum sveikesnį santykį su savo kūnu'
       ]
     },
     pricing: {
@@ -178,19 +180,16 @@ const coaching = {
     },
     contact: {
       sectionTitle: 'Susisiekite',
-      intro: 'Turite klausimų prieš teikiant paraišką? Susisiekite tiesiogiai telefonu, WhatsApp arba rezervuokite nemokamą pažintinį skambutį.',
-      phone: {
-        label: 'Telefonas',
-        value: '+370 6795 1040'
-      },
+      intro: 'Turite klausimų prieš teikiant paraišką? Susisiekite tiesiogiai per WhatsApp arba užpildykite registracijos formą.',
       whatsapp: {
         label: 'WhatsApp',
-        value: 'Tiesioginis pranešimas'
+        value: 'Trumpam klausimui'
       },
-      discovery: {
-        label: 'Pažintinis Skambutis',
-        value: 'Rezervuokite nemokamą 30 minučių skambutį'
+      form: {
+        label: 'Registracijos Forma',
+        value: 'Užpildykite žemiau'
       },
+      nextSteps: 'Peržiūriu tavo atsakymus — jei viskas tinka, atsiųsiu asmeninę nuorodą į kalendorių.',
       locations: {
         title: 'Treniruočių Vietos',
         intro: 'Galimos individualios treniruotės:',

@@ -1,6 +1,7 @@
 
 import { useEffect } from 'react';
-import { Calendar, MessageSquare, Check, Phone } from 'lucide-react';
+import { MessageSquare, Check } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ApplicationForm from '../components/ApplicationForm';
@@ -8,6 +9,8 @@ import TestimonialCard from '../components/TestimonialCard';
 import PricingCards from '../components/PricingCards';
 
 const Coaching = () => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     // Scroll to top on page load
     window.scrollTo(0, 0);
@@ -30,11 +33,18 @@ const Coaching = () => {
     };
   }, []);
 
+  const scrollToForm = () => {
+    const formSection = document.getElementById('contact-section');
+    if (formSection) {
+      formSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
       <Header />
       <main>
-        {/* Hero Section - Updated with larger profile photo and fade effect */}
+        {/* Hero Section */}
         <section className="pt-32 pb-20 bg-theme-navy dark:bg-theme-darknavy">
           <div className="container-width px-4 md:px-8">
             <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 w-full max-w-6xl mx-auto animate-fade-in">
@@ -53,95 +63,83 @@ const Coaching = () => {
               {/* Hero Content - Mobile: Below photo, Desktop: Left side */}
               <div className="order-2 md:order-1 md:w-2/3 text-center md:text-left">
                 <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                  1-on-1 Personal Coaching With Paulius Lipskis
+                  {t('coaching.hero.title')}
                 </h1>
                 <p className="text-xl md:text-2xl text-white mb-8">
-                  Build habits, gain momentum, and level up your life through consistent guidance, smart movement, and practical mindset coaching.
+                  {t('coaching.hero.subtitle')}
                 </p>
-                <a 
-                  href="https://calendar.app.google/LU6UdzQr53kmsKjc6" 
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button 
+                  onClick={scrollToForm}
                   className="cta-button-primary inline-block"
                 >
-                  Book Your First Session
-                </a>
+                  {t('coaching.hero.ctaButton')}
+                </button>
               </div>
             </div>
           </div>
         </section>
         
-        {/* What You'll Get - Updated with new messaging */}
+        {/* What You'll Get */}
         <section className="section-padding bg-elegant-charcoal">
           <div className="container-width">
             <div className="text-center mb-12 scroll-fade-in">
               <h2 className="section-title mx-auto after:left-1/2 after:-translate-x-1/2">
-                What You'll Get
+                {t('coaching.services.sectionTitle')}
               </h2>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-theme-navy bg-opacity-50 p-6 rounded-lg border border-white border-opacity-10 card-hover scroll-fade-in">
-                <h3 className="text-xl font-semibold mb-4 text-white">Personalized Program</h3>
+                <h3 className="text-xl font-semibold mb-4 text-white">{t('coaching.services.personalizedProgram.title')}</h3>
                 <p className="text-white">
-                  A training program built specifically for your goals, limitations, and lifestyle, not a one-size-fits-all template. Includes exercises, progression plan, and recovery protocols.
+                  {t('coaching.services.personalizedProgram.description')}
                 </p>
               </div>
               
               <div className="bg-theme-navy bg-opacity-50 p-6 rounded-lg border border-white border-opacity-10 card-hover scroll-fade-in">
-                <h3 className="text-xl font-semibold mb-4 text-white">Weekly Adjustments</h3>
+                <h3 className="text-xl font-semibold mb-4 text-white">{t('coaching.services.weeklyAdjustments.title')}</h3>
                 <p className="text-white">
-                  Regular program refinement based on your feedback and progress. Your program evolves as you develop, ensuring continuous challenge and adaptation.
+                  {t('coaching.services.weeklyAdjustments.description')}
                 </p>
               </div>
               
               <div className="bg-theme-navy bg-opacity-50 p-6 rounded-lg border border-white border-opacity-10 card-hover scroll-fade-in">
-                <h3 className="text-xl font-semibold mb-4 text-white">Mindset Coaching</h3>
+                <h3 className="text-xl font-semibold mb-4 text-white">{t('coaching.services.psychologicalSupport.title')}</h3>
                 <p className="text-white">
-                  Practical strategies to overcome mental barriers, develop sustainable habits, and maintain motivation throughout your fitness journey.
+                  {t('coaching.services.psychologicalSupport.description')}
                 </p>
               </div>
               
               <div className="bg-theme-navy bg-opacity-50 p-6 rounded-lg border border-white border-opacity-10 card-hover scroll-fade-in">
-                <h3 className="text-xl font-semibold mb-4 text-white">Direct Communication</h3>
+                <h3 className="text-xl font-semibold mb-4 text-white">{t('coaching.services.directCommunication.title')}</h3>
                 <p className="text-white">
-                  Access to me via WhatsApp for questions, form checks, and accountability. You're never alone in your journey.
+                  {t('coaching.services.directCommunication.description')}
                 </p>
               </div>
             </div>
           </div>
         </section>
         
-        {/* Who It's For - Updated with clearer emphasis on habit building */}
+        {/* Who It's For */}
         <section className="section-padding bg-theme-navy dark:bg-theme-darknavy">
           <div className="container-width">
             <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-center">
               <div className="md:w-1/2 scroll-fade-in">
-                <h2 className="section-title text-white">Who It's For</h2>
-                <p className="mb-6 text-white">
-                  "This isn't about perfection. It's about showing up, one real step at a time."
+                <h2 className="section-title text-white">{t('coaching.target.sectionTitle')}</h2>
+                <p className="mb-6 text-white font-medium">
+                  "{t('coaching.target.intro')}"
                 </p>
                 <p className="mb-6 text-white">
-                  My coaching is ideal for individuals who are committed to making meaningful changes to their physical health and building sustainable habits. This program is especially beneficial for:
+                  {t('coaching.target.description')}
                 </p>
                 
                 <ul className="space-y-4">
-                  <li className="flex items-start">
-                    <Check size={24} className="text-theme-tangerine shrink-0 mt-1 mr-3" />
-                    <span className="text-white">Professionals dealing with pain or discomfort from sedentary work</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check size={24} className="text-theme-tangerine shrink-0 mt-1 mr-3" />
-                    <span className="text-white">Individuals recovering from injuries who need safe, guided progression</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check size={24} className="text-theme-tangerine shrink-0 mt-1 mr-3" />
-                    <span className="text-white">People who have tried multiple fitness approaches without lasting success</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check size={24} className="text-theme-tangerine shrink-0 mt-1 mr-3" />
-                    <span className="text-white">Those looking to develop a healthier relationship with exercise and their bodies</span>
-                  </li>
+                  {t('coaching.target.audiences', { returnObjects: true }).map((audience: string, index: number) => (
+                    <li key={index} className="flex items-start">
+                      <Check size={24} className="text-theme-tangerine shrink-0 mt-1 mr-3" />
+                      <span className="text-white">{audience}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
               
@@ -164,7 +162,7 @@ const Coaching = () => {
           <div className="container-width">
             <div className="text-center mb-12 scroll-fade-in">
               <h2 className="section-title mx-auto after:left-1/2 after:-translate-x-1/2">
-                Packages & Pricing
+                {t('coaching.pricing.sectionTitle')}
               </h2>
             </div>
             
@@ -183,15 +181,25 @@ const Coaching = () => {
             <div className="scroll-fade-in">
               <PricingCards />
             </div>
+
+            {/* CTA after pricing */}
+            <div className="text-center mt-12 scroll-fade-in">
+              <button 
+                onClick={scrollToForm}
+                className="cta-button-primary text-lg px-8 py-4"
+              >
+                {t('coaching.hero.ctaButton')}
+              </button>
+            </div>
           </div>
         </section>
         
-        {/* How It Works - Updated to emphasize habit building */}
+        {/* How It Works */}
         <section className="section-padding bg-theme-navy dark:bg-theme-darknavy">
           <div className="container-width">
             <div className="text-center mb-12 scroll-fade-in">
               <h2 className="section-title mx-auto after:left-1/2 after:-translate-x-1/2 text-white">
-                How It Works
+                {t('coaching.process.sectionTitle')}
               </h2>
             </div>
             
@@ -199,45 +207,15 @@ const Coaching = () => {
               <div className="relative">
                 <div className="absolute left-8 top-0 bottom-0 w-px bg-theme-tangerine"></div>
                 
-                <div className="scroll-fade-in relative mb-12 pl-20">
-                  <div className="absolute left-0 top-0 w-16 h-16 bg-theme-tangerine bg-opacity-20 rounded-full flex items-center justify-center">
-                    <span className="text-2xl font-bold text-theme-tangerine">1</span>
+                {t('coaching.process.steps', { returnObjects: true }).map((step: any, index: number) => (
+                  <div key={index} className="scroll-fade-in relative mb-12 pl-20">
+                    <div className="absolute left-0 top-0 w-16 h-16 bg-theme-tangerine bg-opacity-20 rounded-full flex items-center justify-center">
+                      <span className="text-2xl font-bold text-theme-tangerine">{step.number}</span>
+                    </div>
+                    <h3 className="text-xl font-semibold mb-3 text-white">{step.title}</h3>
+                    <p className="text-white">{step.description}</p>
                   </div>
-                  <h3 className="text-xl font-semibold mb-3 text-white">Application</h3>
-                  <p className="text-white">
-                    Fill out the application form below or book a discovery call. This helps me understand your goals, history, and current challenges.
-                  </p>
-                </div>
-                
-                <div className="scroll-fade-in relative mb-12 pl-20">
-                  <div className="absolute left-0 top-0 w-16 h-16 bg-theme-tangerine bg-opacity-20 rounded-full flex items-center justify-center">
-                    <span className="text-2xl font-bold text-theme-tangerine">2</span>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-white">Discovery Call</h3>
-                  <p className="text-white">
-                    We'll have a 30-minute call to discuss your application in more detail and determine if we're a good fit for working together.
-                  </p>
-                </div>
-                
-                <div className="scroll-fade-in relative mb-12 pl-20">
-                  <div className="absolute left-0 top-0 w-16 h-16 bg-theme-tangerine bg-opacity-20 rounded-full flex items-center justify-center">
-                    <span className="text-2xl font-bold text-theme-tangerine">3</span>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-white">Initial Assessment</h3>
-                  <p className="text-white">
-                    Our first session includes a comprehensive physical assessment and deeper discussion about your goals, limitations, and preferences.
-                  </p>
-                </div>
-                
-                <div className="scroll-fade-in relative pl-20">
-                  <div className="absolute left-0 top-0 w-16 h-16 bg-theme-tangerine bg-opacity-20 rounded-full flex items-center justify-center">
-                    <span className="text-2xl font-bold text-theme-tangerine">4</span>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-white">Ongoing Coaching</h3>
-                  <p className="text-white">
-                    Whether you're healing, training, or just trying to feel more like yourself again — this is where it all clicks together. I'll be there every step of the way to guide and support you.
-                  </p>
-                </div>
+                ))}
               </div>
             </div>
           </div>
@@ -248,7 +226,7 @@ const Coaching = () => {
           <div className="container-width">
             <div className="text-center mb-12 scroll-fade-in">
               <h2 className="section-title mx-auto after:left-1/2 after:-translate-x-1/2">
-                Client Success Stories
+                {t('coaching.testimonials.sectionTitle')}
               </h2>
             </div>
             
@@ -267,43 +245,43 @@ const Coaching = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="scroll-fade-in">
                 <TestimonialCard 
-                  quote="Before working with Paulius, I'd given up on finding a solution for my chronic back pain. His approach combines careful attention to form with an understanding of the psychological aspects of pain. I'm now able to exercise without fear and have regained confidence in my body."
-                  name="Marta S."
+                  quote={t('coaching.testimonials.marta.quote')}
+                  name={t('coaching.testimonials.marta.name')}
                 />
               </div>
               
               <div className="scroll-fade-in">
                 <TestimonialCard 
-                  quote="Paulius understands that progress isn't linear. When I struggled with consistency, instead of making me feel guilty, he helped me identify the underlying barriers and create a more realistic approach. This mindset shift was what finally helped me stay consistent."
-                  name="Jonas R."
+                  quote={t('coaching.testimonials.jonas.quote')}
+                  name={t('coaching.testimonials.jonas.name')}
                 />
               </div>
               
               <div className="scroll-fade-in">
                 <TestimonialCard 
-                  quote="As someone who's tried many personal trainers, I can confidently say Paulius's approach is unique. His focus on building sustainable habits and making small, consistent changes has completely transformed how I approach fitness."
-                  name="Laura K."
+                  quote={t('coaching.testimonials.laura.quote')}
+                  name={t('coaching.testimonials.laura.name')}
                 />
               </div>
               
               <div className="scroll-fade-in">
                 <TestimonialCard 
-                  quote="I appreciated how Paulius adapted my program during particularly stressful work periods. Instead of pushing me to maintain the same intensity, he modified my training to support recovery while still making progress. This flexibility made all the difference."
-                  name="Tomas B."
+                  quote={t('coaching.testimonials.tomas.quote')}
+                  name={t('coaching.testimonials.tomas.name')}
                 />
               </div>
               
               <div className="scroll-fade-in">
                 <TestimonialCard 
-                  quote="After my injury, I was afraid to push myself. Paulius gradually rebuilt my confidence through careful progression. His knowledge of rehabilitation created the perfect environment for recovery."
-                  name="Greta M."
+                  quote={t('coaching.testimonials.greta.quote')}
+                  name={t('coaching.testimonials.greta.name')}
                 />
               </div>
               
               <div className="scroll-fade-in">
                 <TestimonialCard 
-                  quote="The combination of physical training and mindset coaching has been transformative. I've achieved physical goals I never thought possible, but more importantly, I've developed a sustainable approach to fitness that I can maintain for life."
-                  name="Andrius P."
+                  quote={t('coaching.testimonials.andrius.quote')}
+                  name={t('coaching.testimonials.andrius.name')}
                 />
               </div>
             </div>
@@ -315,65 +293,37 @@ const Coaching = () => {
           <div className="container-width">
             <div className="flex flex-col lg:flex-row gap-10 lg:gap-16">
               <div className="lg:w-2/5 scroll-fade-in">
-                <h2 className="section-title text-white">Get In Touch</h2>
+                <h2 className="section-title text-white">{t('coaching.contact.sectionTitle')}</h2>
                 <p className="mb-8 text-white">
-                  Have questions before applying? Reach out directly via phone, WhatsApp, or schedule a free discovery call.
+                  {t('coaching.contact.intro')}
                 </p>
                 
                 <div className="space-y-6 mb-8">
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-theme-tangerine bg-opacity-20 rounded-full flex items-center justify-center mr-4">
-                      <Phone size={20} className="text-theme-tangerine" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-1 text-white">Phone</h4>
-                      <a href="tel:+37067951040" className="text-white hover:text-theme-tangerine transition-colors">
-                        +370 6795 1040
-                      </a>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center">
-                    <div className="w-12 h-12 bg-theme-tangerine bg-opacity-20 rounded-full flex items-center justify-center mr-4">
                       <MessageSquare size={20} className="text-theme-tangerine" />
                     </div>
                     <div>
-                      <h4 className="font-semibold mb-1 text-white">WhatsApp</h4>
+                      <h4 className="font-semibold mb-1 text-white">{t('coaching.contact.whatsapp.label')}</h4>
                       <a 
                         href="https://wa.me/37067951040" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="text-white hover:text-theme-tangerine transition-colors"
                       >
-                        Direct message
-                      </a>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center">
-                    <div className="w-12 h-12 bg-theme-tangerine bg-opacity-20 rounded-full flex items-center justify-center mr-4">
-                      <Calendar size={20} className="text-theme-tangerine" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-1 text-white">Discovery Call</h4>
-                      <a 
-                        href="https://calendar.app.google/LU6UdzQr53kmsKjc6" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-white hover:text-theme-tangerine transition-colors"
-                      >
-                        Schedule a free 30-minute call
+                        {t('coaching.contact.whatsapp.value')}
                       </a>
                     </div>
                   </div>
                 </div>
                 
                 <div className="bg-theme-tangerine bg-opacity-20 p-6 rounded-lg border border-theme-tangerine border-opacity-30">
-                  <h4 className="font-semibold mb-3 text-white">Training Locations</h4>
-                  <p className="mb-2 text-white">Available for in-person coaching at:</p>
+                  <h4 className="font-semibold mb-3 text-white">{t('coaching.contact.locations.title')}</h4>
+                  <p className="mb-2 text-white">{t('coaching.contact.locations.intro')}</p>
                   <ul className="space-y-2 text-white">
-                    <li>• Reformatas Gym, Vilnius</li>
-                    <li>• SEB Arena, Vilnius</li>
+                    {t('coaching.contact.locations.places', { returnObjects: true }).map((place: string, index: number) => (
+                      <li key={index}>• {place}</li>
+                    ))}
                   </ul>
                 </div>
               </div>
