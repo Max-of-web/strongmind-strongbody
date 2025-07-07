@@ -1,9 +1,11 @@
+
 import { useEffect } from 'react';
 import { Calendar, MessageSquare, Check, Phone } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ApplicationForm from '../components/ApplicationForm';
 import TestimonialCard from '../components/TestimonialCard';
+import PricingCards from '../components/PricingCards';
 
 const Coaching = () => {
   useEffect(() => {
@@ -176,132 +178,8 @@ const Coaching = () => {
               </div>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-theme-navy bg-opacity-50 p-6 rounded-lg border border-white border-opacity-10 card-hover scroll-fade-in">
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-semibold mb-2 text-white">Starter</h3>
-                  <div className="text-3xl font-bold text-theme-tangerine">€50</div>
-                  <p className="text-white mt-2">per session</p>
-                </div>
-                
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-start">
-                    <Check size={20} className="text-theme-tangerine shrink-0 mt-1 mr-2" />
-                    <span className="text-white">Single training session</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check size={20} className="text-theme-tangerine shrink-0 mt-1 mr-2" />
-                    <span className="text-white">Form assessment</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check size={20} className="text-theme-tangerine shrink-0 mt-1 mr-2" />
-                    <span className="text-white">Basic movement corrections</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check size={20} className="text-theme-tangerine shrink-0 mt-1 mr-2" />
-                    <span className="text-white">Workout recommendations</span>
-                  </li>
-                </ul>
-                
-                <div className="text-center">
-                  <a 
-                    href="https://calendly.com/lipskis-paulius/asmenine-treniruote" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="cta-button-secondary w-full"
-                  >
-                    Book Session
-                  </a>
-                </div>
-              </div>
-              
-              <div className="bg-theme-navy bg-opacity-50 p-6 rounded-lg border border-white border-opacity-10 card-hover scroll-fade-in">
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-semibold mb-2 text-white">Monthly</h3>
-                  <div className="text-3xl font-bold text-theme-tangerine">€150</div>
-                  <p className="text-white mt-2">per month</p>
-                </div>
-                
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-start">
-                    <Check size={20} className="text-theme-tangerine shrink-0 mt-1 mr-2" />
-                    <span className="text-white">4 sessions per month</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check size={20} className="text-theme-tangerine shrink-0 mt-1 mr-2" />
-                    <span className="text-white">Personalized program</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check size={20} className="text-theme-tangerine shrink-0 mt-1 mr-2" />
-                    <span className="text-white">WhatsApp support</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check size={20} className="text-theme-tangerine shrink-0 mt-1 mr-2" />
-                    <span className="text-white">Weekly program adjustments</span>
-                  </li>
-                </ul>
-                
-                <div className="text-center">
-                  <a 
-                    href="https://calendly.com/lipskis-paulius/asmenine-treniruote" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="cta-button-secondary w-full"
-                  >
-                    Book Consultation
-                  </a>
-                </div>
-              </div>
-              
-              <div className="bg-theme-tangerine bg-opacity-95 p-6 rounded-lg shadow-lg scroll-fade-in relative overflow-hidden">
-                <div className="absolute top-0 right-0 bg-white text-theme-navy text-xs font-bold px-3 py-1">
-                  RECOMMENDED
-                </div>
-                
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-semibold mb-2 text-white">Transformation</h3>
-                  <div className="text-3xl font-bold text-white">€250</div>
-                  <p className="text-white mt-2">per month</p>
-                </div>
-                
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-start">
-                    <Check size={20} className="text-white shrink-0 mt-1 mr-2" />
-                    <span className="text-white">8 sessions per month</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check size={20} className="text-white shrink-0 mt-1 mr-2" />
-                    <span className="text-white">Comprehensive assessment</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check size={20} className="text-white shrink-0 mt-1 mr-2" />
-                    <span className="text-white">Advanced program design</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check size={20} className="text-white shrink-0 mt-1 mr-2" />
-                    <span className="text-white">Priority WhatsApp support</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check size={20} className="text-white shrink-0 mt-1 mr-2" />
-                    <span className="text-white">Habit development coaching</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check size={20} className="text-white shrink-0 mt-1 mr-2" />
-                    <span className="text-white">Nutritional guidance</span>
-                  </li>
-                </ul>
-                
-                <div className="text-center">
-                  <a 
-                    href="https://calendly.com/lipskis-paulius/asmenine-treniruote" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="inline-block bg-white text-theme-navy font-semibold px-6 py-3 rounded-md hover:bg-opacity-90 transition-all duration-300 shadow-md w-full"
-                  >
-                    Book Consultation
-                  </a>
-                </div>
-              </div>
+            <div className="scroll-fade-in">
+              <PricingCards />
             </div>
           </div>
         </section>
