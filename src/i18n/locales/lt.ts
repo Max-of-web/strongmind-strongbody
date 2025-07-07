@@ -11,6 +11,19 @@ const lt = {
   ...coaching,
   ...admin,
   ...forms,
+  footer: {
+    ...homepage.footer,
+    whatsAppNote: "WhatsApp skirtas tik trumpiems klausimams — ne registracijai.",
+    instagramNote: "Sek naujienoms ir patarimams."
+  },
+  coaching: {
+    ...coaching.coaching,
+    contact: {
+      ...coaching.coaching.contact,
+      whatsAppNote: "WhatsApp skirtas tik trumpiems klausimams — ne registracijai.",
+      instagramNote: "Sek naujienoms ir patarimams."
+    }
+  }
 };
 
 export default lt;

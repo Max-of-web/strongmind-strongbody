@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { MessageSquare, Phone, MapPin, Home, User } from 'lucide-react';
+import { MessageSquare, MapPin, Home, User, Instagram } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import CTAButton from './CTAButton';
@@ -15,23 +15,39 @@ const Footer = () => {
           {/* Contact Information */}
           <div>
             <h3 className="text-xl font-semibold mb-4">{t('footer.contact')}</h3>
-            <div className="space-y-3">
-              <div className="flex items-center">
-                <Phone size={18} className="mr-3 text-theme-tangerine" />
-                <a href="tel:+37067951040" className="hover:text-theme-tangerine transition-colors">
-                  {t('footer.phone')}
-                </a>
+            <div className="space-y-4">
+              <div>
+                <div className="flex items-center mb-1">
+                  <MessageSquare size={18} className="mr-3 text-theme-tangerine" />
+                  <a 
+                    href="https://wa.me/37067951040" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:text-theme-tangerine transition-colors"
+                  >
+                    {t('footer.whatsAppChat')}
+                  </a>
+                </div>
+                <p className="text-sm text-gray-300 ml-9">
+                  {t('footer.whatsAppNote')}
+                </p>
               </div>
-              <div className="flex items-center">
-                <MessageSquare size={18} className="mr-3 text-theme-tangerine" />
-                <a 
-                  href="https://wa.me/37067951040" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="hover:text-theme-tangerine transition-colors"
-                >
-                  {t('footer.whatsAppChat')}
-                </a>
+              
+              <div>
+                <div className="flex items-center mb-1">
+                  <Instagram size={18} className="mr-3 text-theme-tangerine" />
+                  <a 
+                    href="https://www.instagram.com/paulius_physio?igsh=dXd1bWFiajZwN293" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:text-theme-tangerine transition-colors"
+                  >
+                    @paulius_physio
+                  </a>
+                </div>
+                <p className="text-sm text-gray-300 ml-9">
+                  {t('footer.instagramNote')}
+                </p>
               </div>
             </div>
           </div>
@@ -40,14 +56,18 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-semibold mb-4">{t('footer.locations')}</h3>
             <div className="space-y-2">
-              <div className="flex items-start">
+              <a 
+                href="https://maps.app.goo.gl/23ZNRSt67dN6G9o36"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start hover:text-theme-tangerine transition-colors"
+              >
                 <MapPin size={18} className="mr-3 text-theme-tangerine mt-0.5 shrink-0" />
-                <span>{t('footer.location1')}</span>
-              </div>
-              <div className="flex items-start">
-                <MapPin size={18} className="mr-3 text-theme-tangerine mt-0.5 shrink-0" />
-                <span>{t('footer.location2')}</span>
-              </div>
+                <div>
+                  <div>{t('footer.location1')}</div>
+                  <div>{t('footer.location2')}</div>
+                </div>
+              </a>
             </div>
           </div>
 

@@ -11,6 +11,19 @@ const en = {
   ...coaching,
   ...admin,
   ...forms,
+  footer: {
+    ...homepage.footer,
+    whatsAppNote: "WhatsApp is only for short questions — not for registration.",
+    instagramNote: "Follow for updates & tips."
+  },
+  coaching: {
+    ...coaching.coaching,
+    contact: {
+      ...coaching.coaching.contact,
+      whatsAppNote: "WhatsApp is only for short questions — not for registration.",
+      instagramNote: "Follow for updates & tips."
+    }
+  }
 };
 
 export default en;
