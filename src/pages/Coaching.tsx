@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import { MessageSquare, Check } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
@@ -297,25 +296,6 @@ const Coaching = () => {
                 <p className="mb-8 text-white">
                   {t('coaching.contact.intro')}
                 </p>
-                
-                <div className="space-y-6 mb-8">
-                  <div className="flex items-center">
-                    <div className="w-12 h-12 bg-theme-tangerine bg-opacity-20 rounded-full flex items-center justify-center mr-4">
-                      <MessageSquare size={20} className="text-theme-tangerine" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-1 text-white">{t('coaching.contact.whatsapp.label')}</h4>
-                      <a 
-                        href="https://wa.me/37067951040" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-white hover:text-theme-tangerine transition-colors"
-                      >
-                        {t('coaching.contact.whatsapp.value')}
-                      </a>
-                    </div>
-                  </div>
-                </div>
                 
                 <div className="bg-theme-tangerine bg-opacity-20 p-6 rounded-lg border border-theme-tangerine border-opacity-30">
                   <h4 className="font-semibold mb-3 text-white">{t('coaching.contact.locations.title')}</h4>
