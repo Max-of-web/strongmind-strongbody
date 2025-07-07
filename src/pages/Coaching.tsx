@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import { MessageSquare, Check } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
@@ -72,7 +71,7 @@ const Coaching = () => {
                   onClick={scrollToForm}
                   className="cta-button-primary inline-block"
                 >
-                  {t('coaching.hero.ctaButton')}
+                  {t('homepage.hero.ctaButton')}
                 </button>
               </div>
             </div>
@@ -188,7 +187,7 @@ const Coaching = () => {
                 onClick={scrollToForm}
                 className="cta-button-primary text-lg px-8 py-4"
               >
-                {t('coaching.hero.ctaButton')}
+                {t('homepage.hero.ctaButton')}
               </button>
             </div>
           </div>
@@ -332,6 +331,23 @@ const Coaching = () => {
                 <ApplicationForm />
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Bottom CTA Section */}
+        <section className="py-12 text-white" style={{ backgroundColor: '#0A0A0A' }}>
+          <div className="container-width px-4 text-center">
+            <h3 className="text-xl md:text-2xl font-semibold mb-6 text-white max-w-4xl mx-auto">
+              {t('homepage.cta.finalMessage')}
+            </h3>
+            <a 
+              href="https://calendar.app.google/LU6UdzQr53kmsKjc6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 bg-theme-navy text-white font-bold px-6 py-3 rounded-md hover:bg-theme-darknavy transition-all duration-300 shadow-md"
+            >
+              {t('homepage.cta.finalButtonText')}
+            </a>
           </div>
         </section>
       </main>

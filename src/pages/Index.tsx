@@ -61,14 +61,12 @@ const Index = () => {
                 {t('homepage.hero.subtitle')}
               </p>
               <div className="flex flex-wrap gap-4">
-                <a
-                  href="https://calendar.app.google/LU6UdzQr53kmsKjc6"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to="/coaching#contact-section"
                   className="cta-button-primary"
                 >
-                  {t('homepage.hero.bookCallButton')}
-                </a>
+                  {t('homepage.hero.ctaButton')}
+                </Link>
                 <a href="#free-guide" className="cta-button-secondary">
                   {t('homepage.hero.getFreeGuideButton')}
                 </a>
@@ -241,8 +239,8 @@ const Index = () => {
 
         {/* Final CTA */}
         <CTABanner
-          message={t('cta.finalCta.message')}
-          buttonText={t('cta.finalCta.buttonText')}
+          message={t('homepage.cta.finalMessage')}
+          buttonText={t('homepage.cta.finalButtonText')}
           buttonLink="https://calendar.app.google/LU6UdzQr53kmsKjc6"
         />
       </main>

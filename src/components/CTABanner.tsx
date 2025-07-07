@@ -37,7 +37,7 @@ const CTABanner: React.FC<CTABannerProps> = ({ message, buttonText, buttonLink }
   return (
     <section className="py-12 text-white" style={bannerStyle}>
       <div className="container-width px-4 text-center">
-        <h3 className="text-xl md:text-2xl font-semibold mb-6 text-white">
+        <h3 className="text-xl md:text-2xl font-semibold mb-6 text-white max-w-4xl mx-auto">
           {message}
         </h3>
         <a 
