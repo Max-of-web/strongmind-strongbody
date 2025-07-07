@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -49,6 +48,11 @@ const Index = () => {
   const bioParagraphs = t('homepage.about.bio', { returnObjects: true });
   const bioArray = Array.isArray(bioParagraphs) ? bioParagraphs : [];
 
+  // Smooth scroll to coaching form
+  const scrollToCoachingForm = () => {
+    window.location.href = '/coaching#contact-section';
+  };
+
   return (
     <>
       <Header />
@@ -64,12 +68,12 @@ const Index = () => {
                 {t('homepage.hero.subtitle')}
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link
-                  to="/coaching#contact-section"
+                <button
+                  onClick={scrollToCoachingForm}
                   className="cta-button-primary"
                 >
                   {t('homepage.hero.ctaButton')}
-                </Link>
+                </button>
                 <a href="#free-guide" className="cta-button-secondary">
                   {t('homepage.hero.getFreeGuideButton')}
                 </a>
