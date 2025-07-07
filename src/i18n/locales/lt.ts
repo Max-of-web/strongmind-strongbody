@@ -12,16 +12,34 @@ const lt = {
   ...admin,
   ...forms,
   footer: {
-    ...homepage.footer,
+    contact: "Kontaktai",
+    whatsAppChat: "WhatsApp pokalbiai",
     whatsAppNote: "WhatsApp skirtas tik trumpiems klausimams — ne registracijai.",
-    instagramNote: "Sek naujienoms ir patarimams."
+    instagramNote: "Sek naujienoms ir patarimams.",
+    locations: "Vietos",
+    location1: "Reformatas, Vilnius",
+    location2: "SEB Arena, Vilnius",
+    quickLinks: "Greitos nuorodos",
+    home: "Pagrindinis",
+    coaching: "Koučingas",
+    rights: "Visos teisės saugomos."
   },
   coaching: {
     ...coaching.coaching,
     contact: {
-      ...coaching.coaching.contact,
+      sectionTitle: "Susisiekite",
+      intro: "Turite klausimų prieš teikiant paraišką? Susisiekite tiesiogiai per WhatsApp arba užpildykite registracijos formą.",
       whatsAppNote: "WhatsApp skirtas tik trumpiems klausimams — ne registracijai.",
-      instagramNote: "Sek naujienoms ir patarimams."
+      instagramNote: "Sek naujienoms ir patarimams.",
+      nextSteps: "Peržiūriu tavo atsakymus — jei viskas tinka, atsiųsiu asmeninę nuorodą į kalendorių.",
+      locations: {
+        title: "Treniruočių Vietos",
+        intro: "Galimos individualios treniruotės:",
+        places: [
+          "Reformatas, Vilnius",
+          "SEB Arena, Vilnius"
+        ]
+      }
     }
   }
 };

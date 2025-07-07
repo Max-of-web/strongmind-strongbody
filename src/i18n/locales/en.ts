@@ -12,16 +12,34 @@ const en = {
   ...admin,
   ...forms,
   footer: {
-    ...homepage.footer,
+    contact: "Contact",
+    whatsAppChat: "WhatsApp Chat",
     whatsAppNote: "WhatsApp is only for short questions — not for registration.",
-    instagramNote: "Follow for updates & tips."
+    instagramNote: "Follow for updates & tips.",
+    locations: "Locations",
+    location1: "Reformatas, Vilnius",
+    location2: "SEB Arena, Vilnius",
+    quickLinks: "Quick Links",
+    home: "Home",
+    coaching: "Coaching",
+    rights: "All rights reserved."
   },
   coaching: {
     ...coaching.coaching,
     contact: {
-      ...coaching.coaching.contact,
+      sectionTitle: "Get in Touch",
+      intro: "Have questions before applying? Reach out directly via WhatsApp or fill out the registration form.",
       whatsAppNote: "WhatsApp is only for short questions — not for registration.",
-      instagramNote: "Follow for updates & tips."
+      instagramNote: "Follow for updates & tips.",
+      nextSteps: "I'll review your answers — if it's a good fit, I'll send you a personal calendar link.",
+      locations: {
+        title: "Training Locations",
+        intro: "Individual training sessions available at:",
+        places: [
+          "Reformatas, Vilnius",
+          "SEB Arena, Vilnius"
+        ]
+      }
     }
   }
 };
