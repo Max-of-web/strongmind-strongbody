@@ -240,30 +240,54 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Final CTA */}
-        <CTABanner
-          message={t('homepage.cta.finalMessage')}
-          buttonText={t('homepage.cta.finalButtonText')}
-          buttonLink="https://calendar.app.google/LU6UdzQr53kmsKjc6"
-        />
+        {/* Final CTA Section - Improved Layout */}
+        <section className="py-16 text-white" style={{ backgroundColor: '#0A0A0A' }}>
+          <div className="container-width px-4 text-center">
+            {/* Main encouraging message */}
+            <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white max-w-4xl mx-auto leading-tight">
+              {t('homepage.cta.finalMessage')}
+            </h3>
+            
+            {/* Payment note - smaller and lighter */}
+            <p className="text-sm md:text-base text-gray-300 mb-8 max-w-2xl mx-auto">
+              {t('homepage.cta.finalPaymentNote')}
+            </p>
+            
+            {/* Strong CTA Button */}
+            <a 
+              href="https://calendar.app.google/LU6UdzQr53kmsKjc6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 bg-theme-navy text-white font-bold text-lg px-8 py-4 rounded-lg hover:bg-theme-darknavy transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              style={{
+                backgroundColor: '#1E3A8A',
+                borderRadius: '0.5rem',
+                boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)'
+              }}
+            >
+              {t('homepage.cta.finalButtonText')}
+              <ExternalLink size={20} />
+            </a>
+          </div>
+        </section>
 
-        {/* WhatsApp CTA Section */}
+        {/* WhatsApp CTA Section - Centered */}
         <section className="py-12 bg-[#25D366] text-white">
           <div className="container-width px-4 text-center">
-            <div className="flex items-center justify-center mb-4">
-              <MessageSquare size={32} className="mr-3" />
-              <h3 className="text-xl md:text-2xl font-semibold">
+            <div className="flex items-center justify-center mb-3">
+              <MessageSquare size={28} className="mr-3" />
+              <h3 className="text-lg md:text-xl font-semibold">
                 {t('homepage.cta.whatsappMessage')}
               </h3>
             </div>
-            <p className="text-sm mb-6 opacity-90">
+            <p className="text-sm mb-6 opacity-90 max-w-md mx-auto">
               {t('homepage.cta.whatsappNote')}
             </p>
             <a 
               href="https://wa.me/37067951040"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-white text-[#25D366] font-bold px-6 py-3 rounded-md hover:bg-gray-100 transition-all duration-300 shadow-md"
+              className="inline-flex items-center justify-center gap-2 bg-white text-[#25D366] font-bold px-6 py-3 rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1"
             >
               <MessageSquare size={20} />
               WhatsApp

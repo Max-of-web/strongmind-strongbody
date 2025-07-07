@@ -67,7 +67,8 @@ const homepage = {
       ]
     },
     cta: {
-      finalMessage: "Ready to become the strongest version of yourself with no more doubts? Book your first training session right away (assessment and plan). The first session is paid — this ensures you get a proper starting point and real value.",
+      finalMessage: "Ready to become the strongest version of yourself with no more doubts? Book your first training session right away (assessment and plan).",
+      finalPaymentNote: "The first session is paid — it's your initial assessment and plan session.",
       finalButtonText: "Book Your Training Session",
       whatsappMessage: "Quick questions? Message me on WhatsApp.",
       whatsappNote: "WhatsApp is for short questions only — not for registration."
