@@ -134,7 +134,7 @@ const Coaching = () => {
                 </p>
                 
                 <ul className="space-y-4">
-                  {t('coaching.target.audiences', { returnObjects: true }).map((audience: string, index: number) => (
+                  {(t('coaching.target.audiences', { returnObjects: true }) as string[]).map((audience: string, index: number) => (
                     <li key={index} className="flex items-start">
                       <Check size={24} className="text-theme-tangerine shrink-0 mt-1 mr-3" />
                       <span className="text-white">{audience}</span>
@@ -207,7 +207,7 @@ const Coaching = () => {
               <div className="relative">
                 <div className="absolute left-8 top-0 bottom-0 w-px bg-theme-tangerine"></div>
                 
-                {t('coaching.process.steps', { returnObjects: true }).map((step: any, index: number) => (
+                {(t('coaching.process.steps', { returnObjects: true }) as Array<{number: string, title: string, description: string}>).map((step, index: number) => (
                   <div key={index} className="scroll-fade-in relative mb-12 pl-20">
                     <div className="absolute left-0 top-0 w-16 h-16 bg-theme-tangerine bg-opacity-20 rounded-full flex items-center justify-center">
                       <span className="text-2xl font-bold text-theme-tangerine">{step.number}</span>
@@ -321,7 +321,7 @@ const Coaching = () => {
                   <h4 className="font-semibold mb-3 text-white">{t('coaching.contact.locations.title')}</h4>
                   <p className="mb-2 text-white">{t('coaching.contact.locations.intro')}</p>
                   <ul className="space-y-2 text-white">
-                    {t('coaching.contact.locations.places', { returnObjects: true }).map((place: string, index: number) => (
+                    {(t('coaching.contact.locations.places', { returnObjects: true }) as string[]).map((place: string, index: number) => (
                       <li key={index}>• {place}</li>
                     ))}
                   </ul>
