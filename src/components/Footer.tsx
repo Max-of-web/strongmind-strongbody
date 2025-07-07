@@ -23,7 +23,7 @@ const Footer = () => {
           </h3>
           <div className="flex flex-wrap justify-center gap-4 mt-6">
             <CTAButton 
-              href="https://calendly.com/lipskis-paulius/asmenine-treniruote" 
+              href="https://calendar.app.google/LU6UdzQr53kmsKjc6" 
               external={true}
             >
               {t('footer.bookCall')}
@@ -107,7 +107,7 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="https://calendly.com/lipskis-paulius/asmenine-treniruote" 
+                  href="https://calendar.app.google/LU6UdzQr53kmsKjc6" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   style={{ 

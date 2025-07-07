@@ -59,7 +59,9 @@ const Coaching = () => {
                   Build habits, gain momentum, and level up your life through consistent guidance, smart movement, and practical mindset coaching.
                 </p>
                 <a 
-                  href="#contact-section" 
+                  href="https://calendar.app.google/LU6UdzQr53kmsKjc6" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="cta-button-primary inline-block"
                 >
                   Book Your First Session
@@ -355,9 +357,9 @@ const Coaching = () => {
                     <div>
                       <h4 className="font-semibold mb-1 text-white">Discovery Call</h4>
                       <a 
-                        href="https://calendly.com/lipskis-paulius/asmenine-treniruote" 
+                        href="https://calendar.app.google/LU6UdzQr53kmsKjc6" 
                         target="_blank" 
-                        rel="noopen noreferrer"
+                        rel="noopener noreferrer"
                         className="text-white hover:text-theme-tangerine transition-colors"
                       >
                         Schedule a free 30-minute call

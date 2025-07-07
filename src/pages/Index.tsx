@@ -62,7 +62,7 @@ const Index = () => {
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
-                  href="https://calendly.com/lipskis-paulius/asmenine-treniruote"
+                  href="https://calendar.app.google/LU6UdzQr53kmsKjc6"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="cta-button-primary"
@@ -243,7 +243,7 @@ const Index = () => {
         <CTABanner
           message={t('cta.finalCta.message')}
           buttonText={t('cta.finalCta.buttonText')}
-          buttonLink="https://calendly.com/lipskis-paulius/asmenine-treniruote"
+          buttonLink="https://calendar.app.google/LU6UdzQr53kmsKjc6"
         />
       </main>
       <Footer />

@@ -63,7 +63,7 @@ const Header = () => {
               variant="cta"
             >
               <a 
-                href="https://calendly.com/lipskis-paulius/asmenine-treniruote" 
+                href="https://calendar.app.google/LU6UdzQr53kmsKjc6" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >
@@ -112,7 +112,7 @@ const Header = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               <a 
-                href="https://calendly.com/lipskis-paulius/asmenine-treniruote" 
+                href="https://calendar.app.google/LU6UdzQr53kmsKjc6" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >
