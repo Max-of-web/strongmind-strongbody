@@ -1,6 +1,7 @@
 
 import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import PricingFeatureList from './PricingFeatureList';
 import { useTheme } from '@/hooks/useTheme';
 import BookingButton from './BookingButton';
@@ -9,6 +10,7 @@ interface PricingCardProps {
   pricingKey: string;
   featureCount: number;
   isHighlighted?: boolean;
+  isAddOn?: boolean;
   onBookingClick: () => void;
 }
 
@@ -16,6 +18,7 @@ const PricingCard = ({
   pricingKey, 
   featureCount, 
   isHighlighted = false, 
+  isAddOn = false,
   onBookingClick 
 }: PricingCardProps) => {
   const { t } = useTranslation();
@@ -42,28 +45,59 @@ const PricingCard = ({
       boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)'
     };
 
-    return isHighlighted 
-      ? {...baseStyle, ...highlightStyle}
-      : baseStyle;
+    const addOnStyle = {
+      borderWidth: '2px',
+      borderColor: '#F59E0B', // Amber for add-on
+      boxShadow: '0 10px 15px -3px rgba(245, 158, 11, 0.1), 0 4px 6px -2px rgba(245, 158, 11, 0.05)'
+    };
+
+    if (isAddOn) {
+      return {...baseStyle, ...addOnStyle};
+    } else if (isHighlighted) {
+      return {...baseStyle, ...highlightStyle};
+    }
+    
+    return baseStyle;
+  };
+
+  const getBadgeText = () => {
+    if (isAddOn) {
+      return t('coaching.pricing.badges.addOn');
+    } else if (isHighlighted) {
+      return t('coaching.pricing.badges.mostPopular');
+    }
+    return null;
+  };
+
+  const getBadgeStyle = () => {
+    if (isAddOn) {
+      return {
+        backgroundColor: '#F59E0B', // Amber
+        color: 'white'
+      };
+    } else if (isHighlighted) {
+      return {
+        backgroundColor: '#1E3A8A', // Deep blue
+        color: 'white'
+      };
+    }
+    return {};
   };
 
   return (
-    <Card style={getHighlightedCardStyle()}>
-      {isHighlighted && (
-        <div style={{
-          position: 'absolute',
-          top: 0,
-          right: 0,
-          backgroundColor: '#1E3A8A', // Deep blue
-          color: 'white',
-          fontSize: '0.75rem',
-          padding: '0.25rem 0.75rem',
-          borderBottomLeftRadius: '0.375rem'
-        }}>
-          {t('coaching.pricing.transformation.recommended')}
+    <Card style={getHighlightedCardStyle()} className="relative">
+      {(isHighlighted || isAddOn) && (
+        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
+          <Badge 
+            style={getBadgeStyle()}
+            className="px-3 py-1 text-xs font-bold rounded-full"
+          >
+            {getBadgeText()}
+          </Badge>
         </div>
       )}
-      <CardHeader>
+      
+      <CardHeader className="pt-6">
         <CardTitle className="text-xl text-white">
           {t(`coaching.pricing.${pricingKey}.title`)}
         </CardTitle>
@@ -75,6 +109,9 @@ const PricingCard = ({
             {t(`coaching.pricing.${pricingKey}.period`)}
           </span>
         </div>
+        <p className="text-sm text-gray-300 mt-2">
+          {t(`coaching.pricing.${pricingKey}.subtitle`)}
+        </p>
       </CardHeader>
       <CardContent className="space-y-2">
         <PricingFeatureList 

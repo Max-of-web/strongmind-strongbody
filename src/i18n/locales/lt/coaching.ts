@@ -41,60 +41,87 @@ const coaching = {
     },
     pricing: {
       sectionTitle: 'Paketai ir Kainos',
-      starter: {
-        title: 'Pirmoji Sesija',
+      badges: {
+        mostPopular: 'POPULIARIAUSIAS',
+        addOn: 'PAPILDINYS'
+      },
+      movementClarity: {
+        title: 'Movement Clarity Session',
+        price: '€65',
+        period: '1 sesija',
+        subtitle: 'Skausmui ar aiškiems kūno įžvalgoms - įvertinimas ir aiškūs prioritetai',
+        features: [
+          'Išsamus judesių įvertinimas',
+          'Skausmo priežasčių analizė',
+          'Aiškūs veiksmo prioritetai',
+          '+20€ planas jei reikia'
+        ],
+        buttonText: 'Užsakyti Sesiją'
+      },
+      bodyReset: {
+        title: 'Body Reset Plan',
         price: '€60',
-        period: '90 minučių',
+        period: 'per sesiją',
+        subtitle: 'Saugus atsigavimas po traumos su kineziterapija, EMS/TENS, WhatsApp',
         features: [
-          'Išsami konsultacija',
-          'Pradinė treniruotė',
-          'Judesių įvertinimas',
-          'Tikslų nustatymas ir motyvacijos planavimas',
-          'Programos sukūrimas',
-          'Prieiga prie Asmeninio Trenerio AI'
+          '1×/savaitę, 4-12 savaičių',
+          'Kineziterapijos metodai',
+          'EMS/TENS terapija',
+          'WhatsApp palaikymas'
         ],
-        buttonText: 'Užsakyti Pirmąją Sesiją'
+        buttonText: 'Užsakyti Konsultaciją'
       },
-      additionalSession: {
-        title: 'Papildoma Sesija',
+      strongGrounded: {
+        title: 'Strong & Grounded',
         price: '€50',
-        period: '60 minučių',
+        period: 'per sesiją',
+        subtitle: 'Įpročiai, motyvacija ir treniruočių struktūra',
         features: [
-          'Tolesnė treniruotė',
-          'Programos koregavimai',
-          'Formos pataisymai',
-          'Progreso įvertinimas'
+          '1×/savaitę, mėnesio narystė',
+          'Įpročių formavimas',
+          'Motyvacijos palaikymas',
+          'Treniruočių struktūra'
         ],
-        buttonText: 'Užsakyti Po Pirmosios Sesijos'
+        buttonText: 'Užsakyti Konsultaciją'
       },
-      monthly: {
-        title: 'Mėnesinis',
+      movementReset: {
+        title: 'Movement Reset Package',
         price: '€200',
-        period: 'per mėnesį',
+        period: '4 sesijos',
+        subtitle: 'Išmokti pagrindus ir savarankišką treniravimąsi su planu',
         features: [
-          '4 treniruotės per mėnesį',
-          'Individuali programa',
-          'WhatsApp palaikymas',
-          'Savaitiniai programos patikslinimai',
-          'Asmeninis Treneris AI'
+          '4 treniruočių sesijos',
+          'Pagrindų išmokimas',
+          'Savarankiško treniravimosi planas',
+          'Technikos tobulinimas'
         ],
-        buttonText: 'Užsakyti Konsultaciją'
+        buttonText: 'Užsakyti Paketą'
       },
-      transformation: {
-        title: 'Transformacija',
-        price: '€360',
+      smallGroup: {
+        title: 'Small Group Training',
+        price: '€160',
         period: 'per mėnesį',
-        recommended: 'REKOMENDUOJAMA',
+        subtitle: 'Bendruomenė, motyvacija, mažesnė kaina',
         features: [
-          '8 treniruotės per mėnesį',
-          'Išsamus įvertinimas',
-          'Pažangi programos kūrimas',
-          'Prioritetinis WhatsApp palaikymas',
-          'Įpročių formavimo koučingas',
-          'Mitybos gairės',
-          'Asmeninis Treneris AI'
+          '3-5 žmonių grupė',
+          'Mėnesio narystė',
+          'Bendruomenės palaikymas',
+          'Motyvacija grupėje'
         ],
-        buttonText: 'Užsakyti Konsultaciją'
+        buttonText: 'Prisijungti prie Grupės'
+      },
+      innerShift: {
+        title: 'Inner Shift Add-On',
+        price: '€300',
+        period: '3 mėnesių ciklas',
+        subtitle: 'Papildinys įpročių ir mitybos keitimui - rekomenduojama maksimaliems rezultatams',
+        features: [
+          '3 mėnesių įpročių ciklas',
+          'Mitybos gairės',
+          'Psichologinis palaikymas',
+          'Maksimalūs rezultatai'
+        ],
+        buttonText: 'Pridėti Papildinį'
       }
     },
     process: {

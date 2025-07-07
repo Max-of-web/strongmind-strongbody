@@ -10,33 +10,48 @@ const PricingCards = () => {
   };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-      {/* First Session */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* Movement Clarity Session */}
       <PricingCard 
-        pricingKey="starter" 
-        featureCount={6} 
-        onBookingClick={openBookingLink} 
-      />
-
-      {/* Additional Session */}
-      <PricingCard 
-        pricingKey="additionalSession" 
+        pricingKey="movementClarity" 
         featureCount={4} 
         onBookingClick={openBookingLink} 
       />
 
-      {/* Monthly */}
+      {/* Body Reset Plan */}
       <PricingCard 
-        pricingKey="monthly" 
-        featureCount={5} 
+        pricingKey="bodyReset" 
+        featureCount={4} 
         onBookingClick={openBookingLink} 
       />
 
-      {/* Transformation */}
+      {/* Strong & Grounded - Most Popular */}
       <PricingCard 
-        pricingKey="transformation" 
-        featureCount={7} 
+        pricingKey="strongGrounded" 
+        featureCount={4} 
         isHighlighted={true} 
+        onBookingClick={openBookingLink} 
+      />
+
+      {/* Movement Reset Package */}
+      <PricingCard 
+        pricingKey="movementReset" 
+        featureCount={4} 
+        onBookingClick={openBookingLink} 
+      />
+
+      {/* Small Group Training */}
+      <PricingCard 
+        pricingKey="smallGroup" 
+        featureCount={4} 
+        onBookingClick={openBookingLink} 
+      />
+
+      {/* Inner Shift Add-On */}
+      <PricingCard 
+        pricingKey="innerShift" 
+        featureCount={4} 
+        isAddOn={true} 
         onBookingClick={openBookingLink} 
       />
     </div>

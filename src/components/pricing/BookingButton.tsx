@@ -1,11 +1,11 @@
 
 import React from 'react';
-import { Calendar, CalendarClock, MessageSquare, Zap } from 'lucide-react';
+import { Calendar, CalendarClock, MessageSquare, Zap, Users, Activity, Target } from 'lucide-react';
 
 interface BookingButtonProps {
   onClick: () => void;
   buttonText: string;
-  packageType: 'starter' | 'additionalSession' | 'monthly' | 'transformation';
+  packageType: 'movementClarity' | 'bodyReset' | 'strongGrounded' | 'movementReset' | 'smallGroup' | 'innerShift' | string;
 }
 
 const BookingButton: React.FC<BookingButtonProps> = ({ 
@@ -34,14 +34,18 @@ const BookingButton: React.FC<BookingButtonProps> = ({
   // Select icon based on package type
   const getIcon = () => {
     switch (packageType) {
-      case 'starter':
-        return <Calendar size={18} />;
-      case 'additionalSession':
-        return <CalendarClock size={18} />;
-      case 'monthly':
-        return <MessageSquare size={18} />;
-      case 'transformation':
+      case 'movementClarity':
+        return <Target size={18} />;
+      case 'bodyReset':
+        return <Activity size={18} />;
+      case 'strongGrounded':
         return <Zap size={18} />;
+      case 'movementReset':
+        return <Calendar size={18} />;
+      case 'smallGroup':
+        return <Users size={18} />;
+      case 'innerShift':
+        return <MessageSquare size={18} />;
       default:
         return <Calendar size={18} />;
     }
