@@ -1,3 +1,4 @@
+
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -8,6 +9,8 @@ import {
   Timer,
   Check,
   ChevronRight,
+  MessageSquare,
+  ExternalLink,
 } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -243,6 +246,31 @@ const Index = () => {
           buttonText={t('homepage.cta.finalButtonText')}
           buttonLink="https://calendar.app.google/LU6UdzQr53kmsKjc6"
         />
+
+        {/* WhatsApp CTA Section */}
+        <section className="py-12 bg-[#25D366] text-white">
+          <div className="container-width px-4 text-center">
+            <div className="flex items-center justify-center mb-4">
+              <MessageSquare size={32} className="mr-3" />
+              <h3 className="text-xl md:text-2xl font-semibold">
+                {t('homepage.cta.whatsappMessage')}
+              </h3>
+            </div>
+            <p className="text-sm mb-6 opacity-90">
+              {t('homepage.cta.whatsappNote')}
+            </p>
+            <a 
+              href="https://wa.me/37067951040"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 bg-white text-[#25D366] font-bold px-6 py-3 rounded-md hover:bg-gray-100 transition-all duration-300 shadow-md"
+            >
+              <MessageSquare size={20} />
+              WhatsApp
+              <ExternalLink size={16} />
+            </a>
+          </div>
+        </section>
       </main>
       <Footer />
     </>

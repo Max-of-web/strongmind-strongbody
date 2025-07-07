@@ -4,7 +4,7 @@ const homepage = {
     hero: {
       title: 'Patirk, ką reiškia jaustis stipriu savo kūne – žingsnis po žingsnio.',
       subtitle: 'Kineziterapija, reabilitacija po traumų, mažos grupės, asmeninės treniruotės ir aiškiai struktūruotos programos – paremtos mokslu ir pritaikytos tavo gyvenimo būdui.',
-      bookCallButton: 'Registruotis į treniruotę',
+      ctaButton: 'Registruotis į treniruotę',
       getFreeGuideButton: 'Atsisiųsti nemokamą gidą'
     },
     features: {
@@ -68,7 +68,9 @@ const homepage = {
     },
     cta: {
       finalMessage: 'Esi tikras, kad pasiruošei tapti stipriausia savo versija ir nebeturi abejonių? Užsiregistruok iš karto į pirmą treniruotę (testavimas ir planas). Pirma treniruotė yra mokama – tai pradinio įvertinimo ir plano sesija.',
-      finalButtonText: 'Užsiregistruok treniruotei'
+      finalButtonText: 'Užsiregistruok treniruotei',
+      whatsappMessage: 'Trumpi klausimai? Rašyk WhatsApp.',
+      whatsappNote: 'WhatsApp skirtas tik trumpiems klausimams — ne registracijai.'
     }
   }
 };
