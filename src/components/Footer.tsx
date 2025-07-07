@@ -14,58 +14,62 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Contact Information */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">{t('footer.contact')}</h3>
-            <div className="space-y-4">
-              <div>
-                <div className="flex items-center mb-1">
-                  <MessageSquare size={18} className="mr-3 text-theme-tangerine" />
+            <h3 className="text-xl font-semibold mb-6 text-white">{t('footer.contact')}</h3>
+            <div className="space-y-6">
+              <div className="flex items-start space-x-3">
+                <MessageSquare size={20} className="text-theme-tangerine mt-0.5 flex-shrink-0" />
+                <div className="flex-1">
                   <a 
                     href="https://wa.me/37067951040" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="hover:text-theme-tangerine transition-colors"
+                    className="text-white hover:text-theme-tangerine transition-colors duration-200 font-medium"
                   >
                     {t('footer.whatsAppChat')}
                   </a>
+                  <p className="text-sm text-gray-300 mt-1">
+                    {t('footer.whatsAppNote')}
+                  </p>
                 </div>
-                <p className="text-sm text-gray-300 ml-9">
-                  {t('footer.whatsAppNote')}
-                </p>
               </div>
               
-              <div>
-                <div className="flex items-center mb-1">
-                  <Instagram size={18} className="mr-3 text-theme-tangerine" />
+              <div className="flex items-start space-x-3">
+                <Instagram size={20} className="text-theme-tangerine mt-0.5 flex-shrink-0" />
+                <div className="flex-1">
                   <a 
                     href="https://www.instagram.com/paulius_physio?igsh=dXd1bWFiajZwN293" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="hover:text-theme-tangerine transition-colors"
+                    className="text-white hover:text-theme-tangerine transition-colors duration-200 font-medium"
                   >
                     @paulius_physio
                   </a>
+                  <p className="text-sm text-gray-300 mt-1">
+                    {t('footer.instagramNote')}
+                  </p>
                 </div>
-                <p className="text-sm text-gray-300 ml-9">
-                  {t('footer.instagramNote')}
-                </p>
               </div>
             </div>
           </div>
 
           {/* Locations */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">{t('footer.locations')}</h3>
-            <div className="space-y-2">
+            <h3 className="text-xl font-semibold mb-6 text-white">{t('footer.locations')}</h3>
+            <div className="space-y-4">
               <a 
                 href="https://maps.app.goo.gl/23ZNRSt67dN6G9o36"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-start hover:text-theme-tangerine transition-colors"
+                className="flex items-start space-x-3 hover:text-theme-tangerine transition-colors duration-200 group"
               >
-                <MapPin size={18} className="mr-3 text-theme-tangerine mt-0.5 shrink-0" />
-                <div>
-                  <div>{t('footer.location1')}</div>
-                  <div>{t('footer.location2')}</div>
+                <MapPin size={20} className="text-theme-tangerine mt-0.5 flex-shrink-0" />
+                <div className="flex-1">
+                  <div className="text-white group-hover:text-theme-tangerine font-medium">
+                    {t('footer.location1')}
+                  </div>
+                  <div className="text-white group-hover:text-theme-tangerine font-medium mt-1">
+                    {t('footer.location2')}
+                  </div>
                 </div>
               </a>
             </div>
@@ -73,23 +77,29 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">{t('footer.quickLinks')}</h3>
-            <div className="space-y-2">
-              <Link to="/" className="flex items-center hover:text-theme-tangerine transition-colors">
-                <Home size={18} className="mr-3" />
-                {t('footer.home')}
+            <h3 className="text-xl font-semibold mb-6 text-white">{t('footer.quickLinks')}</h3>
+            <div className="space-y-4">
+              <Link 
+                to="/" 
+                className="flex items-center space-x-3 text-white hover:text-theme-tangerine transition-colors duration-200 group"
+              >
+                <Home size={20} className="text-theme-tangerine flex-shrink-0" />
+                <span className="group-hover:text-theme-tangerine font-medium">{t('footer.home')}</span>
               </Link>
-              <Link to="/coaching" className="flex items-center hover:text-theme-tangerine transition-colors">
-                <User size={18} className="mr-3" />
-                {t('footer.coaching')}
+              <Link 
+                to="/coaching" 
+                className="flex items-center space-x-3 text-white hover:text-theme-tangerine transition-colors duration-200 group"
+              >
+                <User size={20} className="text-theme-tangerine flex-shrink-0" />
+                <span className="group-hover:text-theme-tangerine font-medium">{t('footer.coaching')}</span>
               </Link>
             </div>
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-white border-opacity-20 mt-8 pt-8 text-center">
-          <p className="text-sm opacity-75">
+        <div className="border-t border-white border-opacity-20 mt-12 pt-8 text-center">
+          <p className="text-sm text-gray-300">
             © 2024 Paulius Lipskis. {t('footer.rights')}
           </p>
         </div>

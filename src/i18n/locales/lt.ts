@@ -1,4 +1,3 @@
-
 import homepage from './lt/homepage';
 import common from './lt/common';
 import coaching from './lt/coaching';
@@ -17,11 +16,11 @@ const lt = {
     whatsAppNote: "WhatsApp skirtas tik trumpiems klausimams — ne registracijai.",
     instagramNote: "Sek naujienoms ir patarimams.",
     locations: "Vietos",
-    location1: "Reformatas, Vilnius",
+    location1: "Vilnius, Re.formatas, Ąžuolyno g. 7",
     location2: "SEB Arena, Vilnius",
     quickLinks: "Greitos nuorodos",
     home: "Pagrindinis",
-    coaching: "Koučingas",
+    coaching: "Treniruotės",
     rights: "Visos teisės saugomos."
   },
   coaching: {
@@ -36,7 +35,7 @@ const lt = {
         title: "Treniruočių Vietos",
         intro: "Galimos individualios treniruotės:",
         places: [
-          "Reformatas, Vilnius",
+          "Vilnius, Re.formatas, Ąžuolyno g. 7",
           "SEB Arena, Vilnius"
         ]
       }
