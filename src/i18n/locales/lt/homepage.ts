@@ -65,6 +65,10 @@ const homepage = {
         'Noriu, kad žmonės patikėtų: jų kūnas gali daugiau, nei atrodo. O tam reikia ne spaudimo, o aiškaus plano, nuoseklumo ir žmogaus šalia – tokio, kuris matytų ne tik kūną, bet ir visą tave.',
         'Aš noriu, kad žmonės ne tik treniruotųsi, bet ir pakeistų santykį su judėjimu – kad jis taptų jų vertybe visam gyvenimui.'
       ]
+    },
+    cta: {
+      finalMessage: 'Esi tikras, kad pasiruošei tapti stipriausia savo versija ir nebeturi abejonių? Užsiregistruok iš karto į pirmą treniruotę (testavimas ir planas). Pirma treniruotė yra mokama – tai pradinio įvertinimo ir plano sesija.',
+      finalButtonText: 'Užsiregistruok treniruotei'
     }
   }
 };
