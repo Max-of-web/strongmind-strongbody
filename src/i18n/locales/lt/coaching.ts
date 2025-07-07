@@ -127,27 +127,27 @@ const coaching = {
       }
     },
     process: {
-      sectionTitle: 'Kaip Tai Vyksta',
+      sectionTitle: 'Kaip tai veikia',
       steps: [
         {
           number: '1',
-          title: 'Paraiška',
-          description: 'Užpildykite paraiškos formą žemiau arba užsisakykite pažintinį skambutį. Tai padeda man suprasti jūsų tikslus, istoriją ir dabartines problemas.'
+          title: 'Užpildyk anketą',
+          description: 'Atsakai į kelis klausimus, kad geriau suprasčiau tavo tikslus, patirtį ir didžiausius iššūkius.'
         },
         {
           number: '2',
-          title: 'Pažintinis Skambutis',
-          description: 'Turėsime 30 minučių skambutį, kad išsamiau aptartume jūsų paraišką ir nustatytume, ar esame tinkami dirbti kartu.'
+          title: 'Aš peržvelgsiu',
+          description: 'Perskaitau tavo atsakymus ir, jei matau, kad tikrai galėsiu padėti — susitarsime dėl pokalbio.'
         },
         {
           number: '3',
-          title: 'Pradinis Įvertinimas',
-          description: 'Pirmoji mūsų sesija apima išsamų fizinį įvertinimą ir gilesnį pokalbį apie jūsų tikslus, apribojimus ir pageidavimus.'
+          title: 'Pažintinis pokalbis',
+          description: 'Aptariame, kaip dirbsime kartu ir ar esame tinkami vienas kitam. Jei viskas tinka — planuojame pirmąją sesiją.'
         },
         {
           number: '4',
-          title: 'Nuolatinis Koučingas',
-          description: 'Reguliarios treniruočių sesijos su nuolatiniu programos tobulinimu, remiantis jūsų progresu ir atsiliepimais. Aš būsiu šalia kiekviename žingsnyje, kad vadovaučiau ir palaikyčiau jus.'
+          title: 'Startas ir progresas',
+          description: 'Pradedame nuo pradinio įvertinimo ir aiškaus veiksmų plano. Toliau — nuoseklus darbas, palaikymas ir augimas be streso.'
         }
       ]
     },
