@@ -67,9 +67,6 @@ const Footer = () => {
                   <div className="text-white group-hover:text-theme-tangerine font-medium">
                     {t('footer.location1')}
                   </div>
-                  <div className="text-white group-hover:text-theme-tangerine font-medium mt-1">
-                    {t('footer.location2')}
-                  </div>
                 </div>
               </a>
             </div>
@@ -91,7 +88,7 @@ const Footer = () => {
                 className="flex items-center space-x-3 text-white hover:text-theme-tangerine transition-colors duration-200 group"
               >
                 <User size={20} className="text-theme-tangerine flex-shrink-0" />
-                <span className="group-hover:text-theme-tangerine font-medium">{t('footer.coaching')}</span>
+                <span className="group-hover:text-theme-tangerine font-medium">{t('footer.training')}</span>
               </Link>
             </div>
           </div>

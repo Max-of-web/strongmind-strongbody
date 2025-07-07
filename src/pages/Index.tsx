@@ -240,16 +240,16 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Final CTA Section - Improved Layout */}
+        {/* Final CTA Section - Updated with cleaner styling */}
         <section className="py-16 text-white" style={{ backgroundColor: '#0A0A0A' }}>
           <div className="container-width px-4 text-center">
-            {/* Main encouraging message */}
-            <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white max-w-4xl mx-auto leading-tight">
+            {/* Main encouraging message with improved styling */}
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-white max-w-4xl mx-auto leading-tight">
               {t('homepage.cta.finalMessage')}
             </h3>
             
             {/* Payment note - smaller and lighter */}
-            <p className="text-sm md:text-base text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
               {t('homepage.cta.finalPaymentNote')}
             </p>
             

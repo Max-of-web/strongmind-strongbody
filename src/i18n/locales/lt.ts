@@ -1,3 +1,4 @@
+
 import homepage from './lt/homepage';
 import common from './lt/common';
 import coaching from './lt/coaching';
@@ -17,10 +18,9 @@ const lt = {
     instagramNote: "Sek naujienoms ir patarimams.",
     locations: "Vietos",
     location1: "Vilnius, Re.formatas, Ąžuolyno g. 7",
-    location2: "SEB Arena, Vilnius",
     quickLinks: "Greitos nuorodos",
     home: "Pagrindinis",
-    coaching: "Treniruotės",
+    training: "Treniruotės",
     rights: "Visos teisės saugomos."
   },
   coaching: {
@@ -35,8 +35,7 @@ const lt = {
         title: "Treniruočių Vietos",
         intro: "Galimos individualios treniruotės:",
         places: [
-          "Vilnius, Re.formatas, Ąžuolyno g. 7",
-          "SEB Arena, Vilnius"
+          "Vilnius, Re.formatas, Ąžuolyno g. 7"
         ]
       }
     }

@@ -67,7 +67,7 @@ const homepage = {
       ]
     },
     cta: {
-      finalMessage: 'Esi tikras, kad pasiruošei tapti stipriausia savo versija ir nebeturi abejonių? Užsiregistruok iš karto į pirmą treniruotę (testavimas ir planas).',
+      finalMessage: 'Esi tikras, kad pasiruošei tapti stipriausia savo versija ir nebeturi abejonių? Užsiregistruok iš karto į pirmą treniruotę.',
       finalPaymentNote: 'Pirma treniruotė yra mokama – tai pradinio įvertinimo ir plano sesija.',
       finalButtonText: 'Užsiregistruok treniruotei',
       whatsappMessage: 'Trumpi klausimai? Parašyk WhatsApp.',
