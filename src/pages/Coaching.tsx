@@ -310,6 +310,27 @@ const Coaching = () => {
                     ))}
                   </ul>
                 </div>
+
+                {/* Single WhatsApp section for short questions only */}
+                <div className="bg-[#25D366] bg-opacity-20 p-6 rounded-lg border border-[#25D366] border-opacity-30">
+                  <div className="flex items-center mb-3">
+                    <MessageSquare size={24} className="text-[#25D366] mr-3" />
+                    <h4 className="font-semibold text-white">{t('coaching.contact.whatsapp.label')}</h4>
+                  </div>
+                  <p className="text-sm text-gray-300 mb-4">
+                    {t('coaching.contact.whatsapp.description')}
+                  </p>
+                  <a 
+                    href="https://wa.me/37067951040"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white font-bold px-4 py-2 rounded-lg hover:bg-[#128C7E] transition-all duration-300"
+                  >
+                    <MessageSquare size={18} />
+                    WhatsApp
+                    <ExternalLink size={16} />
+                  </a>
+                </div>
               </div>
               
               <div className="lg:w-3/5 scroll-fade-in">
@@ -338,23 +359,6 @@ const Coaching = () => {
               >
                 {t('coaching.contact.finalCta.button')}
                 <ExternalLink size={20} />
-              </a>
-            </div>
-
-            {/* Single WhatsApp section */}
-            <div className="text-center mt-16 scroll-fade-in">
-              <p className="text-base md:text-lg text-white mb-6 max-w-md mx-auto">
-                {t('coaching.contact.whatsapp.description')}
-              </p>
-              <a 
-                href="https://wa.me/37067951040"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white font-bold px-6 py-3 rounded-lg hover:bg-[#128C7E] transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1"
-              >
-                <MessageSquare size={20} />
-                WhatsApp
-                <ExternalLink size={16} />
               </a>
             </div>
           </div>
