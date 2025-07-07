@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import { MessageSquare, Check, ExternalLink } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
@@ -309,27 +308,6 @@ const Coaching = () => {
                       <li key={index}>• {place}</li>
                     ))}
                   </ul>
-                </div>
-
-                {/* Single WhatsApp section for short questions only */}
-                <div className="bg-[#25D366] bg-opacity-20 p-6 rounded-lg border border-[#25D366] border-opacity-30">
-                  <div className="flex items-center mb-3">
-                    <MessageSquare size={24} className="text-[#25D366] mr-3" />
-                    <h4 className="font-semibold text-white">{t('coaching.contact.whatsapp.label')}</h4>
-                  </div>
-                  <p className="text-sm text-gray-300 mb-4">
-                    {t('coaching.contact.whatsapp.description')}
-                  </p>
-                  <a 
-                    href="https://wa.me/37067951040"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white font-bold px-4 py-2 rounded-lg hover:bg-[#128C7E] transition-all duration-300"
-                  >
-                    <MessageSquare size={18} />
-                    WhatsApp
-                    <ExternalLink size={16} />
-                  </a>
                 </div>
               </div>
               
