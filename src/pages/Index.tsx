@@ -18,6 +18,7 @@ import CTABanner from '../components/CTABanner';
 import FeatureCard from '../components/FeatureCard';
 import TestimonialCard from '../components/TestimonialCard';
 import LowerBackGuide from '../components/LowerBackGuide';
+import PackagesSection from '../components/PackagesSection';
 
 const Index = () => {
   const { t } = useTranslation();
@@ -156,6 +157,9 @@ const Index = () => {
           <LowerBackGuide />
         </section>
 
+        {/* Packages Section */}
+        <PackagesSection />
+
         {/* Testimonials Section */}
         <section className="section-padding bg-elegant-charcoal">
           <div className="container-width">
@@ -240,16 +244,16 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Final CTA Section - Updated with cleaner styling */}
+        {/* Final CTA Section - Updated with better font styling */}
         <section className="py-16 text-white" style={{ backgroundColor: '#0A0A0A' }}>
           <div className="container-width px-4 text-center">
             {/* Main encouraging message with improved styling */}
-            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-white max-w-4xl mx-auto leading-tight">
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 text-white max-w-4xl mx-auto leading-relaxed font-sans">
               {t('homepage.cta.finalMessage')}
             </h3>
             
             {/* Payment note - smaller and lighter */}
-            <p className="text-base md:text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
               {t('homepage.cta.finalPaymentNote')}
             </p>
             
