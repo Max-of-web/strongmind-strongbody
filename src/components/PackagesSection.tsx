@@ -1,112 +1,21 @@
 
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Star, Monitor, Heart, Users } from 'lucide-react';
+import PricingCards from './PricingCards';
 
 const PackagesSection = () => {
   const { t } = useTranslation();
-
-  const packages = [
-    {
-      key: 'oneOnOneTraining',
-      icon: Star,
-      highlight: true
-    },
-    {
-      key: 'onlineProgram',
-      icon: Monitor,
-      highlight: true
-    },
-    {
-      key: 'rehabilitation',
-      icon: Heart,
-      highlight: false
-    },
-    {
-      key: 'smallGroupTraining',
-      icon: Users,
-      highlight: false
-    }
-  ];
 
   return (
     <section className="section-padding bg-elegant-charcoal">
       <div className="container-width">
         <div className="text-center mb-12 scroll-fade-in">
           <h2 className="section-title mx-auto after:left-1/2 after:-translate-x-1/2">
-            {t('homepage.packages.sectionTitle')}
+            {t('coaching.pricing.sectionTitle')}
           </h2>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-          {packages.map(({ key, icon: Icon, highlight }) => (
-            <div
-              key={key}
-              className={`scroll-fade-in ${
-                highlight 
-                  ? 'bg-theme-navy border-2 border-theme-tangerine shadow-lg transform hover:scale-105 transition-all duration-300' 
-                  : 'bg-gray-800 border border-gray-700 hover:border-gray-600 transition-all duration-300'
-              } rounded-lg p-6 relative overflow-hidden`}
-            >
-              {highlight && (
-                <div className="absolute top-4 right-4">
-                  <div className="bg-theme-tangerine text-white text-xs font-bold px-3 py-1 rounded-full">
-                    FEATURED
-                  </div>
-                </div>
-              )}
-              
-              <div className="flex items-center mb-4">
-                <Icon 
-                  size={32} 
-                  className={`mr-4 ${highlight ? 'text-theme-tangerine' : 'text-gray-400'}`} 
-                />
-                <h3 className={`text-xl font-bold ${highlight ? 'text-white' : 'text-white'}`}>
-                  {t(`homepage.packages.${key}.title`)}
-                </h3>
-              </div>
-              
-              <div className="space-y-4">
-                <div>
-                  <p className="text-gray-300 text-sm font-medium mb-2">
-                    {t(`homepage.packages.${key}.forWhoLabel`)}
-                  </p>
-                  <p className="text-gray-200 text-sm leading-relaxed">
-                    {t(`homepage.packages.${key}.forWho`)}
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="text-gray-300 text-sm font-medium mb-2">
-                    {t(`homepage.packages.${key}.whatYouGetLabel`)}
-                  </p>
-                  <p className="text-gray-200 text-sm leading-relaxed">
-                    {t(`homepage.packages.${key}.whatYouGet`)}
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="text-gray-300 text-sm font-medium mb-2">
-                    {t(`homepage.packages.${key}.priceLabel`)}
-                  </p>
-                  <div className={`text-lg font-bold ${highlight ? 'text-theme-tangerine' : 'text-white'}`}>
-                    <div className="whitespace-pre-line">
-                      {t(`homepage.packages.${key}.price`)}
-                    </div>
-                  </div>
-                </div>
-                
-                {key === 'oneOnOneTraining' && (
-                  <div className="bg-theme-tangerine bg-opacity-20 border border-theme-tangerine rounded-lg p-3 mt-4">
-                    <p className="text-theme-tangerine text-sm font-medium">
-                      💡 {t(`homepage.packages.${key}.innerShiftNote`)}
-                    </p>
-                  </div>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
+        <PricingCards />
         
         <div className="text-center mt-12 scroll-fade-in">
           <a

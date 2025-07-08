@@ -66,46 +66,6 @@ const homepage = {
         'I want people not only to train but also to change their relationship with movement — so it becomes their value for life.'
       ]
     },
-    packages: {
-      sectionTitle: 'Work With Me',
-      oneOnOneTraining: {
-        title: '1-on-1 Training + Inner Shift',
-        forWhoLabel: 'For:',
-        forWho: 'People who want consistency, a clear plan, and deeper habit change.',
-        whatYouGetLabel: 'What you get:',
-        whatYouGet: 'Personal training sessions, 3-month behavior change cycle (nutrition, stress, rest), WhatsApp support.',
-        priceLabel: 'Price:',
-        price: '• €50/session\n• + €300 for 3-month behavior change cycle (one-time fee)',
-        innerShiftNote: 'Inner Shift recommended for best results'
-      },
-      onlineProgram: {
-        title: 'Online Program + WhatsApp Support',
-        forWhoLabel: 'For:',
-        forWho: 'Those who want to train independently but with professional supervision.',
-        whatYouGetLabel: 'What you get:',
-        whatYouGet: 'Individual plan, weekly updates, WhatsApp access for questions.',
-        priceLabel: 'Price:',
-        price: '€60/month'
-      },
-      rehabilitation: {
-        title: 'Rehabilitation',
-        forWhoLabel: 'For:',
-        forWho: 'People after injuries or surgeries who want to recover safely.',
-        whatYouGetLabel: 'What you get:',
-        whatYouGet: 'Kinesitherapy 1×/week, EMS/TENS, testing, WhatsApp support.',
-        priceLabel: 'Price:',
-        price: '€60/session'
-      },
-      smallGroupTraining: {
-        title: 'Small Group Training',
-        forWhoLabel: 'For:',
-        forWho: 'People who want to train in a group and have basic preparation.',
-        whatYouGetLabel: 'What you get:',
-        whatYouGet: '3-5 person groups, rotating themes (full body, targeted), community motivation.',
-        priceLabel: 'Price:',
-        price: '€160/month'
-      }
-    },
     cta: {
       finalMessage: 'Ready to become the strongest version of yourself with no more doubts? Book your first training session right away.',
       finalPaymentNote: 'The first session is paid — it\'s your initial assessment and plan session.',
