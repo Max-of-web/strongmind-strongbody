@@ -6,10 +6,6 @@ import PricingCards from './PricingCards';
 const PackagesSection = () => {
   const { t } = useTranslation();
 
-  const openBookingLink = () => {
-    window.open('https://calendar.app.google/LU6UdzQr53kmsKjc6', '_blank');
-  };
-
   return (
     <section className="section-padding bg-elegant-charcoal">
       <div className="container-width">
@@ -19,29 +15,17 @@ const PackagesSection = () => {
           </h2>
         </div>
         
-        {/* 1-on-1 coaching image before pricing cards */}
-        <div className="mb-12 scroll-fade-in">
-          <div className="relative rounded-lg overflow-hidden shadow-xl max-w-4xl mx-auto">
-            <img
-              src="/lovable-uploads/427ebe58-891e-44b0-85bd-c76e3fcd43ec.png"
-              alt="Personal training with focused guidance and proper form"
-              className="w-full h-auto"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-elegant-charcoal via-transparent to-transparent" />
-          </div>
-        </div>
-        
-        <div className="scroll-fade-in">
-          <PricingCards />
-        </div>
+        <PricingCards />
         
         <div className="text-center mt-12 scroll-fade-in">
-          <button
-            onClick={openBookingLink}
-            className="cta-button-primary inline-flex items-center gap-2 text-lg px-8 py-4"
+          <a
+            href="https://calendar.app.google/LU6UdzQr53kmsKjc6"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cta-button-primary inline-flex items-center gap-2"
           >
-            {t('coaching.hero.ctaButton')}
-          </button>
+            {t('homepage.hero.ctaButton')}
+          </a>
         </div>
       </div>
     </section>
