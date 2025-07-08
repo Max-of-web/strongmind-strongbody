@@ -42,7 +42,7 @@ const coaching = {
           'Progress testing every 3 months',
           'Daily WhatsApp support for your questions'
         ],
-        innerShift: 'Inner Shift add-on: €300 for a 3-month behavior change cycle (Highly recommended for best results — your habits won't know what hit them!)',
+        innerShift: 'Inner Shift add-on: €300 for a 3-month behavior change cycle (Highly recommended for best results — your habits won\'t know what hit them!)',
         buttonText: 'Book Session'
       },
       onlineTraining: {
