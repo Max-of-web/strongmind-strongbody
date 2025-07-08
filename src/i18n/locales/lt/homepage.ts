@@ -70,27 +70,39 @@ const homepage = {
       sectionTitle: 'Darbas Su Manimi',
       oneOnOneTraining: {
         title: '1-on-1 Treniravimas + Vidinis Pokytis',
+        forWhoLabel: 'Kam skirta:',
         forWho: 'Žmonėms, norintiems nuoseklumo, aiškaus plano ir gilesnio įpročių keitimo.',
+        whatYouGetLabel: 'Ką gauni:',
         whatYouGet: 'Asmeninės treniruotės, elgesio keitimo ciklas 3 mėn. (mityba, stresas, poilsis), WhatsApp palaikymas.',
-        price: '50 €/treniruotė\n+ 300 € už 3 mėn. elgesio keitimo ciklą (vienkartinis mokestis)',
+        priceLabel: 'Kaina:',
+        price: '• 50 €/treniruotė\n• + 300 € už 3 mėn. elgesio keitimo ciklą (vienkartinis mokestis)',
         innerShiftNote: 'Vidinis Pokytis (Inner Shift) rekomenduojamas geriausiems rezultatams'
       },
       onlineProgram: {
         title: 'Online programa + WhatsApp palaikymas',
+        forWhoLabel: 'Kam skirta:',
         forWho: 'Norintiems treniruotis savarankiškai, bet su profesionalia priežiūra.',
+        whatYouGetLabel: 'Ką gauni:',
         whatYouGet: 'Individualus planas, savaitinis atnaujinimas, WhatsApp prieiga prie manęs klausimams.',
+        priceLabel: 'Kaina:',
         price: '60 €/mėn.'
       },
       rehabilitation: {
         title: 'Reabilitacija',
+        forWhoLabel: 'Kam skirta:',
         forWho: 'Žmonėms po traumų ar operacijų, norintiems atsigauti saugiai.',
+        whatYouGetLabel: 'Ką gauni:',
         whatYouGet: 'Kineziterapija 1×/sav., EMS/TENS, testavimas, WhatsApp palaikymas.',
+        priceLabel: 'Kaina:',
         price: '60 €/sesija'
       },
       smallGroupTraining: {
         title: 'Treniruotės mažose grupėse',
+        forWhoLabel: 'Kam skirta:',
         forWho: 'Žmonėms, norintiems treniruotis grupėje ir turintiems bazinį pasiruošimą.',
+        whatYouGetLabel: 'Ką gauni:',
         whatYouGet: '3–5 žmonių grupė, rotuojamos temos (viso kūno, akcentuotos), motyvacija iš bendruomenės.',
+        priceLabel: 'Kaina:',
         price: '160 €/mėn.'
       }
     },

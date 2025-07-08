@@ -69,7 +69,7 @@ const PackagesSection = () => {
               <div className="space-y-4">
                 <div>
                   <p className="text-gray-300 text-sm font-medium mb-2">
-                    Kam skirta:
+                    {t(`homepage.packages.${key}.forWhoLabel`)}
                   </p>
                   <p className="text-gray-200 text-sm leading-relaxed">
                     {t(`homepage.packages.${key}.forWho`)}
@@ -78,7 +78,7 @@ const PackagesSection = () => {
                 
                 <div>
                   <p className="text-gray-300 text-sm font-medium mb-2">
-                    Ką gauni:
+                    {t(`homepage.packages.${key}.whatYouGetLabel`)}
                   </p>
                   <p className="text-gray-200 text-sm leading-relaxed">
                     {t(`homepage.packages.${key}.whatYouGet`)}
@@ -87,10 +87,12 @@ const PackagesSection = () => {
                 
                 <div>
                   <p className="text-gray-300 text-sm font-medium mb-2">
-                    Kaina:
+                    {t(`homepage.packages.${key}.priceLabel`)}
                   </p>
-                  <div className={`text-lg font-bold ${highlight ? 'text-theme-tangerine' : 'text-white'} whitespace-pre-line`}>
-                    {t(`homepage.packages.${key}.price`)}
+                  <div className={`text-lg font-bold ${highlight ? 'text-theme-tangerine' : 'text-white'}`}>
+                    <div className="whitespace-pre-line">
+                      {t(`homepage.packages.${key}.price`)}
+                    </div>
                   </div>
                 </div>
                 
