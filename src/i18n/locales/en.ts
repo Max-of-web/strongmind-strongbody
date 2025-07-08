@@ -22,23 +22,6 @@ const en = {
     home: "Home",
     training: "Training",
     rights: "All rights reserved."
-  },
-  coaching: {
-    ...coaching.coaching,
-    contact: {
-      sectionTitle: "Get in Touch",
-      intro: "Have questions before applying? Reach out directly via WhatsApp or fill out the registration form.",
-      whatsAppNote: "WhatsApp is only for short questions — not for registration.",
-      instagramNote: "Follow for updates & tips.",
-      nextSteps: "I'll review your answers — if it's a good fit, I'll send you a personal calendar link.",
-      locations: {
-        title: "Training Locations",
-        intro: "Individual training sessions available at:",
-        places: [
-          "Vilnius, Re.formatas, Ąžuolyno g. 7"
-        ]
-      }
-    }
   }
 };
 

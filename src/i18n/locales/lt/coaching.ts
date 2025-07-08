@@ -42,85 +42,40 @@ const coaching = {
       badges: {
         premium: 'PREMIUM',
         mostPopular: 'POPULIARIAUSIA',
-        addOn: 'PRIEDAS'
+        recommended: 'REKOMENDUOJU GERIAUSIEMS REZULTATAMS'
       },
-      movementClarity: {
-        title: 'Judesio Aiškumo Sesija',
-        price: '60 €',
-        period: 'vienkartinis',
-        subtitle: 'Puikus startinis taškas',
-        features: [
-          'Išsamus judesių įvertinimas',
-          'Individualūs pratimų rekomenacijos',
-          'Traumų prevencijos strategijos',
-          'Aiškus veiksmų planas tobulinimui'
-        ],
-        buttonText: 'Rezervuoti Sesiją'
+      oneOnOneCoaching: {
+        title: '1-on-1 Coaching + Inner Shift',
+        icon: '🔹',
+        forWhom: 'Kam skirta: Žmonės, norintys nuoseklumo, aiškaus plano ir gilesnio įpročių keitimo.',
+        whatYouGet: 'Ką gauni: Asmeninės treniruotės 1×/sav., testavimas kas 3 mėn., elgesio keitimo ciklas 3 mėn. (mityba, stresas, poilsis), WhatsApp palaikymas.',
+        price: 'Kaina: 50 €/treniruotė + 300 € už 3 mėn. elgesio keitimo ciklą.',
+        innerShiftNote: 'Vidinis Pokytis (Inner Shift) parodyti tame pačiame bloke kaip priedą su užrašu: „Rekomenduoju geriausiems rezultatams".',
+        buttonText: 'Pradėti Transformaciją'
       },
-      bodyReset: {
-        title: 'Kūno Atstatymo Planas',
-        price: '200 €',
-        period: 'per mėnesį',
-        subtitle: '4 sesijos per mėnesį',
-        features: [
-          'Savaitinės 1-on-1 treniruočių sesijos',
-          'Individuali reabilitacijos programa',
-          'Pažangos stebėjimas ir koregavimai',
-          'WhatsApp palaikymas tarp sesijų'
-        ],
-        buttonText: 'Pradėti Atstatymą'
+      onlineTraining: {
+        title: 'Online Training + WhatsApp Support',
+        icon: '💻',
+        forWhom: 'Kam skirta: Žmonės, kurie nori lankstumo ir galimybės treniruotis namuose ar keliaudami.',
+        whatYouGet: 'Ką gauni: Individualiai pritaikyta programa, video instrukcijos, savaitiniai check-in\'ai, WhatsApp palaikymas.',
+        price: 'Kaina: 80 €/mėn.',
+        buttonText: 'Pradėti Online'
       },
-      strongGrounded: {
-        title: 'Stiprus ir Įsitvirtinęs',
-        price: '350 €',
-        period: 'per mėnesį',
-        subtitle: 'Pilnas transformacijos paketas',
-        features: [
-          'Du kartus per savaitę asmeninės treniruotės',
-          '3 mėnesių elgesio keitimo programa',
-          'Mitybos ir gyvenimo būdo koučingas',
-          'Išsamus pažangos stebėjimas'
-        ],
-        buttonText: 'Transformuotis Dabar'
+      rehabTraining: {
+        title: 'Rehab Training',
+        icon: '🏥',
+        forWhom: 'Kam skirta: Žmonės po traumų, operacijų ar su lėtiniais skausmais.',
+        whatYouGet: 'Ką gauni: Specializuota reabilitacijos programa, judesių analizė, skausmo mažinimo strategijos, reguliarūs vertinimai.',
+        price: 'Kaina: 60 €/sesija.',
+        buttonText: 'Pradėti Reabilitaciją'
       },
-      movementReset: {
-        title: 'Judesio Atstatymo Paketas',
-        price: '500 €',
-        period: '6 sesijos',
-        subtitle: 'Intensyvi korekcijos programa',
-        features: [
-          'Gili judesių šablonų analizė',
-          'Korekcinių pratimų protokolai',
-          'Rankinio terapijos metodai',
-          'Ilgalaikis palaikymo planas'
-        ],
-        buttonText: 'Atstatyti Judėjimą'
-      },
-      smallGroup: {
-        title: 'Mažos Grupės Treniruotės',
-        price: '160 €',
-        period: 'per mėnesį',
-        subtitle: '3-5 žmonių grupės',
-        features: [
-          'Pusiau privatios treniruotės aplinka',
-          'Grupės motyvacija ir palaikymas',
-          'Rotuojantys dėmesio sritys',
-          'Ekonomiškas variantas'
-        ],
+      smallGroupTraining: {
+        title: 'Small Group Training',
+        icon: '👥',
+        forWhom: 'Kam skirta: Žmonės, norintys treniruotis mažoje grupėje su panašiais tikslais.',
+        whatYouGet: 'Ką gauni: Treniruotės 2-4 žmonių grupėje, individualizuotas dėmesys, motyvuojanti aplinka, ekonomiška kaina.',
+        price: 'Kaina: 25 €/sesija.',
         buttonText: 'Prisijungti prie Grupės'
-      },
-      innerShift: {
-        title: 'Vidinio Pokyčio Priedas',
-        price: '300 €',
-        period: '3 mėnesių programa',
-        subtitle: 'Elgesio keitimo meistriškumas',
-        features: [
-          'Įpročių formavimo strategijos',
-          'Streso valdymo metodai',
-          'Miego optimizavimo gairės',
-          'Mąstymo koučingo sesijos'
-        ],
-        buttonText: 'Pridėti Vidinį Pokytį'
       }
     },
     process: {

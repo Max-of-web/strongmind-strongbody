@@ -42,85 +42,40 @@ const coaching = {
       badges: {
         premium: 'PREMIUM',
         mostPopular: 'MOST POPULAR',
-        addOn: 'ADD-ON'
+        recommended: 'RECOMMENDED FOR BEST RESULTS'
       },
-      movementClarity: {
-        title: 'Movement Clarity Session',
-        price: '€60',
-        period: 'one-time',
-        subtitle: 'Perfect starting point',
-        features: [
-          'Complete movement assessment',
-          'Personalized exercise recommendations',
-          'Injury prevention strategies',
-          'Clear action plan for improvement'
-        ],
-        buttonText: 'Book Session'
+      oneOnOneCoaching: {
+        title: '1-on-1 Coaching + Inner Shift',
+        icon: '🔹',
+        forWhom: 'For whom: People who want consistency, a clear plan, and deeper habit change.',
+        whatYouGet: 'What you get: Personal training 1×/week, testing every 3 months, 3-month behavior change cycle (nutrition, stress, rest), WhatsApp support.',
+        price: 'Price: €50/training + €300 for 3-month behavior change cycle.',
+        innerShiftNote: 'Inner Shift shown in the same block as an add-on with the label: "Recommended for best results".',
+        buttonText: 'Start Transformation'
       },
-      bodyReset: {
-        title: 'Body Reset Plan',
-        price: '€200',
-        period: 'per month',
-        subtitle: '4 sessions monthly',
-        features: [
-          'Weekly 1-on-1 training sessions',
-          'Customized rehabilitation program',
-          'Progress tracking and adjustments',
-          'WhatsApp support between sessions'
-        ],
-        buttonText: 'Start Reset'
+      onlineTraining: {
+        title: 'Online Training + WhatsApp Support',
+        icon: '💻',
+        forWhom: 'For whom: People who want flexibility and the ability to train at home or while traveling.',
+        whatYouGet: 'What you get: Individually tailored program, video instructions, weekly check-ins, WhatsApp support.',
+        price: 'Price: €80/month.',
+        buttonText: 'Start Online'
       },
-      strongGrounded: {
-        title: 'Strong & Grounded',
-        price: '€350',
-        period: 'per month',
-        subtitle: 'Complete transformation package',
-        features: [
-          'Bi-weekly personal training',
-          '3-month behavior change program',
-          'Nutrition and lifestyle coaching',
-          'Comprehensive progress monitoring'
-        ],
-        buttonText: 'Transform Now'
+      rehabTraining: {
+        title: 'Rehab Training',
+        icon: '🏥',
+        forWhom: 'For whom: People after injuries, surgeries, or with chronic pain.',
+        whatYouGet: 'What you get: Specialized rehabilitation program, movement analysis, pain reduction strategies, regular assessments.',
+        price: 'Price: €60/session.',
+        buttonText: 'Start Rehabilitation'
       },
-      movementReset: {
-        title: 'Movement Reset Package',
-        price: '€500',
-        period: '6 sessions',
-        subtitle: 'Intensive correction program',
-        features: [
-          'Deep movement pattern analysis',
-          'Corrective exercise protocols',
-          'Manual therapy techniques',
-          'Long-term maintenance plan'
-        ],
-        buttonText: 'Reset Movement'
-      },
-      smallGroup: {
+      smallGroupTraining: {
         title: 'Small Group Training',
-        price: '€160',
-        period: 'per month',
-        subtitle: '3-5 person groups',
-        features: [
-          'Semi-private training environment',
-          'Group motivation and support',
-          'Rotating focus areas',
-          'Cost-effective option'
-        ],
+        icon: '👥',
+        forWhom: 'For whom: People who want to train in a small group with similar goals.',
+        whatYouGet: 'What you get: Training in 2-4 person groups, individualized attention, motivating environment, economical price.',
+        price: 'Price: €25/session.',
         buttonText: 'Join Group'
-      },
-      innerShift: {
-        title: 'Inner Shift Add-On',
-        price: '€300',
-        period: '3-month program',
-        subtitle: 'Behavior change mastery',
-        features: [
-          'Habit formation strategies',
-          'Stress management techniques',
-          'Sleep optimization guidance',
-          'Mindset coaching sessions'
-        ],
-        buttonText: 'Add Inner Shift'
       }
     },
     process: {
