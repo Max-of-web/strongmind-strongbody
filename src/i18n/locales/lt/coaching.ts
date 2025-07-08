@@ -7,6 +7,36 @@ const coaching = {
       ctaButton: 'Registruotis į Treniruotę',
       ctaNote: 'Pirma sesija mokama – tai pradinio įvertinimo ir plano kūrimo sesija.'
     },
+    services: {
+      sectionTitle: 'Ką Gausi',
+      personalizedProgram: {
+        title: 'Individuali Programa',
+        description: 'Asmeninis treniruočių planas, pritaikytas tavo tikslams ir dabartiniam fiziniam pasiruošimui.'
+      },
+      weeklyAdjustments: {
+        title: 'Savaitiniai Koregavimai',
+        description: 'Reguliarūs programos atnaujinimai pagal tavo pažangą ir atsiliepimus.'
+      },
+      psychologicalSupport: {
+        title: 'Psichologinis Palaikymas',
+        description: 'Mentalinis koučingas, padedantis formuoti tvarūs įpročius ir įveikti barjerus.'
+      },
+      directCommunication: {
+        title: 'Tiesioginis Bendravimas',
+        description: 'WhatsApp palaikymas klausimams ir motyvacijai tarp sesijų.'
+      }
+    },
+    target: {
+      sectionTitle: 'Kam Skirta',
+      intro: 'Tai skirta žmonėms, kurie nori tikrų, ilgalaikių pokyčių savo sveikatoje ir fiziniame pasiruošime.',
+      description: 'Nesvarbu, ar atsigaunate po traumos, pradėdate fitneso kelionę, ar ieškote kaip pralaužti plato, mano metodas derina mokslu pagrįstus metodus su individualiu dėmesiu.',
+      audiences: [
+        'Žmonės, atsigaunantys po traumų ar operacijų',
+        'Pradedantieji, norintys tinkamo vadovavimo nuo pat pradžių',
+        'Patyrę asmenys, susidūrę su plato',
+        'Visi, ieškantys tvarių gyvenimo būdo pokyčių'
+      ]
+    },
     pricing: {
       sectionTitle: 'Paketai ir Kainos',
       badges: {
@@ -14,85 +44,135 @@ const coaching = {
         mostPopular: 'POPULIARIAUSIA',
         addOn: 'PRIEDAS'
       },
-      oneOnOne: {
-        title: '1-on-1 Coaching + Inner Shift',
-        price: '50 €/treniruotė + 300 € Inner Shift',
-        period: 'pagal poreikį',
-        forWho: {
-          title: 'Kam skirta:',
-          description: 'Žmonės, norintys nuoseklumo, aiškaus plano ir gilesnio įpročių keitimo.'
-        },
-        whatYouGet: {
-          title: 'Ką gauni:',
-          description: 'Asmeninės treniruotės 1×/sav., testavimas kas 3 mėn., elgesio keitimo ciklas 3 mėn. (mityba, stresas, poilsis), WhatsApp palaikymas.'
-        },
-        buttonText: 'Registruotis Dabar'
-      },
-      online: {
-        title: 'Online Training + WhatsApp Support',
+      movementClarity: {
+        title: 'Judesio Aiškumo Sesija',
         price: '60 €',
+        period: 'vienkartinis',
+        subtitle: 'Puikus startinis taškas',
+        features: [
+          'Išsamus judesių įvertinimas',
+          'Individualūs pratimų rekomenacijos',
+          'Traumų prevencijos strategijos',
+          'Aiškus veiksmų planas tobulinimui'
+        ],
+        buttonText: 'Rezervuoti Sesiją'
+      },
+      bodyReset: {
+        title: 'Kūno Atstatymo Planas',
+        price: '200 €',
         period: 'per mėnesį',
-        forWho: {
-          title: 'Kam skirta:',
-          description: 'Norintiems treniruotis savarankiškai, bet su profesionalia priežiūra.'
-        },
-        whatYouGet: {
-          title: 'Ką gauni:',
-          description: 'Individualus planas, savaitinis atnaujinimas, WhatsApp klausimams.'
-        },
-        buttonText: 'Pradėti Online'
+        subtitle: '4 sesijos per mėnesį',
+        features: [
+          'Savaitinės 1-on-1 treniruočių sesijos',
+          'Individuali reabilitacijos programa',
+          'Pažangos stebėjimas ir koregavimai',
+          'WhatsApp palaikymas tarp sesijų'
+        ],
+        buttonText: 'Pradėti Atstatymą'
       },
-      rehab: {
-        title: 'Rehab Training',
-        price: '60 €',
-        period: 'per sesiją',
-        forWho: {
-          title: 'Kam skirta:',
-          description: 'Žmonės po traumų ar operacijų, norintys atsigauti saugiai.'
-        },
-        whatYouGet: {
-          title: 'Ką gauni:',
-          description: '1×/sav. kineziterapija, EMS/TENS, testavimas, WhatsApp palaikymas.'
-        },
-        buttonText: 'Užsiregistruoti'
+      strongGrounded: {
+        title: 'Stiprus ir Įsitvirtinęs',
+        price: '350 €',
+        period: 'per mėnesį',
+        subtitle: 'Pilnas transformacijos paketas',
+        features: [
+          'Du kartus per savaitę asmeninės treniruotės',
+          '3 mėnesių elgesio keitimo programa',
+          'Mitybos ir gyvenimo būdo koučingas',
+          'Išsamus pažangos stebėjimas'
+        ],
+        buttonText: 'Transformuotis Dabar'
+      },
+      movementReset: {
+        title: 'Judesio Atstatymo Paketas',
+        price: '500 €',
+        period: '6 sesijos',
+        subtitle: 'Intensyvi korekcijos programa',
+        features: [
+          'Gili judesių šablonų analizė',
+          'Korekcinių pratimų protokolai',
+          'Rankinio terapijos metodai',
+          'Ilgalaikis palaikymo planas'
+        ],
+        buttonText: 'Atstatyti Judėjimą'
       },
       smallGroup: {
-        title: 'Small Group Training',
+        title: 'Mažos Grupės Treniruotės',
         price: '160 €',
         period: 'per mėnesį',
-        forWho: {
-          title: 'Kam skirta:',
-          description: 'Žmonės, norintys treniruotis grupėje ir turintys bazinį pasiruošimą.'
-        },
-        whatYouGet: {
-          title: 'Ką gauni:',
-          description: '3–5 žmonių grupė, rotuojamos temos (viso kūno, akcentuotos), motyvacija iš bendruomenės.'
-        },
+        subtitle: '3-5 žmonių grupės',
+        features: [
+          'Pusiau privatios treniruotės aplinka',
+          'Grupės motyvacija ir palaikymas',
+          'Rotuojantys dėmesio sritys',
+          'Ekonomiškas variantas'
+        ],
         buttonText: 'Prisijungti prie Grupės'
       },
       innerShift: {
-        title: 'Inner Shift (Vidinis Pokytis)',
-        description: 'Elgesio keitimo ciklas 3 mėn. (mityba, stresas, poilsis)',
-        recommendation: 'Rekomenduoju geriausiems rezultatams'
+        title: 'Vidinio Pokyčio Priedas',
+        price: '300 €',
+        period: '3 mėnesių programa',
+        subtitle: 'Elgesio keitimo meistriškumas',
+        features: [
+          'Įpročių formavimo strategijos',
+          'Streso valdymo metodai',
+          'Miego optimizavimo gairės',
+          'Mąstymo koučingo sesijos'
+        ],
+        buttonText: 'Pridėti Vidinį Pokytį'
       }
     },
-    application: {
-      title: 'Registracijos Forma',
-      subtitle: 'Užpildyk formą ir susisiekime dėl tinkamo plano',
-      form: {
-        firstName: 'Vardas',
-        lastName: 'Pavardė',
-        email: 'El. paštas',
-        phone: 'Telefono numeris',
-        experience: 'Sporto patirtis',
-        goals: 'Tikslai',
-        submit: 'Pateikti Paraišką',
-        submitting: 'Siunčiama...'
+    process: {
+      sectionTitle: 'Kaip Tai Veikia',
+      steps: [
+        {
+          number: '1',
+          title: 'Pradinis Įvertinimas',
+          description: 'Pradedame nuo išsamaus tavo dabartinės būklės, tikslų ir gyvenimo būdo įvertinimo.'
+        },
+        {
+          number: '2',
+          title: 'Individualizuotas Planas',
+          description: 'Remdamasis įvertinimu, sukuriu pritaikytą programą, kuri atitinka tavo specifinius poreikius.'
+        },
+        {
+          number: '3',
+          title: 'Reguliarios Sesijos',
+          description: 'Reguliariai susitiname treniruočių sesijoms, koreguodami programą pagal tavo pažangą.'
+        },
+        {
+          number: '4',
+          title: 'Nuolatinis Palaikymas',
+          description: 'Tarp sesijų turi prieigą prie vadovavimo ir palaikymo per WhatsApp.'
+        }
+      ]
+    },
+    testimonials: {
+      sectionTitle: 'Sėkmės Istorijos',
+      marta: {
+        quote: 'Po mėnesių nugaros skausmų, Paulius padėjo ne tik atsigauti, bet ir tapti stipresnei nei anksčiau. Jo metodas yra tiek mokslinis, tiek giliai asmeniškas.',
+        name: 'Marta K.'
       },
-      experienceOptions: {
-        beginner: 'Pradedantysis',
-        intermediate: 'Vidutinis',
-        advanced: 'Pažengęs'
+      jonas: {
+        quote: 'Fizinių treniruočių ir mąstymo darbo derinys buvo tiksliai tai, ko man reikėjo. Pagaliau turiu tvarūs įpročius, kurie išlieka.',
+        name: 'Jonas M.'
+      },
+      laura: {
+        quote: 'Profesionalus, žinantis ir nuoširdžiai rūpinantis. Paulius padėjo man grįžti į sportą po rimtos traumos.',
+        name: 'Laura S.'
+      },
+      tomas: {
+        quote: 'Grupės treniruotės sesijos yra nuostabios. Puiki energija, tinkamas vadovavimas ir puiki kaina.',
+        name: 'Tomas R.'
+      },
+      greta: {
+        quote: 'Vidinio Pokyčio programa pakeitė mano santykį su sportu ir mityba. Tai nebėra tik apie sporto salę.',
+        name: 'Greta V.'
+      },
+      andrius: {
+        quote: 'Aiškūs paaiškinimai, efektyvūs metodai ir nuolatinis palaikymas. Tiksliai to, ko ieškojau.',
+        name: 'Andrius P.'
       }
     },
     contact: {
