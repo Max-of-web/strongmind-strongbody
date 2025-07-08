@@ -3,7 +3,6 @@ import { useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import LowerBackGuide from '../components/LowerBackGuide';
-import PackagesSection from '../components/PackagesSection';
 import HeroSection from '../components/sections/HeroSection';
 import FeaturesSection from '../components/sections/FeaturesSection';
 import AchievementsSection from '../components/sections/AchievementsSection';
@@ -44,9 +43,6 @@ const Index = () => {
         <section id="free-guide">
           <LowerBackGuide />
         </section>
-
-        {/* Packages Section */}
-        <PackagesSection />
 
         <TestimonialsSection />
         <AboutSection />
