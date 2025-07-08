@@ -44,86 +44,60 @@ const coaching = {
     pricing: {
       sectionTitle: 'Paketai ir Kainos',
       badges: {
-        mostPopular: 'POPULIARIAUSIAS',
+        mostPopular: 'REKOMENDUOJAMA',
         addOn: 'PAPILDINYS'
       },
-      movementClarity: {
-        title: 'Movement Clarity Session',
-        price: '€65',
-        period: '1 sesija',
-        subtitle: 'Skausmui ar aiškiems kūno įžvalgoms - įvertinimas ir aiškūs prioritetai',
+      oneOnOneCoaching: {
+        title: '1-on-1 Treniruotės + Vidinis Pokytis',
+        price: '50 €',
+        period: 'per treniruotę',
+        subtitle: 'Žmonėms, kurie nori nuoseklumo, aiškaus plano ir gilesnio įpročių keitimo visam gyvenimui.',
         features: [
-          'Išsamus judesių įvertinimas',
-          'Skausmo priežasčių analizė',
-          'Aiškūs veiksmo prioritetai',
-          '+20€ planas jei reikia'
+          'Asmeninės treniruotės 1 k./sav. (arba pagal poreikį)',
+          'Testavimas kas 3 mėn.',
+          'Kasdienis WhatsApp palaikymas visiems klausimams',
+          'Vidinis Pokytis: 300 € už 3 mėn. elgesio keitimo ciklą'
         ],
-        buttonText: 'Užsakyti Sesiją'
+        buttonText: 'Užsakyti Treniruotę'
       },
-      bodyReset: {
-        title: 'Body Reset Plan',
-        price: '€60',
-        period: 'per sesiją',
-        subtitle: 'Saugus atsigavimas po traumos su kineziterapija, EMS/TENS, WhatsApp',
-        features: [
-          '1×/savaitę, 4-12 savaičių',
-          'Kineziterapijos metodai',
-          'EMS/TENS terapija',
-          'WhatsApp palaikymas'
-        ],
-        buttonText: 'Užsakyti Konsultaciją'
-      },
-      strongGrounded: {
-        title: 'Strong & Grounded',
-        price: '€50',
-        period: 'per sesiją',
-        subtitle: 'Įpročiai, motyvacija ir treniruočių struktūra',
-        features: [
-          '1×/savaitę, mėnesio narystė',
-          'Įpročių formavimas',
-          'Motyvacijos palaikymas',
-          'Treniruočių struktūra'
-        ],
-        buttonText: 'Užsakyti Konsultaciją'
-      },
-      movementReset: {
-        title: 'Movement Reset Package',
-        price: '€200',
-        period: '4 sesijos',
-        subtitle: 'Išmokti pagrindus ir savarankišką treniravimąsi su planu',
-        features: [
-          '4 treniruočių sesijos',
-          'Pagrindų išmokimas',
-          'Savarankiško treniravimosi planas',
-          'Technikos tobulinimas'
-        ],
-        buttonText: 'Užsakyti Paketą'
-      },
-      smallGroup: {
-        title: 'Small Group Training',
-        price: '€160',
+      onlineTraining: {
+        title: 'Online Treniruotės + WhatsApp Palaikymas',
+        price: '60 €',
         period: 'per mėnesį',
-        subtitle: 'Bendruomenė, motyvacija, mažesnė kaina',
+        subtitle: 'Tiems, kurie nori sportuoti savarankiškai, bet su aiškiu planu ir profesionalia priežiūra.',
         features: [
-          '3-5 žmonių grupė',
-          'Mėnesio narystė',
-          'Bendruomenės palaikymas',
-          'Motyvacija grupėje'
+          'Individualus treniruočių planas',
+          'Reguliarūs plano atnaujinimai',
+          'WhatsApp palaikymas trumpiems klausimams',
+          'Kad niekada neliktum vienas su iššūkiais'
+        ],
+        buttonText: 'Pradėti Treniruotis'
+      },
+      rehabTraining: {
+        title: 'Reabilitacinės Treniruotės',
+        price: '60 €',
+        period: 'per sesiją',
+        subtitle: 'Žmonėms po traumų ar operacijų ar esant skausmui, kurie nori atsigauti saugiai ir grįžti stipresni nei anksčiau.',
+        features: [
+          'Kineziterapija 1 k./sav.',
+          'EMS/TENS stimuliacija pagal poreikį, testavimas',
+          'Individualus pratimų planas',
+          'WhatsApp palaikymas, kai reikia patarimo'
+        ],
+        buttonText: 'Užsakyti Konsultaciją'
+      },
+      smallGroupTraining: {
+        title: 'Treniruotės Mažoje Grupėje',
+        price: '160 €',
+        period: 'per mėnesį',
+        subtitle: 'Tiems, kurie nori treniruotis grupėje ir jau turi bazinį fizinį pasirengimą.',
+        features: [
+          '2x treniruotės per savaitę',
+          '3–5 žmonių grupė',
+          'Viso kūno treniruotės, padedančios sustiprinti kūną',
+          'Tik 5 vietos grupėje — vietų skaičius ribotas!'
         ],
         buttonText: 'Prisijungti prie Grupės'
-      },
-      innerShift: {
-        title: 'Inner Shift Add-On',
-        price: '€300',
-        period: '3 mėnesių ciklas',
-        subtitle: 'Papildinys įpročių ir mitybos keitimui - rekomenduojama maksimaliems rezultatams',
-        features: [
-          '3 mėnesių įpročių ciklas',
-          'Mitybos gairės',
-          'Psichologinis palaikymas',
-          'Maksimalūs rezultatai'
-        ],
-        buttonText: 'Pridėti Papildinį'
       }
     },
     process: {

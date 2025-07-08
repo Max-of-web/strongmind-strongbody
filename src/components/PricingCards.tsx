@@ -10,48 +10,34 @@ const PricingCards = () => {
   };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {/* Movement Clarity Session */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {/* 1-on-1 Coaching + Inner Shift - Most Popular */}
       <PricingCard 
-        pricingKey="movementClarity" 
+        pricingKey="oneOnOneCoaching" 
         featureCount={4} 
+        isHighlighted={true}
         onBookingClick={openBookingLink} 
       />
 
-      {/* Body Reset Plan */}
+      {/* Online Training + WhatsApp Support - Recommended */}
       <PricingCard 
-        pricingKey="bodyReset" 
+        pricingKey="onlineTraining" 
         featureCount={4} 
+        isHighlighted={true}
         onBookingClick={openBookingLink} 
       />
 
-      {/* Strong & Grounded - Most Popular */}
+      {/* Rehab Training */}
       <PricingCard 
-        pricingKey="strongGrounded" 
-        featureCount={4} 
-        isHighlighted={true} 
-        onBookingClick={openBookingLink} 
-      />
-
-      {/* Movement Reset Package */}
-      <PricingCard 
-        pricingKey="movementReset" 
+        pricingKey="rehabTraining" 
         featureCount={4} 
         onBookingClick={openBookingLink} 
       />
 
       {/* Small Group Training */}
       <PricingCard 
-        pricingKey="smallGroup" 
+        pricingKey="smallGroupTraining" 
         featureCount={4} 
-        onBookingClick={openBookingLink} 
-      />
-
-      {/* Inner Shift Add-On */}
-      <PricingCard 
-        pricingKey="innerShift" 
-        featureCount={4} 
-        isAddOn={true} 
         onBookingClick={openBookingLink} 
       />
     </div>
