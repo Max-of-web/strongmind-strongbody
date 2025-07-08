@@ -44,44 +44,44 @@ const coaching = {
     pricing: {
       sectionTitle: 'Paketai ir Kainos',
       badges: {
-        mostPopular: 'REKOMENDUOJAMA',
+        recommended: 'REKOMENDUOJAMA',
         addOn: 'PAPILDINYS'
       },
       oneOnOneCoaching: {
         title: '1-on-1 Treniruotės + Vidinis Pokytis',
         price: '50 €',
-        period: 'per treniruotę',
-        subtitle: 'Žmonėms, kurie nori nuoseklumo, aiškaus plano ir gilesnio įpročių keitimo visam gyvenimui.',
+        period: 'per treniruotę (~200 €/mėn.)',
+        subtitle: 'Žmonėms, kurie nori nuoseklumo, aiškaus plano ir įpročių, kurie tikrai prigyja — tikroms, visam gyvenimui skirtoms permainoms.',
         features: [
-          'Asmeninės treniruotės 1 k./sav. (arba pagal poreikį)',
+          'Asmeninės treniruotės 1 k./sav.',
           'Testavimas kas 3 mėn.',
-          'Kasdienis WhatsApp palaikymas visiems klausimams',
-          'Vidinis Pokytis: 300 € už 3 mėn. elgesio keitimo ciklą'
+          'Kasdienis WhatsApp palaikymas visiems klausimams'
         ],
+        innerShift: 'Vidinis Pokytis: 300 € už 3 mėn. elgesio keitimo ciklą (Labai rekomenduojama geriausiam rezultatui — tavo įpročiai nežinos, kas juos užklupo!)',
         buttonText: 'Užsakyti Treniruotę'
       },
       onlineTraining: {
         title: 'Online Treniruotės + WhatsApp Palaikymas',
         price: '60 €',
         period: 'per mėnesį',
-        subtitle: 'Tiems, kurie nori sportuoti savarankiškai, bet su aiškiu planu ir profesionalia priežiūra.',
+        subtitle: 'Tiems, kurie nori sportuoti savarankiškai, bet nori profesionalaus palaikymo, struktūros ir tikros atskaitomybės.',
         features: [
           'Individualus treniruočių planas',
-          'Reguliarūs plano atnaujinimai',
-          'WhatsApp palaikymas trumpiems klausimams',
-          'Kad niekada neliktum vienas su iššūkiais'
+          'Savaitiniai plano atnaujinimai',
+          'WhatsApp palaikymas gretiems klausimams',
+          'Niekada nejauskis vienas, kai iškyla iššūkių'
         ],
         buttonText: 'Pradėti Treniruotis'
       },
       rehabTraining: {
         title: 'Reabilitacinės Treniruotės',
         price: '60 €',
-        period: 'per sesiją',
-        subtitle: 'Žmonėms po traumų ar operacijų ar esant skausmui, kurie nori atsigauti saugiai ir grįžti stipresni nei anksčiau.',
+        period: 'per sesiją (~240 €/mėn.)',
+        subtitle: 'Žmonėms, atsigaunantiems po traumos ar operacijos, kurie nori atsigauti saugiai ir grįžti stipresni nei anksčiau.',
         features: [
           'Kineziterapija 1 k./sav.',
           'EMS/TENS stimuliacija pagal poreikį, testavimas',
-          'Individualus pratimų planas',
+          'Individualizuotas reabilitacijos planas',
           'WhatsApp palaikymas, kai reikia patarimo'
         ],
         buttonText: 'Užsakyti Konsultaciją'
@@ -90,12 +90,12 @@ const coaching = {
         title: 'Treniruotės Mažoje Grupėje',
         price: '160 €',
         period: 'per mėnesį',
-        subtitle: 'Tiems, kurie nori treniruotis grupėje ir jau turi bazinį fizinį pasirengimą.',
+        subtitle: 'Tiems, kurie nori treniruotis mažoje grupėje ir jau turi bazinį fizinį pasirengimą.',
         features: [
-          '2x treniruotės per savaitę',
+          'Treniruotės 2 k./sav.',
           '3–5 žmonių grupė',
-          'Viso kūno treniruotės, padedančios sustiprinti kūną',
-          'Tik 5 vietos grupėje — vietų skaičius ribotas!'
+          'Kintantys akcentai (viso kūno, tikslinis treniravimas)',
+          'Tik 5 vietos grupėje — užsisakyk anksčiau!'
         ],
         buttonText: 'Prisijungti prie Grupės'
       }

@@ -2,9 +2,9 @@
 import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Star, Zap } from 'lucide-react';
 import PricingFeatureList from './PricingFeatureList';
 import { useTheme } from '@/hooks/useTheme';
-import BookingButton from './BookingButton';
 
 interface PricingCardProps {
   pricingKey: string;
@@ -64,7 +64,7 @@ const PricingCard = ({
     if (isAddOn) {
       return t('coaching.pricing.badges.addOn');
     } else if (isHighlighted) {
-      return t('coaching.pricing.badges.mostPopular');
+      return t('coaching.pricing.badges.recommended');
     }
     return null;
   };
@@ -84,14 +84,19 @@ const PricingCard = ({
     return {};
   };
 
+  // Check if this package has Inner Shift add-on
+  const hasInnerShift = pricingKey === 'oneOnOneCoaching';
+  const innerShiftText = hasInnerShift ? t(`coaching.pricing.${pricingKey}.innerShift`) : null;
+
   return (
     <Card style={getHighlightedCardStyle()} className="relative">
       {(isHighlighted || isAddOn) && (
         <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
           <Badge 
             style={getBadgeStyle()}
-            className="px-3 py-1 text-xs font-bold rounded-full"
+            className="px-3 py-1 text-xs font-bold rounded-full flex items-center gap-1"
           >
+            <Star size={12} />
             {getBadgeText()}
           </Badge>
         </div>
@@ -118,14 +123,20 @@ const PricingCard = ({
           featurePrefix={`coaching.pricing.${pricingKey}.features`} 
           featureCount={featureCount} 
         />
+        
+        {/* Inner Shift add-on for 1-on-1 coaching */}
+        {hasInnerShift && innerShiftText && (
+          <div className="mt-4 p-3 bg-theme-tangerine bg-opacity-10 rounded-lg border border-theme-tangerine border-opacity-30">
+            <div className="flex items-start gap-2">
+              <Zap size={16} className="text-theme-tangerine mt-0.5 shrink-0" />
+              <p className="text-sm text-gray-200 leading-relaxed">
+                {innerShiftText}
+              </p>
+            </div>
+          </div>
+        )}
       </CardContent>
-      <CardFooter>
-        <BookingButton 
-          onClick={onBookingClick}
-          buttonText={t(`coaching.pricing.${pricingKey}.buttonText`)}
-          packageType={pricingKey as any}
-        />
-      </CardFooter>
+      {/* Removed CardFooter with booking button as requested */}
     </Card>
   );
 };

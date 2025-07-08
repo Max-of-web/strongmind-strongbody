@@ -11,10 +11,10 @@ const PricingCards = () => {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-      {/* 1-on-1 Coaching + Inner Shift - Most Popular */}
+      {/* 1-on-1 Coaching + Inner Shift - Recommended */}
       <PricingCard 
         pricingKey="oneOnOneCoaching" 
-        featureCount={4} 
+        featureCount={3} 
         isHighlighted={true}
         onBookingClick={openBookingLink} 
       />
