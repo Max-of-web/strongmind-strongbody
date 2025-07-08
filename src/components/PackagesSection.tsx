@@ -1,29 +1,29 @@
 
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Star, Users, Heart, Dumbbell } from 'lucide-react';
+import { Star, Monitor, Heart, Users } from 'lucide-react';
 
 const PackagesSection = () => {
   const { t } = useTranslation();
 
   const packages = [
     {
-      key: 'oneOnOneCoaching',
+      key: 'oneOnOneTraining',
       icon: Star,
       highlight: true
     },
     {
-      key: 'onlineTraining',
-      icon: Dumbbell,
+      key: 'onlineProgram',
+      icon: Monitor,
       highlight: true
     },
     {
-      key: 'rehabTraining',
+      key: 'rehabilitation',
       icon: Heart,
       highlight: false
     },
     {
-      key: 'smallGroup',
+      key: 'smallGroupTraining',
       icon: Users,
       highlight: false
     }
@@ -67,19 +67,34 @@ const PackagesSection = () => {
               </div>
               
               <div className="space-y-4">
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  {t(`homepage.packages.${key}.forWho`)}
-                </p>
-                
-                <p className="text-gray-200 text-sm leading-relaxed">
-                  {t(`homepage.packages.${key}.whatYouGet`)}
-                </p>
-                
-                <div className={`text-2xl font-bold ${highlight ? 'text-theme-tangerine' : 'text-white'} pt-2`}>
-                  {t(`homepage.packages.${key}.price`)}
+                <div>
+                  <p className="text-gray-300 text-sm font-medium mb-2">
+                    Kam skirta:
+                  </p>
+                  <p className="text-gray-200 text-sm leading-relaxed">
+                    {t(`homepage.packages.${key}.forWho`)}
+                  </p>
                 </div>
                 
-                {key === 'oneOnOneCoaching' && (
+                <div>
+                  <p className="text-gray-300 text-sm font-medium mb-2">
+                    Ką gauni:
+                  </p>
+                  <p className="text-gray-200 text-sm leading-relaxed">
+                    {t(`homepage.packages.${key}.whatYouGet`)}
+                  </p>
+                </div>
+                
+                <div>
+                  <p className="text-gray-300 text-sm font-medium mb-2">
+                    Kaina:
+                  </p>
+                  <div className={`text-lg font-bold ${highlight ? 'text-theme-tangerine' : 'text-white'} whitespace-pre-line`}>
+                    {t(`homepage.packages.${key}.price`)}
+                  </div>
+                </div>
+                
+                {key === 'oneOnOneTraining' && (
                   <div className="bg-theme-tangerine bg-opacity-20 border border-theme-tangerine rounded-lg p-3 mt-4">
                     <p className="text-theme-tangerine text-sm font-medium">
                       💡 {t(`homepage.packages.${key}.innerShiftNote`)}

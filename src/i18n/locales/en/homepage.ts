@@ -68,31 +68,29 @@ const homepage = {
     },
     packages: {
       sectionTitle: 'Work With Me',
-      oneOnOneCoaching: {
-        title: '1-on-1 Coaching + Inner Shift',
+      oneOnOneTraining: {
+        title: '1-on-1 Training + Inner Shift',
         forWho: 'For people who want consistency, a clear plan, and deeper habit change.',
-        whatYouGet: 'Personal training 1×/week, testing every 3 months, 3-month behavior change cycle (nutrition, stress, rest), WhatsApp support.',
-        price: '€50/training + €300 for 3-month behavior change cycle',
-        innerShiftNote: 'Inner Shift recommended for best results',
-        highlight: true
+        whatYouGet: 'Personal training sessions, 3-month behavior change cycle (nutrition, stress, rest), WhatsApp support.',
+        price: '€50/session\n+ €300 for 3-month behavior change cycle (one-time fee)',
+        innerShiftNote: 'Inner Shift recommended for best results'
       },
-      onlineTraining: {
-        title: 'Online Training + WhatsApp Support',
+      onlineProgram: {
+        title: 'Online Program + WhatsApp Support',
         forWho: 'For those who want to train independently but with professional supervision.',
-        whatYouGet: 'Individual plan, weekly updates, WhatsApp for questions.',
-        price: '€60/month',
-        highlight: true
+        whatYouGet: 'Individual plan, weekly updates, WhatsApp access for questions.',
+        price: '€60/month'
       },
-      rehabTraining: {
-        title: 'Rehab Training',
+      rehabilitation: {
+        title: 'Rehabilitation',
         forWho: 'People after injuries or surgeries who want to recover safely.',
-        whatYouGet: '1×/week kinesitherapy, EMS/TENS, testing, WhatsApp support.',
+        whatYouGet: 'Kinesitherapy 1×/week, EMS/TENS, testing, WhatsApp support.',
         price: '€60/session'
       },
-      smallGroup: {
+      smallGroupTraining: {
         title: 'Small Group Training',
         forWho: 'People who want to train in a group and have basic preparation.',
-        whatYouGet: '3-5 person group, rotating themes (full body, targeted), motivation from community.',
+        whatYouGet: '3-5 person groups, rotating themes (full body, targeted), community motivation.',
         price: '€160/month'
       }
     },

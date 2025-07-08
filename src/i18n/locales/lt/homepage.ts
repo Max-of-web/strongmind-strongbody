@@ -68,31 +68,29 @@ const homepage = {
     },
     packages: {
       sectionTitle: 'Darbas Su Manimi',
-      oneOnOneCoaching: {
-        title: '1-on-1 Coaching + Inner Shift',
-        forWho: 'Kam skirta: Žmonės, norintys nuoseklumo, aiškaus plano ir gilesnio įpročių keitimo.',
-        whatYouGet: 'Ką gauni: Asmeninės treniruotės 1×/sav., testavimas kas 3 mėn., elgesio keitimo ciklas 3 mėn. (mityba, stresas, poilsis), WhatsApp palaikymas.',
-        price: '50 €/treniruotė + 300 € už 3 mėn. elgesio keitimo ciklą',
-        innerShiftNote: 'Vidinis Pokytis (Inner Shift) rekomenduojamas geriausiems rezultatams',
-        highlight: true
+      oneOnOneTraining: {
+        title: '1-on-1 Treniravimas + Vidinis Pokytis',
+        forWho: 'Žmonėms, norintiems nuoseklumo, aiškaus plano ir gilesnio įpročių keitimo.',
+        whatYouGet: 'Asmeninės treniruotės, elgesio keitimo ciklas 3 mėn. (mityba, stresas, poilsis), WhatsApp palaikymas.',
+        price: '50 €/treniruotė\n+ 300 € už 3 mėn. elgesio keitimo ciklą (vienkartinis mokestis)',
+        innerShiftNote: 'Vidinis Pokytis (Inner Shift) rekomenduojamas geriausiems rezultatams'
       },
-      onlineTraining: {
-        title: 'Online Training + WhatsApp Support',
-        forWho: 'Kam skirta: Norintiems treniruotis savarankiškai, bet su profesionalia priežiūra.',
-        whatYouGet: 'Ką gauni: Individualus planas, savaitinis atnaujinimas, WhatsApp klausimams.',
-        price: '60 €/mėn.',
-        highlight: true
+      onlineProgram: {
+        title: 'Online programa + WhatsApp palaikymas',
+        forWho: 'Norintiems treniruotis savarankiškai, bet su profesionalia priežiūra.',
+        whatYouGet: 'Individualus planas, savaitinis atnaujinimas, WhatsApp prieiga prie manęs klausimams.',
+        price: '60 €/mėn.'
       },
-      rehabTraining: {
-        title: 'Rehab Training',
-        forWho: 'Kam skirta: Žmonės po traumų ar operacijų, norintys atsigauti saugiai.',
-        whatYouGet: 'Ką gauni: 1×/sav. kineziterapija, EMS/TENS, testavimas, WhatsApp palaikymas.',
+      rehabilitation: {
+        title: 'Reabilitacija',
+        forWho: 'Žmonėms po traumų ar operacijų, norintiems atsigauti saugiai.',
+        whatYouGet: 'Kineziterapija 1×/sav., EMS/TENS, testavimas, WhatsApp palaikymas.',
         price: '60 €/sesija'
       },
-      smallGroup: {
-        title: 'Small Group Training',
-        forWho: 'Kam skirta: Žmonės, norintys treniruotis grupėje ir turintys bazinį pasiruošimą.',
-        whatYouGet: 'Ką gauni: 3–5 žmonių grupė, rotuojamos temos (viso kūno, akcentuotos), motyvacija iš bendruomenės.',
+      smallGroupTraining: {
+        title: 'Treniruotės mažose grupėse',
+        forWho: 'Žmonėms, norintiems treniruotis grupėje ir turintiems bazinį pasiruošimą.',
+        whatYouGet: '3–5 žmonių grupė, rotuojamos temos (viso kūno, akcentuotos), motyvacija iš bendruomenės.',
         price: '160 €/mėn.'
       }
     },
