@@ -1,78 +1,43 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap');
 
-/* CSS Variables - Dark theme */
+/* CSS Variables - Light theme only */
 :root {
-  --background: 0 0% 4%;
-  --foreground: 0 0% 100%;
+  /* Light theme colors */
+  --background: 0 0% 100%;
+  --foreground: 0 0% 3.9%;
 
-  --card: 0 0% 8%;
-  --card-foreground: 0 0% 100%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 3.9%;
 
-  --popover: 0 0% 8%;
-  --popover-foreground: 0 0% 100%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 3.9%;
 
   --primary: 217 91% 60%;
-  --primary-foreground: 0 0% 100%;
+  --primary-foreground: 0 0% 98%;
 
-  --secondary: 0 0% 12%;
-  --secondary-foreground: 0 0% 100%;
+  --secondary: 0 0% 96.1%;
+  --secondary-foreground: 0 0% 9%;
 
   --accent: 217 91% 60%;
-  --accent-foreground: 0 0% 100%;
+  --accent-foreground: 0 0% 9%;
 
   --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 0 0% 100%;
+  --destructive-foreground: 0 0% 98%;
 
-  --border: 0 0% 22%;
-  --input: 0 0% 22%;
+  --border: 0 0% 89.8%;
+  --input: 0 0% 89.8%;
   --ring: 217 91% 60%;
 
   --radius: 0.5rem;
 
-  --sidebar-background: 0 0% 4%;
-  --sidebar-foreground: 0 0% 100%;
+  --sidebar-background: 0 0% 98%;
+  --sidebar-foreground: 0 0% 3.9%;
   --sidebar-primary: 217 91% 60%;
-  --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 0 0% 12%;
-  --sidebar-accent-foreground: 0 0% 100%;
-  --sidebar-border: 0 0% 22%;
-  --sidebar-ring: 217 91% 60%;
-}
-
-.dark {
-  --background: 0 0% 4%;
-  --foreground: 0 0% 100%;
-
-  --card: 0 0% 8%;
-  --card-foreground: 0 0% 100%;
-
-  --popover: 0 0% 8%;
-  --popover-foreground: 0 0% 100%;
-
-  --primary: 217 91% 60%;
-  --primary-foreground: 0 0% 100%;
-
-  --secondary: 0 0% 12%;
-  --secondary-foreground: 0 0% 100%;
-
-  --accent: 217 91% 60%;
-  --accent-foreground: 0 0% 100%;
-
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 0 0% 100%;
-
-  --border: 0 0% 22%;
-  --input: 0 0% 22%;
-  --ring: 217 91% 60%;
-  
-  --sidebar-background: 0 0% 4%;
-  --sidebar-foreground: 0 0% 100%;
-  --sidebar-primary: 217 91% 60%;
-  --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 0 0% 12%;
-  --sidebar-accent-foreground: 0 0% 100%;
-  --sidebar-border: 0 0% 22%;
+  --sidebar-primary-foreground: 0 0% 98%;
+  --sidebar-accent: 0 0% 96.1%;
+  --sidebar-accent-foreground: 0 0% 9%;
+  --sidebar-border: 0 0% 89.8%;
   --sidebar-ring: 217 91% 60%;
 }
 
@@ -94,7 +59,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Component styles */
 .hero-section {
-  min-height: 85vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -363,7 +328,7 @@ h4 {
   }
 }
 
-/* Feature cards with dark theme */
+/* Feature cards */
 .feature-card-dark {
   color: #FFFFFF;
   background-color: #1F2937;

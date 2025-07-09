@@ -2,7 +2,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import { ThemeProvider } from './contexts/ThemeContext';
 import './App.css'; // Tailwind directives
 import './index.css'; // Custom styles
 import { I18nextProvider } from 'react-i18next';
@@ -16,10 +15,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
       <I18nextProvider i18n={i18n}>
-        <ThemeProvider>
-          <App />
-          <Toaster position="top-right" richColors closeButton />
-        </ThemeProvider>
+        <App />
+        <Toaster position="top-right" richColors closeButton />
       </I18nextProvider>
     </QueryClientProvider>
   </React.StrictMode>,
