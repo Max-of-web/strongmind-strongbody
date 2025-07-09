@@ -65,7 +65,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(to bottom, rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.95)), url('/lovable-uploads/b4413382-3998-4c2e-a754-75a067048c2d.png');
+  background: linear-gradient(to bottom, rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.8)), url('/lovable-uploads/c001e4d7-57ea-4185-b82b-b4d66829facf.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -84,6 +84,7 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
 }
 
+/* ... keep existing code (section-padding, container-width, button styles, etc.) */
 .section-padding {
   padding-top: 4rem;
   padding-bottom: 4rem;
