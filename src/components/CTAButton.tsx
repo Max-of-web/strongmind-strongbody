@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useTheme } from '@/hooks/useTheme';
 
 interface CTAButtonProps {
   children: React.ReactNode;
@@ -28,8 +27,6 @@ const CTAButton: React.FC<CTAButtonProps> = ({
   isWhatsApp = false,
   navyBg = false,
 }) => {
-  const { theme } = useTheme();
-
   const baseClasses =
     'inline-flex items-center justify-center px-6 py-3 rounded-md font-bold transition-all duration-300 text-base';
   

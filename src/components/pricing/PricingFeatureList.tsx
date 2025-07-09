@@ -1,7 +1,6 @@
 
 import { Check } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { useTheme } from '@/hooks/useTheme';
 
 interface PricingFeatureListProps {
   featurePrefix: string;
@@ -10,7 +9,6 @@ interface PricingFeatureListProps {
 
 const PricingFeatureList = ({ featurePrefix, featureCount }: PricingFeatureListProps) => {
   const { t } = useTranslation();
-  const { theme } = useTheme();
 
   // Define check icon style with deep blue color
   const checkIconStyle = {
@@ -27,9 +25,7 @@ const PricingFeatureList = ({ featurePrefix, featureCount }: PricingFeatureListP
         t(`${featurePrefix}.${index}`) ? (
           <li key={index} className="flex items-start">
             <Check style={checkIconStyle} />
-            <span style={{ 
-              color: theme === 'dark' ? 'white' : 'white' 
-            }}>
+            <span className="text-white">
               {t(`${featurePrefix}.${index}`)}
             </span>
           </li>

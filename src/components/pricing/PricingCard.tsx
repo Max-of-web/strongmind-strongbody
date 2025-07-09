@@ -4,7 +4,6 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 import { Badge } from '@/components/ui/badge';
 import { Star, Zap } from 'lucide-react';
 import PricingFeatureList from './PricingFeatureList';
-import { useTheme } from '@/hooks/useTheme';
 
 interface PricingCardProps {
   pricingKey: string;
@@ -22,7 +21,6 @@ const PricingCard = ({
   onBookingClick 
 }: PricingCardProps) => {
   const { t } = useTranslation();
-  const { theme } = useTheme();
 
   // Get correct card style based on new color scheme
   const getCardStyle = () => {
