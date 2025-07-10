@@ -21,6 +21,12 @@ const Header = () => {
     };
   }, []);
 
+  const handleHomeClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setIsMenuOpen(false);
+  };
+
   return (
     <header 
       className={`fixed w-full z-50 transition-all duration-300 ${
@@ -33,6 +39,7 @@ const Header = () => {
         <Link 
           to="/" 
           className="text-white font-display text-lg md:text-xl lg:text-2xl font-bold hover:text-opacity-80 transition-all z-10"
+          onClick={handleHomeClick}
         >
           Paulius<span className="text-theme-gold text-lg md:text-xl lg:text-2xl font-bold">Lipskis</span>
         </Link>
@@ -43,6 +50,7 @@ const Header = () => {
             <Link 
               to="/" 
               className="text-white hover:text-theme-gold transition-colors"
+              onClick={handleHomeClick}
             >
               {t('header.home')}
             </Link>
@@ -91,7 +99,7 @@ const Header = () => {
             <Link 
               to="/" 
               className="text-white hover:text-theme-gold transition-colors py-2 text-lg" 
-              onClick={() => setIsMenuOpen(false)}
+              onClick={handleHomeClick}
             >
               {t('header.home')}
             </Link>
@@ -108,13 +116,9 @@ const Header = () => {
               className="w-full justify-center mt-4"
               onClick={() => setIsMenuOpen(false)}
             >
-              <a 
-                href="https://calendar.app.google/LU6UdzQr53kmsKjc6" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
+              <Link to="/coaching#contact-section">
                 {t('header.bookCall')}
-              </a>
+              </Link>
             </Button>
           </nav>
         </div>
