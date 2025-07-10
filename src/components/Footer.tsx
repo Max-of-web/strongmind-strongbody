@@ -8,11 +8,6 @@ import CTAButton from './CTAButton';
 const Footer = () => {
   const { t } = useTranslation();
 
-  const handleHomeClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   return (
     <footer className="bg-theme-navy dark:bg-theme-darknavy text-white">
       <div className="container-width px-4 md:px-8 py-12">
@@ -84,7 +79,6 @@ const Footer = () => {
               <Link 
                 to="/" 
                 className="flex items-center space-x-3 text-white hover:text-theme-tangerine transition-colors duration-200 group"
-                onClick={handleHomeClick}
               >
                 <Home size={20} className="text-theme-tangerine flex-shrink-0" />
                 <span className="group-hover:text-theme-tangerine font-medium">{t('footer.home')}</span>
@@ -103,7 +97,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="border-t border-white border-opacity-20 mt-12 pt-8 text-center">
           <p className="text-sm text-gray-300">
-            © 2025 Paulius Lipskis. {t('footer.rights')}
+            © 2024 Paulius Lipskis. {t('footer.rights')}
           </p>
         </div>
       </div>
