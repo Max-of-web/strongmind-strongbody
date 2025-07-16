@@ -27,7 +27,7 @@ const LowerBackGuide = () => {
   // Get the benefits array from translations with fallback
   let benefits: string[] = [];
   try {
-    const benefitsData = t('cta.freeGuide.benefits', { returnObjects: true });
+    const benefitsData = t('homepage.lowerBackGuide.benefits', { returnObjects: true });
     benefits = Array.isArray(benefitsData) ? benefitsData : [];
   } catch (error) {
     console.error('Error loading benefits:', error);
@@ -48,10 +48,10 @@ const LowerBackGuide = () => {
           {/* Left column - Guide information */}
           <div className="md:w-1/2 bg-white dark:bg-slate-800 rounded-md shadow-md px-[35px] py-[30px]">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-800 dark:text-white">
-              {t('cta.freeGuide.title')}
+              {t('homepage.lowerBackGuide.sectionTitle')}
             </h2>
             <p className="mb-6 text-slate-700 dark:text-slate-200 text-lg">
-              {t('cta.freeGuide.description')}
+              {t('homepage.lowerBackGuide.intro')}
             </p>
             
             <ul className="space-y-4 mb-8">
@@ -65,7 +65,7 @@ const LowerBackGuide = () => {
 
             <div className="flex items-center text-sm mt-10 border-t border-slate-200 dark:border-slate-700 pt-4">
               <Shield size={18} className="mr-2 text-theme-tangerine" />
-              <span className="text-slate-600 dark:text-slate-300">{t('emailSubscription.privacyText')}</span>
+              <span className="text-slate-600 dark:text-slate-300">{t('homepage.lowerBackGuide.privacyNote')}</span>
             </div>
           </div>
 
@@ -73,10 +73,10 @@ const LowerBackGuide = () => {
           <div className="md:w-1/2">
             <div className="h-full flex flex-col bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-md shadow-md p-6">
               <h3 className="text-2xl font-semibold mb-4 text-slate-800 dark:text-white">
-                {t('emailSubscription.title')}
+                {t('homepage.lowerBackGuide.sectionTitle')}
               </h3>
               <p className="mb-6 text-slate-700 dark:text-slate-200">
-                {t('emailSubscription.description')}
+                {t('homepage.lowerBackGuide.intro')}
               </p>
 
               <form onSubmit={handleSubmit} className="flex flex-col space-y-4 mt-auto">
@@ -97,11 +97,11 @@ const LowerBackGuide = () => {
                   variant="cta"
                   className="w-full px-4 py-3 h-auto"
                 >
-                  {isSubmitting ? t('emailSubscription.sending') : t('emailSubscription.button')}
+                  {isSubmitting ? 'Siunčiama...' : t('homepage.lowerBackGuide.buttonText')}
                 </Button>
 
                 <p className="text-xs text-slate-600 dark:text-slate-400 mt-2">
-                  {t('emailSubscription.disclaimerText')}
+                  {t('homepage.lowerBackGuide.disclaimer')}
                 </p>
               </form>
             </div>

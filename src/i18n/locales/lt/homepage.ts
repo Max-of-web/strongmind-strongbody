@@ -28,6 +28,7 @@ const homepage = {
     },
     achievements: {
       sectionTitle: 'Kas tavęs laukia',
+      subtitle: 'Nuoseklaus vedimo, protingo judėjimo ir praktinių mąstysenos pokyčių dėka aš padedu žmonėms perimti kontrolę. Čia ne apie tobulumą. Čia apie tai, kad atsiradiis vienu tikru žingsniu vienu metu.',
       items: [
         'Mažiau skausmo ir diskomforto dėl taisyklingo judėjimo',
         'Treniruotės, pritaikytos prie tavo energijos ir progreso',
@@ -72,6 +73,20 @@ const homepage = {
       finalButtonText: 'Užsiregistruok treniruotei', 
       whatsappMessage: 'Trumpi klausimai? Parašyk WhatsApp.',
       whatsappNote: 'WhatsApp skirtas tik trumpiems klausimams — ne registracijai.'
+    },
+    lowerBackGuide: {
+      sectionTitle: 'Gauk nemokamą gidą dabar',
+      intro: 'Įvesk el. paštą ir iš karto gauk „Išspręsk nugaros problemas 7 žingsniais" PDF gidą.',
+      benefits: [
+        'Mažiau skausmo ir diskomforto dėl taisyklingo judėjimo',
+        'Protingesnis treniruočių požiūris, prisitaikantis prie tavo energijos',
+        'Tvarūs įpročiai, kurie tinka tavo gyvenimo būdui',
+        'Stipresnis kūno suvokimas ir ryšys',
+        'Didesnis pasitikėjimas savo judėjimo gebėjimais'
+      ],
+      privacyNote: 'Tavo el. paštas saugus su manimi. Niekad nedalinsiuosi juo su kitais.',
+      buttonText: 'Atsisiųsti nemokamą gidą',
+      disclaimer: 'Pateikdamas duomenis, sutinki gauti PDF gidą el. paštu. Gali atsisitrakinti bet kada.'
     }
   }
 };

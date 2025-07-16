@@ -19,7 +19,7 @@ const lt = {
     locations: "Vietos",
     location1: "Vilnius, Re.formatas, Ąžuolyno g. 7",
     quickLinks: "Greitos nuorodos",
-    home: "Pagrindinis",
+    home: "Pradžia",
     training: "Treniruotės",
     rights: "Visos teisės saugomos."
   },

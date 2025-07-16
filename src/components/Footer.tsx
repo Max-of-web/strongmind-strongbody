@@ -76,13 +76,13 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-semibold mb-6 text-white">{t('footer.quickLinks')}</h3>
             <div className="space-y-4">
-              <Link 
-                to="/" 
+              <button 
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 className="flex items-center space-x-3 text-white hover:text-theme-tangerine transition-colors duration-200 group"
               >
                 <Home size={20} className="text-theme-tangerine flex-shrink-0" />
                 <span className="group-hover:text-theme-tangerine font-medium">{t('footer.home')}</span>
-              </Link>
+              </button>
               <Link 
                 to="/coaching" 
                 className="flex items-center space-x-3 text-white hover:text-theme-tangerine transition-colors duration-200 group"
@@ -97,7 +97,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="border-t border-white border-opacity-20 mt-12 pt-8 text-center">
           <p className="text-sm text-gray-300">
-            © 2024 Paulius Lipskis. {t('footer.rights')}
+            © 2025 Paulius Lipskis. {t('footer.rights')}
           </p>
         </div>
       </div>

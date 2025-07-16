@@ -16,7 +16,7 @@ const AchievementsSection = () => {
           <div className="md:w-1/2 scroll-fade-in">
             <h2 className="section-title">{t('homepage.achievements.sectionTitle')}</h2>
             <p className="mb-6">
-              "{t('homepage.hero.subtitle')}"
+              "{t('homepage.achievements.subtitle')}"
             </p>
             <ul className="space-y-4">
               {achievementsArray.map((item: string, idx: number) => (

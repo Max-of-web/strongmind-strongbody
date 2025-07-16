@@ -103,18 +103,17 @@ const Header = () => {
               {t('header.coaching')}
             </Link>
             <Button 
-              asChild
               variant="cta"
               className="w-full justify-center mt-4"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={() => {
+                setIsMenuOpen(false);
+                const emailForm = document.getElementById('free-guide');
+                if (emailForm) {
+                  emailForm.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
             >
-              <a 
-                href="https://calendar.app.google/LU6UdzQr53kmsKjc6" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                {t('header.bookCall')}
-              </a>
+              {t('header.bookCall')}
             </Button>
           </nav>
         </div>
