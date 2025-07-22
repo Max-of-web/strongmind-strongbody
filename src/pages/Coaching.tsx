@@ -226,7 +226,7 @@ const Coaching = () => {
           <div className="container-width">
             <div className="text-center mb-12 scroll-fade-in">
               <h2 className="section-title mx-auto after:left-1/2 after:-translate-x-1/2">
-                {t('coaching.testimonials.sectionTitle')}
+                {t('homepage.testimonials.sectionTitle')}
               </h2>
             </div>
             
@@ -243,47 +243,14 @@ const Coaching = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="scroll-fade-in">
-                <TestimonialCard 
-                  quote={t('coaching.testimonials.marta.quote')}
-                  name={t('coaching.testimonials.marta.name')}
-                />
-              </div>
-              
-              <div className="scroll-fade-in">
-                <TestimonialCard 
-                  quote={t('coaching.testimonials.jonas.quote')}
-                  name={t('coaching.testimonials.jonas.name')}
-                />
-              </div>
-              
-              <div className="scroll-fade-in">
-                <TestimonialCard 
-                  quote={t('coaching.testimonials.laura.quote')}
-                  name={t('coaching.testimonials.laura.name')}
-                />
-              </div>
-              
-              <div className="scroll-fade-in">
-                <TestimonialCard 
-                  quote={t('coaching.testimonials.tomas.quote')}
-                  name={t('coaching.testimonials.tomas.name')}
-                />
-              </div>
-              
-              <div className="scroll-fade-in">
-                <TestimonialCard 
-                  quote={t('coaching.testimonials.greta.quote')}
-                  name={t('coaching.testimonials.greta.name')}
-                />
-              </div>
-              
-              <div className="scroll-fade-in">
-                <TestimonialCard 
-                  quote={t('coaching.testimonials.andrius.quote')}
-                  name={t('coaching.testimonials.andrius.name')}
-                />
-              </div>
+              {(t('homepage.testimonials.testimonials', { returnObjects: true }) as any[]).map((testimonial, index: number) => (
+                <div key={index} className="scroll-fade-in">
+                  <TestimonialCard 
+                    quote={testimonial.quote}
+                    name={testimonial.name}
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </section>
