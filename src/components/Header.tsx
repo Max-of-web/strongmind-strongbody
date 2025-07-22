@@ -60,13 +60,11 @@ const Header = () => {
               asChild
               variant="cta"
             >
-              <a 
-                href="https://calendar.app.google/LU6UdzQr53kmsKjc6" 
-                target="_blank" 
-                rel="noopener noreferrer"
+              <Link 
+                to="/coaching#contact-section"
               >
                 {t('header.bookCall')}
-              </a>
+              </Link>
             </Button>
           </div>
         </nav>
@@ -104,18 +102,13 @@ const Header = () => {
             >
               {t('header.coaching')}
             </Link>
-            <button 
+            <Link
+              to="/coaching#contact-section"
               className="w-full justify-center mt-4 inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white bg-gradient-to-r from-amber-600 to-yellow-500 rounded-lg shadow-lg hover:from-amber-700 hover:to-yellow-600 transition-all duration-300 transform hover:scale-105"
-              onClick={() => {
-                setIsMenuOpen(false);
-                const emailForm = document.getElementById('free-guide');
-                if (emailForm) {
-                  emailForm.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
+              onClick={() => setIsMenuOpen(false)}
             >
               {t('header.bookCall')}
-            </button>
+            </Link>
           </nav>
         </div>
       )}
