@@ -3,7 +3,6 @@ import { useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import LowerBackGuide from '../components/LowerBackGuide';
-import ApplicationForm from '../components/ApplicationForm';
 import HeroSection from '../components/sections/HeroSection';
 import FeaturesSection from '../components/sections/FeaturesSection';
 import AchievementsSection from '../components/sections/AchievementsSection';
@@ -47,14 +46,6 @@ const Index = () => {
 
         <TestimonialsSection />
         <AboutSection />
-        
-        {/* Coaching Application Form */}
-        <section id="coaching-form" className="py-16 bg-elegant-dark">
-          <div className="container-width px-4">
-            <ApplicationForm />
-          </div>
-        </section>
-        
         <FinalCTASection />
         <WhatsAppCTASection />
       </main>
