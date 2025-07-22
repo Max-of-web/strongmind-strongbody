@@ -106,7 +106,7 @@ const homepage = {
     },
     lowerBackGuide: {
       sectionTitle: 'Get Your Free Back Pain Guide',
-      intro: '',
+      intro: 'This short and clear guide gives you the most important facts and 7 simple steps to better understand your pain and what you can do yourself.',
       benefits: [
         'Why most back pain isn\'t dangerous',
         'Why movement and even short walks matter',
