@@ -41,43 +41,43 @@ const homepage = {
       sectionTitle: 'Ką sako klientai',
       testimonials: [
         {
-          quote: "Prieš pradėdama dirbti su Pauliumi, jau buvau praradusi viltį rasti sprendimą savo vis pasikartojančiam nugaros skausmui. Jo požiūris sujungia dėmesį į atlikimo formą su įžvalgomis apie psichologinę skausmo pusę. Dabar galiu sportuoti be baimės ir vėl jaučiu pasitikėjimą savo kūnu.",
+          quote: "Prieš pradėdama dirbti su Pauliumi, buvau praradusi viltį dėl nugaros skausmo. Jis ne tik padėjo išmokti taisyklingai judėti, bet ir padėjo suprasti, kaip skausmas susijęs su emocijomis. Dabar sportuoju be baimės ir vėl jaučiu, kad galiu pasitikėti savo kūnu.",
           name: 'Marta S.'
         },
         {
-          quote: "Paulius supranta, kad progresas nėra tiesi linija. Kai man trūko nuoseklumo, jis nevertė manęs jaustis kaltu — vietoj to padėjo atpažinti, kas man trukdo, ir rasti man tinkamą kelią į priekį. Būtent šis požiūrio pokytis man padėjo pagaliau išlikti nuosekliam.",
+          quote: "Man dažnai trūkdavo nuoseklumo. Buvau įpratęs save kaltinti, bet Paulius parodė, kad galima kitaip – jis padėjo suprasti, kas man trukdo, ir rasti būdą, kuris veikia būtent man. Tas požiūris viską pakeitė.",
           name: 'Jonas R.'
         },
         {
-          quote: "Kaip žmogus, kuris yra išbandęs daug asmeninių trenerių, drąsiai galiu pasakyti, kad Pauliaus metodas — kitoks. Jo dėmesys įpročiams ir mažiems, nuosekliems pokyčiams visiškai pakeitė mano požiūrį į sportą.",
+          quote: "Esu išbandžiusi daug trenerių, bet Paulius – visiškai kitoks. Jis moko ne spausti save, o keisti įpročius po truputį. Pirmą kartą sportas tapo kažkuo, kas man tinka.",
           name: 'Laura K.'
         },
         {
-          quote: "Labai vertinu, kaip Paulius pritaikė mano programą ypač įtemptais darbo laikotarpiais. Vietoj to, kad spaustų išlaikyti tą patį intensyvumą, jis pakeitė treniruotes taip, kad galėčiau atsigauti, bet nenustočiau judėti pirmyn. Būtent šis lankstumas padarė didžiausią skirtumą.",
+          quote: "Kai darbe buvo įtemptas laikotarpis, Paulius neprašė spausti per jėgą. Priešingai – pritaikė treniruotes taip, kad galėčiau atsigauti ir vis tiek judėti pirmyn. Toks lankstumas man labai daug reiškė.",
           name: 'Tomas B.'
         },
         {
-          quote: "Po traumos bijojau save spausti. Paulius pamažu atkūrė mano pasitikėjimą per mažus iššūkius. Jo žinios apie reabilitaciją sukūrė tobulą aplinką man atsistatyti.",
+          quote: "Po traumos labai bijojau vėl pradėti judėti. Paulius viską darė palaipsniui – per mažus iššūkius grąžino man pasitikėjimą. Jaučiausi saugiai, nes jis tikrai supranta reabilitaciją.",
           name: 'Greta M.'
         },
         {
-          quote: "Sporto ir požiūrio koučingo derinys buvo tikrai puikus. Pasiekiau fizinius tikslus, kurių niekada negalvojau, kad pasieksiu, bet dar svarbiau — susikūriau santykį su sportu, kurį galiu palaikyti visą gyvenimą.",
+          quote: "Su Pauliumi pasiekiau tikslų, kurių anksčiau net nesvajojau pasiekti. Bet svarbiausia – jis padėjo susikurti tokį santykį su sportu, kuris man tinka ir kurį galiu palaikyti ilgai.",
           name: 'Andrius P.'
         },
         {
-          quote: "Paulius įsigilino į mano nugaros skausmą kaip niekas iki tol. Jo požiūris metodiškas, bet kartu lankstus, ir per 3 mėnesius pasiekiau daugiau nei per daugelį metų tradicinės terapijos.",
+          quote: "Paulius pirmas, kuris į mano nugaros skausmą pažiūrėjo rimtai ir iš visų pusių. Per tris mėnesius pasiekiau daugiau nei per kelerius metus terapijų.",
           name: 'Laura K.'
         },
         {
-          quote: "Tai, kas Paulių išskiria iš kitų — tai, kaip jis prisitaiko prie tavo nuotaikos ir energijos. Vieną dieną dirbame intensyviai, kitą — susitelkiame į techniką. Visada produktyvu ir niekada nejauti, kad laikas iššvaistytas.",
+          quote: "Labiausiai vertinu tai, kaip Paulius prisitaiko. Vieną dieną dirbam rimtai, kitą – susitelkiam į techniką. Visada jaučiu, kad laikas išnaudotas prasmingai.",
           name: 'Tomas B.'
         },
         {
-          quote: "Psichologinė jo koučingo dalis buvo netikėta, bet būtent to man reikėjo. Ne tik fiziškai sustiprėjau, bet ir susikūriau sveikesnį santykį su sportu.",
+          quote: "Labai nustebino psichologinė jo darbo pusė – bet kaip tik to man reikėjo. Ne tik sustiprėjau fiziškai, bet ir atsirado sveikesnis santykis su sportu.",
           name: 'Milda P.'
         },
         {
-          quote: "Pradėjęs dirbti su Pauliumi, išmokau labiau stebėti savo kūną, jo padėtį, laikyseną ir emocinę būklę. Tai padėjo suprasti, ką galiu taisyti ir tobulinti kasdien. Labiausiai įstrigo jo įkvepiantis požiūris, kad galiu sau padėti — tai suteikė man daug pasitikėjimo. Didelį skirtumą padarė ir nuolatinis ryšys: visada žinojau, kad gausiu atsakymus į visus klausimus, todėl jaučiausi motyvuotas ir ne vienas. Dabar labiausiai džiaugiuosi, kad sumažėjo skausmas, labiau pasitikiu savimi ir žinau, kaip saugiai judėti",
+          quote: "Dirbdamas su Pauliumi pradėjau geriau jausti savo kūną – ir fizinę, ir emocinę būklę. Jis man padėjo suprasti, kad galiu sau padėti. Visada žinojau, kad jei kils klausimų – nepaliks vieno. Dabar mažiau skauda, labiau pasitikiu savimi ir žinau, kaip saugiai judėti.",
           name: 'Aleksandras T.'
         }
       ],
