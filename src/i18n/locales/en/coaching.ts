@@ -82,7 +82,7 @@ const coaching = {
       },
       onlineTraining: {
         title: 'Online Training + WhatsApp Support',
-        price: '€60',
+        price: '€100',
         period: 'per month',
         subtitle: 'Busy people who prefer training independently but want a plan that actually works - plus real accountability.',
         features: [

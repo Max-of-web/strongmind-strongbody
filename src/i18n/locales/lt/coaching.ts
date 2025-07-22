@@ -57,7 +57,7 @@ const coaching = {
       },
       onlineTraining: {
         title: 'Online Treniruotės + WhatsApp Palaikymas',
-        price: '60 €',
+        price: '100 €',
         period: 'per mėnesį',
         subtitle: 'Tiems, kurie mėgsta sportuoti savarankiškai, bet nori aiškaus plano, profesionalios priežiūros ir realios atsakomybės.',
         features: [
