@@ -1,156 +1,171 @@
-
 const coaching = {
   coaching: {
     hero: {
-      title: '1-on-1 Asmeninis Darbas Su Manimi',
-      subtitle: 'Padėsiu tau susikurti tvirtus įpročius, pajusti pagreitį ir augti nuosekliai. Mano metodas — aiškios treniruotės, išmanus judėjimas ir praktiškas požiūrio keitimas. Be spaudimo siekti tobulumo — tik realūs žingsniai, kurie veikia.',
-      bookButton: 'Užsisakyk Pirmą Treniruotę',
-      ctaButton: 'Registracija'
+      title: 'Pasiruošęs keistis? Žinau, kad tai nesudėtinga. Net jei nesitikėjai.',
+      subtitle: 'Treneris, kuris supranta — nebūtina mylėti sporto, kad atrastum pusiausvyrą ir energiją. Pradėkime.'
     },
     services: {
-      sectionTitle: 'Ką Tu Gausi',
-      personalizedProgram: {
-        title: 'Individuali Programa',
-        description: 'Planą sudarau pagal tavo tikslus, stipriąsias puses, apribojimus ir gyvenimo ritmą. Jokių šablonų — tik tai, kas veikia tau.'
-      },
-      weeklyAdjustments: {
-        title: 'Reguliarios Korekcijos',
-        description: 'Planą nuolat atnaujinu pagal tavo savijautą ir pažangą. Tobulėji tu — prisitaiko ir programa. Taip neprarasi motyvacijos ir nuolat judėsi pirmyn.'
-      },
-      psychologicalSupport: {
-        title: 'Koučingas',
-        description: 'Paprasti, bet veiksmingi patarimai, kaip įveikti vidines kliūtis, formuoti naudingus įpročius ir išlaikyti motyvaciją. Jokios tuščios teorijos — tik tai, kas iš tikrųjų padeda.'
-      },
-      directCommunication: {
-        title: 'Tiesioginis Kontaktas',
-        description: 'Tiesioginis ryšys per WhatsApp — gali bet kada parašyti klausimus, pasitikrinti techniką ar pasidalinti, kur stringi. Tu niekada nebūsi vienas šiame kelyje.'
-      },
-      personalCoachAI: {
-        title: 'Asmeninis Treneris AI',
-        description: 'Prieiga prie personalizuoto dirbtinio intelekto asistento, kuris padeda sekti jūsų progresą, atsako į klausimus apie treniruotes ir suteikia motyvacijos tarp sesijų.'
-      }
+      title: 'Ką galiu duoti',
+      subtitle: 'Kaip tai veikia — paprasta:',
+      items: [
+        {
+          title: 'Individuali Programa',
+          description: 'Tik tau pritaikyta — atsižvelgdamas į tikslus, apribojimus ir galimybes.'
+        },
+        {
+          title: 'Reguliarios Korekcijos',
+          description: 'Judame pirmyn kartu. Nes tai, kas veikė šį mėnesį, ne visada tiks kitam.'
+        },
+        {
+          title: 'Koučingas',
+          description: 'Padėti formuoti naują mąstymą ir elgseną. Tas paprastas dalykas, kurio dažnai trūksta.'
+        },
+        {
+          title: 'Tiesioginis Kontaktas',
+          description: 'Klausk, kada reikia. WhatsApp yra kasdieniam palaikymui — ne vien registracijoms.'
+        },
+        {
+          title: 'Asmeninis Treneris AI',
+          description: 'Mano pagalbininkas atsakys į pagrindinius klausimus, kai manęs nėra šalia.'
+        }
+      ]
     },
     target: {
-      sectionTitle: 'Kam Tai Skirta',
-      intro: 'Nereikia tobulybės. Svarbiausia — judėti mažais, bet tikrą pokytį kuriančiais žingsniais į priekį.',
-      description: 'Mano treniruotės ir koučingas skirti žmonėms, kurie pasiryžę pakeisti santykį su savo kūnu ir kurti įpročius, kurie išlieka. Ši programa ypač naudinga, jei:',
-      audiences: [
-        'Dirbi sėdimą darbą ir jauti skausmą ar diskomfortą',
-        'Atsigauni po traumos ir nori tai daryti saugiai bei nuosekliai',
-        'Esi išbandęs daugybę treniruočių metodų, bet ilgalaikio rezultato taip ir nebuvo',
-        'Nori išmokti judėti taip, kad jaustumeisi stiprus ir kurtum sveikesnį santykį su savo kūnu'
+      intro: 'Kam tinka:',
+      list: [
+        'Užimtiems žmonėms, kurie tikisi aiškumo ir struktūros',
+        'Tiems, kurie pradėdavo ir mesdavo — nebūtinai dėl motyvacijos',
+        'Jei nori tvarumo, ne "greitų rezultatų"',
+        'Jei nerimauja dėl traumų ar kitų apribojimų',
+        'Jei sportas — ne malonumas, bet priemonė geresniam savijautai'
       ]
     },
     pricing: {
       sectionTitle: 'Paketai ir Kainos',
       badges: {
         recommended: 'REKOMENDUOJAMA',
-        addOn: 'PAPILDINYS'
+        mostPopular: 'POPULIARIAUSIA'
       },
       oneOnOneCoaching: {
-        title: '1-on-1 Treniruotės + Vidinis Pokytis',
+        title: '1-on-1 Treniruotės',
         price: '50 €',
-        period: 'per treniruotę (~200 €/mėn.)',
-        subtitle: 'Žmonėms, kurie nori nuoseklumo, aiškaus plano ir įpročių, kurie tikrai prigyja — tikroms, visam gyvenimui skirtoms permainoms.',
+        period: 'už treniruotę',
+        subtitle: 'Žmonėms, kurie nori nuoseklumo, aiškaus plano ir įpročių, kurie išlieka visam gyvenimui - ne tik trumpam laikotarpiui.',
         features: [
-          'Asmeninės treniruotės 1 k./sav.',
-          'Testavimas kas 3 mėn.',
-          'Kasdienis WhatsApp palaikymas visiems klausimams'
+          'Asmeninės treniruotės 1× per savaitę',
+          'Progreso testavimas kas 3 mėnesius',
+          'Kasdienis WhatsApp palaikymas visiems klausimams - kad niekada neliktum vienas'
         ],
-        innerShift: 'Vidinis Pokytis: 300 € už 3 mėn. elgesio keitimo ciklą (Labai rekomenduojama geriausiam rezultatui — tavo įpročiai nežinos, kas juos užklupo!)',
+        note: 'Nori treniruotis su draugu ar dviem? Mažų grupių treniruotės yra pigesnės, bet vis tiek pritaikytos individualiai. Parašyk, jei įdomu!',
+        bottomText: 'Tinka, jei nori aiškios struktūros, motyvacijos ir pokyčių, kurie išlieka.',
         buttonText: 'Užsakyti Treniruotę'
       },
       onlineTraining: {
         title: 'Online Treniruotės + WhatsApp Palaikymas',
         price: '60 €',
         period: 'per mėnesį',
-        subtitle: 'Tiems, kurie nori sportuoti savarankiškai, bet nori profesionalaus palaikymo, struktūros ir tikros atskaitomybės.',
+        subtitle: 'Tiems, kurie mėgsta sportuoti savarankiškai, bet nori aiškaus plano, profesionalios priežiūros ir realios atsakomybės.',
         features: [
-          'Individualus treniruočių planas',
-          'Savaitiniai plano atnaujinimai',
-          'WhatsApp palaikymas gretiems klausimams',
-          'Niekada nejauskis vienas, kai iškyla iššūkių'
+          'Individualus treniruočių planas, pritaikytas tavo tikslams',
+          'Savaitiniai plano atnaujinimai, kad visada judėtum pirmyn',
+          'WhatsApp palaikymas greitiems klausimams - kai tik prireikia',
+          'Niekada neliksi vienas su iššūkiais, net kai gyvenimas įsibėgėja'
         ],
+        bottomText: 'Puikus pasirinkimas, jei nori laisvės sportuoti, bet sieki rimtų rezultatų su profesionalo palaikymu.',
         buttonText: 'Pradėti Treniruotis'
       },
       rehabTraining: {
         title: 'Reabilitacinės Treniruotės',
         price: '60 €',
-        period: 'per sesiją (~240 €/mėn.)',
-        subtitle: 'Žmonėms, atsigaunantiems po traumos ar operacijos, kurie nori atsigauti saugiai ir grįžti stipresni nei anksčiau.',
+        period: 'už sesiją (~240 €/mėn.)',
+        subtitle: 'Žmonėms, atsigaunantiems po traumos ar operacijos, kurie nori saugiai grįžti į formą - ir tapti stipresni nei anksčiau.',
         features: [
-          'Kineziterapija 1 k./sav.',
-          'EMS/TENS stimuliacija pagal poreikį, testavimas',
+          'Kineziterapijos užsiėmimai 1× per savaitę',
+          'EMS/TENS stimuliacija, testavimas pagal poreikį',
           'Individualizuotas reabilitacijos planas',
-          'WhatsApp palaikymas, kai reikia patarimo'
+          'WhatsApp palaikymas, kai reikia patarimo ar drąsos žingsniui pirmyn'
         ],
+        bottomText: 'Idealu, jei nori atgauti jėgas ir pasitikėjimą žingsnis po žingsnio.',
         buttonText: 'Užsakyti Konsultaciją'
       },
       smallGroupTraining: {
         title: 'Treniruotės Mažoje Grupėje',
         price: '160 €',
         period: 'per mėnesį',
-        subtitle: 'Tiems, kurie nori treniruotis mažoje grupėje ir jau turi bazinį fizinį pasirengimą.',
+        subtitle: 'Tiems, kurie nori sportuoti bendruomenėje, mėgsta motyvaciją ir jau turi bazinį fizinį pasirengimą.',
         features: [
-          'Treniruotės 2 k./sav.',
-          '3–5 žmonių grupė',
-          'Kintantys akcentai (viso kūno, tikslinis treniravimas)',
-          'Tik 5 vietos grupėje — užsisakyk anksčiau!'
+          'Treniruotės 2× per savaitę mažoje, draugiškoje grupėje',
+          '3-5 žmonės grupėje - daug dėmesio kiekvienam',
+          'Kintančios treniruočių temos (viso kūno, jėgos, tikslingos sesijos)',
+          'Tik 5 vietos grupėje - vietų skaičius ribotas, užsitikrink vietą iš anksto!'
         ],
+        bottomText: 'Puikus variantas, jei tave motyvuoja bendruomenė ir papildoma atsakomybė.',
         buttonText: 'Prisijungti prie Grupės'
+      },
+      innerShiftCoaching: {
+        title: 'Vidinis Pokytis',
+        price: '150 €',
+        period: '/mėn. (minimalus įsipareigojimas – 3 mėn.)',
+        subtitle: 'Žmonėms, kurie nori realaus, tvaraus įpročių pokyčio - daugiau nei tik treniruotės. Puikiai tinka tiems, kurie įstringa "pradėjau-mečiau" rate, jaučiasi pavargę nuo trumpalaikių sprendimų, arba nori išmokti valdyti stresą, mitybą ir poilsį visam laikui.',
+        features: [
+          'Aiškus, praktiškas 3 mėn. elgesio keitimo planas',
+          'Savaitiniai susitikimai (balso žinutės arba video - kaip tau patogu)',
+          'WhatsApp palaikymas kasdieniam atskaitingumui ir klausimams',
+          'Konkretūs veiksmai ir įrankiai stresui, miegui, mitybai valdyti - be teorijos, tik tai, kas veikia',
+          'Papildomai: gali derinti su 1-on-1 ar online treniruotėmis - dar geresniems rezultatams'
+        ],
+        bottomText: 'Ši programa skirta tau, jei nori, kad tavo įpročiai, mąstysena ir kūnas pagaliau veiktų kartu - visam laikui.',
+        buttonText: 'Pradėti Vidinį Pokytį'
       }
     },
     process: {
-      sectionTitle: 'Kaip tai veikia',
+      sectionTitle: 'Kaip Tai Veikia',
       steps: [
         {
           number: '1',
-          title: 'Užpildyk anketą',
-          description: 'Atsakai į kelis klausimus, kad geriau suprasčiau tavo tikslus, patirtį ir didžiausius iššūkius.'
+          title: 'Užpildyk formą',
+          description: 'Atsakyk į keletą klausimų, kad galėčiau suprasti tavo tikslus, patirtį ir didžiausius iššūkius.'
         },
         {
           number: '2',
-          title: 'Aš peržvelgsiu',
-          description: 'Perskaitau tavo atsakymus ir, jei matau, kad tikrai galėsiu padėti — susitarsime dėl pokalbio.'
+          title: 'Peržiūriu tavo atsakymus',
+          description: 'Perskaičiau tavo atsakymus ir, jei matau, kad tikrai galiu padėti – sutarsime dėl pokalbio.'
         },
         {
           number: '3',
           title: 'Pažintinis pokalbis',
-          description: 'Aptariame, kaip dirbsime kartu ir ar esame tinkami vienas kitam. Jei viskas tinka — planuojame pirmąją sesiją.'
+          description: 'Pakalbėsime, kaip galime dirbti kartu, ir pažiūrėsime, ar tinkame vienas kitam. Jei viskas gerai – suplanuosime pirmą sesiją.'
         },
         {
           number: '4',
-          title: 'Startas ir progresas',
-          description: 'Pradedame nuo pradinio įvertinimo ir aiškaus veiksmų plano. Toliau — nuoseklus darbas, palaikymas ir augimas be streso.'
+          title: 'Pradedame ir darėme pažangą',
+          description: 'Pradėsime nuo pradinio vertinimo ir sukursime aiškų veiksmų planą. Toliau – nuoseklus darbas, palaikymas ir tolygus augimas be streso.'
         }
       ]
     },
     contact: {
       sectionTitle: 'Susisiekite',
       intro: 'Turite klausimų prieš teikiant paraišką? Susisiekite tiesiogiai per WhatsApp arba užpildykite registracijos formą.',
-      whatsAppNote: 'WhatsApp yra skirtas tik trumpiems klausimams — ne registracijai.',
-      instagramNote: 'Sekite, kad gautumėte naujienų ir patarimų.',
+      whatsAppNote: 'WhatsApp skirtas tik trumpiems klausimams — ne registracijai.',
+      instagramNote: 'Sek naujienoms ir patarimams.',
       nextSteps: 'Peržiūriu tavo atsakymus — jei viskas tinka, atsiųsiu asmeninę nuorodą į kalendorių.',
       locations: {
         title: 'Treniruočių Vietos',
         intro: 'Galimos individualios treniruotės:',
         places: [
-          'Reformatas, Vilnius',
-          'SEB Arena, Vilnius'
+          'Vilnius, Re.formatas, Ąžuolyno g. 7'
         ]
       }
     },
     personalCoachAI: {
-      sectionTitle: 'Asmeninis Treneris AI',
-      intro: 'Kaip jūsų treniruočių paketo dalį, gausite prieigą prie pažangaus dirbtinio intelekto asistento, sukurto palaikyti jūsų sporto kelionę:',
-      features: [
-        'Prieinamas 24/7 atsakyti į jūsų treniruočių klausimus',
-        'Padeda sekti jūsų treniruotes ir progresą',
-        'Teikia formos patarimus ir pratimų alternatyvas',
-        'Suteikia motyvacijos ir atskaitomybės tarp sesijų',
-        'Pritaikytas pagal mano treniravimo filosofiją ir metodą'
-      ],
-      disclaimer: 'Asmeninis Treneris AI yra papildoma priemonė, skirta pagerinti jūsų treniruočių patirtį, o ne pakeisti žmogaus vadovavimą.'
+      intro: 'Susipažink su mano asistentu',
+      name: 'Asmeninis Treneris AI',
+      description: 'Jis atsako į klausimus, kai manęs nėra šalia.',
+      capabilities: [
+        'Atsako į pagrindinius treniruočių klausimus',
+        'Duoda patarimų dėl mitybos',
+        'Padeda spręsti problemas'
+      ]
     }
   }
 };
