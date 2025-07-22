@@ -105,14 +105,15 @@ const homepage = {
       whatsappNote: 'WhatsApp is only for short questions — not for registration.'
     },
     lowerBackGuide: {
-      sectionTitle: 'Get Your Free Guide Now',
-      intro: 'Enter your email to receive "Fix Your Lower Back in 7 Steps" PDF guide immediately.',
+      sectionTitle: 'Get Your Free Back Pain Guide',
+      intro: 'Up to 80% of people experience back pain at some point in their lives — but it doesn\'t always mean something serious.\nThis short and clear guide gives you the most important facts and 7 simple steps to better understand your pain and what you can do yourself.',
       benefits: [
-        'Reduced pain and discomfort through proper movement patterns',
-        'Smarter training approach that adapts to your energy levels',
-        'Sustainable habits that fit into your lifestyle',
-        'Stronger body awareness and connection',
-        'Increased confidence in your movement abilities'
+        'Why most back pain isn\'t dangerous',
+        'Why movement and even short walks matter',
+        'How to track what actually helps',
+        'How stress and thoughts are linked to pain',
+        'Why it\'s important to respect your body\'s limits',
+        'What exercises to do in the acute phase'
       ],
       privacyNote: 'Your email is safe with me. I\'ll never share it with anyone else.',
       buttonText: 'Download Free Guide',

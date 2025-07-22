@@ -105,14 +105,15 @@ const homepage = {
       whatsappNote: 'WhatsApp skirtas tik trumpiems klausimams — ne registracijai.'
     },
     lowerBackGuide: {
-      sectionTitle: 'Gauk nemokamą gidą dabar',
-      intro: 'Įvesk el. paštą ir iš karto gauk „Išspręsk nugaros problemas 7 žingsniais" PDF gidą.',
+      sectionTitle: 'Gauk nemokamą gidą apie nugaros skausmą',
+      intro: 'Iki 80 % žmonių bent kartą gyvenime susiduria su nugaros skausmu — bet tai nebūtinai reiškia rimtą problemą.\nŠiame gide rasi svarbiausius faktus ir 7 paprastus žingsnius, kurie padės suprasti skausmą ir ką gali pasidaryti pats.',
       benefits: [
-        'Mažiau skausmo ir diskomforto dėl taisyklingo judėjimo',
-        'Protingesnis treniruočių požiūris, prisitaikantis prie tavo energijos',
-        'Tvarūs įpročiai, kurie tinka tavo gyvenimo būdui',
-        'Stipresnis kūno suvokimas ir ryšys',
-        'Didesnis pasitikėjimas savo judėjimo gebėjimais'
+        'Kodėl dažniausiai nugaros skausmas neturėtų kelti nerimo',
+        'Kuo svarbus judėjimas ir trumpi pasivaikščiojimai',
+        'Kaip stebėti, kas iš tikrųjų padeda',
+        'Kaip stresas susijęs su skausmu',
+        'Kodėl svarbu stebėti savo kūno ribas',
+        'Kokius pratimus atlikti ūmiame periode'
       ],
       privacyNote: 'Tavo el. paštas saugus su manimi. Niekad nedalinsiuosi juo su kitais.',
       buttonText: 'Atsisiųsti nemokamą gidą',
