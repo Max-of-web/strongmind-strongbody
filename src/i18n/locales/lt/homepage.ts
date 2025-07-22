@@ -38,20 +38,50 @@ const homepage = {
       ]
     },
     testimonials: {
-      sectionTitle: 'Ką Sako Klientai',
-      laura: {
-        quote: 'Paulius suprato mano nugaros skausmą kaip joks kitas treneris anksčiau. Jo metodas yra metodiškas, bet lankstus, ir aš padariau didesnę pažangą per 3 mėnesius nei per metus tradicinės terapijos.',
-        name: 'Laura K.'
-      },
-      tomas: {
-        quote: 'Paulius išsiskiria tuo, kaip jis prisitaiko prie jūsų nuotaikos ir energijos. Kai kuriomis dienomis dirbame intensyviai, kitomis susitelkiame į techniką. Visada jaučiasi produktyviai.',
-        name: 'Tomas B.'
-      },
-      milda: {
-        quote: 'Mentalinis jo treniruočių aspektas buvo netikėtas, bet būtent to man reikėjo. Aš ne tik tapau fiziškai stipresnė, bet ir išvysčiau sveikesnį ryšį su sportu.',
-        name: 'Milda P.'
-      },
-      viewMoreLink: 'Peržiūrėti daugiau atsiliepimų'
+      sectionTitle: 'Ką sako klientai',
+      testimonials: [
+        {
+          quote: "Prieš pradėdama dirbti su Pauliumi, jau buvau praradusi viltį rasti sprendimą savo vis pasikartojančiam nugaros skausmui. Jo požiūris sujungia dėmesį į atlikimo formą su įžvalgomis apie psichologinę skausmo pusę. Dabar galiu sportuoti be baimės ir vėl jaučiu pasitikėjimą savo kūnu.",
+          name: 'Marta S.'
+        },
+        {
+          quote: "Paulius supranta, kad progresas nėra tiesi linija. Kai man trūko nuoseklumo, jis nevertė manęs jaustis kaltu — vietoj to padėjo atpažinti, kas man trukdo, ir rasti man tinkamą kelią į priekį. Būtent šis požiūrio pokytis man padėjo pagaliau išlikti nuosekliam.",
+          name: 'Jonas R.'
+        },
+        {
+          quote: "Kaip žmogus, kuris yra išbandęs daug asmeninių trenerių, drąsiai galiu pasakyti, kad Pauliaus metodas — kitoks. Jo dėmesys įpročiams ir mažiems, nuosekliems pokyčiams visiškai pakeitė mano požiūrį į sportą.",
+          name: 'Laura K.'
+        },
+        {
+          quote: "Labai vertinu, kaip Paulius pritaikė mano programą ypač įtemptais darbo laikotarpiais. Vietoj to, kad spaustų išlaikyti tą patį intensyvumą, jis pakeitė treniruotes taip, kad galėčiau atsigauti, bet nenustočiau judėti pirmyn. Būtent šis lankstumas padarė didžiausią skirtumą.",
+          name: 'Tomas B.'
+        },
+        {
+          quote: "Po traumos bijojau save spausti. Paulius pamažu atkūrė mano pasitikėjimą per mažus iššūkius. Jo žinios apie reabilitaciją sukūrė tobulą aplinką man atsistatyti.",
+          name: 'Greta M.'
+        },
+        {
+          quote: "Sporto ir požiūrio koučingo derinys buvo tikrai puikus. Pasiekiau fizinius tikslus, kurių niekada negalvojau, kad pasieksiu, bet dar svarbiau — susikūriau santykį su sportu, kurį galiu palaikyti visą gyvenimą.",
+          name: 'Andrius P.'
+        },
+        {
+          quote: "Paulius įsigilino į mano nugaros skausmą kaip niekas iki tol. Jo požiūris metodiškas, bet kartu lankstus, ir per 3 mėnesius pasiekiau daugiau nei per daugelį metų tradicinės terapijos.",
+          name: 'Laura K.'
+        },
+        {
+          quote: "Tai, kas Paulių išskiria iš kitų — tai, kaip jis prisitaiko prie tavo nuotaikos ir energijos. Vieną dieną dirbame intensyviai, kitą — susitelkiame į techniką. Visada produktyvu ir niekada nejauti, kad laikas iššvaistytas.",
+          name: 'Tomas B.'
+        },
+        {
+          quote: "Psichologinė jo koučingo dalis buvo netikėta, bet būtent to man reikėjo. Ne tik fiziškai sustiprėjau, bet ir susikūriau sveikesnį santykį su sportu.",
+          name: 'Milda P.'
+        },
+        {
+          quote: "Pradėjęs dirbti su Pauliumi, išmokau labiau stebėti savo kūną, jo padėtį, laikyseną ir emocinę būklę. Tai padėjo suprasti, ką galiu taisyti ir tobulinti kasdien. Labiausiai įstrigo jo įkvepiantis požiūris, kad galiu sau padėti — tai suteikė man daug pasitikėjimo. Didelį skirtumą padarė ir nuolatinis ryšys: visada žinojau, kad gausiu atsakymus į visus klausimus, todėl jaučiausi motyvuotas ir ne vienas. Dabar labiausiai džiaugiuosi, kad sumažėjo skausmas, labiau pasitikiu savimi ir žinau, kaip saugiai judėti",
+          name: 'Aleksandras T.'
+        }
+      ],
+      viewMoreLink: 'Daugiau atsiliepimų'
     },
     about: {
       sectionTitle: 'Apie mane',

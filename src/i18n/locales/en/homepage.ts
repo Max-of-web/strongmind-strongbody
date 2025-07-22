@@ -39,18 +39,48 @@ const homepage = {
     },
     testimonials: {
       sectionTitle: 'What Clients Say',
-      laura: {
-        quote: 'Paulius understood my back pain like no other trainer before. His method is methodical but flexible, and I made more progress in 3 months than in years of traditional therapy.',
-        name: 'Laura K.'
-      },
-      tomas: {
-        quote: 'Paulius stands out in how he adapts to your mood and energy. Some days we work intensively, others we focus on technique. It always feels productive.',
-        name: 'Tomas B.'
-      },
-      milda: {
-        quote: 'The mental aspect of his training was unexpected but exactly what I needed. I not only became physically stronger but also developed a healthier relationship with sports.',
-        name: 'Milda P.'
-      },
+      testimonials: [
+        {
+          quote: "Before working with Paulius, I'd given up on finding a solution for my chronic back pain. His approach combines careful attention to form with an understanding of the psychological aspects of pain. I'm now able to exercise without fear and have regained confidence in my body.",
+          name: 'Marta S.'
+        },
+        {
+          quote: "Paulius understands that progress isn't linear. When I struggled with consistency, instead of making me feel guilty, he helped me identify the underlying barriers and create a more realistic approach. This mindset shift was what finally helped me stay consistent.",
+          name: 'Jonas R.'
+        },
+        {
+          quote: "As someone who's tried many personal trainers, I can confidently say Paulius's approach is unique. His focus on building sustainable habits and making small, consistent changes has completely transformed how I approach fitness.",
+          name: 'Laura K.'
+        },
+        {
+          quote: "I appreciated how Paulius adapted my program during particularly stressful work periods. Instead of pushing me to maintain the same intensity, he modified my training to support recovery while still making progress. This flexibility made all the difference.",
+          name: 'Tomas B.'
+        },
+        {
+          quote: "After my injury, I was afraid to push myself. Paulius gradually rebuilt my confidence through careful progression. His knowledge of rehabilitation created the perfect environment for recovery.",
+          name: 'Greta M.'
+        },
+        {
+          quote: "The combination of physical training and mindset coaching has been transformative. I've achieved physical goals I never thought possible, but more importantly, I've developed a sustainable approach to fitness that I can maintain for life.",
+          name: 'Andrius P.'
+        },
+        {
+          quote: "Paulius understood my back pain like no other trainer before. His approach is methodical yet flexible, and I've made more progress in 3 months than in years of traditional therapy.",
+          name: 'Laura K.'
+        },
+        {
+          quote: "What makes Paulius different is how he adapts to your mood and energy. Some days we go hard, others we focus on technique. It's always productive and never feels like wasted time.",
+          name: 'Tomas B.'
+        },
+        {
+          quote: "The mental aspect of his coaching was unexpected but exactly what I needed. I've not only gotten stronger physically but also developed a healthier relationship with exercise.",
+          name: 'Milda P.'
+        },
+        {
+          quote: "After I started working with Paulius, I learned to observe my body more closely — its position, posture, and my emotional state. This helped me understand what I can correct and improve every day. What stuck with me most was his inspiring mindset that I can help myself — that gave me so much confidence. The constant connection also made a big difference: I always knew I'd get answers to all my questions, so I felt motivated and never alone. Now I'm happiest that my pain has decreased, I trust myself more, and I know how to move safely.",
+          name: 'Aleksandras T.'
+        }
+      ],
       viewMoreLink: 'View more testimonials'
     },
     about: {

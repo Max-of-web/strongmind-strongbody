@@ -29,18 +29,13 @@ const TestimonialsSection = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-          <TestimonialCard
-            quote={t('homepage.testimonials.laura.quote')}
-            name={t('homepage.testimonials.laura.name')}
-          />
-          <TestimonialCard
-            quote={t('homepage.testimonials.tomas.quote')}
-            name={t('homepage.testimonials.tomas.name')}
-          />
-          <TestimonialCard
-            quote={t('homepage.testimonials.milda.quote')}
-            name={t('homepage.testimonials.milda.name')}
-          />
+          {(t('homepage.testimonials.testimonials', { returnObjects: true }) as any[]).slice(0, 6).map((testimonial, index: number) => (
+            <TestimonialCard
+              key={index}
+              quote={testimonial.quote}
+              name={testimonial.name}
+            />
+          ))}
         </div>
         <div className="text-center scroll-fade-in">
           <Link
