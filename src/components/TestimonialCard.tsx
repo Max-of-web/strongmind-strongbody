@@ -10,7 +10,7 @@ interface TestimonialCardProps {
 
 const TestimonialCard: React.FC<TestimonialCardProps> = ({ quote, name, image }) => {
   return (
-    <div className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-md rounded-lg p-6 transition-all duration-300 hover:translate-y-[-5px] h-full">
+    <div className="bg-[#111111] border border-gray-700 shadow-md rounded-lg p-6 transition-all duration-300 hover:translate-y-[-5px] h-full">
       <div className="flex flex-col h-full">
         <div className="mb-4">
           <Quote 
@@ -23,7 +23,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ quote, name, image })
         </p>
         <div className="flex items-center mt-auto">
           {image && (
-            <div className="w-12 h-12 rounded-full overflow-hidden mr-3 border border-theme-border">
+            <div className="w-12 h-12 rounded-full overflow-hidden mr-3 border border-gray-600">
               <img 
                 src={image} 
                 alt={`${name}'s portrait`} 
