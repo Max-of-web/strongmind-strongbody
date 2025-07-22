@@ -68,7 +68,14 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(to bottom, rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.8)), url('/lovable-uploads/c001e4d7-57ea-4185-b82b-b4d66829facf.png');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center top;
+  }
 }
 
 .hero-section h1,

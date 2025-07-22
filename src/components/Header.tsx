@@ -40,12 +40,12 @@ const Header = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-4">
           <div className="flex items-center space-x-8 mr-4">
-            <Link 
-              to="/" 
+            <button 
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               className="text-white hover:text-theme-gold transition-colors"
             >
               {t('header.home')}
-            </Link>
+            </button>
             <Link 
               to="/coaching" 
               className="text-white hover:text-theme-gold transition-colors"
@@ -88,13 +88,15 @@ const Header = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-black bg-opacity-95 absolute top-full left-0 right-0 py-4 px-4 shadow-md animate-fade-in z-40">
           <nav className="flex flex-col space-y-4">
-            <Link 
-              to="/" 
-              className="text-white hover:text-theme-gold transition-colors py-2 text-lg" 
-              onClick={() => setIsMenuOpen(false)}
+            <button 
+              onClick={() => {
+                setIsMenuOpen(false);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              className="text-white hover:text-theme-gold transition-colors py-2 text-lg text-left" 
             >
               {t('header.home')}
-            </Link>
+            </button>
             <Link 
               to="/coaching" 
               className="text-white hover:text-theme-gold transition-colors py-2 text-lg" 
