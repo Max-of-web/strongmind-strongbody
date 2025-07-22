@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
@@ -10,6 +10,7 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t } = useTranslation();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,6 +21,17 @@ const Header = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  const handleBookCallClick = () => {
+    // If we're already on the coaching page, scroll to contact section
+    if (location.pathname === '/coaching') {
+      const contactSection = document.getElementById('contact-section');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    // If we're on another page, navigation will be handled by Link component
+  };
 
   return (
     <header 
@@ -56,17 +68,20 @@ const Header = () => {
           
           <div className="flex items-center space-x-3">
             <LanguageSwitcher />
-            <Button 
-              onClick={() => {
-                const contactSection = document.getElementById('contact-section');
-                if (contactSection) {
-                  contactSection.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-              variant="cta"
-            >
-              {t('header.bookCall')}
-            </Button>
+            {location.pathname === '/coaching' ? (
+              <Button 
+                onClick={handleBookCallClick}
+                variant="cta"
+              >
+                {t('header.bookCall')}
+              </Button>
+            ) : (
+              <Link to="/coaching#contact-section">
+                <Button variant="cta">
+                  {t('header.bookCall')}
+                </Button>
+              </Link>
+            )}
           </div>
         </nav>
 
@@ -103,18 +118,25 @@ const Header = () => {
             >
               {t('header.coaching')}
             </Link>
-            <button 
-              className="w-full justify-center mt-4 inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white bg-gradient-to-r from-amber-600 to-yellow-500 rounded-lg shadow-lg hover:from-amber-700 hover:to-yellow-600 transition-all duration-300 transform hover:scale-105"
-              onClick={() => {
-                setIsMenuOpen(false);
-                const contactSection = document.getElementById('contact-section');
-                if (contactSection) {
-                  contactSection.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-            >
-              {t('header.bookCall')}
-            </button>
+            {location.pathname === '/coaching' ? (
+              <button 
+                className="w-full justify-center mt-4 inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white bg-gradient-to-r from-amber-600 to-yellow-500 rounded-lg shadow-lg hover:from-amber-700 hover:to-yellow-600 transition-all duration-300 transform hover:scale-105"
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  handleBookCallClick();
+                }}
+              >
+                {t('header.bookCall')}
+              </button>
+            ) : (
+              <Link 
+                to="/coaching#contact-section"
+                className="w-full justify-center mt-4 inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white bg-gradient-to-r from-amber-600 to-yellow-500 rounded-lg shadow-lg hover:from-amber-700 hover:to-yellow-600 transition-all duration-300 transform hover:scale-105"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t('header.bookCall')}
+              </Link>
+            )}
           </nav>
         </div>
       )}

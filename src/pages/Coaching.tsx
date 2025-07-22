@@ -1,5 +1,6 @@
 
 import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { MessageSquare, Check, Instagram, MapPin } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import Header from '../components/Header';
@@ -10,10 +11,22 @@ import PricingCards from '../components/PricingCards';
 
 const Coaching = () => {
   const { t } = useTranslation();
+  const location = useLocation();
 
   useEffect(() => {
     // Scroll to top on page load
     window.scrollTo(0, 0);
+    
+    // Handle hash navigation (e.g., #contact-section)
+    if (location.hash) {
+      // Use setTimeout to ensure the page has rendered before scrolling
+      setTimeout(() => {
+        const element = document.getElementById(location.hash.substring(1));
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
     
     // Intersection Observer for fade-in animations
     const observer = new IntersectionObserver((entries) => {
@@ -31,7 +44,7 @@ const Coaching = () => {
     return () => {
       observer.disconnect();
     };
-  }, []);
+  }, [location.hash]);
 
   const scrollToForm = () => {
     const formSection = document.getElementById('contact-section');
