@@ -75,9 +75,6 @@ const LowerBackGuide = () => {
               <h3 className="text-2xl font-semibold mb-4 text-slate-800 dark:text-white">
                 {t('homepage.lowerBackGuide.sectionTitle')}
               </h3>
-              <p className="mb-6 text-slate-700 dark:text-slate-200">
-                {t('homepage.lowerBackGuide.intro')}
-              </p>
 
               <form onSubmit={handleSubmit} className="flex flex-col space-y-4 mt-auto">
                 <div>
