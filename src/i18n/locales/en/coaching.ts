@@ -1,5 +1,40 @@
 const coaching = {
   coaching: {
+    hero: {
+      title: 'Ready for change? I know it doesn\'t have to be complicated. Even if you didn\'t expect it.',
+      subtitle: 'A trainer who understands — you don\'t have to love sports to find balance and energy. Let\'s begin.'
+    },
+    services: {
+      sectionTitle: 'What I Can Offer',
+      personalizedProgram: {
+        title: 'Personalized Program',
+        description: 'Tailored just for you — taking into account your goals, limitations, and possibilities.'
+      },
+      weeklyAdjustments: {
+        title: 'Regular Adjustments', 
+        description: 'We move forward together. Because what worked this month might not always suit the next.'
+      },
+      psychologicalSupport: {
+        title: 'Coaching',
+        description: 'Help form new thinking and behavior. That simple thing that\'s often missing.'
+      },
+      directCommunication: {
+        title: 'Direct Contact',
+        description: 'Ask when you need to. WhatsApp is for daily support — not just registrations.'
+      }
+    },
+    target: {
+      sectionTitle: 'Who This Is For',
+      intro: 'Perfect for:',
+      description: 'This approach works for people who want clarity and structure in their fitness journey.',
+      audiences: [
+        'Busy people who expect clarity and structure',
+        'Those who started and quit — not necessarily due to motivation',
+        'If you want sustainability, not "quick results"',
+        'If you worry about injuries or other limitations',
+        'If sports isn\'t a pleasure, but a means to better well-being'
+      ]
+    },
     process: {
       sectionTitle: 'How It Works',
       steps: [
@@ -101,6 +136,20 @@ const coaching = {
         ],
         bottomText: 'This is for you if you want your habits, mindset, and body to finally work together - for good.',
         buttonText: 'Start Inner Shift'
+      }
+    },
+    contact: {
+      sectionTitle: 'Get in Touch',
+      intro: 'Have questions before applying? Reach out directly via WhatsApp or fill out the registration form.',
+      whatsAppNote: 'WhatsApp is only for short questions — not for registration.',
+      instagramNote: 'Follow for updates & tips.',
+      nextSteps: 'I\'ll review your answers — if it\'s a good fit, I\'ll send you a personal calendar link.',
+      locations: {
+        title: 'Training Locations',
+        intro: 'Individual training sessions available at:',
+        places: [
+          'Vilnius, Re.formatas, Ąžuolyno g. 7'
+        ]
       }
     }
   }

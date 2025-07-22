@@ -5,34 +5,29 @@ const coaching = {
       subtitle: 'Treneris, kuris supranta — nebūtina mylėti sporto, kad atrastum pusiausvyrą ir energiją. Pradėkime.'
     },
     services: {
-      title: 'Ką galiu duoti',
-      subtitle: 'Kaip tai veikia — paprasta:',
-      items: [
-        {
-          title: 'Individuali Programa',
-          description: 'Tik tau pritaikyta — atsižvelgdamas į tikslus, apribojimus ir galimybes.'
-        },
-        {
-          title: 'Reguliarios Korekcijos',
-          description: 'Judame pirmyn kartu. Nes tai, kas veikė šį mėnesį, ne visada tiks kitam.'
-        },
-        {
-          title: 'Koučingas',
-          description: 'Padėti formuoti naują mąstymą ir elgseną. Tas paprastas dalykas, kurio dažnai trūksta.'
-        },
-        {
-          title: 'Tiesioginis Kontaktas',
-          description: 'Klausk, kada reikia. WhatsApp yra kasdieniam palaikymui — ne vien registracijoms.'
-        },
-        {
-          title: 'Asmeninis Treneris AI',
-          description: 'Mano pagalbininkas atsakys į pagrindinius klausimus, kai manęs nėra šalia.'
-        }
-      ]
+      sectionTitle: 'Ką galiu duoti',
+      personalizedProgram: {
+        title: 'Individuali Programa',
+        description: 'Tik tau pritaikyta — atsižvelgdamas į tikslus, apribojimus ir galimybes.'
+      },
+      weeklyAdjustments: {
+        title: 'Reguliarios Korekcijos',
+        description: 'Judame pirmyn kartu. Nes tai, kas veikė šį mėnesį, ne visada tiks kitam.'
+      },
+      psychologicalSupport: {
+        title: 'Koučingas',
+        description: 'Padėti formuoti naują mąstymą ir elgseną. Tas paprastas dalykas, kurio dažnai trūksta.'
+      },
+      directCommunication: {
+        title: 'Tiesioginis Kontaktas',
+        description: 'Klausk, kada reikia. WhatsApp yra kasdieniam palaikymui — ne vien registracijoms.'
+      }
     },
     target: {
+      sectionTitle: 'Kam tinka',
       intro: 'Kam tinka:',
-      list: [
+      description: 'Šis metodas tinka žmonėms, kurie nori aiškumo ir struktūros savo fitneso kelyje.',
+      audiences: [
         'Užimtiems žmonėms, kurie tikisi aiškumo ir struktūros',
         'Tiems, kurie pradėdavo ir mesdavo — nebūtinai dėl motyvacijos',
         'Jei nori tvarumo, ne "greitų rezultatų"',
@@ -138,7 +133,7 @@ const coaching = {
         },
         {
           number: '4',
-          title: 'Pradedame ir darėme pažangą',
+          title: 'Pradedame ir darome pažangą',
           description: 'Pradėsime nuo pradinio vertinimo ir sukursime aiškų veiksmų planą. Toliau – nuoseklus darbas, palaikymas ir tolygus augimas be streso.'
         }
       ]
@@ -156,16 +151,6 @@ const coaching = {
           'Vilnius, Re.formatas, Ąžuolyno g. 7'
         ]
       }
-    },
-    personalCoachAI: {
-      intro: 'Susipažink su mano asistentu',
-      name: 'Asmeninis Treneris AI',
-      description: 'Jis atsako į klausimus, kai manęs nėra šalia.',
-      capabilities: [
-        'Atsako į pagrindinius treniruočių klausimus',
-        'Duoda patarimų dėl mitybos',
-        'Padeda spręsti problemas'
-      ]
     }
   }
 };
