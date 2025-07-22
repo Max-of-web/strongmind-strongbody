@@ -26,11 +26,13 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
     return 'lt';
   });
 
-  // Load custom translations from Supabase
+  // Load custom translations from Supabase with proper fallback
   useEffect(() => {
     const loadCustomTranslations = async () => {
       setIsLoading(true);
       try {
+        console.log(`Loading custom translations for language: ${language}`);
+        
         const { data, error } = await supabase
           .from('translations')
           .select('key, value')
@@ -38,10 +40,13 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
           .eq('namespace', 'translation');
 
         if (error) {
-          console.error('Error fetching translations:', error);
+          console.warn('Error fetching translations from Supabase, using local fallback:', error);
+          // Don't throw error, just use local translations
         } else if (data && data.length > 0) {
+          console.log(`Loaded ${data.length} custom translations from Supabase`);
+          
           // Process the data and add to i18n
-          const resources: Record<string, string> = {};
+          const resources: Record<string, any> = {};
           
           data.forEach(item => {
             const pathParts = item.key.split('.');
@@ -59,27 +64,38 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
             current[pathParts[pathParts.length - 1]] = item.value;
           });
           
-          // Add the custom translations to i18n
-          i18n.addResourceBundle(language, 'translation', resources, true, true);
+          // Merge custom translations with existing ones (don't override, just extend)
+          i18n.addResourceBundle(language, 'translation', resources, true, false);
+          console.log('Custom translations merged successfully');
+        } else {
+          console.log('No custom translations found in Supabase, using local translations');
         }
       } catch (error) {
-        console.error('Error loading custom translations:', error);
+        console.warn('Network error loading custom translations, using local fallback:', error);
+        // Don't throw error, just use local translations
       } finally {
         setIsLoading(false);
       }
     };
 
-    // Update i18next language
-    i18n.changeLanguage(language);
-    
-    // Update localStorage
-    localStorage.setItem('language', language);
-    
-    // Load any custom translations from Supabase
-    loadCustomTranslations();
+    // First, ensure i18next language is set and local translations are loaded
+    i18n.changeLanguage(language).then(() => {
+      console.log(`i18next language changed to: ${language}`);
+      console.log('Local translations loaded, checking for custom translations...');
+      
+      // Update localStorage
+      localStorage.setItem('language', language);
+      
+      // Then try to load custom translations from Supabase
+      loadCustomTranslations();
+    }).catch((error) => {
+      console.error('Error changing i18next language:', error);
+      setIsLoading(false);
+    });
   }, [language, i18n]);
 
   const changeLanguage = (lang: Language) => {
+    console.log(`Changing language to: ${lang}`);
     setIsLoading(true);
     setLanguage(lang);
     // The useEffect will handle the actual language change

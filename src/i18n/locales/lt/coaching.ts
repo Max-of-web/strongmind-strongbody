@@ -125,44 +125,11 @@ const coaching = {
         }
       ]
     },
-    testimonials: {
-      sectionTitle: 'Klientų Sėkmės Istorijos',
-      marta: {
-        quote: 'Prieš dirbdama su Pauliumi, aš buvau atsisakiusi rasti sprendimą dėl lėtinio nugaros skausmo. Jo metodas jungia dėmesingą formos stebėjimą su skausmo psichologinių aspektų supratimu. Dabar galiu sportuoti be baimės ir atgavau pasitikėjimą savo kūnu.',
-        name: 'Marta S.'
-      },
-      jonas: {
-        quote: 'Paulius supranta, kad progresas nėra linijinis. Kai man buvo sunku išlaikyti pastovumą, vietoje kaltės jausmo sukėlimo, jis padėjo man identifikuoti gilumines kliūtis ir sukurti realistiškesnį metodą. Šis mąstymo pokytis galiausiai padėjo man išlikti pastoviam.',
-        name: 'Jonas R.'
-      },
-      laura: {
-        quote: 'Kaip žmogus, kuris išbandė daug asmeninių trenerių, galiu drąsiai teigti, kad Pauliaus metodas yra unikalus. Jis vienodai investuoja į jūsų mentalinį požiūrį ir fizinį treniravimą. Aš ne tik tapau stipresnė, bet ir išvysčiau sveikesnį santykį su sportu apskritai.',
-        name: 'Laura K.'
-      },
-      tomas: {
-        quote: 'Vertinau, kaip Paulius pritaikė mano programą ypač stresiniais darbo periodais. Vietoj to, kad verstų išlaikyti tą patį intensyvumą, jis modifikavo mano treniruotes, kad palaikytų atsigavimą, kartu vis tiek darant pažangą. Šis lankstumas padarė didžiulį skirtumą.',
-        name: 'Tomas B.'
-      },
-      greta: {
-        quote: 'Po traumos bijojau save stumti. Paulius palaipsniui atstatė mano pasitikėjimą per kruopščią progresiją. Jo žinios apie reabilitaciją ir psichologiją sukūrė tobulą aplinką atsigavimui.',
-        name: 'Greta M.'
-      },
-      andrius: {
-        quote: 'Fizinio treniravimo ir mąstymo koučingo derinys buvo transformuojantis. Pasiekiau fizinius tikslus, kurių niekada nemaniau esant įmanomus, bet svarbiausia - išvysčiau tvarų požiūrį į sportą, kurį galiu išlaikyti visą gyvenimą.',
-        name: 'Andrius P.'
-      }
-    },
     contact: {
       sectionTitle: 'Susisiekite',
       intro: 'Turite klausimų prieš teikiant paraišką? Susisiekite tiesiogiai per WhatsApp arba užpildykite registracijos formą.',
-      whatsapp: {
-        label: 'WhatsApp',
-        value: 'Trumpam klausimui'
-      },
-      form: {
-        label: 'Registracijos Forma',
-        value: 'Užpildykite žemiau'
-      },
+      whatsAppNote: 'WhatsApp yra skirtas tik trumpiems klausimams — ne registracijai.',
+      instagramNote: 'Sekite, kad gautumėte naujienų ir patarimų.',
       nextSteps: 'Peržiūriu tavo atsakymus — jei viskas tinka, atsiųsiu asmeninę nuorodą į kalendorių.',
       locations: {
         title: 'Treniruočių Vietos',
