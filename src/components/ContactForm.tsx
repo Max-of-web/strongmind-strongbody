@@ -21,6 +21,13 @@ const ContactForm = () => {
             method="POST" 
             className="space-y-4"
           >
+            {/* Hidden Honeypot input to prevent spam */}
+            <input 
+              type="hidden" 
+              name="_gotcha" 
+              style={{ display: 'none !important' } as React.CSSProperties}
+            />
+            
             <div>
               <Label htmlFor="name">Name *</Label>
               <Input
