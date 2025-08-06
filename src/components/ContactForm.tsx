@@ -275,6 +275,10 @@ const ContactForm = () => {
               type="submit" 
               className="w-full" 
               disabled={isSubmitting}
+              onClick={() => {
+                console.log('🔴 BUTTON CLICKED - Direct onClick handler');
+                alert('BUTTON CLICKED - Direct onClick');
+              }}
             >
               {isSubmitting ? getPhaseDisplay() : 'Send Message'}
             </Button>
