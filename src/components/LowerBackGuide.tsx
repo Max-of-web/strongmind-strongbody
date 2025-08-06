@@ -673,7 +673,7 @@ const LowerBackGuide = () => {
                       <h4>Gauk nemokamą gidą apie nugaros skausmą</h4>
                     </div>
 
-                    <form className="ml-block-form" action="https://assets.mailerlite.com/jsonp/1654024/forms/162015638916695194/subscribe" data-code="" method="post" target="_blank">
+                    <form className="ml-block-form" action="https://assets.mailerlite.com/jsonp/1654024/forms/162015638916695194/subscribe" data-code="" method="post">
                       <div className="ml-form-formContent">
                         <div className="ml-form-fieldRow ml-last-item">
                           <div className="ml-field-group ml-field-email ml-validate-email ml-validate-required">
