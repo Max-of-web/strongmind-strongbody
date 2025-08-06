@@ -14,6 +14,39 @@ export type Database = {
   }
   public: {
     Tables: {
+      coaching_applications: {
+        Row: {
+          challenge: string
+          created_at: string
+          email: string
+          goal: string
+          id: string
+          name: string
+          ready_for_change: boolean
+          updated_at: string
+        }
+        Insert: {
+          challenge: string
+          created_at?: string
+          email: string
+          goal: string
+          id?: string
+          name: string
+          ready_for_change?: boolean
+          updated_at?: string
+        }
+        Update: {
+          challenge?: string
+          created_at?: string
+          email?: string
+          goal?: string
+          id?: string
+          name?: string
+          ready_for_change?: boolean
+          updated_at?: string
+        }
+        Relationships: []
+      }
       contacts: {
         Row: {
           company: string | null
@@ -44,6 +77,54 @@ export type Database = {
           notes?: string | null
           phone?: string | null
           updated_at?: string
+        }
+        Relationships: []
+      }
+      email_subscriptions: {
+        Row: {
+          created_at: string
+          email: string
+          id: string
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          id?: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          id?: string
+        }
+        Relationships: []
+      }
+      translations: {
+        Row: {
+          created_at: string
+          id: string
+          key: string
+          language: string
+          namespace: string
+          updated_at: string
+          value: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          key: string
+          language: string
+          namespace: string
+          updated_at?: string
+          value: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          key?: string
+          language?: string
+          namespace?: string
+          updated_at?: string
+          value?: string
         }
         Relationships: []
       }
