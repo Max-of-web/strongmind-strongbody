@@ -1,28 +1,10 @@
 
-import { useState } from 'react';
 import { Check, Shield } from 'lucide-react';
-import { toast } from 'sonner';
 import { useTranslation } from 'react-i18next';
 import { Button } from "@/components/ui/button";
 
 const LowerBackGuide = () => {
   const { t } = useTranslation();
-  const [email, setEmail] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate API call
-    setTimeout(() => {
-      toast.success(t('emailSubscription.successToast.title'), {
-        description: t('emailSubscription.successToast.description')
-      });
-      setEmail('');
-      setIsSubmitting(false);
-    }, 800);
-  };
 
   // Get the benefits array from translations with fallback
   let benefits: string[] = [];
@@ -76,12 +58,22 @@ const LowerBackGuide = () => {
                 {t('homepage.lowerBackGuide.sectionTitle')}
               </h3>
 
-              <form onSubmit={handleSubmit} className="flex flex-col space-y-4 mt-auto">
+              <form 
+                action="https://getform.io/f/bxozjona" 
+                method="POST" 
+                className="flex flex-col space-y-4 mt-auto"
+              >
+                {/* Hidden Honeypot input to prevent spam */}
+                <input 
+                  type="hidden" 
+                  name="_gotcha" 
+                  style={{ display: 'none !important' } as React.CSSProperties}
+                />
+                
                 <div>
                   <input 
                     type="email" 
-                    value={email} 
-                    onChange={e => setEmail(e.target.value)} 
+                    name="email"
                     placeholder={t('emailSubscription.placeholder')} 
                     required 
                     className="w-full p-3 rounded-md bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-white border border-slate-300 dark:border-slate-600 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-theme-tangerine focus:border-transparent"
@@ -90,11 +82,10 @@ const LowerBackGuide = () => {
                 
                 <Button
                   type="submit" 
-                  disabled={isSubmitting}
                   variant="cta"
                   className="w-full px-4 py-3 h-auto"
                 >
-                  {isSubmitting ? 'Siunčiama...' : t('homepage.lowerBackGuide.buttonText')}
+                  {t('homepage.lowerBackGuide.buttonText')}
                 </Button>
 
                 <p className="text-xs text-slate-600 dark:text-slate-400 mt-2">
