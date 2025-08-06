@@ -36,7 +36,7 @@ const handler = async (req: Request): Promise<Response> => {
     // Send email with dynamic contact info
     const emailResponse = await resend.emails.send({
       from: "Contact Form <onboarding@resend.dev>",
-      to: ["admin@example.com"], // Replace with your admin email
+      to: ["noreply@resend.dev"], // Using verified domain for testing
       subject: `New Contact: ${contactData.name}`,
       html: `
         <h1>New Contact Submission</h1>
