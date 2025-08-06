@@ -76,9 +76,31 @@ const LowerBackGuide = () => {
                 {t('homepage.lowerBackGuide.sectionTitle')}
               </h3>
 
-              <div className="mt-auto">
-                <div className="ml-embedded" data-form="5fYjuv"></div>
-              </div>
+              <form onSubmit={handleSubmit} className="flex flex-col space-y-4 mt-auto">
+                <div>
+                  <input 
+                    type="email" 
+                    value={email} 
+                    onChange={e => setEmail(e.target.value)} 
+                    placeholder={t('emailSubscription.placeholder')} 
+                    required 
+                    className="w-full p-3 rounded-md bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-white border border-slate-300 dark:border-slate-600 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-theme-tangerine focus:border-transparent"
+                  />
+                </div>
+                
+                <Button
+                  type="submit" 
+                  disabled={isSubmitting}
+                  variant="cta"
+                  className="w-full px-4 py-3 h-auto"
+                >
+                  {isSubmitting ? 'Siunčiama...' : t('homepage.lowerBackGuide.buttonText')}
+                </Button>
+
+                <p className="text-xs text-slate-600 dark:text-slate-400 mt-2">
+                  {t('homepage.lowerBackGuide.disclaimer')}
+                </p>
+              </form>
             </div>
           </div>
         </div>
