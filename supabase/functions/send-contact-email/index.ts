@@ -18,15 +18,21 @@ interface ContactEmailRequest {
 }
 
 const handler = async (req: Request): Promise<Response> => {
+  console.log("Edge function called, method:", req.method);
+  
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
+    console.log("Handling CORS preflight request");
     return new Response(null, { headers: corsHeaders });
   }
 
   try {
+    console.log("Parsing request body...");
     const contactData: ContactEmailRequest = await req.json();
     console.log("Received contact data:", contactData);
 
+    console.log("Preparing to send email via Resend...");
+    
     // Send email with dynamic contact info
     const emailResponse = await resend.emails.send({
       from: "Contact Form <onboarding@resend.dev>",
@@ -46,11 +52,15 @@ const handler = async (req: Request): Promise<Response> => {
 
     console.log("Email sent successfully:", emailResponse);
 
-    return new Response(JSON.stringify({ 
+    const responseData = { 
       success: true, 
       message: "Email sent successfully",
       emailId: emailResponse.data?.id 
-    }), {
+    };
+    
+    console.log("Returning success response:", responseData);
+
+    return new Response(JSON.stringify(responseData), {
       status: 200,
       headers: {
         "Content-Type": "application/json",
@@ -59,11 +69,22 @@ const handler = async (req: Request): Promise<Response> => {
     });
   } catch (error: any) {
     console.error("Error in send-contact-email function:", error);
+    console.error("Error details:", {
+      message: error.message,
+      stack: error.stack,
+      name: error.name
+    });
+    
+    const errorResponse = { 
+      success: false,
+      error: error.message || "Failed to send email",
+      details: error.stack
+    };
+    
+    console.log("Returning error response:", errorResponse);
+    
     return new Response(
-      JSON.stringify({ 
-        success: false,
-        error: error.message || "Failed to send email"
-      }),
+      JSON.stringify(errorResponse),
       {
         status: 500,
         headers: { "Content-Type": "application/json", ...corsHeaders },

@@ -35,6 +35,8 @@ const ContactForm = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
+    console.log('Form submission started with data:', formData);
+    
     if (!formData.name || !formData.email) {
       toast.error('Please fill in all required fields');
       return;
@@ -43,6 +45,8 @@ const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
+      console.log('Attempting to insert contact into Supabase...');
+      
       // Insert contact into Supabase
       const { data: contact, error: dbError } = await supabase
         .from('contacts')
@@ -56,17 +60,29 @@ const ContactForm = () => {
         .select()
         .single();
 
-      if (dbError) throw dbError;
+      console.log('Supabase insert result:', { contact, dbError });
 
+      if (dbError) {
+        console.error('Database error:', dbError);
+        throw new Error(`Database error: ${dbError.message}`);
+      }
+
+      console.log('Contact saved successfully:', contact);
+      
       // Send email via Edge Function
+      console.log('Attempting to send email via edge function...');
+      
       const { data: emailResult, error: emailError } = await supabase.functions.invoke('send-contact-email', {
         body: formData
       });
+
+      console.log('Edge function result:', { emailResult, emailError });
 
       if (emailError) {
         console.error('Email error:', emailError);
         toast.error('Contact saved but email notification failed');
       } else {
+        console.log('Email sent successfully');
         toast.success('Contact submitted successfully! We\'ll be in touch soon.');
       }
 
