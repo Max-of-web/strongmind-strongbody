@@ -26,6 +26,7 @@ const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (field: keyof ContactFormData, value: string) => {
+    console.log(`📝 Field updated: ${field} = "${value}"`);
     setFormData(prev => ({
       ...prev,
       [field]: value
@@ -35,19 +36,30 @@ const ContactForm = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    console.log('Form submission started with data:', formData);
+    console.log('🚀 STEP 1: Form submission initiated');
+    console.log('📋 Form data received:', formData);
     
+    // Validation
     if (!formData.name || !formData.email) {
+      console.log('❌ STEP 2: Validation failed - missing required fields');
       toast.error('Please fill in all required fields');
       return;
     }
-
+    
+    console.log('✅ STEP 2: Validation passed');
     setIsSubmitting(true);
 
     try {
-      console.log('Attempting to insert contact into Supabase...');
-      
-      // Insert contact into Supabase
+      // Step 3: Save to Supabase
+      console.log('💾 STEP 3: Starting database save operation...');
+      console.log('📊 Data being inserted:', {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone || null,
+        company: formData.company || null,
+        notes: formData.notes || null
+      });
+
       const { data: contact, error: dbError } = await supabase
         .from('contacts')
         .insert([{
@@ -58,35 +70,46 @@ const ContactForm = () => {
           notes: formData.notes || null
         }])
         .select()
-        .single();
+        .maybeSingle();
 
-      console.log('Supabase insert result:', { contact, dbError });
+      console.log('💾 STEP 3 RESULT: Database operation completed');
+      console.log('✅ Saved contact:', contact);
+      console.log('❌ Database error:', dbError);
 
       if (dbError) {
-        console.error('Database error:', dbError);
-        throw new Error(`Database error: ${dbError.message}`);
+        console.error('💥 STEP 3 FAILED: Database error details:', dbError);
+        throw new Error(`Database save failed: ${dbError.message}`);
       }
 
-      console.log('Contact saved successfully:', contact);
+      if (!contact) {
+        console.error('💥 STEP 3 FAILED: No contact returned from database');
+        throw new Error('Contact was not saved to database');
+      }
+
+      console.log('🎉 STEP 3 SUCCESS: Contact saved with ID:', contact.id);
       
-      // Send email via Edge Function
-      console.log('Attempting to send email via edge function...');
-      
+      // Step 4: Send email notification
+      console.log('📧 STEP 4: Starting email notification...');
+      console.log('📤 Email payload:', formData);
+
       const { data: emailResult, error: emailError } = await supabase.functions.invoke('send-contact-email', {
         body: formData
       });
 
-      console.log('Edge function result:', { emailResult, emailError });
+      console.log('📧 STEP 4 RESULT: Email function completed');
+      console.log('✅ Email result:', emailResult);
+      console.log('❌ Email error:', emailError);
 
       if (emailError) {
-        console.error('Email error:', emailError);
+        console.error('💥 STEP 4 FAILED: Email error details:', emailError);
         toast.error('Contact saved but email notification failed');
       } else {
-        console.log('Email sent successfully');
+        console.log('🎉 STEP 4 SUCCESS: Email sent successfully');
         toast.success('Contact submitted successfully! We\'ll be in touch soon.');
       }
 
-      // Reset form
+      // Step 5: Reset form
+      console.log('🔄 STEP 5: Resetting form...');
       setFormData({
         name: '',
         email: '',
@@ -94,11 +117,18 @@ const ContactForm = () => {
         company: '',
         notes: ''
       });
+      console.log('✅ STEP 5 SUCCESS: Form reset completed');
 
     } catch (error: any) {
-      console.error('Submission error:', error);
+      console.error('💥 SUBMISSION FAILED: Final error catch:', error);
+      console.error('🔍 Error details:', {
+        message: error.message,
+        stack: error.stack,
+        name: error.name
+      });
       toast.error(error.message || 'Failed to submit contact form');
     } finally {
+      console.log('🏁 FINAL STEP: Resetting submission state');
       setIsSubmitting(false);
     }
   };
