@@ -2,9 +2,13 @@
 import { Check, Shield } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Button } from "@/components/ui/button";
+import { useState } from 'react';
+import { toast } from "sonner";
 
 const LowerBackGuide = () => {
   const { t } = useTranslation();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [email, setEmail] = useState('');
 
   // Get the benefits array from translations with fallback
   let benefits: string[] = [];
@@ -59,8 +63,32 @@ const LowerBackGuide = () => {
               </h3>
 
               <form 
-                action="https://getform.io/f/bxozjona" 
-                method="POST" 
+                onSubmit={async (e) => {
+                  e.preventDefault();
+                  setIsSubmitting(true);
+                  
+                  try {
+                    const formData = new FormData();
+                    formData.append('email', email);
+                    
+                    const response = await fetch('https://getform.io/f/bxozjona', {
+                      method: 'POST',
+                      body: formData,
+                    });
+                    
+                    if (response.ok) {
+                      toast.success(t('homepage.lowerBackGuide.successMessage') || 'Mes išsiuntėme jums gidą. Sėkmė! Patikrinkite savo el. paštą.');
+                      setEmail('');
+                    } else {
+                      throw new Error('Form submission failed');
+                    }
+                  } catch (error) {
+                    console.error('Form submission error:', error);
+                    toast.error(t('homepage.lowerBackGuide.errorMessage') || 'Klaida išsiunčiant. Bandykite dar kartą.');
+                  } finally {
+                    setIsSubmitting(false);
+                  }
+                }}
                 className="flex flex-col space-y-4 mt-auto"
               >
                 {/* Hidden Honeypot input to prevent spam */}
@@ -74,18 +102,22 @@ const LowerBackGuide = () => {
                   <input 
                     type="email" 
                     name="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     placeholder={t('emailSubscription.placeholder')} 
                     required 
-                    className="w-full p-3 rounded-md bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-white border border-slate-300 dark:border-slate-600 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-theme-tangerine focus:border-transparent"
+                    disabled={isSubmitting}
+                    className="w-full p-3 rounded-md bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-white border border-slate-300 dark:border-slate-600 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-theme-tangerine focus:border-transparent disabled:opacity-50"
                   />
                 </div>
                 
                 <Button
                   type="submit" 
                   variant="cta"
+                  disabled={isSubmitting}
                   className="w-full px-4 py-3 h-auto"
                 >
-                  {t('homepage.lowerBackGuide.buttonText')}
+                  {isSubmitting ? (t('homepage.lowerBackGuide.sendingText') || 'Siunčiama...') : t('homepage.lowerBackGuide.buttonText')}
                 </Button>
 
                 <p className="text-xs text-slate-600 dark:text-slate-400 mt-2">
