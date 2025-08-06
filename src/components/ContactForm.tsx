@@ -43,6 +43,7 @@ const ContactForm = () => {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
+    alert('FORM HANDLER CALLED - If you see this alert, the form handler is working');
     console.log('🔥 FORM SUBMIT HANDLER CALLED - This should appear in console');
     e.preventDefault();
     setDebugLog([]);
