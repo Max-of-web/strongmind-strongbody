@@ -175,7 +175,7 @@ const handler = async (req: Request): Promise<Response> => {
     
     emailContent = {
       from: "Contact Form <onboarding@resend.dev>",
-      to: ["admin@yourcompany.com"], // Change this to your admin email
+      to: ["your@email.com"],
       subject: `New Contact from ${contactData.name}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">

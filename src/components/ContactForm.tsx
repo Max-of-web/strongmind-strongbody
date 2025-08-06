@@ -131,11 +131,11 @@ const ContactForm = () => {
         return;
       }
 
-      // Check if the email function returned an error status
-      if (emailResult && !emailResult.success) {
-        const errorMsg = `Email function returned error: ${emailResult.error || 'Unknown error'}`;
+      // STRICT VALIDATION: Only treat as success if emailResult.success === true
+      if (!emailResult || emailResult.success !== true) {
+        const errorMsg = emailResult?.error || 'Email function returned invalid response or failed';
         addDebugLog(`❌ PHASE 3 FAILED: ${errorMsg}`);
-        console.error('Email function error:', emailResult);
+        console.error('Email function error details:', emailResult);
         alert(`EMAIL ERROR: ${errorMsg} (Contact was saved to database)`);
         setCurrentPhase('error');
         setLastError(errorMsg);
