@@ -1,8 +1,8 @@
 const coaching = {
   coaching: {
     hero: {
-      title: 'Pasiruošęs keistis? Žinau, kad tai nesudėtinga. Net jei nesitikėjai.',
-      subtitle: 'Treneris, kuris supranta — nebūtina mylėti sporto, kad atrastum pusiausvyrą ir energiją. Pradėkime.'
+      title: 'Pasiruošęs keistis? Tai paprasčiau nei manai — net jei šiuo metu abejoji.',
+      subtitle: 'Tau nereikia gyventi sporto salėje, kad sustiprėtum ir turėtum daugiau energijos. Kartu sukursime planą, pritaikytą tavo gyvenimui, o rezultatai kalbės patys už save.'
     },
     services: {
       sectionTitle: 'Ką galiu duoti',
