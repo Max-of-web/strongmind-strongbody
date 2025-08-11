@@ -77,7 +77,7 @@ const Coaching = () => {
                   Net jei dabar tuo abejoji.
                 </h1>
                 <p className="text-xl md:text-2xl text-white mb-8">
-                  Tau nebūtina gyventi sporto salėje, kad atrastum pusiausvyrą, sustiprėtum ir turėtum daugiau energijos. Kartu sukursime planą, kuris tiks tavo gyvenimui, o rezultatai kalbės patys už save.
+                  Tau nereikia gyventi sporto salėje, kad sustiprėtum ir turėtum daugiau energijos. Kartu sukursime planą, pritaikytą tavo gyvenimui, o rezultatai kalbės patys už save.
                 </p>
                 <button onClick={scrollToForm} className="cta-button-primary inline-block">
                   {t('homepage.hero.ctaButton')}
