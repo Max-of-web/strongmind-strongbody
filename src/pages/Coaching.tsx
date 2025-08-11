@@ -132,9 +132,7 @@ const Coaching = () => {
             <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-center">
               <div className="md:w-1/2 scroll-fade-in">
                 <h2 className="section-title text-white">{t('coaching.target.sectionTitle')}</h2>
-                <p className="mb-6 text-white font-medium">
-                  "{t('coaching.target.intro')}"
-                </p>
+                
                 <p className="mb-6 text-white">
                   {t('coaching.target.description')}
                 </p>
