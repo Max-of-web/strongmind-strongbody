@@ -36,10 +36,6 @@ const LowerBackGuide = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-800 dark:text-white">
               {t('homepage.lowerBackGuide.sectionTitle')}
             </h2>
-            <p className="mb-6 text-slate-700 dark:text-slate-200 text-lg">
-              {t('homepage.lowerBackGuide.intro')}
-            </p>
-            
             <ul className="space-y-4 mb-8">
               {benefits.map((benefit, index) => (
                 <li key={index} className="flex items-start">
