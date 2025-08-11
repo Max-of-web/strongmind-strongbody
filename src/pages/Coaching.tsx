@@ -76,7 +76,9 @@ const Coaching = () => {
               {/* Hero Content - Mobile: Below photo, Desktop: Left side */}
               <div className="order-2 md:order-1 md:w-2/3 text-center md:text-left">
                 <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                  {t('coaching.hero.title')}
+                  Pasiruošęs keistis?<br />
+                  Tai paprasčiau, nei manai.<br />
+                  Net jei dabar tuo abejoji.
                 </h1>
                 <p className="text-xl md:text-2xl text-white mb-8">
                   {t('coaching.hero.subtitle')}
