@@ -24,6 +24,9 @@ const common = {
   theme: {
     dark: 'Tamsus Režimas',
     light: 'Šviesus Režimas'
+  },
+  emailSubscription: {
+    placeholder: 'Įveskite savo el. pašto adresą'
   }
 };
 

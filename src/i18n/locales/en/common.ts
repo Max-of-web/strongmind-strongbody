@@ -36,6 +36,9 @@ const common = {
   theme: {
     dark: 'Dark Mode',
     light: 'Light Mode'
+  },
+  emailSubscription: {
+    placeholder: 'Enter your email address'
   }
 };
 
