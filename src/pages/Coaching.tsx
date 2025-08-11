@@ -72,9 +72,9 @@ const Coaching = () => {
               {/* Hero Content - Mobile: Below photo, Desktop: Left side */}
               <div className="order-2 md:order-1 md:w-2/3 text-center md:text-left">
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white text-center leading-tight">
-                  Pasiruošęs keistis?<br />
-                  Tai paprasčiau, nei manai.<br />
-                  Net jei dabar tuo abejoji.
+                  Ready to change?<br />
+                  It's easier than you think —<br />
+                  even if you doubt it right now.
                 </h1>
                 <p className="text-xl md:text-2xl text-white mb-8">
                   Tau nereikia gyventi sporto salėje, kad sustiprėtum ir turėtum daugiau energijos. Kartu sukursime planą, pritaikytą tavo gyvenimui, o rezultatai kalbės patys už save.
