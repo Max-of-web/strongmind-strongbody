@@ -15,7 +15,7 @@ const coaching = {
         description: 'Judame pirmyn kartu. Išsikeliame tikslus, peržiūrime ir pritaikome planą, nes tai, kas veikė vakar, nebūtinai tiks rytoj.'
       },
       psychologicalSupport: {
-        title: 'Koučingas',
+        title: 'Mąstysenos ir įpročių formavimas',
         description: 'Padėti formuoti naują mąstymą ir elgseną. Tas paprastas dalykas, kurio dažnai trūksta.'
       },
       directCommunication: {
