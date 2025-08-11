@@ -28,12 +28,12 @@ const homepage = {
     },
     achievements: {
       sectionTitle: 'Kas tavęs laukia',
-      subtitle: 'Nuoseklaus vedimo, protingo judėjimo ir praktinių mąstysenos pokyčių dėka aš padedu žmonėms perimti kontrolę. Čia ne apie tobulumą. Čia apie tai, kad atsiradiis vienu tikru žingsniu vienu metu.',
+      subtitle: 'Kineziterapija, reabilitacija po traumų, mažos grupės, individualios treniruotės ir aiškiai struktūruotos programos – paremtos mokslu ir pritaikytos tavo gyvenimo būdui.',
       items: [
         'Mažiau skausmo ir diskomforto dėl taisyklingo judėjimo',
-        'Treniruotės, pritaikytos prie tavo energijos ir progreso',
-        'Įpročiai, kuriuos pagaliau galėsi išlaikyti ilgai',
-        'Tvirtesnis ryšys tarp tavęs ir tavo kūno',
+        'Treniruotės, pritaikytos tavo energijai ir progresui',
+        'Įpročiai, kurie išliks ilgam',
+        'Stipresnis ryšys su savo kūnu',
         'Pasitikėjimas, kad judi teisingai'
       ]
     },
