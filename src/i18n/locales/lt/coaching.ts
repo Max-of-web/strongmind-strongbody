@@ -12,7 +12,7 @@ const coaching = {
       },
       weeklyAdjustments: {
         title: 'Reguliarios Korekcijos',
-        description: 'Judame pirmyn kartu. Nes tai, kas veikė šį mėnesį, ne visada tiks kitam.'
+        description: 'Judame pirmyn kartu. Išsikeliame tikslus, peržiūrime ir pritaikome planą, nes tai, kas veikė vakar, nebūtinai tiks rytoj.'
       },
       psychologicalSupport: {
         title: 'Koučingas',
