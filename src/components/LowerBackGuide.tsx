@@ -57,19 +57,14 @@ const LowerBackGuide = () => {
 
           {/* Right column - Form */}
           <div className="md:w-1/2">
-            <div className="h-full flex flex-col bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-md shadow-md p-6 relative">
-              {/* Background silhouette */}
-              <div className="absolute inset-0 flex items-center justify-center opacity-20 pointer-events-none">
-                <img 
-                  src="/lovable-uploads/324207cf-4222-443e-bb7a-9456f2cc7a7a.png" 
-                  alt="Spine silhouette" 
-                  className="w-full h-full object-contain mix-blend-multiply dark:mix-blend-screen"
-                />
-              </div>
-              
-              <h3 className="text-2xl font-semibold mb-4 text-slate-800 dark:text-white relative z-10">
+            <div className="flex flex-col bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-md shadow-md p-4">
+              <h3 className="text-xl font-semibold mb-3 text-slate-800 dark:text-white">
                 {t('homepage.lowerBackGuide.sectionTitle')}
               </h3>
+              
+              <p className="text-sm text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                {t('homepage.lowerBackGuide.intro')}
+              </p>
 
               <form 
                 onSubmit={async (e) => {
@@ -98,7 +93,7 @@ const LowerBackGuide = () => {
                     setIsSubmitting(false);
                   }
                 }}
-                className="flex flex-col space-y-4 mt-auto relative z-10"
+                className="flex flex-col space-y-3"
               >
                 {/* Hidden Honeypot input to prevent spam */}
                 <input 
@@ -116,7 +111,7 @@ const LowerBackGuide = () => {
                     placeholder={t('emailSubscription.placeholder')} 
                     required 
                     disabled={isSubmitting}
-                    className="w-full p-3 rounded-md bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-white border border-slate-300 dark:border-slate-600 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-theme-tangerine focus:border-transparent disabled:opacity-50"
+                    className="w-full p-2 text-sm rounded-md bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-white border border-slate-300 dark:border-slate-600 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-theme-tangerine focus:border-transparent disabled:opacity-50"
                   />
                 </div>
                 
@@ -124,12 +119,12 @@ const LowerBackGuide = () => {
                   type="submit" 
                   variant="cta"
                   disabled={isSubmitting}
-                  className="w-full px-4 py-3 h-auto"
+                  className="w-full px-4 py-2 text-sm h-auto"
                 >
                   {isSubmitting ? (t('homepage.lowerBackGuide.sendingText') || 'Siunčiama...') : t('homepage.lowerBackGuide.buttonText')}
                 </Button>
 
-                <p className="text-xs text-slate-600 dark:text-slate-400 mt-2">
+                <p className="text-xs text-slate-600 dark:text-slate-400">
                   {t('homepage.lowerBackGuide.disclaimer')}
                 </p>
               </form>
