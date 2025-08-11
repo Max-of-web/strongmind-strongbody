@@ -24,15 +24,15 @@ const coaching = {
       }
     },
     target: {
-      sectionTitle: 'Kam tinka',
+      sectionTitle: 'Kam tai skirta',
       intro: 'Kam tinka:',
-      description: 'Šis metodas tinka žmonėms, kurie nori aiškumo ir struktūros savo fitneso kelyje.',
+      description: 'Mano metodas sukurtas žmonėms, kurie nori aiškumo, struktūros ir ilgalaikės sėkmės savo sveikatingumo kelyje:',
       audiences: [
-        'Užimtiems žmonėms, kurie tikisi aiškumo ir struktūros',
-        'Tiems, kurie pradėdavo ir mesdavo — nebūtinai dėl motyvacijos',
-        'Jei nori tvarumo, ne "greitų rezultatų"',
-        'Jei nerimauja dėl traumų ar kitų apribojimų',
-        'Jei sportas — ne malonumas, bet priemonė geresniam savijautai'
+        'Užimtiems, bet siekiantiems aiškaus plano ir krypties',
+        'Tiems, kurie ne kartą pradėjo ir metė – ne dėl motyvacijos stokos, o dėl netinkamos sistemos',
+        'Ieškantiems tvaraus progreso, o ne greitų, trumpalaikių rezultatų',
+        'Nerimaujantiems dėl traumų ar kitų fizinių apribojimų',
+        'Žiūrintiems į sportą ne kaip į bausmę, o kaip į priemonę jaustis geriau kasdien'
       ]
     },
     pricing: {
