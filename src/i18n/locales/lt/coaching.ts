@@ -8,7 +8,7 @@ const coaching = {
       sectionTitle: 'Kas tavęs laukia',
       personalizedProgram: {
         title: 'Individuali Programa',
-        description: 'Tik tau pritaikyta — atsižvelgdamas į tikslus, apribojimus ir galimybes.'
+        description: 'Sukurta tik tau – atsižvelgiant į tavo tikslus, galimybes ir apribojimus.'
       },
       weeklyAdjustments: {
         title: 'Reguliarios Korekcijos',
