@@ -234,7 +234,7 @@ const Coaching = () => {
             
             {/* Group training community image */}
             <div className="mb-12 scroll-fade-in">
-              <div className="relative rounded-lg overflow-hidden shadow-xl max-w-4xl mx-auto">
+              <div className="relative rounded-lg overflow-hidden shadow-xl max-w-xl mx-auto">
                 <img src="/lovable-uploads/2a7d58f6-c98a-4706-a5a9-faa7910a150a.png" alt="Group training session showing community and progress" className="w-full h-auto" />
                 <div className="absolute inset-0 bg-gradient-to-t from-elegant-charcoal via-transparent to-transparent" />
               </div>
