@@ -57,8 +57,17 @@ const LowerBackGuide = () => {
 
           {/* Right column - Form */}
           <div className="md:w-1/2">
-            <div className="h-full flex flex-col bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-md shadow-md p-6">
-              <h3 className="text-2xl font-semibold mb-4 text-slate-800 dark:text-white">
+            <div className="h-full flex flex-col bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-md shadow-md p-6 relative">
+              {/* Background silhouette */}
+              <div className="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none">
+                <img 
+                  src="/lovable-uploads/324207cf-4222-443e-bb7a-9456f2cc7a7a.png" 
+                  alt="Spine silhouette" 
+                  className="w-32 h-auto"
+                />
+              </div>
+              
+              <h3 className="text-2xl font-semibold mb-4 text-slate-800 dark:text-white relative z-10">
                 {t('homepage.lowerBackGuide.sectionTitle')}
               </h3>
 
@@ -89,7 +98,7 @@ const LowerBackGuide = () => {
                     setIsSubmitting(false);
                   }
                 }}
-                className="flex flex-col space-y-4 mt-auto"
+                className="flex flex-col space-y-4 mt-auto relative z-10"
               >
                 {/* Hidden Honeypot input to prevent spam */}
                 <input 
