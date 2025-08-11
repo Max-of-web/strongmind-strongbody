@@ -24,15 +24,15 @@ const coaching = {
       }
     },
     target: {
-      sectionTitle: 'Who This Is For',
+      sectionTitle: 'Who It\'s For',
       intro: 'Perfect for:',
-      description: 'This approach works for people who want clarity and structure in their fitness journey.',
+      description: 'My approach is designed for people who want clarity, structure, and long-term success in their health and fitness journey:',
       audiences: [
-        'Busy people who expect clarity and structure',
-        'Those who started and quit — not necessarily due to motivation',
-        'If you want sustainability, not "quick results"',
-        'If you worry about injuries or other limitations',
-        'If sports isn\'t a pleasure, but a means to better well-being'
+        'Busy individuals who need a clear plan and direction',
+        'Those who have started and stopped before – not because of a lack of motivation, but because the system wasn\'t right',
+        'People looking for sustainable progress, not quick, short-lived results',
+        'Anyone concerned about injuries or physical limitations',
+        'Those who see exercise not as punishment, but as a tool to feel better every day'
       ]
     },
     process: {
