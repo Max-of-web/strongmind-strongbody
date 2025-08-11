@@ -59,11 +59,11 @@ const LowerBackGuide = () => {
           <div className="md:w-1/2">
             <div className="h-full flex flex-col bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-md shadow-md p-6 relative">
               {/* Background silhouette */}
-              <div className="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none">
+              <div className="absolute inset-0 flex items-center justify-center opacity-20 pointer-events-none">
                 <img 
                   src="/lovable-uploads/324207cf-4222-443e-bb7a-9456f2cc7a7a.png" 
                   alt="Spine silhouette" 
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-contain mix-blend-multiply dark:mix-blend-screen"
                 />
               </div>
               
