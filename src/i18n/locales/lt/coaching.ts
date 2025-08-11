@@ -5,7 +5,7 @@ const coaching = {
       subtitle: 'Tau nereikia gyventi sporto salėje, kad sustiprėtum ir turėtum daugiau energijos. Kartu sukursime planą, pritaikytą tavo gyvenimui, o rezultatai kalbės patys už save.'
     },
     services: {
-      sectionTitle: 'Ką galiu duoti',
+      sectionTitle: 'Kas tavęs laukia',
       personalizedProgram: {
         title: 'Individuali Programa',
         description: 'Tik tau pritaikyta — atsižvelgdamas į tikslus, apribojimus ir galimybes.'
