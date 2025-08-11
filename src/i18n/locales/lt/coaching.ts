@@ -20,7 +20,7 @@ const coaching = {
       },
       directCommunication: {
         title: 'Tiesioginis palaikymas',
-        description: 'Klausk, kada reikia. WhatsApp yra kasdieniam palaikymui — ne vien registracijoms.'
+        description: 'Kreipkis, kai reikia. WhatsApp ryšys klientų palaikymui, o ne tik registracijai.'
       }
     },
     target: {
