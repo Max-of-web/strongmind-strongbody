@@ -121,7 +121,7 @@ const LowerBackGuide = () => {
                 </Button>
 
                 <p className="text-xs text-slate-600 dark:text-slate-400 mt-2">
-                  Pateikdamas savo duomenis, sutinki, kad PDF gidas būtų atsiųstas tau el. paštu. Prenumeratos galėsi atsisakyti bet kada.
+                  {t('homepage.lowerBackGuide.disclaimer')}
                 </p>
               </form>
             </div>
