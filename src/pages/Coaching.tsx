@@ -133,9 +133,11 @@ const Coaching = () => {
               <div className="md:w-1/2 scroll-fade-in">
                 <h2 className="section-title text-white">{t('coaching.target.sectionTitle')}</h2>
                 
-                <p className="mb-4 text-white">
-                  Mano metodas sukurtas žmonėms, kurie nori aiškumo, struktūros ir ilgalaikės sėkmės savo sveikatingumo kelyje:
-                </p>
+                {t('language') === 'lt' && (
+                  <p className="mb-4 text-white">
+                    Mano metodas sukurtas žmonėms, kurie nori aiškumo, struktūros ir ilgalaikės sėkmės savo sveikatingumo kelyje:
+                  </p>
+                )}
                 
                 <p className="mb-6 text-white">
                   {t('coaching.target.description')}
