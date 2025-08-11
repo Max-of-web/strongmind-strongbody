@@ -16,7 +16,7 @@ const coaching = {
       },
       psychologicalSupport: {
         title: 'Mąstysenos ir įpročių formavimas',
-        description: 'Padėti formuoti naują mąstymą ir elgseną. Tas paprastas dalykas, kurio dažnai trūksta.'
+        description: 'Padėsiu keisti požiūrį ir kasdienius įpročius, kad pokyčiai išliktų ilgam.'
       },
       directCommunication: {
         title: 'Tiesioginis Kontaktas',
