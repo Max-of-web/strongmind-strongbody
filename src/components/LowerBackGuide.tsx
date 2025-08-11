@@ -63,7 +63,7 @@ const LowerBackGuide = () => {
                 <img 
                   src="/lovable-uploads/324207cf-4222-443e-bb7a-9456f2cc7a7a.png" 
                   alt="Spine silhouette" 
-                  className="w-32 h-auto"
+                  className="w-full h-full object-contain"
                 />
               </div>
               
