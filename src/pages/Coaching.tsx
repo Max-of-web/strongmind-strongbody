@@ -77,7 +77,7 @@ const Coaching = () => {
                   even if you doubt it right now.
                 </h1>
                 <p className="text-xl md:text-2xl text-white mb-8">
-                  Tau nereikia gyventi sporto salėje, kad sustiprėtum ir turėtum daugiau energijos. Kartu sukursime planą, pritaikytą tavo gyvenimui, o rezultatai kalbės patys už save.
+                  You don't need to live in the gym to get stronger and feel more energized. We'll create a plan that fits your life, and the results will speak for themselves.
                 </p>
                 <button onClick={scrollToForm} className="cta-button-primary inline-block">
                   {t('homepage.hero.ctaButton')}
