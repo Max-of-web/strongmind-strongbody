@@ -154,7 +154,6 @@ const Coaching = () => {
               <div className="md:w-1/2 scroll-fade-in">
                 <div className="relative rounded-lg overflow-hidden shadow-xl">
                   <img src="/lovable-uploads/7a91b7ec-6167-4e40-bd4c-9460ff6826b2.png" alt="One-on-one personal training session" className="w-full h-auto" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-theme-navy via-transparent to-transparent"></div>
                 </div>
               </div>
             </div>
