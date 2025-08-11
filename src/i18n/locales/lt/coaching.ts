@@ -19,7 +19,7 @@ const coaching = {
         description: 'Padėsiu keisti požiūrį ir kasdienius įpročius, kad pokyčiai išliktų ilgam.'
       },
       directCommunication: {
-        title: 'Tiesioginis Kontaktas',
+        title: 'Tiesioginis palaikymas',
         description: 'Klausk, kada reikia. WhatsApp yra kasdieniam palaikymui — ne vien registracijoms.'
       }
     },
