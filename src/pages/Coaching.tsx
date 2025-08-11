@@ -71,7 +71,7 @@ const Coaching = () => {
               
               {/* Hero Content - Mobile: Below photo, Desktop: Left side */}
               <div className="order-2 md:order-1 md:w-2/3 text-center md:text-left">
-                <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-center">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white text-center leading-tight">
                   Pasiruošęs keistis?<br />
                   Tai paprasčiau, nei manai.<br />
                   Net jei dabar tuo abejoji.
