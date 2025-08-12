@@ -1,7 +1,7 @@
 const coaching = {
   coaching: {
     hero: {
-      title: 'Ready to change? It\'s easier than you think — even if you doubt it right now.',
+      title: 'Ready to change?\nIt\'s easier than you think — even if you doubt it right now.',
       subtitle: 'You don\'t need to live in the gym to get stronger and feel more energized. We\'ll create a plan that fits your life, and the results will speak for themselves.'
     },
     services: {
