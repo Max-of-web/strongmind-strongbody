@@ -66,9 +66,12 @@ const Header = () => {
               to="/"
               className={`text-white hover:text-theme-gold transition-all duration-300 ${
                 location.pathname === '/' 
-                  ? 'text-theme-gold shadow-[0_0_10px] shadow-theme-gold/50 font-semibold' 
+                  ? 'text-theme-gold font-semibold' 
                   : ''
               }`}
+              style={location.pathname === '/' ? {
+                textShadow: '0 0 10px hsl(var(--theme-gold)), 0 0 20px hsl(var(--theme-gold)), 0 0 30px hsl(var(--theme-gold))'
+              } : {}}
             >
               {t('header.home')}
             </Link>
@@ -76,9 +79,12 @@ const Header = () => {
               to="/coaching" 
               className={`text-white hover:text-theme-gold transition-all duration-300 ${
                 location.pathname === '/coaching' 
-                  ? 'text-theme-gold shadow-[0_0_10px] shadow-theme-gold/50 font-semibold' 
+                  ? 'text-theme-gold font-semibold' 
                   : ''
               }`}
+              style={location.pathname === '/coaching' ? {
+                textShadow: '0 0 10px hsl(var(--theme-gold)), 0 0 20px hsl(var(--theme-gold)), 0 0 30px hsl(var(--theme-gold))'
+              } : {}}
             >
               {t('header.coaching')}
             </Link>
