@@ -70,7 +70,7 @@ const Header = () => {
                   : ''
               }`}
               style={location.pathname === '/' ? {
-                textShadow: '0 0 10px hsl(var(--theme-gold)), 0 0 20px hsl(var(--theme-gold)), 0 0 30px hsl(var(--theme-gold))'
+                textShadow: '0 0 15px hsl(var(--theme-gold)), 0 0 30px hsl(var(--theme-gold)), 0 0 45px hsl(var(--theme-gold)), 0 0 60px hsl(var(--theme-gold))'
               } : {}}
             >
               {t('header.home')}
@@ -83,7 +83,7 @@ const Header = () => {
                   : ''
               }`}
               style={location.pathname === '/coaching' ? {
-                textShadow: '0 0 10px hsl(var(--theme-gold)), 0 0 20px hsl(var(--theme-gold)), 0 0 30px hsl(var(--theme-gold))'
+                textShadow: '0 0 15px hsl(var(--theme-gold)), 0 0 30px hsl(var(--theme-gold)), 0 0 45px hsl(var(--theme-gold)), 0 0 60px hsl(var(--theme-gold))'
               } : {}}
             >
               {t('header.coaching')}
