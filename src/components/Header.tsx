@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
@@ -11,6 +11,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t } = useTranslation();
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,22 +43,27 @@ const Header = () => {
       }`}
     >
       <div className="container-width flex justify-between items-center px-4 md:px-8">
-        <Link 
-          to="/#about" 
-          onClick={(e) => {
-            e.preventDefault();
-            const aboutSection = document.getElementById('about');
-            if (aboutSection) {
-              aboutSection.scrollIntoView({ behavior: 'smooth' });
+        <button
+          onClick={() => {
+            if (location.pathname === '/') {
+              const aboutSection = document.getElementById('about');
+              if (aboutSection) {
+                aboutSection.scrollIntoView({ behavior: 'smooth' });
+              }
             } else {
-              // If not on home page, navigate there first
-              window.location.href = '/#about';
+              navigate('/', { replace: true });
+              setTimeout(() => {
+                const aboutSection = document.getElementById('about');
+                if (aboutSection) {
+                  aboutSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }, 100);
             }
           }}
           className="text-theme-gold bg-gradient-to-r from-theme-gold to-theme-tangerine bg-clip-text font-display text-lg md:text-xl lg:text-2xl font-bold hover:text-transparent hover:from-theme-tangerine hover:to-theme-gold transition-all duration-300 z-10"
         >
           Paulius<span className="text-theme-gold text-lg md:text-xl lg:text-2xl font-bold">Lipskis</span>
-        </Link>
+        </button>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-4">
