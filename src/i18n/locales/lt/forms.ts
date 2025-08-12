@@ -70,6 +70,35 @@ const forms = {
       title: 'Kažkas nepavyko',
       description: 'Bandykite dar kartą vėliau.'
     }
+  },
+  contact: {
+    form: {
+      title: "Susisiekite su mumis",
+      name: "Vardas",
+      email: "El. paštas",
+      phone: "Telefonas",
+      message: "Žinutė",
+      namePlaceholder: "Jūsų vardas ir pavardė",
+      emailPlaceholder: "jusu.pastas@example.com",
+      phonePlaceholder: "+370 123 45678",
+      messagePlaceholder: "Papasakokite, kaip galime jums padėti...",
+      submit: "Siųsti žinutę",
+      submitting: "Siunčiama...",
+      successToast: {
+        title: "Žinutė išsiųsta sėkmingai!",
+        description: "Ačiū už jūsų žinutę. Netrukus su jumis susisieksime."
+      },
+      errorToast: {
+        title: "Klaida siunčiant žinutę",
+        description: "Kažkas nepavyko. Bandykite dar kartą."
+      },
+      thankYou: {
+        title: "Ačiū!",
+        description: "Jūsų žinutė sėkmingai gauta.",
+        nextSteps: "Atsakysime per 24 valandas.",
+        close: "Uždaryti"
+      }
+    }
   }
 };
 
