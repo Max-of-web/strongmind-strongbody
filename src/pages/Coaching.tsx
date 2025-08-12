@@ -75,7 +75,7 @@ const Coaching = () => {
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white text-center leading-tight">
                   {t('coaching.hero.title')}
                 </h1>
-                <p className="text-xl md:text-2xl text-white mb-8">
+                <p className="text-xl md:text-2xl text-white mb-8 text-center max-w-4xl mx-auto">
                   {t('coaching.hero.subtitle')}
                 </p>
                 <button onClick={() => navigate('/')} className="cta-button-primary inline-block">
