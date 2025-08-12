@@ -72,7 +72,15 @@ const Coaching = () => {
               {/* Hero Content - Mobile: Below photo, Desktop: Left side */}
               <div className="order-2 md:order-1 md:w-2/3 text-center md:text-left flex flex-col justify-center">
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white text-center leading-tight">
-                  {t('coaching.hero.title')}
+                  <span className="block text-theme-tangerine whitespace-nowrap">
+                    {t('language') === 'lt' ? 'Pasiruošęs keistis?' : 'Ready to change?'}
+                  </span>
+                  <span className="block">
+                    {t('language') === 'lt' 
+                      ? 'Tai paprasčiau nei manai — net jei šiuo metu abejoji.' 
+                      : 'It\'s easier than you think — even if you doubt it right now.'
+                    }
+                  </span>
                 </h1>
                 <p className="text-xl md:text-2xl text-white mb-8">
                   {t('coaching.hero.subtitle')}
