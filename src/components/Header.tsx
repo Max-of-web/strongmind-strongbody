@@ -44,9 +44,9 @@ const Header = () => {
       <div className="container-width flex justify-between items-center px-4 md:px-8">
         <Link 
           to="/#about" 
-          className="text-transparent bg-gradient-to-r from-theme-gold via-theme-tangerine to-purple-500 bg-clip-text font-display text-lg md:text-xl lg:text-2xl font-bold hover:from-yellow-300 hover:via-orange-400 hover:to-pink-500 transition-all duration-300 z-10"
+          className="text-transparent bg-gradient-to-r from-theme-gold to-theme-tangerine bg-clip-text font-display text-lg md:text-xl lg:text-2xl font-bold hover:from-theme-tangerine hover:to-theme-gold transition-all duration-300 z-10"
         >
-          Paulius<span className="text-transparent bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-lg md:text-xl lg:text-2xl font-bold">Lipskis</span>
+          Paulius<span className="text-theme-gold text-lg md:text-xl lg:text-2xl font-bold">Lipskis</span>
         </Link>
 
         {/* Desktop Navigation */}
