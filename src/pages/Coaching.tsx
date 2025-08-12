@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { MessageSquare, Check, Instagram, MapPin } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import Header from '../components/Header';
@@ -12,6 +12,7 @@ const Coaching = () => {
     t
   } = useTranslation();
   const location = useLocation();
+  const navigate = useNavigate();
   useEffect(() => {
     // Scroll to top on page load
     window.scrollTo(0, 0);
@@ -77,7 +78,7 @@ const Coaching = () => {
                 <p className="text-xl md:text-2xl text-white mb-8">
                   {t('coaching.hero.subtitle')}
                 </p>
-                <button onClick={scrollToForm} className="cta-button-primary inline-block">
+                <button onClick={() => navigate('/')} className="cta-button-primary inline-block">
                   {t('homepage.hero.ctaButton')}
                 </button>
               </div>
@@ -185,7 +186,7 @@ const Coaching = () => {
 
             {/* CTA after pricing */}
             <div className="text-center mt-12 scroll-fade-in">
-              <button onClick={scrollToForm} className="cta-button-primary text-lg px-8 py-4">
+              <button onClick={() => navigate('/')} className="cta-button-primary text-lg px-8 py-4">
                 {t('homepage.hero.ctaButton')}
               </button>
             </div>
