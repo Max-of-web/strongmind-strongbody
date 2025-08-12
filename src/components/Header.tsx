@@ -44,6 +44,16 @@ const Header = () => {
       <div className="container-width flex justify-between items-center px-4 md:px-8">
         <Link 
           to="/#about" 
+          onClick={(e) => {
+            e.preventDefault();
+            const aboutSection = document.getElementById('about');
+            if (aboutSection) {
+              aboutSection.scrollIntoView({ behavior: 'smooth' });
+            } else {
+              // If not on home page, navigate there first
+              window.location.href = '/#about';
+            }
+          }}
           className="text-theme-gold bg-gradient-to-r from-theme-gold to-theme-tangerine bg-clip-text font-display text-lg md:text-xl lg:text-2xl font-bold hover:text-transparent hover:from-theme-tangerine hover:to-theme-gold transition-all duration-300 z-10"
         >
           Paulius<span className="text-theme-gold text-lg md:text-xl lg:text-2xl font-bold">Lipskis</span>
