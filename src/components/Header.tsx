@@ -44,7 +44,7 @@ const Header = () => {
       <div className="container-width flex justify-between items-center px-4 md:px-8">
         <Link 
           to="/#about" 
-          className="text-transparent bg-gradient-to-r from-theme-gold to-theme-tangerine bg-clip-text font-display text-lg md:text-xl lg:text-2xl font-bold hover:from-theme-tangerine hover:to-theme-gold transition-all duration-300 z-10"
+          className="text-theme-gold bg-gradient-to-r from-theme-gold to-theme-tangerine bg-clip-text font-display text-lg md:text-xl lg:text-2xl font-bold hover:text-transparent hover:from-theme-tangerine hover:to-theme-gold transition-all duration-300 z-10"
         >
           Paulius<span className="text-theme-gold text-lg md:text-xl lg:text-2xl font-bold">Lipskis</span>
         </Link>
