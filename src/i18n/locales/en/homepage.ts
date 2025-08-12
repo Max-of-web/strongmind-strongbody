@@ -106,7 +106,7 @@ const homepage = {
     },
     lowerBackGuide: {
       sectionTitle: 'Get Your Free Back Pain Guide',
-      intro: 'Up to 80% of people experience back pain at some point in their lives — but it doesn\'t always mean something serious. This short and clear guide gives you the most important facts and 7 simple steps to better understand your pain and what you can do yourself.',
+      intro: 'Up to 80% of people experience back pain at least once in their lives. In this short guide you will find essential facts and 7 simple steps to help you understand the cause of pain and take action immediately.',
       benefits: [
         'Why most back pain isn\'t dangerous',
         'Why movement and even short walks matter',

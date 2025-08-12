@@ -106,7 +106,7 @@ const homepage = {
     },
     lowerBackGuide: {
       sectionTitle: 'Gauk nemokamą gidą apie nugaros skausmą',
-      intro: 'Iki 80% žmonių gyvenimo metu patiria nugaros skausmą — bet tai ne visada reiškia, kad kas nors rimta. Šis trumpas ir aiškus gidas suteiks tau svarbiausius faktus ir 7 paprastus žingsnius, kad geriau suprastum savo skausmą ir ką gali padaryti pats.',
+      intro: 'Iki 80 % žmonių bent kartą gyvenime susiduria su nugaros skausmu. Šiame trumpame gide rasi esminius faktus ir 7 paprastus žingsnius, padėsiančius suprasti skausmo priežastį ir imtis veiksmų iškart.',
       benefits: [
         'Kodėl dažniausiai nugaros skausmas neturėtų kelti nerimo',
         'Kuo svarbus judėjimas ir trumpi pasivaikščiojimai',
