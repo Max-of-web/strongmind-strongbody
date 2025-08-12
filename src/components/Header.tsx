@@ -64,13 +64,21 @@ const Header = () => {
           <div className="flex items-center space-x-8 mr-4">
             <Link 
               to="/"
-              className="text-white hover:text-theme-gold transition-colors"
+              className={`text-white hover:text-theme-gold transition-all duration-300 ${
+                location.pathname === '/' 
+                  ? 'text-theme-gold shadow-[0_0_10px] shadow-theme-gold/50 font-semibold' 
+                  : ''
+              }`}
             >
               {t('header.home')}
             </Link>
             <Link 
               to="/coaching" 
-              className="text-white hover:text-theme-gold transition-colors"
+              className={`text-white hover:text-theme-gold transition-all duration-300 ${
+                location.pathname === '/coaching' 
+                  ? 'text-theme-gold shadow-[0_0_10px] shadow-theme-gold/50 font-semibold' 
+                  : ''
+              }`}
             >
               {t('header.coaching')}
             </Link>
