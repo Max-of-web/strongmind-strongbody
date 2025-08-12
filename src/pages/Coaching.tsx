@@ -72,7 +72,7 @@ const Coaching = () => {
               
               {/* Hero Content - Mobile: Below photo, Desktop: Left side */}
               <div className="order-2 md:order-1 md:w-2/3 text-center md:text-left flex flex-col justify-center">
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white text-center leading-tight">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white text-center leading-tight whitespace-pre-line">
                   {t('coaching.hero.title')}
                 </h1>
                 <p className="text-xl md:text-2xl text-white mb-8 text-center max-w-4xl mx-auto">
