@@ -131,11 +131,11 @@ const PricingCard = ({
           <div className="max-h-[70vh] overflow-y-auto">
             <CardContent className="space-y-4 pt-0 p-5 md:p-6 bg-[#0F1115]">
               <p className="text-sm text-gray-100">
-                Who it's for: {t(`coaching.pricing.${pricingKey}.subtitle`)}
+                {t('coaching.pricing.whoItsFor')}: {t(`coaching.pricing.${pricingKey}.subtitle`)}
               </p>
               
               <div>
-                <p className="text-sm text-gray-100 mb-3 font-medium">What you get:</p>
+                <p className="text-sm text-gray-100 mb-3 font-medium">{t('coaching.pricing.whatYouGet')}:</p>
                 <PricingFeatureList 
                   featurePrefix={`coaching.pricing.${pricingKey}.features`} 
                   featureCount={featureCount} 

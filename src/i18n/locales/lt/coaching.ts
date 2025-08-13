@@ -37,6 +37,8 @@ const coaching = {
     },
     pricing: {
       sectionTitle: 'Paketai ir Kainos',
+      whoItsFor: 'Kam tai skirta',
+      whatYouGet: 'Kas įeina į paketą',
       badges: {
         recommended: 'REKOMENDUOJAMA',
         mostPopular: 'POPULIARIAUSIA'

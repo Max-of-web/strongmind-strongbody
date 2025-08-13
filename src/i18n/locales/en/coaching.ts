@@ -62,6 +62,8 @@ const coaching = {
     },
     pricing: {
       sectionTitle: 'Packages & Pricing',
+      whoItsFor: 'Who it\'s for',
+      whatYouGet: 'What you get',
       badges: {
         recommended: 'RECOMMENDED',
         mostPopular: 'MOST POPULAR'
