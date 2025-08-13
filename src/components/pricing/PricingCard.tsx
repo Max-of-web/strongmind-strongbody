@@ -26,42 +26,16 @@ const PricingCard = ({
 }: PricingCardProps) => {
   const { t } = useTranslation();
 
-  // Get correct card style based on new color scheme
-  const getCardStyle = () => {
-    const cardStyle = {
-      borderColor: '#374151',
-      boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05)',
-      transition: 'all 300ms ease',
-      backgroundColor: '#1F2937',
-      color: 'white'
-    };
+  const getCardClasses = () => {
+    const baseClasses = "border border-border/20 shadow-lg bg-card text-card-foreground transition-all duration-300 ease-out hover:shadow-xl";
     
-    return cardStyle;
-  };
-
-  const getHighlightedCardStyle = () => {
-    const baseStyle = getCardStyle();
-    
-    const highlightStyle = {
-      borderWidth: '2px',
-      borderColor: '#1E3A8A', // Deep blue
-      boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)'
-    };
-
-    const premiumStyle = {
-      borderWidth: '2px',
-      borderColor: '#F59E0B', // Golden for premium
-      boxShadow: '0 20px 25px -5px rgba(245, 158, 11, 0.2), 0 10px 10px -5px rgba(245, 158, 11, 0.1)',
-      background: 'linear-gradient(135deg, #1F2937 0%, #374151 100%)'
-    };
-
     if (isPremium) {
-      return {...baseStyle, ...premiumStyle};
+      return `${baseClasses} border-amber-500/40 shadow-amber-500/10`;
     } else if (isHighlighted) {
-      return {...baseStyle, ...highlightStyle};
+      return `${baseClasses} border-primary/40 shadow-primary/10`;
     }
     
-    return baseStyle;
+    return baseClasses;
   };
 
   const getBadgeText = () => {
@@ -109,7 +83,7 @@ const PricingCard = ({
 
   return (
     <Collapsible open={isExpanded} onOpenChange={onToggleExpand}>
-      <Card style={getHighlightedCardStyle()} className="relative">
+      <Card className={`relative ${getCardClasses()}`}>
         {(isHighlighted || isPremium) && (
           <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
             <Badge 
@@ -122,24 +96,24 @@ const PricingCard = ({
           </div>
         )}
         
-        <CollapsibleTrigger className="w-full text-left focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg">
-          <CardHeader className="pt-6 pb-4">
+        <CollapsibleTrigger className="w-full text-left focus:outline-none focus:ring-2 focus:ring-primary/20 focus:ring-offset-2 rounded-lg group">
+          <CardHeader className="pt-6 pb-4 group-hover:bg-muted/5 transition-colors duration-200 rounded-t-lg">
             <div className="flex items-center justify-between">
               <div className="flex-1">
-                <CardTitle className="text-xl text-white mb-2">
+                <CardTitle className="text-xl mb-2">
                   {t(`coaching.pricing.${pricingKey}.title`)}
                 </CardTitle>
                 <div className="flex items-baseline">
-                  <span className="text-3xl font-bold text-white">
+                  <span className="text-3xl font-bold">
                     {t(`coaching.pricing.${pricingKey}.price`)}
                   </span>
-                  <span className="ml-1 text-gray-400">
+                  <span className="ml-1 text-muted-foreground">
                     {t(`coaching.pricing.${pricingKey}.period`)}
                   </span>
                 </div>
               </div>
               <ChevronDown 
-                className={`h-5 w-5 text-gray-400 transition-transform duration-200 ${
+                className={`h-5 w-5 text-muted-foreground transition-transform duration-300 ease-out ${
                   isExpanded ? 'rotate-180' : ''
                 }`}
               />
@@ -147,48 +121,50 @@ const PricingCard = ({
           </CardHeader>
         </CollapsibleTrigger>
         
-        <CollapsibleContent className="data-[state=open]:animate-accordion-down data-[state=closed]:animate-accordion-up">
-          <CardContent className="space-y-4 pt-0">
-            <p className="text-sm text-gray-300">
-              Who it's for: {t(`coaching.pricing.${pricingKey}.subtitle`)}
-            </p>
-            
-            <div>
-              <p className="text-sm text-gray-300 mb-3 font-medium">What you get:</p>
-              <PricingFeatureList 
-                featurePrefix={`coaching.pricing.${pricingKey}.features`} 
-                featureCount={featureCount} 
-              />
-            </div>
-            
-            {/* Note section for packages that have it */}
-            {hasNote() && (
-              <div className="mt-4 p-3 bg-green-500/10 rounded-lg border border-green-500/30">
-                <p className="text-sm text-green-200">
-                  🟢 {t(`coaching.pricing.${pricingKey}.note`)}
-                </p>
+        <CollapsibleContent className="data-[state=open]:animate-accordion-down data-[state=closed]:animate-accordion-up overflow-hidden">
+          <div className="max-h-[70vh] md:max-h-none overflow-y-auto">
+            <CardContent className="space-y-4 pt-0 px-6 pb-6 bg-muted/5">
+              <p className="text-sm text-muted-foreground">
+                Who it's for: {t(`coaching.pricing.${pricingKey}.subtitle`)}
+              </p>
+              
+              <div>
+                <p className="text-sm text-muted-foreground mb-3 font-medium">What you get:</p>
+                <PricingFeatureList 
+                  featurePrefix={`coaching.pricing.${pricingKey}.features`} 
+                  featureCount={featureCount} 
+                />
               </div>
-            )}
-            
-            {/* Bottom text section */}
-            {hasBottomText() && (
-              <div className="mt-4 pt-3 border-t border-gray-600">
-                <p className="text-sm text-gray-300 font-medium">
-                  👉 {t(`coaching.pricing.${pricingKey}.bottomText`)}
-                </p>
+              
+              {/* Note section for packages that have it */}
+              {hasNote() && (
+                <div className="mt-4 p-3 bg-green-500/10 rounded-lg border border-green-500/30">
+                  <p className="text-sm text-green-200">
+                    🟢 {t(`coaching.pricing.${pricingKey}.note`)}
+                  </p>
+                </div>
+              )}
+              
+              {/* Bottom text section */}
+              {hasBottomText() && (
+                <div className="mt-4 pt-3 border-t border-border/20">
+                  <p className="text-sm text-muted-foreground font-medium">
+                    👉 {t(`coaching.pricing.${pricingKey}.bottomText`)}
+                  </p>
+                </div>
+              )}
+              
+              {/* Book button */}
+              <div className="mt-6 pt-4 border-t border-border/20">
+                <button
+                  onClick={onBookingClick}
+                  className="w-full cta-button-primary text-center py-3 px-4 rounded-lg font-medium"
+                >
+                  {t(`coaching.pricing.${pricingKey}.buttonText`)}
+                </button>
               </div>
-            )}
-            
-            {/* Book button */}
-            <div className="mt-6 pt-4 border-t border-gray-600">
-              <button
-                onClick={onBookingClick}
-                className="w-full cta-button-primary text-center py-3 px-4 rounded-lg font-medium"
-              >
-                {t(`coaching.pricing.${pricingKey}.buttonText`)}
-              </button>
-            </div>
-          </CardContent>
+            </CardContent>
+          </div>
         </CollapsibleContent>
       </Card>
     </Collapsible>
