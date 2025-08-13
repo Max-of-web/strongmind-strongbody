@@ -1,7 +1,7 @@
 const coaching = {
   coaching: {
     hero: {
-      title: "Pasiruošęs keistis?\nTai paprasčiau nei manai — net jei šiuo metu abejoji.",
+      title: "Laikas pokyčiams\nTai paprasčiau nei manai — net jei šiuo metu abejoji.",
       subtitle: 'Tau nereikia gyventi sporto salėje, kad sustiprėtum ir turėtum daugiau energijos. Kartu sukursime planą, pritaikytą tavo gyvenimui, o rezultatai kalbės patys už save.'
     },
     services: {
