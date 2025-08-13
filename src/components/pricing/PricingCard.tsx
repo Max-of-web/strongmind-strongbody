@@ -38,6 +38,15 @@ const PricingCard = ({
     return baseClasses;
   };
 
+  const getTopBarClasses = () => {
+    if (isPremium) {
+      return "bg-gradient-to-r from-amber-500/20 to-amber-400/20 border-b border-amber-500/30";
+    } else if (isHighlighted) {
+      return "bg-gradient-to-r from-primary/20 to-primary/10 border-b border-primary/30";
+    }
+    return "bg-gradient-to-r from-muted/30 to-muted/20 border-b border-border/20";
+  };
+
   const getBadgeText = () => {
     if (isPremium) {
       return 'PREMIUM';
@@ -97,28 +106,30 @@ const PricingCard = ({
         )}
         
         <CollapsibleTrigger className="w-full text-left focus:outline-none focus:ring-2 focus:ring-primary/20 focus:ring-offset-2 rounded-lg group">
-          <CardHeader className="pt-6 pb-4 group-hover:bg-muted/5 transition-colors duration-200 rounded-t-lg">
-            <div className="flex items-center justify-between">
-              <div className="flex-1">
-                <CardTitle className="text-xl mb-2">
-                  {t(`coaching.pricing.${pricingKey}.title`)}
-                </CardTitle>
-                <div className="flex items-baseline">
-                  <span className="text-3xl font-bold">
-                    {t(`coaching.pricing.${pricingKey}.price`)}
-                  </span>
-                  <span className="ml-1 text-muted-foreground">
-                    {t(`coaching.pricing.${pricingKey}.period`)}
-                  </span>
+          <div className={`${getTopBarClasses()} rounded-t-lg group-hover:bg-opacity-80 transition-colors duration-200`}>
+            <CardHeader className="pt-6 pb-4">
+              <div className="flex items-center justify-between">
+                <div className="flex-1">
+                  <CardTitle className="text-xl font-bold mb-2 text-foreground">
+                    {t(`coaching.pricing.${pricingKey}.title`)}
+                  </CardTitle>
+                  <div className="flex items-baseline">
+                    <span className="text-3xl font-bold text-foreground">
+                      {t(`coaching.pricing.${pricingKey}.price`)}
+                    </span>
+                    <span className="ml-1 text-muted-foreground text-base">
+                      {t(`coaching.pricing.${pricingKey}.period`)}
+                    </span>
+                  </div>
                 </div>
+                <ChevronDown 
+                  className={`h-5 w-5 text-muted-foreground transition-transform duration-300 ease-out ${
+                    isExpanded ? 'rotate-180' : ''
+                  }`}
+                />
               </div>
-              <ChevronDown 
-                className={`h-5 w-5 text-muted-foreground transition-transform duration-300 ease-out ${
-                  isExpanded ? 'rotate-180' : ''
-                }`}
-              />
-            </div>
-          </CardHeader>
+            </CardHeader>
+          </div>
         </CollapsibleTrigger>
         
         <CollapsibleContent className="data-[state=open]:animate-accordion-down data-[state=closed]:animate-accordion-up overflow-hidden">
