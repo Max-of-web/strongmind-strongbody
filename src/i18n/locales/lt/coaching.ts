@@ -51,7 +51,7 @@ const coaching = {
         features: [
           'Asmeninės treniruotės 1× per savaitę',
           'Progreso testavimas kas 3 mėnesius',
-          'Kasdienis WhatsApp palaikymas visiems klausimams - kad niekada neliktum vienas'
+          'WhatsApp palaikymas visiems klausimams - kad niekada neliktum vienas'
         ],
         note: 'Nori treniruotis su draugu ar dviem? Mažų grupių treniruotės yra pigesnės, bet vis tiek pritaikytos individualiai. Parašyk, jei įdomu!',
         bottomText: 'Tinka, jei nori aiškios struktūros, motyvacijos ir pokyčių, kurie išlieka.',
