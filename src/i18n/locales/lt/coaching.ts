@@ -44,7 +44,7 @@ const coaching = {
         mostPopular: 'POPULIARIAUSIA'
       },
       oneOnOneCoaching: {
-        title: '1-on-1 Treniruotės',
+        title: 'Asmeninės treniruotės',
         price: '50 €',
         period: 'už treniruotę',
         subtitle: 'Žmonėms, kurie nori nuoseklumo, aiškaus plano ir įpročių, kurie išlieka visam gyvenimui - ne tik trumpam laikotarpiui.',
