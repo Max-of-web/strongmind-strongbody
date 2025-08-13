@@ -90,11 +90,11 @@ const PricingCard = ({
 
   const getTopBarColor = () => {
     if (isPremium) {
-      return 'hsl(45 100% 60%)'; // Golden for premium
+      return 'linear-gradient(90deg, hsl(45 100% 50%) 0%, hsl(45 100% 65%) 100%)'; // Golden gradient for premium
     } else if (isHighlighted) {
-      return 'hsl(var(--primary))'; // Brand blue for highlighted
+      return 'linear-gradient(90deg, hsl(var(--primary)) 0%, hsl(217 91% 70%) 100%)'; // Brand blue gradient for highlighted
     }
-    return 'hsl(var(--primary))'; // Default brand color
+    return 'linear-gradient(90deg, hsl(var(--primary)) 0%, hsl(217 91% 70%) 100%)'; // Default brand gradient
   };
 
   // Check if translation keys exist for additional content
@@ -119,10 +119,10 @@ const PricingCard = ({
   return (
     <Collapsible open={isExpanded} onOpenChange={onToggleExpand}>
       <Card style={getHighlightedCardStyle()} className="relative mb-6">
-        {/* Colored top bar */}
+        {/* Colored top bar with gradient */}
         <div 
-          className="h-1.5 w-full"
-          style={{ backgroundColor: getTopBarColor() }}
+          className="h-1 w-full"
+          style={{ background: getTopBarColor() }}
         />
         
         {(isHighlighted || isPremium) && (
@@ -141,14 +141,14 @@ const PricingCard = ({
           <CardHeader className="pt-6 pb-4 px-6">
             <div className="flex items-center justify-between">
               <div className="flex-1">
-                <CardTitle className="text-xl mb-2 text-card-foreground">
+                <CardTitle className="text-xl font-bold mb-3 text-card-foreground">
                   {t(`coaching.pricing.${pricingKey}.title`)}
                 </CardTitle>
                 <div className="flex items-baseline">
-                  <span className="text-3xl font-bold text-card-foreground">
+                  <span className="text-4xl font-bold text-card-foreground">
                     {t(`coaching.pricing.${pricingKey}.price`)}
                   </span>
-                  <span className="ml-1 text-muted-foreground">
+                  <span className="ml-2 text-base text-muted-foreground">
                     {t(`coaching.pricing.${pricingKey}.period`)}
                   </span>
                 </div>
