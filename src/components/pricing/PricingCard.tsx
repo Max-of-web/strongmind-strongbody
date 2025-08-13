@@ -27,24 +27,19 @@ const PricingCard = ({
   const { t } = useTranslation();
 
   const getCardClasses = () => {
-    const baseClasses = "border border-border/20 shadow-lg bg-card text-card-foreground transition-all duration-300 ease-out hover:shadow-xl";
+    const baseClasses = "border border-[#2A2F36] rounded-xl shadow-sm bg-[#0F1115]/80 text-white transition-all duration-300 ease-out hover:shadow-lg";
     
     if (isPremium) {
-      return `${baseClasses} border-amber-500/40 shadow-amber-500/10`;
+      return `${baseClasses} hover:border-[#E39A4C] hover:shadow-[0_0_0_2px_rgba(227,154,76,0.25)]`;
     } else if (isHighlighted) {
-      return `${baseClasses} border-primary/40 shadow-primary/10`;
+      return `${baseClasses} hover:border-[#E39A4C] hover:shadow-[0_0_0_2px_rgba(227,154,76,0.25)]`;
     }
     
-    return baseClasses;
+    return `${baseClasses} hover:border-[#E39A4C] hover:shadow-[0_0_0_2px_rgba(227,154,76,0.25)]`;
   };
 
   const getTopBarClasses = () => {
-    if (isPremium) {
-      return "bg-gradient-to-r from-amber-500/20 to-amber-400/20 border-b border-amber-500/30";
-    } else if (isHighlighted) {
-      return "bg-gradient-to-r from-primary/20 to-primary/10 border-b border-primary/30";
-    }
-    return "bg-gradient-to-r from-muted/30 to-muted/20 border-b border-border/20";
+    return "bg-transparent border-b border-[#2A2F36]";
   };
 
   const getBadgeText = () => {
@@ -59,12 +54,12 @@ const PricingCard = ({
   const getBadgeStyle = () => {
     if (isPremium) {
       return {
-        backgroundColor: '#F59E0B', // Golden
+        backgroundColor: '#E39A4C', // Bronze
         color: 'white'
       };
     } else if (isHighlighted) {
       return {
-        backgroundColor: '#1E3A8A', // Deep blue
+        backgroundColor: '#1E3A8A', // Keep existing blue for recommended
         color: 'white'
       };
     }
@@ -105,25 +100,25 @@ const PricingCard = ({
           </div>
         )}
         
-        <CollapsibleTrigger className="w-full text-left focus:outline-none focus:ring-2 focus:ring-primary/20 focus:ring-offset-2 rounded-lg group">
-          <div className={`${getTopBarClasses()} rounded-t-lg group-hover:bg-opacity-80 transition-colors duration-200`}>
+        <CollapsibleTrigger className="w-full text-left focus:outline-none focus:ring-2 focus:ring-[#E39A4C]/50 focus:ring-offset-2 rounded-xl group">
+          <div className={`${getTopBarClasses()} rounded-t-xl transition-colors duration-200`}>
             <CardHeader className="pt-6 pb-4">
               <div className="flex items-center justify-between">
                 <div className="flex-1">
-                  <CardTitle className="text-xl font-bold mb-2 text-foreground">
+                  <CardTitle className="text-xl font-bold mb-2 text-white">
                     {t(`coaching.pricing.${pricingKey}.title`)}
                   </CardTitle>
                   <div className="flex items-baseline">
-                    <span className="text-3xl font-bold text-foreground">
+                    <span className="text-3xl font-bold text-white/90">
                       {t(`coaching.pricing.${pricingKey}.price`)}
                     </span>
-                    <span className="ml-1 text-muted-foreground text-base">
+                    <span className="ml-1 text-[#D1D5DB] text-base">
                       {t(`coaching.pricing.${pricingKey}.period`)}
                     </span>
                   </div>
                 </div>
                 <ChevronDown 
-                  className={`h-5 w-5 text-muted-foreground transition-transform duration-300 ease-out ${
+                  className={`h-5 w-5 text-[#D1D5DB] transition-transform duration-300 ease-out ${
                     isExpanded ? 'rotate-180' : ''
                   }`}
                 />
@@ -133,14 +128,14 @@ const PricingCard = ({
         </CollapsibleTrigger>
         
         <CollapsibleContent className="data-[state=open]:animate-accordion-down data-[state=closed]:animate-accordion-up overflow-hidden">
-          <div className="max-h-[70vh] md:max-h-none overflow-y-auto">
-            <CardContent className="space-y-4 pt-0 px-6 pb-6 bg-muted/5">
-              <p className="text-sm text-muted-foreground">
+          <div className="max-h-[70vh] overflow-y-auto">
+            <CardContent className="space-y-4 pt-0 p-5 md:p-6 bg-[#0F1115]">
+              <p className="text-sm text-gray-100">
                 Who it's for: {t(`coaching.pricing.${pricingKey}.subtitle`)}
               </p>
               
               <div>
-                <p className="text-sm text-muted-foreground mb-3 font-medium">What you get:</p>
+                <p className="text-sm text-gray-100 mb-3 font-medium">What you get:</p>
                 <PricingFeatureList 
                   featurePrefix={`coaching.pricing.${pricingKey}.features`} 
                   featureCount={featureCount} 
@@ -158,15 +153,15 @@ const PricingCard = ({
               
               {/* Bottom text section */}
               {hasBottomText() && (
-                <div className="mt-4 pt-3 border-t border-border/20">
-                  <p className="text-sm text-muted-foreground font-medium">
+                <div className="mt-4 pt-3 border-t border-[#2A2F36]">
+                  <p className="text-sm text-gray-100 font-medium">
                     👉 {t(`coaching.pricing.${pricingKey}.bottomText`)}
                   </p>
                 </div>
               )}
               
               {/* Book button */}
-              <div className="mt-6 pt-4 border-t border-border/20">
+              <div className="mt-6 pt-4 border-t border-[#2A2F36]">
                 <button
                   onClick={onBookingClick}
                   className="w-full cta-button-primary text-center py-3 px-4 rounded-lg font-medium"
