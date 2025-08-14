@@ -11,6 +11,22 @@ const forms = {
     phone: "Phone",
     message: "Message"
   },
+  applicationForm: {
+    title: "Start Your Training Journey",
+    name: "Name",
+    email: "Email",
+    goal: "What is your main goal?",
+    challenges: "What challenges are you facing?",
+    commitment: "I am ready to commit to my transformation and understand that results require consistency and effort.",
+    namePlaceholder: "Your full name",
+    emailPlaceholder: "your.email@example.com",
+    goalPlaceholder: "Describe your main fitness or health goal...",
+    challengesPlaceholder: "What obstacles or challenges are you currently facing?",
+    submit: "Apply Now",
+    submitting: "Applying...",
+    successMessage: "✅ Application sent. I'll get back to you shortly.",
+    errorMessage: "⚠️ Send failed. Please try again."
+  },
   contact: {
     form: {
       title: "Get In Touch",

@@ -52,7 +52,7 @@ const ContactForm = () => {
     <>
       <div className="bg-elegant-charcoal bg-opacity-40 p-6 md:p-8 rounded-lg border border-elegant-light border-opacity-10 w-full max-w-2xl mx-auto">
         <h3 className="text-2xl font-semibold mb-6">
-          {t('contact.form.title')}
+          {t('applicationForm.title')}
         </h3>
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Honeypot field - hidden from users */}
@@ -66,56 +66,71 @@ const ContactForm = () => {
           
           <div>
             <label htmlFor="vardas" className="block mb-2">
-              {t('contact.form.name')} *
+              {t('applicationForm.name')} *
             </label>
             <input
               type="text"
               id="vardas"
               name="vardas"
               required
-              placeholder={t('contact.form.namePlaceholder')}
+              placeholder={t('applicationForm.namePlaceholder')}
               className="form-input"
             />
           </div>
 
           <div>
             <label htmlFor="email" className="block mb-2">
-              {t('contact.form.email')} *
+              {t('applicationForm.email')} *
             </label>
             <input
               type="email"
               id="email"
               name="email"
               required
-              placeholder={t('contact.form.emailPlaceholder')}
+              placeholder={t('applicationForm.emailPlaceholder')}
               className="form-input"
             />
           </div>
 
           <div>
-            <label htmlFor="phone" className="block mb-2">
-              {t('contact.form.phone')}
-            </label>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              placeholder={t('contact.form.phonePlaceholder')}
-              className="form-input"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="message" className="block mb-2">
-              {t('contact.form.message')}
+            <label htmlFor="tikslas" className="block mb-2">
+              {t('applicationForm.goal')} *
             </label>
             <textarea
-              id="message"
-              name="message"
-              rows={4}
-              placeholder={t('contact.form.messagePlaceholder')}
+              id="tikslas"
+              name="tikslas"
+              required
+              rows={3}
+              placeholder={t('applicationForm.goalPlaceholder')}
               className="form-input"
             />
+          </div>
+
+          <div>
+            <label htmlFor="issukiai" className="block mb-2">
+              {t('applicationForm.challenges')} *
+            </label>
+            <textarea
+              id="issukiai"
+              name="issukiai"
+              required
+              rows={3}
+              placeholder={t('applicationForm.challengesPlaceholder')}
+              className="form-input"
+            />
+          </div>
+
+          <div className="flex items-start space-x-3">
+            <input
+              type="checkbox"
+              id="commit"
+              name="commit"
+              required
+              className="mt-1 h-4 w-4 text-elegant-peach border-elegant-light border-opacity-30 rounded focus:ring-elegant-peach focus:ring-offset-0"
+            />
+            <label htmlFor="commit" className="text-sm leading-6">
+              {t('applicationForm.commitment')} *
+            </label>
           </div>
 
           <button
@@ -129,10 +144,10 @@ const ContactForm = () => {
                   <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                   <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                 </svg>
-                {t('contact.form.submitting')}
+                {t('applicationForm.submitting')}
               </span>
             ) : (
-              t('contact.form.submit')
+              t('applicationForm.submit')
             )}
           </button>
           

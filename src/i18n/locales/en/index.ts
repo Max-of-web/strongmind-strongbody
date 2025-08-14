@@ -1,8 +1,10 @@
 
 import coaching from './coaching';
+import forms from './forms';
 
 const translation = {
-  ...coaching
+  ...coaching,
+  ...forms
 };
 
 export default translation;
