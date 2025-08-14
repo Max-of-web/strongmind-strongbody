@@ -19,7 +19,7 @@ const ContactForm = () => {
     formData.append('lang', i18n.language);
     
     try {
-      const response = await fetch('https://getform.io/f/your-form-id', {
+      const response = await fetch('https://getform.io/f/YOUR_FORM_ENDPOINT_HERE', {
         method: 'POST',
         body: formData
       });
