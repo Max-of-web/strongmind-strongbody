@@ -50,7 +50,7 @@ const ContactForm = () => {
 
   return (
     <>
-      <div className="bg-elegant-charcoal bg-opacity-40 p-6 md:p-8 rounded-lg border border-elegant-light border-opacity-10 w-full max-w-2xl mx-auto">
+      <div className="bg-elegant-charcoal bg-opacity-40 p-6 md:p-8 rounded-lg border border-elegant-light border-opacity-10 w-full">
         <h3 className="text-2xl font-semibold mb-6">
           {t('applicationForm.title')}
         </h3>
