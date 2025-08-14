@@ -4,7 +4,7 @@ import { MessageSquare, Check, Instagram, MapPin } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import ApplicationForm from '../components/ApplicationForm';
+import ContactForm from '../components/ContactForm';
 import TestimonialCard from '../components/TestimonialCard';
 import PricingCards from '../components/PricingCards';
 const Coaching = () => {
@@ -309,7 +309,7 @@ const Coaching = () => {
               </div>
               
               <div className="lg:w-3/5 scroll-fade-in">
-                <ApplicationForm />
+                <ContactForm />
               </div>
             </div>
           </div>

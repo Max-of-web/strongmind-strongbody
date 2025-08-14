@@ -10,8 +10,6 @@ import TestimonialsSection from '../components/sections/TestimonialsSection';
 import AboutSection from '../components/sections/AboutSection';
 import FinalCTASection from '../components/sections/FinalCTASection';
 import WhatsAppCTASection from '../components/sections/WhatsAppCTASection';
-import ContactForm from '../components/ContactForm';
-
 const Index = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -47,15 +45,6 @@ const Index = () => {
 
         <TestimonialsSection />
         <AboutSection />
-        
-        {/* Contact Form */}
-        <section id="contact" className="py-20 bg-muted/50">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-8">Get In Touch</h2>
-            <ContactForm />
-          </div>
-        </section>
-        
         <FinalCTASection />
         <WhatsAppCTASection />
       </main>
