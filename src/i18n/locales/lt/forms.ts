@@ -51,7 +51,7 @@ const forms = {
     goalPlaceholder: 'Pvz., stiprinti raumenis, numesti svorį, pagerinti laikyseną...',
     challenges: 'Su kokiais iššūkiais dabar susiduriate?',
     challengesPlaceholder: 'Pvz., laiko trūkumas, skausmai, motyvacijos stoka...',
-    commitment: 'Esu pasiruošęs(-usi) įsipareigoti savo transformacijai ir suprantu, kad rezultatai reikalauja nuoseklumo ir pastangų.',
+    commitment: 'Esu pasiruošęs(-usi) pradėti pokyčius ir žinau, kad maži, nuoseklūs žingsniai nuves prie didelių rezultatų.',
     namePlaceholder: 'Jūsų vardas ir pavardė',
     emailPlaceholder: 'jusu.elpastas@pavyzdys.lt',
     submit: 'Pateikti Paraišką',

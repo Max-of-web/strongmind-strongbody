@@ -17,7 +17,7 @@ const forms = {
     email: "Email",
     goal: "What is your main goal?",
     challenges: "What challenges are you currently facing?",
-    commitment: "I am ready to commit to my transformation and understand that results require consistency and effort.",
+    commitment: "I'm ready to start making changes and know that small, consistent steps lead to big results.",
     namePlaceholder: "Your full name",
     emailPlaceholder: "your.email@example.com",
     goalPlaceholder: "E.g., build muscle, lose weight, improve posture...",
