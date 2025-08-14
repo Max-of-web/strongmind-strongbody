@@ -1,82 +1,48 @@
 
 import { useState } from 'react';
-import { toast } from 'sonner';
-import { MessageSquare } from 'lucide-react';
-import { supabase } from '@/integrations/supabase/client';
+import { Loader2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
 
 const ApplicationForm = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    goal: '',
-    challenge: '',
-    readyForChange: false
-  });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showThankYouDialog, setShowThankYouDialog] = useState(false);
-  const { t } = useTranslation();
+  const [statusMessage, setStatusMessage] = useState<{type: 'success' | 'error', text: string} | null>(null);
+  const { t, i18n } = useTranslation();
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, checked } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: checked
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setStatusMessage(null);
+    
+    const formData = new FormData(e.currentTarget);
+    
+    // Add hidden metadata
+    formData.append('page', window.location.pathname);
+    formData.append('lang', i18n.language);
     
     try {
-      // Insert into Supabase
-      const { error } = await supabase
-        .from('coaching_applications')
-        .insert([{
-          name: formData.name,
-          email: formData.email,
-          goal: formData.goal,
-          challenge: formData.challenge,
-          ready_for_change: formData.readyForChange
-        }]);
-      
-      if (error) throw error;
-      
-      toast.success(t('applicationForm.successToast.title'), {
-        description: t('applicationForm.successToast.description')
-      });
-
-      setFormData({
-        name: '',
-        email: '',
-        goal: '',
-        challenge: '',
-        readyForChange: false
+      const response = await fetch('https://getform.io/f/YOUR_FORM_ENDPOINT_HERE', {
+        method: 'POST',
+        body: formData
       });
       
-      setShowThankYouDialog(true);
-    } catch (error: any) {
+      if (response.ok) {
+        // Clear form
+        e.currentTarget.reset();
+        
+        // Show success message
+        const successText = i18n.language === 'lt' 
+          ? "✅ Paraška išsiųsta. Susisieksiu netrukus."
+          : "✅ Application sent. I'll get back to you shortly.";
+        setStatusMessage({ type: 'success', text: successText });
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
       console.error('Error submitting form:', error);
-      toast.error(t('applicationForm.errorToast.title'), {
-        description: error.message || t('applicationForm.errorToast.description')
-      });
+      const errorText = i18n.language === 'lt'
+        ? "⚠️ Nepavyko išsiųsti. Bandyk dar kartą."
+        : "⚠️ Send failed. Please try again.";
+      setStatusMessage({ type: 'error', text: errorText });
     } finally {
       setIsSubmitting(false);
     }
@@ -89,16 +55,23 @@ const ApplicationForm = () => {
           {t('applicationForm.title')}
         </h3>
         <form onSubmit={handleSubmit} className="space-y-6">
+          {/* Honeypot field for spam protection */}
+          <input
+            type="text"
+            name="website"
+            tabIndex={-1}
+            autoComplete="off"
+            style={{ position: 'absolute', left: '-9999px', visibility: 'hidden' }}
+          />
+          
           <div>
-            <label htmlFor="name" className="block mb-2">
+            <label htmlFor="vardas" className="block mb-2">
               {t('applicationForm.name')}
             </label>
             <input
               type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
+              id="vardas"
+              name="vardas"
               required
               className="form-input"
             />
@@ -112,22 +85,18 @@ const ApplicationForm = () => {
               type="email"
               id="email"
               name="email"
-              value={formData.email}
-              onChange={handleChange}
               required
               className="form-input"
             />
           </div>
           
           <div>
-            <label htmlFor="goal" className="block mb-2">
+            <label htmlFor="tikslas" className="block mb-2">
               {t('applicationForm.goal')}
             </label>
             <textarea
-              id="goal"
-              name="goal"
-              value={formData.goal}
-              onChange={handleChange}
+              id="tikslas"
+              name="tikslas"
               required
               rows={3}
               placeholder={t('applicationForm.goalPlaceholder')}
@@ -136,14 +105,12 @@ const ApplicationForm = () => {
           </div>
           
           <div>
-            <label htmlFor="challenge" className="block mb-2">
+            <label htmlFor="issukiai" className="block mb-2">
               {t('applicationForm.challenge')}
             </label>
             <textarea
-              id="challenge"
-              name="challenge"
-              value={formData.challenge}
-              onChange={handleChange}
+              id="issukiai"
+              name="issukiai"
               required
               rows={3}
               placeholder={t('applicationForm.challengePlaceholder')}
@@ -154,14 +121,13 @@ const ApplicationForm = () => {
           <div className="flex items-start">
             <input
               type="checkbox"
-              id="readyForChange"
-              name="readyForChange"
-              checked={formData.readyForChange}
-              onChange={handleCheckboxChange}
+              id="commit"
+              name="commit"
+              value="yes"
               required
               className="mt-1 mr-3"
             />
-            <label htmlFor="readyForChange">
+            <label htmlFor="commit">
               {t('applicationForm.change')}
             </label>
           </div>
@@ -171,46 +137,17 @@ const ApplicationForm = () => {
             disabled={isSubmitting}
             className={`cta-button-primary w-full ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
           >
+            {isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
             {isSubmitting ? t('applicationForm.submitting') : t('applicationForm.submit')}
           </button>
+          
+          {statusMessage && (
+            <div className={`text-sm mt-3 ${statusMessage.type === 'success' ? 'text-green-600' : 'text-red-500'}`}>
+              {statusMessage.text}
+            </div>
+          )}
         </form>
       </div>
-
-      <Dialog open={showThankYouDialog} onOpenChange={setShowThankYouDialog}>
-        <DialogContent className="sm:max-w-md">
-          <DialogHeader>
-            <DialogTitle className="text-xl">{t('applicationForm.thankYou.title')}</DialogTitle>
-            <DialogDescription>
-              {t('applicationForm.thankYou.description')}
-            </DialogDescription>
-          </DialogHeader>
-          <div className="grid gap-4 py-4">
-            <div className="bg-theme-navy bg-opacity-20 p-4 rounded-lg border border-theme-navy border-opacity-30">
-              <p className="text-white font-medium mb-2">{t('coaching.contact.nextSteps')}</p>
-            </div>
-            <p>{t('applicationForm.thankYou.connect')}</p>
-            <div className="grid grid-cols-1 gap-4">
-              <a 
-                href="https://wa.me/37067951040" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 bg-green-600 text-white font-semibold px-4 py-3 rounded-md hover:bg-green-700 transition-colors"
-              >
-                <MessageSquare size={18} />
-                <span>{t('applicationForm.thankYou.whatsApp')}</span>
-              </a>
-            </div>
-          </div>
-          <DialogFooter>
-            <button 
-              onClick={() => setShowThankYouDialog(false)} 
-              className="w-full sm:w-auto text-foreground bg-muted hover:bg-muted/80 px-4 py-2 rounded-md transition-colors"
-            >
-              {t('applicationForm.thankYou.close')}
-            </button>
-          </DialogFooter>
-        </DialogContent>
-      </Dialog>
     </>
   );
 };
