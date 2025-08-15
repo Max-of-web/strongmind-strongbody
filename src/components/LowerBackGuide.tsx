@@ -2,25 +2,13 @@
 import { Check, Shield } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { Checkbox } from "@/components/ui/checkbox";
 import { useState } from 'react';
 import { toast } from "sonner";
-import { supabase } from "@/integrations/supabase/client";
 
 const LowerBackGuide = () => {
   const { t } = useTranslation();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-    subscribe: true,
-    gender: 'male',
-    workExperience: 'one-year'
-  });
+  const [email, setEmail] = useState('');
 
   // Get the benefits array from translations with fallback
   let benefits: string[] = [];
@@ -80,42 +68,17 @@ const LowerBackGuide = () => {
                   setIsSubmitting(true);
                   
                   try {
-                    // Submit to Getform
-                    const getformData = new FormData();
-                    getformData.append('name', formData.name);
-                    getformData.append('email', formData.email);
-                    getformData.append('message', formData.message);
-                    getformData.append('subscribe', formData.subscribe ? 'yes' : 'no');
-                    getformData.append('gender', formData.gender);
-                    getformData.append('work-experience', formData.workExperience);
+                    const formData = new FormData();
+                    formData.append('email', email);
                     
-                    const getformResponse = await fetch('https://getform.io/f/bxozjona', {
+                    const response = await fetch('https://getform.io/f/bxozjona', {
                       method: 'POST',
-                      body: getformData,
+                      body: formData,
                     });
                     
-                    // Save to Supabase
-                    const { error: supabaseError } = await supabase
-                      .from('back_pain_guide_submissions')
-                      .insert({
-                        name: formData.name,
-                        email: formData.email,
-                        message: formData.message,
-                        subscribe: formData.subscribe,
-                        gender: formData.gender,
-                        work_experience: formData.workExperience
-                      });
-                    
-                    if (getformResponse.ok && !supabaseError) {
+                    if (response.ok) {
                       toast.success(t('homepage.lowerBackGuide.successMessage') || 'Mes išsiuntėme jums gidą. Sėkmė! Patikrinkite savo el. paštą.');
-                      setFormData({
-                        name: '',
-                        email: '',
-                        message: '',
-                        subscribe: true,
-                        gender: 'male',
-                        workExperience: 'one-year'
-                      });
+                      setEmail('');
                     } else {
                       throw new Error('Form submission failed');
                     }
@@ -126,7 +89,7 @@ const LowerBackGuide = () => {
                     setIsSubmitting(false);
                   }
                 }}
-                className="flex flex-col space-y-4"
+                className="flex flex-col space-y-3"
               >
                 {/* Hidden Honeypot input to prevent spam */}
                 <input 
@@ -135,134 +98,17 @@ const LowerBackGuide = () => {
                   style={{ display: 'none !important' } as React.CSSProperties}
                 />
                 
-                {/* Name Field */}
                 <div>
-                  <Label htmlFor="name" className="text-sm font-medium mb-1 block">
-                    Name
-                  </Label>
-                  <Input 
-                    id="name"
-                    type="text" 
-                    name="name"
-                    value={formData.name}
-                    onChange={(e) => setFormData({...formData, name: e.target.value})}
-                    required 
-                    disabled={isSubmitting}
-                    className="w-full"
-                  />
-                </div>
-
-                {/* Email Field */}
-                <div>
-                  <Label htmlFor="email" className="text-sm font-medium mb-1 block">
-                    Email
-                  </Label>
-                  <Input 
-                    id="email"
+                  <input 
                     type="email" 
                     name="email"
-                    value={formData.email}
-                    onChange={(e) => setFormData({...formData, email: e.target.value})}
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder={t('emailSubscription.placeholder')} 
                     required 
                     disabled={isSubmitting}
-                    className="w-full"
+                    className="w-full p-2 text-sm rounded-md bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-white border border-slate-300 dark:border-slate-600 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-theme-tangerine focus:border-transparent disabled:opacity-50"
                   />
-                </div>
-
-                {/* Message Field */}
-                <div>
-                  <Label htmlFor="message" className="text-sm font-medium mb-1 block">
-                    Message
-                  </Label>
-                  <Textarea 
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={(e) => setFormData({...formData, message: e.target.value})}
-                    disabled={isSubmitting}
-                    className="w-full min-h-[80px]"
-                    placeholder="Tell us about your back pain concerns..."
-                  />
-                </div>
-
-                {/* Subscribe Checkbox */}
-                <div className="flex items-center space-x-2">
-                  <Checkbox 
-                    id="subscribe"
-                    name="subscribe"
-                    checked={formData.subscribe}
-                    onCheckedChange={(checked) => setFormData({...formData, subscribe: !!checked})}
-                    disabled={isSubmitting}
-                  />
-                  <Label htmlFor="subscribe" className="text-sm">
-                    Subscribe to our newsletter
-                  </Label>
-                </div>
-
-                {/* Gender Radio Buttons */}
-                <div>
-                  <Label className="text-sm font-medium mb-2 block">
-                    Gender
-                  </Label>
-                  <div className="flex space-x-4">
-                    <div className="flex items-center space-x-2">
-                      <input 
-                        type="radio" 
-                        id="male"
-                        name="gender" 
-                        value="male" 
-                        checked={formData.gender === 'male'}
-                        onChange={(e) => setFormData({...formData, gender: e.target.value})}
-                        disabled={isSubmitting}
-                        className="w-4 h-4 text-theme-tangerine"
-                      />
-                      <Label htmlFor="male" className="text-sm">Male</Label>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <input 
-                        type="radio" 
-                        id="female"
-                        name="gender" 
-                        value="female" 
-                        checked={formData.gender === 'female'}
-                        onChange={(e) => setFormData({...formData, gender: e.target.value})}
-                        disabled={isSubmitting}
-                        className="w-4 h-4 text-theme-tangerine"
-                      />
-                      <Label htmlFor="female" className="text-sm">Female</Label>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <input 
-                        type="radio" 
-                        id="other"
-                        name="gender" 
-                        value="other" 
-                        checked={formData.gender === 'other'}
-                        onChange={(e) => setFormData({...formData, gender: e.target.value})}
-                        disabled={isSubmitting}
-                        className="w-4 h-4 text-theme-tangerine"
-                      />
-                      <Label htmlFor="other" className="text-sm">Other</Label>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Work Experience Select */}
-                <div>
-                  <Label htmlFor="workExperience" className="text-sm font-medium mb-1 block">
-                    Work Experience
-                  </Label>
-                  <select 
-                    id="workExperience"
-                    name="work-experience"
-                    value={formData.workExperience}
-                    onChange={(e) => setFormData({...formData, workExperience: e.target.value})}
-                    disabled={isSubmitting}
-                    className="w-full p-2 text-sm rounded-md bg-background border border-input focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent disabled:opacity-50"
-                  >
-                    <option value="one-year">0-1 years</option>
-                    <option value="one-five-years">1-5 years</option>
-                  </select>
                 </div>
                 
                 <Button
