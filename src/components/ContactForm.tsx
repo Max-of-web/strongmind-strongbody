@@ -19,7 +19,7 @@ const ContactForm = () => {
     formData.append('lang', i18n.language);
     
     try {
-      const response = await fetch('https://getform.io/f/your-form-id', {
+      const response = await fetch('https://getform.io/f/bxozjona', {
         method: 'POST',
         body: formData
       });
@@ -54,7 +54,7 @@ const ContactForm = () => {
         <h3 className="text-2xl font-semibold mb-6">
           {t('applicationForm.title')}
         </h3>
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form action="https://getform.io/f/bxozjona" method="POST" onSubmit={handleSubmit} className="space-y-6">
           {/* Honeypot field - hidden from users */}
           <input
             type="text"
@@ -65,13 +65,13 @@ const ContactForm = () => {
           />
           
           <div>
-            <label htmlFor="vardas" className="block mb-2">
+            <label htmlFor="name" className="block mb-2">
               {t('applicationForm.name')} *
             </label>
             <input
               type="text"
-              id="vardas"
-              name="vardas"
+              id="name"
+              name="name"
               required
               placeholder={t('applicationForm.namePlaceholder')}
               className="form-input"
@@ -93,12 +93,12 @@ const ContactForm = () => {
           </div>
 
           <div>
-            <label htmlFor="tikslas" className="block mb-2">
+            <label htmlFor="goal" className="block mb-2">
               {t('applicationForm.goal')} *
             </label>
             <textarea
-              id="tikslas"
-              name="tikslas"
+              id="goal"
+              name="goal"
               required
               rows={3}
               placeholder={t('applicationForm.goalPlaceholder')}
@@ -107,12 +107,12 @@ const ContactForm = () => {
           </div>
 
           <div>
-            <label htmlFor="issukiai" className="block mb-2">
+            <label htmlFor="challenges" className="block mb-2">
               {t('applicationForm.challenges')} *
             </label>
             <textarea
-              id="issukiai"
-              name="issukiai"
+              id="challenges"
+              name="challenges"
               required
               rows={3}
               placeholder={t('applicationForm.challengesPlaceholder')}
