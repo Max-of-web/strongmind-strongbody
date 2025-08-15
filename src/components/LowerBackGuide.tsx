@@ -63,6 +63,8 @@ const LowerBackGuide = () => {
               </p>
 
               <form 
+                action="https://getform.io/f/bxozjona"
+                method="POST"
                 onSubmit={async (e) => {
                   e.preventDefault();
                   setIsSubmitting(true);
