@@ -79,14 +79,14 @@ const LowerBackGuide = () => {
                     });
                     
                     if (response.ok) {
-                      toast.success(t('homepage.lowerBackGuide.successMessage') || 'Mes išsiuntėme jums gidą. Sėkmė! Patikrinkite savo el. paštą.');
+                      toast.success(t('homepage.lowerBackGuide.successMessage') || 'Guide sent successfully! Check your email.');
                       setEmail('');
                     } else {
                       throw new Error('Form submission failed');
                     }
                   } catch (error) {
                     console.error('Form submission error:', error);
-                    toast.error(t('homepage.lowerBackGuide.errorMessage') || 'Klaida išsiunčiant. Bandykite dar kartą.');
+                    toast.error(t('homepage.lowerBackGuide.errorMessage') || 'Failed to send. Please try again.');
                   } finally {
                     setIsSubmitting(false);
                   }
@@ -119,7 +119,7 @@ const LowerBackGuide = () => {
                   disabled={isSubmitting}
                   className="w-full px-4 py-2 text-sm h-auto"
                 >
-                  {isSubmitting ? (t('homepage.lowerBackGuide.sendingText') || 'Siunčiama...') : t('homepage.lowerBackGuide.buttonText')}
+                  {isSubmitting ? (t('homepage.lowerBackGuide.sendingText') || 'Sending...') : t('homepage.lowerBackGuide.buttonText')}
                 </Button>
 
                 <p className="text-xs text-slate-600 dark:text-slate-400">
