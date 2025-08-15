@@ -117,6 +117,9 @@ const homepage = {
       ],
       privacyNote: 'Tavo el. paštas saugus su manimi. Niekad nedalinsiuosi juo su kitais.',
       buttonText: 'Atsisiųsti nemokamą gidą',
+      sendingText: 'Siunčiama...',
+      successMessage: 'Gidas išsiųstas sėkmingai! Patikrinkite savo el. paštą.',
+      errorMessage: 'Nepavyko išsiųsti. Bandykite dar kartą.',
       disclaimer: 'Pateikdamas duomenis, sutinki gauti PDF gidą el. paštu. Gali atsisitrakinti bet kada.'
     }
   }

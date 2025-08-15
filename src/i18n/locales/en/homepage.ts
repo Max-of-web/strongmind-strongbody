@@ -117,6 +117,9 @@ const homepage = {
       ],
       privacyNote: 'Your email is safe with me. I\'ll never share it with anyone else.',
       buttonText: 'Download Free Guide',
+      sendingText: 'Sending...',
+      successMessage: 'Guide sent successfully! Check your email.',
+      errorMessage: 'Failed to send. Please try again.',
       disclaimer: 'By submitting, you agree to receive the PDF guide via email. You can unsubscribe at any time.'
     }
   }
