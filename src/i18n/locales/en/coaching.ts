@@ -20,7 +20,7 @@ const coaching = {
       },
       directCommunication: {
         title: 'Direct Contact',
-        description: 'Ask when you need to. WhatsApp is for daily support — not just registrations.'
+        description: 'For clients – WhatsApp for questions and support.'
       }
     },
     target: {
