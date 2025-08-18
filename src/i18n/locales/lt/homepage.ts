@@ -101,7 +101,7 @@ const homepage = {
       finalMessage: 'Neturi abejonių, kad nori tapti stipriausia savo versija? Užsiregistruok iš karto į pirmą treniruotę.',
       finalPaymentNote: 'Pirma treniruotė yra mokama – tai pradinio įvertinimo ir plano sesija.',
       finalButtonText: 'Užsiregistruok treniruotei', 
-      whatsappMessage: 'Trumpi klausimai? Parašyk WhatsApp.',
+      whatsappMessage: 'Nori greitai pasitarti? Parašyk į WhatsApp.',
       whatsappNote: 'WhatsApp skirtas tik trumpiems klausimams — ne registracijai.'
     },
     lowerBackGuide: {
