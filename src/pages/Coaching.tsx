@@ -290,19 +290,19 @@ const Coaching = () => {
 
                   {/* Training Locations */}
                   <div className="bg-theme-tangerine bg-opacity-20 p-6 rounded-lg border border-theme-tangerine border-opacity-30">
-                    <div className="flex items-start">
-                      <MapPin size={20} className="mr-3 text-theme-tangerine mt-0.5 shrink-0" />
-                      <div>
-                        <h4 className="font-semibold mb-2 text-white">{t('coaching.contact.locations.title')}</h4>
-                        <a href="https://maps.app.goo.gl/23ZNRSt67dN6G9o36" target="_blank" rel="noopener noreferrer" className="text-white hover:text-theme-tangerine transition-colors">
-                          <p className="mb-1 text-white">{t('coaching.contact.locations.intro')}</p>
-                          <ul className="space-y-1 text-white">
-                            {(t('coaching.contact.locations.places', {
-                            returnObjects: true
-                          }) as string[]).map((place: string, index: number) => <li key={index}>• {place}</li>)}
-                          </ul>
-                        </a>
-                      </div>
+                    <div className="flex items-center mb-2">
+                      <MapPin size={20} className="mr-3 text-theme-tangerine" />
+                      <h4 className="text-white hover:text-theme-tangerine transition-colors font-semibold">{t('coaching.contact.locations.title')}</h4>
+                    </div>
+                    <div className="text-sm text-gray-300 ml-8">
+                      <a href="https://maps.app.goo.gl/23ZNRSt67dN6G9o36" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-theme-tangerine transition-colors">
+                        <p className="mb-1">{t('coaching.contact.locations.intro')}</p>
+                        <ul className="space-y-1">
+                          {(t('coaching.contact.locations.places', {
+                          returnObjects: true
+                        }) as string[]).map((place: string, index: number) => <li key={index}>• {place}</li>)}
+                        </ul>
+                      </a>
                     </div>
                   </div>
                 </div>
