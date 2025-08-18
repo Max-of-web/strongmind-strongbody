@@ -122,7 +122,7 @@ const LowerBackGuide = () => {
                   {isSubmitting ? (t('homepage.lowerBackGuide.sendingText') || 'Sending...') : t('homepage.lowerBackGuide.buttonText')}
                 </Button>
 
-                <p className="text-xs text-slate-600 dark:text-slate-400">
+                <p className="text-xs text-slate-600 dark:text-slate-400 text-center">
                   {t('homepage.lowerBackGuide.disclaimer')}
                 </p>
               </form>
