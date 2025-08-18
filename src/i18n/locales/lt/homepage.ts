@@ -92,9 +92,9 @@ const homepage = {
         personalTrainer: 'Asmeninis Treneris (OTA Akademija)'
       },
       bio: [
-        'Tikiu, kad kiekvienas gali pamilti judėjimą – jei tik paiso savo tempo ir išmoksta išgirsti savo kūną. Man pačiam tai nebuvo greitas kelias. Norą treniruotis atradau per asmeninę patirtį – kai pats taisiau laikyseną ir pirmą kartą pajutau, ką reiškia jaustis tvirčiau. Mane įkvėpė mano kineziterapeutė – ir nuo tada gimė noras padėti kitiems jaustis stipriais ir pasitikėti savo kūnu.',
-        'Noriu, kad žmonės patikėtų: jų kūnas gali daugiau, nei atrodo. O tam reikia ne spaudimo, o aiškaus plano, nuoseklumo ir žmogaus šalia – tokio, kuris matytų ne tik kūną, bet ir visą tave.',
-        'Aš noriu, kad žmonės ne tik treniruotųsi, bet ir pakeistų santykį su judėjimu – kad jis taptų jų vertybe visam gyvenimui.'
+        "Tikiu, kad kiekvienas gali pamilti judėjimą – jei tik paiso savo tempo ir išmoksta išgirsti savo kūną. Man pačiam tai nebuvo greitas kelias. Norą treniruotis atradau per asmeninę patirtį – kai taisiau laikyseną ir pirmą kartą pajutau, ką reiškia jaustis tvirčiau. Treniruotės su kineziterapeutu įkvėpė mane – nuo tada gimė noras padėti kitiems jaustis stipriais ir pasitikėti savo kūnu.",
+        "Šiandien remiuosi ne tik kineziterapija, bet ir pokyčių psichologijos žiniomis, kurias įgijau studijuodamas. Jos padeda žmonėms įveikti vidines kliūtis ir išlaikyti nuoseklumą. Būtent tai daro mano metodą kitokį: čia svarbiausia ne spaudimas, o aiškus planas, kantrybė ir žmogus šalia, kuris mato ne tik kūną, bet ir visą tave.",
+        "Noriu, kad žmonės ne tik treniruotųsi, bet ir pakeistų santykį su judėjimu – kad jis taptų jų vertybe visam gyvenimui."
       ]
     },
     cta: {
