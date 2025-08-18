@@ -294,10 +294,10 @@ const Coaching = () => {
                       <MapPin size={20} className="mr-3 text-theme-tangerine" />
                       <h4 className="text-white hover:text-theme-tangerine transition-colors font-semibold">{t('coaching.contact.locations.title')}</h4>
                     </div>
-                    <div className="ml-8">
+                    <div className="text-sm text-gray-300 ml-8">
                       <a href="https://maps.app.goo.gl/23ZNRSt67dN6G9o36" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-theme-tangerine transition-colors">
-                        <p className="mb-1 text-sm">{t('coaching.contact.locations.intro')}</p>
-                        <ul className="space-y-1 text-sm">
+                        <p className="mb-1">{t('coaching.contact.locations.intro')}</p>
+                        <ul className="space-y-1">
                           {(t('coaching.contact.locations.places', {
                           returnObjects: true
                         }) as string[]).map((place: string, index: number) => <li key={index}>• {place}</li>)}
