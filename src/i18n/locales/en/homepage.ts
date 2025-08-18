@@ -92,9 +92,9 @@ const homepage = {
         personalTrainer: 'Personal Trainer (OTA Academy)'
       },
       bio: [
-        'I believe everyone can fall in love with movement – if they respect their own pace and learn to listen to their body. For me, it wasn\'t a quick path. I discovered the desire to train through personal experience – when I corrected my posture myself and felt for the first time what it means to feel stronger. I was inspired by my physiotherapist – and since then, the desire to help others feel strong and trust their body was born.',
-        'I want people to believe: their body can do more than it seems. And for that, you don\'t need pressure, but a clear plan, consistency, and a person beside you – someone who sees not just the body, but all of you.',
-        'I want people not just to train, but to change their relationship with movement – so it becomes their value for life.'
+        "I believe everyone can learn to love movement – as long as they follow their own pace and learn to listen to their body. For me, this wasn't a quick journey. I first discovered the desire to train through personal experience – when I worked on my posture and felt, for the first time, what it means to feel stronger. Training with a physiotherapist inspired me, and from that moment, I wanted to help others feel strong and confident in their bodies.",
+        "Today, I draw not only from physiotherapy but also from change psychology, which I studied in depth. This helps people overcome inner obstacles and stay consistent. That's what makes my method different: it's not about pressure, but about having a clear plan, patience, and someone by your side who sees not only your body, but all of you.",
+        "My goal is for people not just to train, but to transform their relationship with movement – so it becomes a lifelong value."
       ]
     },
     cta: {
