@@ -52,7 +52,7 @@ const ContactForm = () => {
     <>
       <div className="bg-elegant-charcoal bg-opacity-40 p-6 md:p-8 rounded-lg border border-elegant-light border-opacity-10 w-full">
         <h3 className="text-2xl font-semibold mb-6">
-          {t('applicationForm.title')}
+          Pradėk savo pokyčių kelionę
         </h3>
         <form action="https://getform.io/f/bxozjona" method="POST" onSubmit={handleSubmit} className="space-y-6">
           {/* Honeypot field - hidden from users */}
