@@ -141,7 +141,7 @@ const coaching = {
       ]
     },
     contact: {
-      sectionTitle: 'Susisiekite',
+      sectionTitle: 'Susisiek',
       intro: 'Turite klausimų prieš teikiant paraišką? Susisiekite tiesiogiai per WhatsApp arba užpildykite registracijos formą.',
       whatsAppNote: 'WhatsApp skirtas tik trumpiems klausimams — ne registracijai.',
       instagramNote: 'Sek naujienoms ir patarimams.',
