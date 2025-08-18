@@ -103,26 +103,26 @@ const PricingCard = ({
         <CollapsibleTrigger className="w-full text-left focus:outline-none focus:ring-2 focus:ring-[#E39A4C]/50 focus:ring-offset-2 rounded-xl group">
           <div className={`${getTopBarClasses()} rounded-t-xl transition-colors duration-200`}>
             <CardHeader className="pt-6 pb-4 text-center">
-              <div className="flex items-center justify-between">
-                <div className="flex-1">
-                  <CardTitle className="text-xl font-bold mb-2 text-white">
-                    {t(`coaching.pricing.${pricingKey}.title`)}
-                  </CardTitle>
-                  <div className="flex items-baseline">
-                    <span className="text-3xl font-bold text-white/90">
-                      {t(`coaching.pricing.${pricingKey}.price`)}
-                    </span>
-                    <span className="ml-1 text-[#D1D5DB] text-base">
-                      {t(`coaching.pricing.${pricingKey}.period`)}
-                    </span>
-                  </div>
-                </div>
-                <ChevronDown 
-                  className={`h-5 w-5 text-[#D1D5DB] transition-transform duration-300 ease-out ${
-                    isExpanded ? 'rotate-180' : ''
-                  }`}
-                />
-              </div>
+               <div className="flex flex-col items-center justify-center text-center">
+                 <div className="mb-4">
+                   <CardTitle className="text-xl font-bold mb-2 text-white">
+                     {t(`coaching.pricing.${pricingKey}.title`)}
+                   </CardTitle>
+                   <div className="flex items-baseline justify-center">
+                     <span className="text-3xl font-bold text-white/90">
+                       {t(`coaching.pricing.${pricingKey}.price`)}
+                     </span>
+                     <span className="ml-1 text-[#D1D5DB] text-base">
+                       {t(`coaching.pricing.${pricingKey}.period`)}
+                     </span>
+                   </div>
+                 </div>
+                 <ChevronDown 
+                   className={`h-5 w-5 text-[#D1D5DB] transition-transform duration-300 ease-out ${
+                     isExpanded ? 'rotate-180' : ''
+                   }`}
+                 />
+               </div>
             </CardHeader>
           </div>
         </CollapsibleTrigger>
