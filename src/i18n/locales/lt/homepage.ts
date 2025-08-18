@@ -120,7 +120,7 @@ const homepage = {
       sendingText: 'Siunčiama...',
       successMessage: 'Gidas išsiųstas sėkmingai! Patikrinkite savo el. paštą.',
       errorMessage: 'Nepavyko išsiųsti. Bandykite dar kartą.',
-      disclaimer: 'Pateikdamas duomenis, sutinki gauti PDF gidą el. paštu. Gali atsisitrakinti bet kada.'
+      disclaimer: 'Pateikdamas duomenis, sutinki gauti PDF gidą el. paštu.'
     }
   }
 };
