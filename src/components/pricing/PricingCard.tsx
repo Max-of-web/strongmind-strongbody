@@ -102,7 +102,7 @@ const PricingCard = ({
         
         <CollapsibleTrigger className="w-full text-left focus:outline-none focus:ring-2 focus:ring-[#E39A4C]/50 focus:ring-offset-2 rounded-xl group">
           <div className={`${getTopBarClasses()} rounded-t-xl transition-colors duration-200`}>
-            <CardHeader className="pt-6 pb-4">
+            <CardHeader className="pt-6 pb-4 text-center">
               <div className="flex items-center justify-between">
                 <div className="flex-1">
                   <CardTitle className="text-xl font-bold mb-2 text-white">
