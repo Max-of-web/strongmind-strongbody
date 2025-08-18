@@ -296,7 +296,7 @@ const Coaching = () => {
                         <h4 className="font-semibold mb-2 text-white">{t('coaching.contact.locations.title')}</h4>
                         <a href="https://maps.app.goo.gl/23ZNRSt67dN6G9o36" target="_blank" rel="noopener noreferrer" className="text-white hover:text-theme-tangerine transition-colors">
                           <p className="mb-1 text-white">{t('coaching.contact.locations.intro')}</p>
-                          <ul className="space-y-1">
+                          <ul className="space-y-1 text-white">
                             {(t('coaching.contact.locations.places', {
                             returnObjects: true
                           }) as string[]).map((place: string, index: number) => <li key={index}>• {place}</li>)}
