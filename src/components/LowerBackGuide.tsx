@@ -47,7 +47,7 @@ const LowerBackGuide = () => {
 
             <div className="flex items-center text-sm mt-10 border-t border-slate-200 dark:border-slate-700 pt-4">
               <Shield size={18} className="mr-2 text-theme-tangerine" />
-              <span className="text-slate-600 dark:text-slate-300">{t('homepage.lowerBackGuide.privacyNote')}</span>
+              <span className="text-sm text-slate-600 dark:text-slate-300">{t('homepage.lowerBackGuide.privacyNote')}</span>
             </div>
           </div>
 
