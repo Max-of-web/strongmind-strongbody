@@ -255,7 +255,7 @@ const Coaching = () => {
         <section id="contact-section" className="section-padding bg-theme-navy dark:bg-theme-darknavy">
           <div className="container-width">
             <div className="scroll-fade-in">
-              <h2 className="section-title text-white">{t('coaching.contact.sectionTitle')}</h2>
+              
               <p className="mb-8 text-white">
                 Tavo kelias į stipresnį kūną prasideda čia – užpildyk formą
               </p>
