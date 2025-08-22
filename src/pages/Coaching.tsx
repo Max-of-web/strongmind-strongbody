@@ -261,6 +261,7 @@ const Coaching = () => {
                   Tavo kelias į stipresnį kūną prasideda čia – užpildyk formą
                 </p>
                 
+                <h3 className="text-white text-lg font-semibold mb-4">Jei dar turi klausimų, susisiek:</h3>
                 <div className="space-y-6">
                   {/* WhatsApp */}
                   <div className="bg-theme-tangerine bg-opacity-20 p-6 rounded-lg border border-theme-tangerine border-opacity-30">
