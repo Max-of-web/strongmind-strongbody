@@ -19,7 +19,7 @@ const ContactForm = () => {
     formData.append('lang', i18n.language);
     
     try {
-      const response = await fetch('https://getform.io/f/agdjpzyb', {
+      const response = await fetch('https://formspree.io/f/mrblnlnk', {
         method: 'POST',
         body: formData
       });
