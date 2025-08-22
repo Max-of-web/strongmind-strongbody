@@ -19,7 +19,7 @@ const ContactForm = () => {
     formData.append('lang', i18n.language);
     
     try {
-      const response = await fetch('https://getform.io/f/agdjpzyb', {
+      const response = await fetch('https://formspree.io/f/mrblnlnk', {
         method: 'POST',
         body: formData
       });
@@ -54,7 +54,7 @@ const ContactForm = () => {
         <h3 className="text-2xl font-semibold mb-6">
           Pradėk savo pokyčių kelionę
         </h3>
-        <form action="https://getform.io/f/agdjpzyb" method="POST" onSubmit={handleSubmit} className="space-y-6">
+        <form action="https://formspree.io/f/mrblnlnk" method="POST" onSubmit={handleSubmit} className="space-y-6">
           {/* Honeypot field - hidden from users */}
           <input
             type="text"
