@@ -115,7 +115,7 @@ const homepage = {
         'Kodėl svarbu stebėti savo kūno ribas',
         'Kokius pratimus atlikti ūmiame periode'
       ],
-      privacyNote: 'Jūsų kontaktiniai duomenys bus saugomi atsakingai ir nebus dalinami su kitais.',
+      privacyNote: 'Jūsų kontaktiniai duomenys bus saugomi atsakingai',
       buttonText: 'Atsisiųsti nemokamą gidą',
       sendingText: 'Siunčiama...',
       successMessage: 'Gidas išsiųstas sėkmingai! Patikrinkite savo el. paštą.',
