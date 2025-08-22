@@ -63,7 +63,7 @@ const LowerBackGuide = () => {
               </p>
 
               <form 
-                action="https://formspree.io/f/mrblnlnk"
+                action="https://formspree.io/f/mgvzgzge"
                 method="POST"
                 onSubmit={async (e) => {
                   e.preventDefault();
@@ -73,7 +73,7 @@ const LowerBackGuide = () => {
                     const formData = new FormData();
                     formData.append('email', email);
                     
-                    const response = await fetch('https://formspree.io/f/mrblnlnk', {
+                    const response = await fetch('https://getform.io/f/agdjpzyb', {
                       method: 'POST',
                       body: formData,
                     });
