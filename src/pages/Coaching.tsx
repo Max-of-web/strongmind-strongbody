@@ -254,63 +254,61 @@ const Coaching = () => {
         {/* Contact & Application */}
         <section id="contact-section" className="section-padding bg-theme-navy dark:bg-theme-darknavy">
           <div className="container-width">
-            <div className="flex flex-col lg:flex-row gap-10 lg:gap-16">
-              <div className="lg:w-2/5 scroll-fade-in">
-                <h2 className="section-title text-white">{t('coaching.contact.sectionTitle')}</h2>
-                <p className="mb-8 text-white">
-                  Tavo kelias į stipresnį kūną prasideda čia – užpildyk formą
-                </p>
-                
-                <h3 className="text-white text-lg font-semibold mb-4">Jei dar turi klausimų, susisiek:</h3>
-                <div className="space-y-6">
-                  {/* WhatsApp */}
-                  <div className="bg-theme-tangerine bg-opacity-20 p-6 rounded-lg border border-theme-tangerine border-opacity-30">
-                    <div className="flex items-center mb-2">
-                      <MessageSquare size={20} className="mr-3 text-theme-tangerine" />
-                      <a href="https://wa.me/37067951040" target="_blank" rel="noopener noreferrer" className="text-white hover:text-theme-tangerine transition-colors font-semibold">
-                        WhatsApp
-                      </a>
-                    </div>
-                    <p className="text-sm text-gray-300 ml-8">
-                      {t('coaching.contact.whatsAppNote')}
-                    </p>
-                  </div>
-
-                  {/* Instagram */}
-                  <div className="bg-theme-tangerine bg-opacity-20 p-6 rounded-lg border border-theme-tangerine border-opacity-30">
-                    <div className="flex items-center mb-2">
-                      <Instagram size={20} className="mr-3 text-theme-tangerine" />
-                      <a href="https://www.instagram.com/paulius_physio?igsh=dXd1bWFiajZwN293" target="_blank" rel="noopener noreferrer" className="text-white hover:text-theme-tangerine transition-colors font-semibold">
-                        @paulius_physio
-                      </a>
-                    </div>
-                    <p className="text-sm text-gray-300 ml-8">
-                      {t('coaching.contact.instagramNote')}
-                    </p>
-                  </div>
-
-                  {/* Training Locations */}
-                  <div className="bg-theme-tangerine bg-opacity-20 p-6 rounded-lg border border-theme-tangerine border-opacity-30">
-                    <div className="flex items-center mb-2">
-                      <MapPin size={20} className="mr-3 text-theme-tangerine" />
-                      <h4 className="text-white hover:text-theme-tangerine transition-colors font-semibold">{t('coaching.contact.locations.title')}</h4>
-                    </div>
-                    <div className="text-sm text-gray-300 ml-8">
-                      <a href="https://maps.app.goo.gl/23ZNRSt67dN6G9o36" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-theme-tangerine transition-colors">
-                        <p className="mb-1">{t('coaching.contact.locations.intro')}</p>
-                        <ul className="space-y-1">
-                          {(t('coaching.contact.locations.places', {
-                          returnObjects: true
-                        }) as string[]).map((place: string, index: number) => <li key={index}>• {place}</li>)}
-                        </ul>
-                      </a>
-                    </div>
-                  </div>
-                </div>
+            <div className="scroll-fade-in">
+              <h2 className="section-title text-white">{t('coaching.contact.sectionTitle')}</h2>
+              <p className="mb-8 text-white">
+                Tavo kelias į stipresnį kūną prasideda čia – užpildyk formą
+              </p>
+              
+              <div className="mb-10">
+                <ContactForm />
               </div>
               
-              <div className="lg:w-3/5 scroll-fade-in">
-                <ContactForm />
+              <h3 className="text-white text-lg font-semibold mb-4">Jei dar turi klausimų, susisiek:</h3>
+              <div className="space-y-6">
+                {/* WhatsApp */}
+                <div className="bg-theme-tangerine bg-opacity-20 p-6 rounded-lg border border-theme-tangerine border-opacity-30">
+                  <div className="flex items-center mb-2">
+                    <MessageSquare size={20} className="mr-3 text-theme-tangerine" />
+                    <a href="https://wa.me/37067951040" target="_blank" rel="noopener noreferrer" className="text-white hover:text-theme-tangerine transition-colors font-semibold">
+                      WhatsApp
+                    </a>
+                  </div>
+                  <p className="text-sm text-gray-300 ml-8">
+                    {t('coaching.contact.whatsAppNote')}
+                  </p>
+                </div>
+
+                {/* Instagram */}
+                <div className="bg-theme-tangerine bg-opacity-20 p-6 rounded-lg border border-theme-tangerine border-opacity-30">
+                  <div className="flex items-center mb-2">
+                    <Instagram size={20} className="mr-3 text-theme-tangerine" />
+                    <a href="https://www.instagram.com/paulius_physio?igsh=dXd1bWFiajZwN293" target="_blank" rel="noopener noreferrer" className="text-white hover:text-theme-tangerine transition-colors font-semibold">
+                      @paulius_physio
+                    </a>
+                  </div>
+                  <p className="text-sm text-gray-300 ml-8">
+                    {t('coaching.contact.instagramNote')}
+                  </p>
+                </div>
+
+                {/* Training Locations */}
+                <div className="bg-theme-tangerine bg-opacity-20 p-6 rounded-lg border border-theme-tangerine border-opacity-30">
+                  <div className="flex items-center mb-2">
+                    <MapPin size={20} className="mr-3 text-theme-tangerine" />
+                    <h4 className="text-white hover:text-theme-tangerine transition-colors font-semibold">{t('coaching.contact.locations.title')}</h4>
+                  </div>
+                  <div className="text-sm text-gray-300 ml-8">
+                    <a href="https://maps.app.goo.gl/23ZNRSt67dN6G9o36" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-theme-tangerine transition-colors">
+                      <p className="mb-1">{t('coaching.contact.locations.intro')}</p>
+                      <ul className="space-y-1">
+                        {(t('coaching.contact.locations.places', {
+                        returnObjects: true
+                      }) as string[]).map((place: string, index: number) => <li key={index}>• {place}</li>)}
+                      </ul>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
