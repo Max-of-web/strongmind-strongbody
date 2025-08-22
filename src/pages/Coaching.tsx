@@ -256,9 +256,9 @@ const Coaching = () => {
           <div className="container-width">
             <div className="scroll-fade-in">
               
-              <p className="mb-8 text-white">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight text-center">
                 Tavo kelias į stipresnį kūną prasideda čia – užpildyk formą
-              </p>
+              </h2>
               
               <div className="mb-10">
                 <ContactForm />
