@@ -29,7 +29,7 @@ const ContactForm = () => {
     // Optional: read JSON for extra info
     // const data = await response.json().catch(() => null);
 
-    (e.currentTarget as HTMLFormElement).reset();
+    form?.reset();
 
     const successText =
       i18n.language === 'lt'
