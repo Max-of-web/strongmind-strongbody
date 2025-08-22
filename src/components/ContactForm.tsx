@@ -19,33 +19,45 @@ const ContactForm = () => {
     formData.append('lang', i18n.language);
     
     try {
-      const response = await fetch('https://formspree.io/f/mrblnlnk', {
-        method: 'POST',
-        body: formData
-      });
-      
-      if (!response.ok) throw new Error('Network response was not ok');
-      
-      // Clear form on success
-      form.reset();
-      
-      // Show success message
-      const successText = i18n.language === 'lt' 
-        ? "✅ Paraška išsiųsta. Susisieksiu netrukus."
+  const response = await fetch('https://formspree.io/f/mrblnlnk', {
+    method: 'POST',
+    headers: { Accept: 'application/json' },     // <-- IMPORTANT
+    body: formData,
+  });
+
+  if (response.ok) {
+    // Optional: read JSON for extra info
+    // const data = await response.json().catch(() => null);
+
+    (e.currentTarget as HTMLFormElement).reset();
+
+    const successText =
+      i18n.language === 'lt'
+        ? '✅ Paraška išsiųsta. Susisieksiu netrukus.'
         : "✅ Application sent. I'll get back to you shortly.";
-      setStatusMessage({ type: 'success', text: successText });
-      
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      
-      // Show error message
-      const errorText = i18n.language === 'lt'
-        ? "⚠️ Nepavyko išsiųsti. Bandyk dar kartą."
-        : "⚠️ Send failed. Please try again.";
-      setStatusMessage({ type: 'error', text: errorText });
-    } finally {
-      setIsSubmitting(false);
-    }
+    setStatusMessage({ type: 'success', text: successText });
+  } else {
+    // Try to read Formspree error messages
+    let msg =
+      i18n.language === 'lt'
+        ? '⚠️ Nepavyko išsiųsti. Bandyk dar kartą.'
+        : '⚠️ Send failed. Please try again.';
+    try {
+      const data = await response.json();
+      if (data?.errors?.length) msg = data.errors[0].message;
+    } catch {}
+    setStatusMessage({ type: 'error', text: msg });
+  }
+} catch (err) {
+  console.error('Error submitting form:', err);
+  const msg =
+    i18n.language === 'lt'
+      ? '⚠️ Nepavyko išsiųsti. Bandyk dar kartą.'
+      : '⚠️ Send failed. Please try again.';
+  setStatusMessage({ type: 'error', text: msg });
+} finally {
+  setIsSubmitting(false);
+}
   };
 
   return (
