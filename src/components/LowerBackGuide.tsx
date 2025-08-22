@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { toast } from "sonner";
 
 const LowerBackGuide = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [email, setEmail] = useState('');
 
@@ -72,9 +72,14 @@ const LowerBackGuide = () => {
                   try {
                     const formData = new FormData();
                     formData.append('email', email);
+                    formData.append('page', 'lower-back-guide');
+                    formData.append('language', i18n.language || 'en');
                     
                     const response = await fetch('https://formspree.io/f/mgvzgzge', {
                       method: 'POST',
+                      headers: {
+                        'Accept': 'application/json'
+                      },
                       body: formData,
                     });
                     
@@ -82,7 +87,8 @@ const LowerBackGuide = () => {
                       toast.success(t('homepage.lowerBackGuide.successMessage') || 'Guide sent successfully! Check your email.');
                       setEmail('');
                     } else {
-                      throw new Error('Form submission failed');
+                      const data = await response.json();
+                      throw new Error(data.error || 'Form submission failed');
                     }
                   } catch (error) {
                     console.error('Form submission error:', error);
@@ -95,8 +101,8 @@ const LowerBackGuide = () => {
               >
                 {/* Hidden Honeypot input to prevent spam */}
                 <input 
-                  type="hidden" 
-                  name="_gotcha" 
+                  type="text" 
+                  name="website" 
                   style={{ display: 'none !important' } as React.CSSProperties}
                 />
                 
