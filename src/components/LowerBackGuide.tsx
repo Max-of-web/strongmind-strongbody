@@ -73,7 +73,7 @@ const LowerBackGuide = () => {
                     const formData = new FormData();
                     formData.append('email', email);
                     
-                    const response = await fetch('https://getform.io/f/agdjpzyb', {
+                    const response = await fetch('https://formspree.io/f/mgvzgzge', {
                       method: 'POST',
                       body: formData,
                     });
