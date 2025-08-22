@@ -58,12 +58,12 @@ const LowerBackGuide = () => {
                 {t('homepage.lowerBackGuide.sectionTitle')}
               </h3>
               
-              <p className="text-sm text-slate-600 dark:text-slate-300 mb-4 leading-relaxed text-justify">
+              <p className="text-sm text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
                 {t('homepage.lowerBackGuide.intro')}
               </p>
 
               <form 
-                action="https://getform.io/f/agdjpzyb"
+                action="https://formspree.io/f/mgvzgzge"
                 method="POST"
                 onSubmit={async (e) => {
                   e.preventDefault();
@@ -73,7 +73,7 @@ const LowerBackGuide = () => {
                     const formData = new FormData();
                     formData.append('email', email);
                     
-                    const response = await fetch('https://formspree.io/f/mgvzgzge', {
+                    const response = await fetch('https://getform.io/f/agdjpzyb', {
                       method: 'POST',
                       body: formData,
                     });
