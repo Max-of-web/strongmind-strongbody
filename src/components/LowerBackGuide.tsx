@@ -1,14 +1,9 @@
 
 import { Check, Shield } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { Button } from "@/components/ui/button";
-import { useState } from 'react';
-import { toast } from "sonner";
 
 const LowerBackGuide = () => {
-  const { t, i18n } = useTranslation();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [email, setEmail] = useState('');
+  const { t } = useTranslation();
 
   // Get the benefits array from translations with fallback
   let benefits: string[] = [];
@@ -62,76 +57,7 @@ const LowerBackGuide = () => {
                 {t('homepage.lowerBackGuide.intro')}
               </p>
 
-              <form 
-                action="https://formspree.io/f/mgvzgzge"
-                method="POST"
-                onSubmit={async (e) => {
-                  e.preventDefault();
-                  setIsSubmitting(true);
-                  
-                  try {
-                    const formData = new FormData();
-                    formData.append('email', email);
-                    formData.append('page', 'lower-back-guide');
-                    formData.append('language', i18n.language || 'en');
-                    
-                    const response = await fetch('https://formspree.io/f/mgvzgzge', {
-                      method: 'POST',
-                      headers: {
-                        'Accept': 'application/json'
-                      },
-                      body: formData,
-                    });
-                    
-                    if (response.ok) {
-                      toast.success(t('homepage.lowerBackGuide.successMessage') || 'Guide sent successfully! Check your email.');
-                      setEmail('');
-                    } else {
-                      const data = await response.json();
-                      throw new Error(data.error || 'Form submission failed');
-                    }
-                  } catch (error) {
-                    console.error('Form submission error:', error);
-                    toast.error(t('homepage.lowerBackGuide.errorMessage') || 'Failed to send. Please try again.');
-                  } finally {
-                    setIsSubmitting(false);
-                  }
-                }}
-                className="flex flex-col space-y-3"
-              >
-                {/* Hidden Honeypot input to prevent spam */}
-                <input 
-                  type="text" 
-                  name="website" 
-                  style={{ display: 'none !important' } as React.CSSProperties}
-                />
-                
-                <div>
-                  <input 
-                    type="email" 
-                    name="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder={t('emailSubscription.placeholder')} 
-                    required 
-                    disabled={isSubmitting}
-                    className="w-full p-2 text-sm rounded-md bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-white border border-slate-300 dark:border-slate-600 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-theme-tangerine focus:border-transparent disabled:opacity-50"
-                  />
-                </div>
-                
-                <Button
-                  type="submit" 
-                  variant="cta"
-                  disabled={isSubmitting}
-                  className="w-full px-4 py-2 text-sm h-auto"
-                >
-                  {isSubmitting ? (t('homepage.lowerBackGuide.sendingText') || 'Sending...') : t('homepage.lowerBackGuide.buttonText')}
-                </Button>
-
-                <p className="text-xs text-slate-600 dark:text-slate-400 text-center">
-                  {t('homepage.lowerBackGuide.disclaimer')}
-                </p>
-              </form>
+              <div className="ml-embedded" data-form="7Ja66U"></div>
             </div>
           </div>
         </div>
