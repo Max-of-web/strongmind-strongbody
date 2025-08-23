@@ -70,7 +70,11 @@ export default {
 					lightgray: '#F8FAFC',      // Light background for light elements
 					darkgray: '#1F2937',       // Dark gray for secondary elements
 					border: '#374151',         // Border color
-					muted: '#6B7280'           // Muted text color
+					muted: '#6B7280',          // Muted text color
+					// Orange gradient for accents
+					accentGradientStart: '#FF9800',
+					accentGradientEnd: '#F9C404',
+					accentFallback: '#F9A602'
 				}
 			},
 			textColor: {

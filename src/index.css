@@ -31,6 +31,11 @@
 
   --radius: 0.5rem;
 
+  /* Orange gradient colors for accents */
+  --accent-gradient-start: 36 100% 50%; /* #FF9800 */
+  --accent-gradient-end: 45 96% 50%; /* #F9C404 */
+  --accent-fallback: 39 98% 51%; /* #F9A602 */
+
   --sidebar-background: 0 0% 98%;
   --sidebar-foreground: 0 0% 3.9%;
   --sidebar-primary: 217 91% 60%;
@@ -187,7 +192,8 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   width: 5rem;
   height: 0.25rem;
-  background-color: #1E3A8A;
+  background: linear-gradient(90deg, #FF9800, #F9C404);
+  background-color: #F9A602; /* Fallback */
 }
 
 .card-hover {
@@ -215,8 +221,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .form-input:focus {
   outline: none;
-  box-shadow: 0 0 0 2px #1E3A8A;
-  border-color: #1E3A8A;
+  box-shadow: 0 0 0 2px #F9A602;
+  border-color: #F9A602;
 }
 
 .testimonial-card {
@@ -225,6 +231,9 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 0.5rem;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   border: 1px solid #374151;
+  border-left: 4px solid #F9A602;
+  border-left: 4px solid;
+  border-image: linear-gradient(90deg, #FF9800, #F9C404) 1;
   color: #FFFFFF;
 }
 
@@ -233,6 +242,9 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 0.5rem;
   padding: 2rem;
   border: 1px solid #374151;
+  border-top: 3px solid #F9A602;
+  border-top: 3px solid;
+  border-image: linear-gradient(90deg, #FF9800, #F9C404) 1;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   color: #FFFFFF;
 }
