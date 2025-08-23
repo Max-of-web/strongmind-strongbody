@@ -2,22 +2,9 @@
 "use client";
 import { Check, Shield } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { useEffect } from 'react';
-
-declare global { interface Window { ml?: any } }
 
 const LowerBackGuide = () => {
   const { t } = useTranslation();
-
-  useEffect(() => {
-    if (typeof window !== 'undefined' && window.ml) {
-      window.ml('parse');
-    } else {
-      // try again shortly if script loads a bit later
-      const id = setTimeout(() => { window.ml && window.ml('parse'); }, 600);
-      return () => clearTimeout(id);
-    }
-  }, []);
 
   let benefits: string[] = [];
   try {
