@@ -57,7 +57,14 @@ const LowerBackGuide = () => {
                 {t('homepage.lowerBackGuide.intro')}
               </p>
 
-              <div className="ml-embedded" data-form="7Ja66U"></div>
+              <div style={{width:"100%",maxWidth:"560px",margin:"0 auto"}}>
+                <div className="ml-embedded" data-form="7Ja66U"></div>
+              </div>
+              
+              <div className="flex items-center text-sm mt-4 border-t border-slate-200 dark:border-slate-700 pt-4">
+                <Shield size={18} className="mr-2 text-theme-tangerine" />
+                <span className="text-sm text-slate-600 dark:text-slate-300">{t('homepage.lowerBackGuide.privacyNote')}</span>
+              </div>
             </div>
           </div>
         </div>
