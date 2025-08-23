@@ -52,14 +52,14 @@ const LowerBackGuide = () => {
               <h3 className="text-xl font-semibold mb-3 text-slate-800 dark:text-white">
                 {t('homepage.lowerBackGuide.sectionTitle')}
               </h3>
+
+              <div style={{width:"100%",maxWidth:"560px",margin:"0 auto"}} className="mb-4">
+                <div className="ml-embedded" data-form="7Ja66U"></div>
+              </div>
               
               <p className="text-sm text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
                 {t('homepage.lowerBackGuide.intro')}
               </p>
-
-              <div style={{width:"100%",maxWidth:"560px",margin:"0 auto"}}>
-                <div className="ml-embedded" data-form="7Ja66U"></div>
-              </div>
               
               <div className="flex items-center text-sm mt-4 border-t border-slate-200 dark:border-slate-700 pt-4">
                 <Shield size={18} className="mr-2 text-theme-tangerine" />
