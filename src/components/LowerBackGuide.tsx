@@ -200,6 +200,9 @@ const LowerBackGuide = () => {
                           display: block;
                           font-family: inherit;
                           font-size: 0.875rem;
+                        }
+                        #mlb2-29311269.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description p {
+                          color: hsl(var(--foreground)) !important;
                           text-align: left;
                           margin-bottom: 0;
                           position: relative;
