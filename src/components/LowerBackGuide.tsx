@@ -110,16 +110,17 @@ const LowerBackGuide = () => {
                         #mlb2-29311269.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody {
                           padding: 0;
                         }
-                        #mlb2-29311269.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent h4 {
-                          color: hsl(var(--foreground)) !important;
-                          font-family: inherit;
-                          font-size: 1.125rem;
-                          font-weight: 600;
-                          margin: 0 0 16px 0;
-                          text-align: left;
-                          word-break: break-word;
-                          line-height: 1.5;
-                        }
+                         #mlb2-29311269.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent h4 {
+                           color: hsl(var(--foreground)) !important;
+                           font-family: inherit !important;
+                           font-size: 1.25rem !important;
+                           font-weight: 700 !important;
+                           margin: 0 0 20px 0 !important;
+                           text-align: center !important;
+                           word-break: break-word;
+                           line-height: 1.3 !important;
+                           letter-spacing: -0.01em !important;
+                         }
                         #mlb2-29311269.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow {
                           margin: 0 0 16px 0;
                           width: 100%;
@@ -182,21 +183,25 @@ const LowerBackGuide = () => {
                           min-height: 24px;
                           padding-left: 24px;
                         }
-                        #mlb2-29311269.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description {
-                          color: hsl(var(--foreground)) !important;
-                          display: block;
-                          font-family: inherit;
-                          font-size: 0.875rem;
-                          text-align: left;
-                          margin-bottom: 0;
-                          position: relative;
-                          vertical-align: top;
-                          line-height: 1.5;
-                        }
-                        #mlb2-29311269.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description p {
-                          color: hsl(var(--foreground)) !important;
-                          margin: 0 !important;
-                        }
+                         #mlb2-29311269.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description {
+                           color: hsl(var(--foreground)) !important;
+                           display: block;
+                           font-family: inherit !important;
+                           font-size: 0.8rem !important;
+                           text-align: left;
+                           margin-bottom: 0;
+                           position: relative;
+                           vertical-align: top;
+                           line-height: 1.4 !important;
+                           opacity: 0.9 !important;
+                         }
+                         #mlb2-29311269.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description p {
+                           color: hsl(var(--foreground)) !important;
+                           margin: 0 !important;
+                           font-family: inherit !important;
+                           font-size: 0.8rem !important;
+                           line-height: 1.4 !important;
+                         }
                         #mlb2-29311269.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before {
                           position: absolute;
                           top: 4px;
@@ -311,12 +316,12 @@ const LowerBackGuide = () => {
                                 <input type="hidden" name="anticsrf" value="true">
                               </form>
                             </div>
-                            <div class="ml-form-successBody row-success" style="display: none">
-                              <div class="ml-form-successContent">
-                                <h4>Ačiū, kad žengi pirmą žingsnį!</h4>
-                                <p><strong>Gidas jau pakeliui – patikrink savo el. paštą.</strong></p>
-                              </div>
-                            </div>
+                             <div class="ml-form-successBody row-success" style="display: none">
+                               <div class="ml-form-successContent" style="text-align: center; padding: 20px 0;">
+                                 <h4 style="color: #16a34a !important; font-size: 1.25rem !important; font-weight: 700 !important; margin: 0 0 12px 0 !important; line-height: 1.3 !important;">Ačiū, kad žengi pirmą žingsnį!</h4>
+                                 <p style="font-size: 0.9rem !important; line-height: 1.4 !important; opacity: 0.9;"><strong>Gidas jau pakeliui – patikrink savo el. paštą.</strong></p>
+                               </div>
+                             </div>
                           </div>
                         </div>
                       </div>
