@@ -336,7 +336,7 @@ const LowerBackGuide = () => {
                         </div>
                       </div>
                       
-                      <script>
+                       <script>
                         // Global JSONP callback handler
                         window.ml_webform_success_29311269 = function(res) {
                           const form = document.querySelector('.ml-subscribe-form-29311269');
@@ -361,87 +361,95 @@ const LowerBackGuide = () => {
                           }
                         };
                         
-                        // Form submission handler
-                        document.addEventListener('DOMContentLoaded', function() {
+                        // Initialize form handlers immediately (after DOM injection)
+                        setTimeout(function() {
                           const form = document.querySelector('.ml-subscribe-form-29311269 .ml-block-form');
-                          if (!form) return;
-                          
-                          form.addEventListener('submit', function(e) {
-                            e.preventDefault();
-                            
-                            const formData = new FormData(form);
-                            const emailInput = form.querySelector('input[name="fields[email]"]');
-                            const checkboxInput = form.querySelector('input[name="fields[newsletter_consent]"]');
-                            const submitBtn = form.querySelector('button[type="submit"]');
-                            const loadingBtn = form.querySelector('button.loading');
-                            const errorBody = form.closest('.ml-subscribe-form-29311269').querySelector('.ml-form-errorBody');
-                            const emailError = form.querySelector('.ml-field-email .ml-form-fieldError');
-                            const checkboxError = form.querySelector('.ml-form-checkboxRow .ml-form-fieldError');
-                            
-                            // Clear previous errors
-                            if (emailError) emailError.style.display = 'none';
-                            if (checkboxError) checkboxError.style.display = 'none';
-                            if (errorBody) errorBody.style.display = 'none';
-                            
-                            // Validate form
-                            let hasErrors = false;
-                            
-                            if (!emailInput.value || !emailInput.validity.valid) {
-                              if (emailError) {
-                                emailError.textContent = 'Įveskite teisingą el. pašto adresą';
-                                emailError.style.display = 'block';
-                              }
-                              hasErrors = true;
-                            }
-                            
-                            if (!checkboxInput.checked) {
-                              if (checkboxError) {
-                                checkboxError.textContent = 'Privalote sutikti gauti naujienlaiškius';
-                                checkboxError.style.display = 'block';
-                              }
-                              hasErrors = true;
-                            }
-                            
-                            if (hasErrors) return;
-                            
-                            // Show loading state
-                            if (submitBtn) submitBtn.style.display = 'none';
-                            if (loadingBtn) loadingBtn.style.display = 'inline-block';
-                            
-                            // Submit via JSONP
-                            const params = new URLSearchParams(formData);
-                            params.append('callback', 'ml_webform_success_29311269');
-                            
-                            const script = document.createElement('script');
-                            script.src = form.action + '?' + params.toString();
-                            script.onerror = function() {
-                              // Fallback: submit form normally to iframe
-                              form.submit();
-                            };
-                            
-                            document.head.appendChild(script);
-                            
-                            // Cleanup script after use
-                            setTimeout(() => {
-                              if (script.parentNode) {
-                                script.parentNode.removeChild(script);
-                              }
-                            }, 5000);
-                          });
-                        });
-                        
-                        // Iframe fallback onload handler
-                        document.addEventListener('DOMContentLoaded', function() {
                           const iframe = document.querySelector('iframe[name="ml_iframe"]');
+                          
+                          console.log('Initializing form handlers...', { form, iframe });
+                          
+                          if (form) {
+                            form.addEventListener('submit', function(e) {
+                              console.log('Form submit triggered');
+                              e.preventDefault();
+                              
+                              const formData = new FormData(form);
+                              const emailInput = form.querySelector('input[name="fields[email]"]');
+                              const checkboxInput = form.querySelector('input[name="fields[newsletter_consent]"]');
+                              const submitBtn = form.querySelector('button[type="submit"]');
+                              const loadingBtn = form.querySelector('button.loading');
+                              const errorBody = form.closest('.ml-subscribe-form-29311269').querySelector('.ml-form-errorBody');
+                              const emailError = form.querySelector('.ml-field-email .ml-form-fieldError');
+                              const checkboxError = form.querySelector('.ml-form-checkboxRow .ml-form-fieldError');
+                              
+                              // Clear previous errors
+                              if (emailError) emailError.style.display = 'none';
+                              if (checkboxError) checkboxError.style.display = 'none';
+                              if (errorBody) errorBody.style.display = 'none';
+                              
+                              // Validate form
+                              let hasErrors = false;
+                              
+                              if (!emailInput.value || !emailInput.validity.valid) {
+                                if (emailError) {
+                                  emailError.textContent = 'Įveskite teisingą el. pašto adresą';
+                                  emailError.style.display = 'block';
+                                }
+                                hasErrors = true;
+                              }
+                              
+                              if (!checkboxInput.checked) {
+                                if (checkboxError) {
+                                  checkboxError.textContent = 'Privalote sutikti gauti naujienlaiškius';
+                                  checkboxError.style.display = 'block';
+                                }
+                                hasErrors = true;
+                              }
+                              
+                              if (hasErrors) return;
+                              
+                              // Show loading state
+                              if (submitBtn) submitBtn.style.display = 'none';
+                              if (loadingBtn) loadingBtn.style.display = 'inline-block';
+                              
+                              // Submit via JSONP
+                              const params = new URLSearchParams(formData);
+                              params.append('callback', 'ml_webform_success_29311269');
+                              
+                              console.log('Submitting JSONP request...', params.toString());
+                              
+                              const script = document.createElement('script');
+                              script.src = form.action + '?' + params.toString();
+                              script.onerror = function() {
+                                console.log('JSONP failed, using iframe fallback');
+                                // Fallback: submit form normally to iframe
+                                form.submit();
+                              };
+                              
+                              document.head.appendChild(script);
+                              
+                              // Cleanup script after use
+                              setTimeout(() => {
+                                if (script.parentNode) {
+                                  script.parentNode.removeChild(script);
+                                }
+                              }, 5000);
+                            });
+                          } else {
+                            console.error('Form not found!');
+                          }
+                          
+                          // Setup iframe fallback handler
                           if (iframe) {
                             iframe.onload = function() {
+                              console.log('Iframe loaded, assuming success');
                               // If iframe loads, assume success (fallback)
                               setTimeout(() => {
                                 window.ml_webform_success_29311269({ success: true });
                               }, 500);
                             };
                           }
-                        });
+                        }, 100);
                       </script>
                     `
               }} />
