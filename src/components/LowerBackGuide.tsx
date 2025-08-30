@@ -144,7 +144,7 @@ const LowerBackGuide: React.FC = () => {
                       placeholder="El. paštas"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full"
+                      className="w-full text-black dark:text-white"
                       required
                     />
                   </div>
