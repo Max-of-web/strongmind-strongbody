@@ -289,21 +289,23 @@ const LowerBackGuide = () => {
                               <div class="ml-form-embedContent">
                                 <h4>Įrašyk el. paštą ir gidas netrukus atkeliaus</h4>
                               </div>
-                              <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1654024/forms/162021803147921327/subscribe?callback=ml_webform_success_29311269" data-code="" method="post">
+                              <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1654024/forms/162021803147921327/subscribe" data-code="" method="post" target="ml_iframe">
                                 <div class="ml-form-formContent">
                                   <div class="ml-form-fieldRow ml-last-item">
                                     <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
-                                      <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="El. paštas" autocomplete="email">
+                                      <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="El. paštas" autocomplete="email" required>
+                                      <div class="ml-form-fieldError" style="display: none; color: #dc2626; font-size: 0.875rem; margin-top: 4px;"></div>
                                     </div>
                                   </div>
                                 </div>
                                 <div class="ml-form-checkboxRow ml-validate-required">
                                   <label class="checkbox">
-                                    <input type="checkbox" name="fields[newsletter_consent]" value="1">
+                                    <input type="checkbox" name="fields[newsletter_consent]" value="1" required>
                                     <div class="label-description">
                                       <p>Sutinku gauti naujienlaiškius apie sveikatą ir fizinį aktyvumą.</p>
                                     </div>
                                   </label>
+                                  <div class="ml-form-fieldError" style="display: none; color: #dc2626; font-size: 0.875rem; margin-top: 4px;"></div>
                                 </div>
                                 <input type="hidden" name="ml-submit" value="1">
                                 <div class="ml-form-embedSubmit">
@@ -315,6 +317,14 @@ const LowerBackGuide = () => {
                                 </div>
                                 <input type="hidden" name="anticsrf" value="true">
                               </form>
+                              
+                              <!-- Error message container -->
+                              <div class="ml-form-errorBody" style="display: none; padding: 16px; background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; margin-top: 16px;">
+                                <p style="color: #dc2626; margin: 0; font-size: 0.875rem;">Įvyko klaida. Bandykite dar kartą.</p>
+                              </div>
+                              
+                              <!-- Fallback iframe for JSONP -->
+                              <iframe name="ml_iframe" class="hidden" style="display: none; width: 0; height: 0; border: none;"></iframe>
                             </div>
                              <div class="ml-form-successBody row-success" style="display: none">
                                <div class="ml-form-successContent" style="text-align: center; padding: 20px 0;">
@@ -327,15 +337,111 @@ const LowerBackGuide = () => {
                       </div>
                       
                       <script>
-                        function ml_webform_success_29311269() {
-                          var $ = ml_jQuery || jQuery;
-                          $('.ml-subscribe-form-29311269 .row-success').show();
-                          $('.ml-subscribe-form-29311269 .row-form').hide();
-                        }
-                      </script>
-                      <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
-                      <script>
-                        fetch("https://assets.mailerlite.com/jsonp/1654024/forms/162021803147921327/takel")
+                        // Global JSONP callback handler
+                        window.ml_webform_success_29311269 = function(res) {
+                          const form = document.querySelector('.ml-subscribe-form-29311269');
+                          if (!form) return;
+                          
+                          const rowForm = form.querySelector('.row-form');
+                          const rowSuccess = form.querySelector('.row-success');
+                          const errorBody = form.querySelector('.ml-form-errorBody');
+                          const submitBtn = form.querySelector('button[type="submit"]');
+                          const loadingBtn = form.querySelector('button.loading');
+                          
+                          if (res && res.success) {
+                            // Success: hide form, show success message
+                            if (rowForm) rowForm.style.display = 'none';
+                            if (rowSuccess) rowSuccess.style.display = 'block';
+                            if (errorBody) errorBody.style.display = 'none';
+                          } else {
+                            // Error: show error message, re-enable form
+                            if (errorBody) errorBody.style.display = 'block';
+                            if (submitBtn) submitBtn.style.display = 'inline-block';
+                            if (loadingBtn) loadingBtn.style.display = 'none';
+                          }
+                        };
+                        
+                        // Form submission handler
+                        document.addEventListener('DOMContentLoaded', function() {
+                          const form = document.querySelector('.ml-subscribe-form-29311269 .ml-block-form');
+                          if (!form) return;
+                          
+                          form.addEventListener('submit', function(e) {
+                            e.preventDefault();
+                            
+                            const formData = new FormData(form);
+                            const emailInput = form.querySelector('input[name="fields[email]"]');
+                            const checkboxInput = form.querySelector('input[name="fields[newsletter_consent]"]');
+                            const submitBtn = form.querySelector('button[type="submit"]');
+                            const loadingBtn = form.querySelector('button.loading');
+                            const errorBody = form.closest('.ml-subscribe-form-29311269').querySelector('.ml-form-errorBody');
+                            const emailError = form.querySelector('.ml-field-email .ml-form-fieldError');
+                            const checkboxError = form.querySelector('.ml-form-checkboxRow .ml-form-fieldError');
+                            
+                            // Clear previous errors
+                            if (emailError) emailError.style.display = 'none';
+                            if (checkboxError) checkboxError.style.display = 'none';
+                            if (errorBody) errorBody.style.display = 'none';
+                            
+                            // Validate form
+                            let hasErrors = false;
+                            
+                            if (!emailInput.value || !emailInput.validity.valid) {
+                              if (emailError) {
+                                emailError.textContent = 'Įveskite teisingą el. pašto adresą';
+                                emailError.style.display = 'block';
+                              }
+                              hasErrors = true;
+                            }
+                            
+                            if (!checkboxInput.checked) {
+                              if (checkboxError) {
+                                checkboxError.textContent = 'Privalote sutikti gauti naujienlaiškius';
+                                checkboxError.style.display = 'block';
+                              }
+                              hasErrors = true;
+                            }
+                            
+                            if (hasErrors) return;
+                            
+                            // Show loading state
+                            if (submitBtn) submitBtn.style.display = 'none';
+                            if (loadingBtn) loadingBtn.style.display = 'inline-block';
+                            
+                            // Submit via JSONP
+                            const params = new URLSearchParams(formData);
+                            params.append('callback', 'ml_webform_success_29311269');
+                            
+                            const script = document.createElement('script');
+                            script.src = form.action + '?' + params.toString();
+                            script.onerror = function() {
+                              // Fallback: submit form normally to iframe
+                              form.submit();
+                            };
+                            
+                            document.head.appendChild(script);
+                            
+                            // Cleanup script after use
+                            setTimeout(() => {
+                              if (script.parentNode) {
+                                script.parentNode.removeChild(script);
+                              }
+                            }, 5000);
+                          });
+                        });
+                        
+                        // Iframe fallback onload handler
+                        document.addEventListener('DOMContentLoaded', function() {
+                          const iframe = document.querySelector('iframe[name="ml_iframe"]');
+                          if (iframe) {
+                            iframe.onload = function() {
+                              // If iframe loads, assume success (fallback)
+                              setTimeout(() => {
+                                window.ml_webform_success_29311269({ success: true });
+                              }, 500);
+                            };
+                          }
+                        });
                       </script>
                     `
               }} />
