@@ -197,6 +197,10 @@ const LowerBackGuide = () => {
                           vertical-align: top;
                           line-height: 1.5;
                         }
+                        #mlb2-29311269.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description p {
+                          color: hsl(var(--foreground)) !important;
+                          margin: 0 !important;
+                        }
                         #mlb2-29311269.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before {
                           position: absolute;
                           top: 4px;
