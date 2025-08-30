@@ -120,6 +120,13 @@ const LowerBackGuide: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-800 dark:text-white">
               {t('homepage.lowerBackGuide.sectionTitle')}
             </h2>
+            
+            <div className="mb-8 p-4 bg-gradient-to-r from-orange-50 to-amber-50 dark:from-slate-700 dark:to-slate-600 rounded-lg border-l-4 border-orange-400">
+              <p className="text-lg leading-relaxed text-slate-700 dark:text-slate-200 font-medium">
+                Iki <span className="font-bold text-orange-600 dark:text-orange-400">80 %</span> žmonių bent kartą gyvenime patiria nugaros skausmą. Šiame gide – svarbiausi faktai ir <span className="font-bold">7 paprasti žingsniai</span>, kaip suprasti priežastis ir pradėti veikti jau šiandien.
+              </p>
+            </div>
+            
             <ul className="space-y-4 mb-8">
               {benefits.map((benefit, index) => (
                 <li key={index} className="flex items-start">
