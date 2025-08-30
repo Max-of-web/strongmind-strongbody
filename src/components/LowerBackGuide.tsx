@@ -28,10 +28,6 @@ const LowerBackGuide = () => {
                   <span className="text-slate-700 dark:text-slate-200">{b}</span>
                 </li>)}
             </ul>
-            <div className="flex items-center text-sm mt-10 border-t border-slate-200 dark:border-slate-700 pt-4">
-              <Shield size={18} className="mr-2 text-theme-tangerine" />
-              
-            </div>
           </div>
 
           <div className="md:w-1/2 w-full mt-6 md:mt-0">
