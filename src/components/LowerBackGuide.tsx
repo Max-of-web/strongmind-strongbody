@@ -38,7 +38,7 @@ const LowerBackGuide = () => {
               <div className="w-full">
                 <div dangerouslySetInnerHTML={{
                 __html: `
-                      <style type="text/css">@import url("https://assets.mlcdn.com/fonts.css?version=1754385");</style>
+                      <style type="text/css">@import url("https://assets.mlcdn.com/fonts.css?version=1756385");</style>
                       <style type="text/css">
                         .ml-form-embedSubmitLoad {
                           display: inline-block;
@@ -282,7 +282,7 @@ const LowerBackGuide = () => {
                           <div class="ml-form-embedWrapper embedForm">
                             <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
                               <div class="ml-form-embedContent">
-                                <h4>Gauk nemokamą gidą apie nugaros skausmą</h4>
+                                <h4>Įrašyk el. paštą ir gidas netrukus atkeliaus</h4>
                               </div>
                               <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1654024/forms/162021803147921327/subscribe" data-code="" method="post" target="_blank">
                                 <div class="ml-form-formContent">
@@ -313,7 +313,8 @@ const LowerBackGuide = () => {
                             </div>
                             <div class="ml-form-successBody row-success" style="display: none">
                               <div class="ml-form-successContent">
-                                <h4>Thank you!</h4>
+                                <h4>Ačiū, kad žengi pirmą žingsnį!</h4>
+                                <p><strong>Gidas jau pakeliui – patikrink savo el. paštą.</strong></p>
                               </div>
                             </div>
                           </div>
