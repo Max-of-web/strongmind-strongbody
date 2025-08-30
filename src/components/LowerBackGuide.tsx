@@ -40,14 +40,14 @@ const LowerBackGuide = () => {
             </div>
           </div>
 
-          <div className="md:w-1/2">
-            <div className="flex flex-col bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-md shadow-md p-4">
-              <h3 className="text-xl font-semibold mb-3 text-slate-800 dark:text-white">
+          <div className="md:w-1/2 w-full mt-6 md:mt-0">
+            <div className="flex flex-col bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl shadow-lg p-6 gap-4 max-w-[380px] w-full mx-auto md:mx-0">
+              <h3 className="text-lg font-semibold text-slate-800 dark:text-white leading-relaxed">
                 {t('homepage.lowerBackGuide.sectionTitle')}
               </h3>
 
               {/* MailerLite form */}
-              <div className="mb-4 w-full">
+              <div className="w-full">
                 <div 
                   dangerouslySetInnerHTML={{
                     __html: `
@@ -126,35 +126,54 @@ const LowerBackGuide = () => {
                         #mlb2-29311269.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent h4 {
                           color: inherit;
                           font-family: inherit;
-                          font-size: 1.25rem;
+                          font-size: 1.125rem;
                           font-weight: 600;
                           margin: 0 0 16px 0;
                           text-align: left;
                           word-break: break-word;
+                          line-height: 1.5;
                         }
                         #mlb2-29311269.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow {
-                          margin: 0 0 12px 0;
+                          margin: 0 0 16px 0;
                           width: 100%;
                         }
                         #mlb2-29311269.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input {
                           background-color: #ffffff !important;
                           color: #333333 !important;
                           border-color: #cccccc;
-                          border-radius: 4px !important;
+                          border-radius: 8px !important;
                           border-style: solid !important;
                           border-width: 1px !important;
                           font-family: inherit;
-                          font-size: 14px !important;
+                          font-size: 1rem !important;
                           height: auto;
-                          line-height: 21px !important;
+                          line-height: 1.5 !important;
                           margin: 0;
-                          padding: 10px !important;
+                          padding: 12px 16px !important;
                           width: 100% !important;
                           box-sizing: border-box !important;
                           max-width: 100% !important;
+                          transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+                        }
+                        #mlb2-29311269.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input:focus {
+                          outline: none !important;
+                          border-color: hsl(var(--primary)) !important;
+                          box-shadow: 0 0 0 3px hsl(var(--ring)) !important;
+                        }
+                        #mlb2-29311269.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input::placeholder {
+                          color: #6b7280 !important;
+                          font-weight: 400 !important;
+                        }
+                        .dark #mlb2-29311269.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input {
+                          background-color: hsl(var(--background)) !important;
+                          color: hsl(var(--foreground)) !important;
+                          border-color: hsl(var(--border)) !important;
+                        }
+                        .dark #mlb2-29311269.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input::placeholder {
+                          color: hsl(var(--muted-foreground)) !important;
                         }
                         #mlb2-29311269.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow {
-                          margin: 12px 0 20px 0;
+                          margin: 16px 0 20px 0;
                           width: 100%;
                         }
                         #mlb2-29311269.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow input[type="checkbox"] {
@@ -180,11 +199,12 @@ const LowerBackGuide = () => {
                           color: inherit;
                           display: block;
                           font-family: inherit;
-                          font-size: 14px;
+                          font-size: 0.875rem;
                           text-align: left;
                           margin-bottom: 0;
                           position: relative;
                           vertical-align: top;
+                          line-height: 1.5;
                         }
                         #mlb2-29311269.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before {
                           position: absolute;
@@ -198,10 +218,15 @@ const LowerBackGuide = () => {
                           background-color: #ffffff;
                           border: #cccccc solid 1px;
                           border-radius: 4px;
+                          transition: border-color 0.2s ease, background-color 0.2s ease;
+                        }
+                        .dark #mlb2-29311269.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before {
+                          background-color: hsl(var(--background));
+                          border-color: hsl(var(--border));
                         }
                         #mlb2-29311269.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow input[type=checkbox]:checked~.label-description::before {
-                          border-color: #1e3a8a !important;
-                          background-color: #1e3a8a !important;
+                          border-color: hsl(var(--primary)) !important;
+                          background-color: hsl(var(--primary)) !important;
                         }
                         #mlb2-29311269.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow input[type=checkbox]:checked~.label-description::after {
                           position: absolute;
@@ -219,29 +244,40 @@ const LowerBackGuide = () => {
                           width: 100%;
                         }
                         #mlb2-29311269.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button {
-                          background-color: #1e3a8a !important;
+                          background-color: hsl(var(--primary)) !important;
                           border: none !important;
-                          border-radius: 4px !important;
+                          border-radius: 8px !important;
                           box-shadow: none !important;
-                          color: #ffffff !important;
+                          color: hsl(var(--primary-foreground)) !important;
                           cursor: pointer;
                           font-family: inherit !important;
-                          font-size: 14px !important;
+                          font-size: 1rem !important;
                           font-weight: 600 !important;
-                          line-height: 21px !important;
+                          line-height: 1.5 !important;
                           height: auto;
-                          padding: 10px !important;
+                          padding: 12px 16px !important;
                           width: 100% !important;
                           box-sizing: border-box !important;
+                          transition: background-color 0.2s ease, transform 0.1s ease !important;
                         }
                         #mlb2-29311269.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button:hover {
-                          background-color: #3159c5 !important;
+                          background-color: hsl(var(--primary) / 0.9) !important;
+                          transform: translateY(-1px) !important;
+                        }
+                        #mlb2-29311269.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button:focus {
+                          outline: none !important;
+                          box-shadow: 0 0 0 3px hsl(var(--ring)) !important;
+                        }
+                        #mlb2-29311269.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button:disabled {
+                          opacity: 0.5 !important;
+                          cursor: not-allowed !important;
+                          transform: none !important;
                         }
                         #mlb2-29311269.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.loading {
                           display: none;
                         }
                         .ml-error input {
-                          border-color: red !important;
+                          border-color: hsl(var(--destructive)) !important;
                         }
                         @media only screen and (max-width: 400px) {
                           .ml-form-embedWrapper.embedForm { 
@@ -309,13 +345,13 @@ const LowerBackGuide = () => {
                 />
               </div>
 
-              <p className="mb-4 opacity-90 text-slate-700 dark:text-slate-300">
+              <p className="text-base text-slate-700 dark:text-slate-300 leading-relaxed">
                 {t('homepage.lowerBackGuide.intro')}
               </p>
 
-              <div className="flex items-center text-sm mt-4 border-t border-slate-200 dark:border-slate-700 pt-4">
-                <Shield size={18} className="mr-2 text-theme-tangerine" />
-                <span className="text-sm text-slate-600 dark:text-slate-300">{t('homepage.lowerBackGuide.privacyNote')}</span>
+              <div className="flex items-center text-sm border-t border-slate-200 dark:border-slate-700 pt-4">
+                <Shield size={18} className="mr-2 text-theme-tangerine flex-shrink-0" />
+                <span className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">{t('homepage.lowerBackGuide.privacyNote')}</span>
               </div>
             </div>
           </div>
