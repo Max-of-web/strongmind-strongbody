@@ -167,7 +167,7 @@ const LowerBackGuide: React.FC = () => {
                     disabled={isSubmitting}
                     className="w-full"
                   >
-                    {isSubmitting ? 'Siunčiama...' : t('homepage.lowerBackGuide.downloadButton')}
+                    {isSubmitting ? 'Siunčiama...' : 'Atsisiųsti nemokamą gidą'}
                   </Button>
                 </form>
               ) : (
