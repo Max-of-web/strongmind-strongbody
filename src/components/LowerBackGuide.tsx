@@ -289,7 +289,7 @@ const LowerBackGuide = () => {
                               <div class="ml-form-embedContent">
                                 <h4>Įrašyk el. paštą ir gidas netrukus atkeliaus</h4>
                               </div>
-                              <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1654024/forms/162021803147921327/subscribe" data-code="" method="post">
+                              <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1654024/forms/162021803147921327/subscribe?callback=ml_webform_success_29311269" data-code="" method="post">
                                 <div class="ml-form-formContent">
                                   <div class="ml-form-fieldRow ml-last-item">
                                     <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
@@ -299,7 +299,7 @@ const LowerBackGuide = () => {
                                 </div>
                                 <div class="ml-form-checkboxRow ml-validate-required">
                                   <label class="checkbox">
-                                    <input type="checkbox">
+                                    <input type="checkbox" name="fields[newsletter_consent]" value="1">
                                     <div class="label-description">
                                       <p>Sutinku gauti naujienlaiškius apie sveikatą ir fizinį aktyvumą.</p>
                                     </div>
