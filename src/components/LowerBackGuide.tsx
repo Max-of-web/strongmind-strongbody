@@ -339,7 +339,7 @@ const LowerBackGuide = () => {
               }} />
               </div>
 
-              <p className="text-base text-slate-700 dark:text-slate-300 leading-relaxed">
+              <p className="text-sm text-slate-600 dark:text-slate-400 leading-normal tracking-normal">
                 Iki 80 % žmonių bent kartą gyvenime patiria nugaros skausmą. Šiame gide – svarbiausi faktai ir 7 paprasti žingsniai, kaip suprasti priežastis ir pradėti veikti jau šiandien
               </p>
 
