@@ -1,25 +1,21 @@
-
 "use client";
+
 import { Check, Shield } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-
 const LowerBackGuide = () => {
-  const { t } = useTranslation();
-
+  const {
+    t
+  } = useTranslation();
   let benefits: string[] = [];
   try {
-    const data = t('homepage.lowerBackGuide.benefits', { returnObjects: true }) as unknown;
-    benefits = Array.isArray(data) ? (data as string[]) : [];
-  } catch { benefits = [
-    'Reduced pain and discomfort through proper movement patterns',
-    'Smarter training approach that adapts to your energy levels',
-    'Sustainable habits that fit into your lifestyle',
-    'Stronger body awareness and connection',
-    'Increased confidence in your movement abilities'
-  ]; }
-
-  return (
-    <section id="free-guide" className="py-20 bg-slate-100 dark:bg-slate-900">
+    const data = t('homepage.lowerBackGuide.benefits', {
+      returnObjects: true
+    }) as unknown;
+    benefits = Array.isArray(data) ? data as string[] : [];
+  } catch {
+    benefits = ['Reduced pain and discomfort through proper movement patterns', 'Smarter training approach that adapts to your energy levels', 'Sustainable habits that fit into your lifestyle', 'Stronger body awareness and connection', 'Increased confidence in your movement abilities'];
+  }
+  return <section id="free-guide" className="py-20 bg-slate-100 dark:bg-slate-900">
       <div className="container-width px-4 md:px-8">
         <div className="flex flex-col md:flex-row gap-10 items-stretch">
           <div className="md:w-1/2 bg-white dark:bg-slate-800 rounded-md shadow-md px-[35px] py-[30px]">
@@ -27,12 +23,10 @@ const LowerBackGuide = () => {
               {t('homepage.lowerBackGuide.sectionTitle')}
             </h2>
             <ul className="space-y-4 mb-8">
-              {benefits.map((b, i) => (
-                <li key={i} className="flex items-start">
+              {benefits.map((b, i) => <li key={i} className="flex items-start">
                   <Check size={22} className="text-theme-tangerine shrink-0 mt-1 mr-3" />
                   <span className="text-slate-700 dark:text-slate-200">{b}</span>
-                </li>
-              ))}
+                </li>)}
             </ul>
             <div className="flex items-center text-sm mt-10 border-t border-slate-200 dark:border-slate-700 pt-4">
               <Shield size={18} className="mr-2 text-theme-tangerine" />
@@ -42,15 +36,12 @@ const LowerBackGuide = () => {
 
           <div className="md:w-1/2 w-full mt-6 md:mt-0">
             <div className="flex flex-col bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl shadow-lg p-6 gap-4 max-w-[380px] w-full mx-auto md:mx-0">
-              <h3 className="text-lg font-semibold text-slate-800 dark:text-white leading-relaxed">
-                {t('homepage.lowerBackGuide.sectionTitle')}
-              </h3>
+              
 
               {/* MailerLite form */}
               <div className="w-full">
-                <div 
-                  dangerouslySetInnerHTML={{
-                    __html: `
+                <div dangerouslySetInnerHTML={{
+                __html: `
                       <style type="text/css">@import url("https://assets.mlcdn.com/fonts.css?version=1754385");</style>
                       <style type="text/css">
                         .ml-form-embedSubmitLoad {
@@ -200,9 +191,6 @@ const LowerBackGuide = () => {
                           display: block;
                           font-family: inherit;
                           font-size: 0.875rem;
-                        }
-                        #mlb2-29311269.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description p {
-                          color: hsl(var(--foreground)) !important;
                           text-align: left;
                           margin-bottom: 0;
                           position: relative;
@@ -344,8 +332,7 @@ const LowerBackGuide = () => {
                         fetch("https://assets.mailerlite.com/jsonp/1654024/forms/162021803147921327/takel")
                       </script>
                     `
-                  }}
-                />
+              }} />
               </div>
 
               <p className="text-base text-slate-700 dark:text-slate-300 leading-relaxed">
@@ -360,8 +347,6 @@ const LowerBackGuide = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default LowerBackGuide;
