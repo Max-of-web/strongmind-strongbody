@@ -124,7 +124,7 @@ const LowerBackGuide = () => {
                           padding: 0;
                         }
                         #mlb2-29311269.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent h4 {
-                          color: inherit;
+                          color: hsl(var(--foreground)) !important;
                           font-family: inherit;
                           font-size: 1.125rem;
                           font-weight: 600;
@@ -196,7 +196,7 @@ const LowerBackGuide = () => {
                           padding-left: 24px;
                         }
                         #mlb2-29311269.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description {
-                          color: inherit;
+                          color: hsl(var(--foreground)) !important;
                           display: block;
                           font-family: inherit;
                           font-size: 0.875rem;
