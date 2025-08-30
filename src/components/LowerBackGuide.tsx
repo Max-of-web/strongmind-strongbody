@@ -381,6 +381,8 @@ const LowerBackGuide = () => {
                               const errorBody = form.closest('.ml-subscribe-form-29311269').querySelector('.ml-form-errorBody');
                               const emailError = form.querySelector('.ml-field-email .ml-form-fieldError');
                               const checkboxError = form.querySelector('.ml-form-checkboxRow .ml-form-fieldError');
+                              const rowForm = form.closest('.ml-subscribe-form-29311269').querySelector('.row-form');
+                              const rowSuccess = form.closest('.ml-subscribe-form-29311269').querySelector('.row-success');
                               
                               // Clear previous errors
                               if (emailError) emailError.style.display = 'none';
@@ -408,15 +410,16 @@ const LowerBackGuide = () => {
                               
                               if (hasErrors) return;
                               
-                              // Show loading state
-                              if (submitBtn) submitBtn.style.display = 'none';
-                              if (loadingBtn) loadingBtn.style.display = 'inline-block';
+                              // Show immediate success if validation passes
+                              console.log('Validation passed, showing immediate success');
+                              if (rowForm) rowForm.style.display = 'none';
+                              if (rowSuccess) rowSuccess.style.display = 'block';
                               
-                              // Submit via JSONP
+                              // Submit to MailerLite in background (no need to wait for response)
                               const params = new URLSearchParams(formData);
                               params.append('callback', 'ml_webform_success_29311269');
                               
-                              console.log('Submitting JSONP request...', params.toString());
+                              console.log('Submitting to MailerLite in background...', params.toString());
                               
                               const script = document.createElement('script');
                               script.src = form.action + '?' + params.toString();
