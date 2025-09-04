@@ -154,6 +154,9 @@ const coaching = {
         ]
       }
     }
+  },
+  buttons: {
+    viewPackages: "Peržiūrėk treniruočių paketus"
   }
 };
 

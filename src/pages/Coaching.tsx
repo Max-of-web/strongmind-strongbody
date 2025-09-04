@@ -55,6 +55,15 @@ const Coaching = () => {
       });
     }
   };
+
+  const scrollToPackages = () => {
+    const packagesSection = document.getElementById('packages-section');
+    if (packagesSection) {
+      packagesSection.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  };
   return <>
       <Header />
       <main>
@@ -79,8 +88,8 @@ const Coaching = () => {
                   {t('coaching.hero.subtitle')}
                 </p>
                 <div className="flex items-center gap-4 justify-center">
-                  <button onClick={() => navigate('/')} className="cta-button-primary inline-block">
-                    {t('homepage.hero.ctaButton')}
+                  <button onClick={scrollToPackages} className="inline-flex items-center justify-center px-6 py-3 bg-transparent text-white border-2 border-theme-tangerine hover:bg-theme-tangerine hover:text-black rounded-md font-bold transition-all duration-300 shadow-md hover:shadow-lg">
+                    {t('coaching.buttons.viewPackages')}
                   </button>
                   <button 
                     onClick={scrollToForm}
@@ -173,7 +182,7 @@ const Coaching = () => {
         </section>
         
         {/* Packages & Pricing */}
-        <section className="section-padding bg-elegant-charcoal">
+        <section id="packages-section" className="section-padding bg-elegant-charcoal">
           <div className="container-width">
             <div className="text-center mb-12 scroll-fade-in">
               <h2 className="section-title mx-auto after:left-1/2 after:-translate-x-1/2">

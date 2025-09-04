@@ -154,6 +154,9 @@ const coaching = {
         ]
       }
     }
+  },
+  buttons: {
+    viewPackages: "View Training Packages"
   }
 };
 
