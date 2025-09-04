@@ -118,32 +118,36 @@ const PricingCard = ({
                     </div>
                     {pricingKey === 'oneOnOneCoaching' && (
                       <div className="mt-2">
-                        <span className="text-sm text-green-400 font-medium bg-green-400/10 px-2 py-1 rounded-md border border-green-400/20">
-                          45 € už treniruotę perkant 8 treniruočių paketą
+                        <span className="text-black font-medium bg-gradient-to-r from-amber-400 to-orange-400 px-3 py-2 rounded-md border border-amber-300/50 shadow-lg shadow-amber-500/25 relative overflow-hidden">
+                          <span className="relative z-10">45 € už treniruotę perkant 8 treniruočių paketą</span>
+                          <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-50"></div>
                         </span>
                       </div>
                     )}
-                    {pricingKey === 'onlineTraining' && (
-                      <div className="mt-2">
-                        <span className="text-sm text-green-400 font-medium bg-green-400/10 px-2 py-1 rounded-md border border-green-400/20">
-                          90 € mokant už trijų mėnesių paketą
-                        </span>
-                      </div>
-                    )}
-                    {pricingKey === 'rehabTraining' && (
-                      <div className="mt-2">
-                        <span className="text-sm text-green-400 font-medium bg-green-400/10 px-2 py-1 rounded-md border border-green-400/20">
-                          55 € mokant už 8 treniruočių paketą
-                        </span>
-                      </div>
-                    )}
-                    {pricingKey === 'smallGroupTraining' && (
-                      <div className="mt-2">
-                        <span className="text-sm text-green-400 font-medium bg-green-400/10 px-2 py-1 rounded-md border border-green-400/20">
-                          arba 160 € mokant už mėnesį
-                        </span>
-                      </div>
-                    )}
+                     {pricingKey === 'onlineTraining' && (
+                       <div className="mt-2">
+                         <span className="text-black font-medium bg-gradient-to-r from-amber-400 to-orange-400 px-3 py-2 rounded-md border border-amber-300/50 shadow-lg shadow-amber-500/25 relative overflow-hidden">
+                           <span className="relative z-10">90 € mokant už trijų mėnesių paketą</span>
+                           <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-50"></div>
+                         </span>
+                       </div>
+                     )}
+                     {pricingKey === 'rehabTraining' && (
+                       <div className="mt-2">
+                         <span className="text-black font-medium bg-gradient-to-r from-amber-400 to-orange-400 px-3 py-2 rounded-md border border-amber-300/50 shadow-lg shadow-amber-500/25 relative overflow-hidden">
+                           <span className="relative z-10">55 € mokant už 8 treniruočių paketą</span>
+                           <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-50"></div>
+                         </span>
+                       </div>
+                     )}
+                     {pricingKey === 'smallGroupTraining' && (
+                       <div className="mt-2">
+                         <span className="text-black font-medium bg-gradient-to-r from-amber-400 to-orange-400 px-3 py-2 rounded-md border border-amber-300/50 shadow-lg shadow-amber-500/25 relative overflow-hidden">
+                           <span className="relative z-10">arba 160 € mokant už mėnesį</span>
+                           <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-50"></div>
+                         </span>
+                       </div>
+                     )}
                  </div>
                  <ChevronDown 
                    className={`h-5 w-5 text-[#D1D5DB] transition-transform duration-300 ease-out ${
