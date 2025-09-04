@@ -87,8 +87,8 @@ const coaching = {
       },
       smallGroupTraining: {
         title: 'Treniruotės Mažoje Grupėje',
-        price: '160 €',
-        period: 'per mėnesį',
+        price: '25 €',
+        period: 'už kartą',
         subtitle: 'Tiems, kurie nori sportuoti bendruomenėje, mėgsta motyvaciją ir jau turi bazinį fizinį pasirengimą.',
         features: [
           'Treniruotės 2× per savaitę mažoje, draugiškoje grupėje',
