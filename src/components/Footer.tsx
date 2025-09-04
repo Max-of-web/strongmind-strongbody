@@ -50,18 +50,17 @@ const Footer = () => {
                 </div>
               </div>
               
-              <div className="flex items-start space-x-3">
-                <Youtube size={20} className="text-theme-tangerine mt-0.5 flex-shrink-0" />
-                <div className="flex-1">
-                  <a 
-                    href="https://youtube.com/playlist?list=PL9FEczFkBjTeQt3GXlvoKfNygvTiZ-qkb" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-white hover:text-theme-tangerine transition-colors duration-200 font-medium"
-                  >
-                    YouTube treniruotės (nuolat pildoma)
-                  </a>
-                </div>
+              <div className="flex justify-center">
+                <a 
+                  href="https://youtube.com/playlist?list=PL9FEczFkBjTeQt3GXlvoKfNygvTiZ-qkb" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-white text-gray-900 font-medium rounded-lg hover:bg-gray-100 transition-all duration-300 hover:transform hover:-translate-y-0.5 shadow-md hover:shadow-lg"
+                  aria-label="View YouTube training videos"
+                >
+                  <Youtube size={20} className="mr-2" />
+                  YouTube treniruotės
+                </a>
               </div>
             </div>
           </div>
