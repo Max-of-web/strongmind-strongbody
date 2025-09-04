@@ -13,6 +13,7 @@ const common = {
     contact: 'Contact',
     phone: '+370 6795 1040',
     whatsAppChat: 'WhatsApp Chat',
+    whatsAppNote: 'Message me directly on WhatsApp',
     youtubeTraining: 'YouTube Workouts',
     youtubeNote: 'Short workouts and exercises on my YouTube channel',
     instagramNote: 'Follow for updates & tips.',
