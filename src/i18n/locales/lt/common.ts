@@ -14,7 +14,7 @@ const common = {
     phone: '+370 6795 1040',
     whatsAppChat: 'WhatsApp Pokalbis',
     whatsAppNote: 'Rašykite man tiesiogiai WhatsApp',
-    youtubeTraining: 'YouTube treniruotės',
+    youtubeTraining: 'YouTube treniruotės (nuolat pildoma)',
     youtubeNote: 'Trumpas treniruotes ir mankštas gali rasti mano YouTube kanale',
     instagramNote: 'Sekite naujienoms ir patarimams.',
     locations: 'Treniruočių Vietos',
