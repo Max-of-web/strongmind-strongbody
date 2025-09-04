@@ -88,8 +88,9 @@ const Coaching = () => {
                   {t('coaching.hero.subtitle')}
                 </p>
                 <div className="flex items-center gap-4 justify-center">
-                  <button onClick={scrollToPackages} className="bg-theme-tangerine text-black px-6 py-3 rounded-md font-bold hover:bg-theme-tangerine/90 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
-                    {t('buttons.viewPackages')}
+                  <button onClick={scrollToPackages} className="bg-gradient-to-r from-amber-400 to-orange-400 text-black px-6 py-3 rounded-md font-bold border border-amber-300/50 shadow-lg shadow-amber-500/25 hover:shadow-xl hover:shadow-amber-500/40 hover:from-amber-300 hover:to-orange-300 transition-all duration-300 hover:-translate-y-0.5 relative overflow-hidden">
+                    <span className="relative z-10">{t('buttons.viewPackages')}</span>
+                    <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
                   </button>
                   <a 
                     href="https://youtube.com/playlist?list=PL9FEczFkBjTeQt3GXlvoKfNygvTiZ-qkb" 
