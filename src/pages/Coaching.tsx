@@ -88,7 +88,7 @@ const Coaching = () => {
                   {t('coaching.hero.subtitle')}
                 </p>
                 <div className="flex items-center gap-4 justify-center">
-                  <button onClick={scrollToPackages} className="inline-flex items-center justify-center px-6 py-3 bg-transparent text-white border-2 border-theme-tangerine hover:bg-theme-tangerine hover:text-black rounded-md font-bold transition-all duration-300 shadow-md hover:shadow-lg">
+                  <button onClick={scrollToPackages} className="bg-theme-tangerine text-black px-6 py-3 rounded-md font-bold hover:bg-theme-tangerine/90 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
                     {t('buttons.viewPackages')}
                   </button>
                   <a 
