@@ -115,11 +115,20 @@ const homepage = {
         'Why it\'s important to respect your body\'s limits',
         'What exercises to do in the acute phase'
       ],
+      formTitle: 'Enter your email and the guide will arrive soon',
+      emailPlaceholder: 'Email',
+      consentText: 'I agree to receive newsletters about health and physical activity.',
       privacyNote: 'Your email is safe with me. I\'ll never share it with anyone else.',
       buttonText: 'Download Free Guide',
       sendingText: 'Sending...',
       successMessage: 'Guide sent successfully! Check your email.',
+      successTitle: 'Great!',
+      successText: 'The guide has been sent to your email. Check your inbox.',
       errorMessage: 'Failed to send. Please try again.',
+      errorTitle: 'Error',
+      emailRequiredError: 'Please enter your email address',
+      emailValidError: 'Please enter a valid email address',
+      consentRequiredError: 'Please agree to receive newsletters',
       disclaimer: 'By submitting, you agree to receive the PDF guide via email. You can unsubscribe at any time.'
     }
   }

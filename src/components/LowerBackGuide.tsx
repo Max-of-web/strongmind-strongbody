@@ -25,24 +25,24 @@ const LowerBackGuide: React.FC = () => {
     // Validation
     if (!email.trim()) {
       toast({
-        title: "Klaida",
-        description: "Prašome įvesti el. pašto adresą",
+        title: t('homepage.lowerBackGuide.errorTitle'),
+        description: t('homepage.lowerBackGuide.emailRequiredError'),
         variant: "destructive"
       });
       return;
     }
     if (!validateEmail(email)) {
       toast({
-        title: "Klaida",
-        description: "Prašome įvesti galiojantį el. pašto adresą",
+        title: t('homepage.lowerBackGuide.errorTitle'),
+        description: t('homepage.lowerBackGuide.emailValidError'),
         variant: "destructive"
       });
       return;
     }
     if (!consent) {
       toast({
-        title: "Klaida",
-        description: "Prašome sutikti su naujienlaiškio gavimu",
+        title: t('homepage.lowerBackGuide.errorTitle'),
+        description: t('homepage.lowerBackGuide.consentRequiredError'),
         variant: "destructive"
       });
       return;
@@ -80,15 +80,15 @@ const LowerBackGuide: React.FC = () => {
       // Show immediate success
       setIsSubmitted(true);
       toast({
-        title: "Sėkmė!",
-        description: "Gidas išsiųstas į jūsų el. paštą",
+        title: t('homepage.lowerBackGuide.successTitle'),
+        description: t('homepage.lowerBackGuide.successMessage'),
         variant: "default"
       });
     } catch (error) {
       console.error('Submission error:', error);
       toast({
-        title: "Klaida",
-        description: "Įvyko klaida. Bandykite dar kartą.",
+        title: t('homepage.lowerBackGuide.errorTitle'),
+        description: t('homepage.lowerBackGuide.errorMessage'),
         variant: "destructive"
       });
     } finally {
@@ -128,27 +128,27 @@ const LowerBackGuide: React.FC = () => {
             <div className="flex flex-col bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl shadow-lg p-6 gap-4 max-w-[380px] w-full mx-auto md:mx-0">
               {!isSubmitted ? <form onSubmit={handleSubmit} className="space-y-4">
                   <h4 className="text-xl font-bold text-center text-slate-800 dark:text-white mb-4">
-                    Įrašyk el. paštą ir gidas netrukus atkeliaus
+                    {t('homepage.lowerBackGuide.formTitle')}
                   </h4>
                   
                   <div>
-                    <Input type="email" placeholder="El. paštas" value={email} onChange={e => setEmail(e.target.value)} className="w-full text-black dark:text-white" required />
+                    <Input type="email" placeholder={t('homepage.lowerBackGuide.emailPlaceholder')} value={email} onChange={e => setEmail(e.target.value)} className="w-full text-black dark:text-white" required />
                   </div>
                   
                   <div className="flex items-start gap-3">
                     <Checkbox id="consent" checked={consent} onCheckedChange={checked => setConsent(checked as boolean)} className="mt-1" required />
                     <label htmlFor="consent" className="text-sm text-slate-700 dark:text-slate-200 cursor-pointer leading-relaxed">
-                      Sutinku gauti naujienlaiškius apie sveikatą ir fizinį aktyvumą.
+                      {t('homepage.lowerBackGuide.consentText')}
                     </label>
                   </div>
                   
                   <Button type="submit" disabled={isSubmitting} className="w-full">
-                    {isSubmitting ? 'Siunčiama...' : 'Atsisiųsti nemokamą gidą'}
+                    {isSubmitting ? t('homepage.lowerBackGuide.sendingText') : t('homepage.lowerBackGuide.buttonText')}
                   </Button>
                 </form> : <div className="text-center py-8">
                   <div className="text-6xl mb-4">✅</div>
-                  <h3 className="text-xl font-semibold text-slate-800 dark:text-white mb-2">Puiku!</h3>
-                  <p className="text-slate-600 dark:text-slate-300">Gidas išsiųstas į jūsų el. paštą. Patikrinkite gautus laiškus.</p>
+                  <h3 className="text-xl font-semibold text-slate-800 dark:text-white mb-2">{t('homepage.lowerBackGuide.successTitle')}</h3>
+                  <p className="text-slate-600 dark:text-slate-300">{t('homepage.lowerBackGuide.successText')}</p>
                 </div>}
             </div>
           </div>

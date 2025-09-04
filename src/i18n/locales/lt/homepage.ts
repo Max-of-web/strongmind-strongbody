@@ -115,11 +115,20 @@ const homepage = {
         'Kodėl svarbu stebėti savo kūno ribas',
         'Kokius pratimus atlikti ūmiame periode'
       ],
+      formTitle: 'Įrašyk el. paštą ir gidas netrukus atkeliaus',
+      emailPlaceholder: 'El. paštas',
+      consentText: 'Sutinku gauti naujienlaiškius apie sveikatą ir fizinį aktyvumą.',
       privacyNote: 'Jūsų kontaktiniai duomenys bus saugomi atsakingai',
       buttonText: 'Atsisiųsti nemokamą gidą',
       sendingText: 'Siunčiama...',
       successMessage: 'Gidas išsiųstas sėkmingai! Patikrinkite savo el. paštą.',
+      successTitle: 'Puiku!',
+      successText: 'Gidas išsiųstas į jūsų el. paštą. Patikrinkite gautus laiškus.',
       errorMessage: 'Nepavyko išsiųsti. Bandykite dar kartą.',
+      errorTitle: 'Klaida',
+      emailRequiredError: 'Prašome įvesti el. pašto adresą',
+      emailValidError: 'Prašome įvesti galiojantį el. pašto adresą',
+      consentRequiredError: 'Prašome sutikti su naujienlaiškio gavimu',
       disclaimer: 'Pildydami formą gausite PDF gidą el. paštu. Jei nebenorėsite laiškų – galėsite jų atsisakyti bet kada.'
     }
   }
