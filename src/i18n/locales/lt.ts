@@ -25,6 +25,7 @@ const lt = {
   },
   coaching: {
     ...coaching.coaching,
+    ...coaching.buttons,
     contact: {
       sectionTitle: "Susisiekite",
       intro: "Turite klausimų prieš teikiant paraišką? Susisiekite tiesiogiai per WhatsApp arba užpildykite registracijos formą.",

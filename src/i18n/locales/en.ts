@@ -25,6 +25,7 @@ const en = {
   },
   coaching: {
     ...coaching.coaching,
+    ...coaching.buttons,
     contact: {
       sectionTitle: "Get in Touch",
       intro: "Have questions before applying? Reach out directly via WhatsApp or fill out the registration form.",
