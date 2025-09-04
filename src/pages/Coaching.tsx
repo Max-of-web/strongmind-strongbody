@@ -86,7 +86,7 @@ const Coaching = () => {
                     href="https://youtube.com/playlist?list=PL9FEczFkBjTeQt3GXlvoKfNygvTiZ-qkb" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-12 h-12 bg-[#FF0000] hover:bg-[#CC0000] rounded-full transition-colors duration-300 shadow-lg hover:shadow-xl"
+                    className="inline-flex items-center justify-center w-12 h-12 bg-[#FF0000] hover:bg-[#CC0000] rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-110 hover:-translate-y-1"
                     aria-label="YouTube treniruotės"
                   >
                     <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
