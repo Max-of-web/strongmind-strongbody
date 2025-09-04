@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { MessageSquare, MapPin, Home, User, Instagram } from 'lucide-react';
+import { MessageSquare, MapPin, Home, User, Instagram, Youtube } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import CTAButton from './CTAButton';
@@ -46,6 +46,23 @@ const Footer = () => {
                   </a>
                   <p className="text-sm text-gray-300 mt-1">
                     {t('footer.instagramNote')}
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-3">
+                <Youtube size={20} className="text-theme-tangerine mt-0.5 flex-shrink-0" />
+                <div className="flex-1">
+                  <a 
+                    href="https://youtube.com/playlist?list=PL9FEczFkBjTeQt3GXlvoKfNygvTiZ-qkb" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-white hover:text-theme-tangerine transition-colors duration-200 font-medium"
+                  >
+                    {t('footer.youtubeTraining')}
+                  </a>
+                  <p className="text-sm text-gray-300 mt-1">
+                    {t('footer.youtubeNote')}
                   </p>
                 </div>
               </div>

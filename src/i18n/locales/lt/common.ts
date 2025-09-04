@@ -13,6 +13,8 @@ const common = {
     contact: 'Kontaktai',
     phone: '+370 6795 1040',
     whatsAppChat: 'WhatsApp Pokalbis',
+    youtubeTraining: 'YouTube treniruotės',
+    youtubeNote: 'Trumpas treniruotes ir mankštas gali rasti mano YouTube kanale',
     locations: 'Treniruočių Vietos',
     location1: 'Reformatas, Vilnius',
     location2: 'SEB Arena, Vilnius',

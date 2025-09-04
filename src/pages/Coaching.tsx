@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { MessageSquare, Check, Instagram, MapPin } from 'lucide-react';
+import { MessageSquare, Check, Instagram, MapPin, Youtube } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -289,6 +289,19 @@ const Coaching = () => {
                   </div>
                   <p className="text-sm text-gray-300 ml-8">
                     {t('coaching.contact.instagramNote')}
+                  </p>
+                </div>
+
+                {/* YouTube */}
+                <div className="bg-theme-tangerine bg-opacity-20 p-6 rounded-lg border border-theme-tangerine border-opacity-30">
+                  <div className="flex items-center mb-2">
+                    <Youtube size={20} className="mr-3 text-theme-tangerine" />
+                    <a href="https://youtube.com/playlist?list=PL9FEczFkBjTeQt3GXlvoKfNygvTiZ-qkb" target="_blank" rel="noopener noreferrer" className="text-white hover:text-theme-tangerine transition-colors font-semibold">
+                      YouTube
+                    </a>
+                  </div>
+                  <p className="text-sm text-gray-300 ml-8">
+                    {t('footer.youtubeNote')}
                   </p>
                 </div>
 
