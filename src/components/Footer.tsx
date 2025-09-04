@@ -59,7 +59,7 @@ const Footer = () => {
                     rel="noopener noreferrer"
                     className="text-white hover:text-theme-tangerine transition-colors duration-200 font-medium"
                   >
-                    {t('footer.youtubeTraining')}
+                    YouTube treniruotės (nuolat pildoma)
                   </a>
                   <p className="text-sm text-gray-300 mt-1">
                     {t('footer.youtubeNote')}
