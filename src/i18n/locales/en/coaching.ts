@@ -68,10 +68,8 @@ const coaching = {
         recommended: 'RECOMMENDED',
         mostPopular: 'MOST POPULAR'
       },
-      oneOnOneCoaching: {
+      personalTraining: {
         title: '1-on-1 Coaching',
-        price: '€50',
-        period: 'per session',
         subtitle: 'People who want to train smart, stay consistent, and build habits that stick - for good.',
         features: [
           'Weekly personal training that adapts to your needs',
@@ -82,24 +80,8 @@ const coaching = {
         bottomText: 'Best for real, lasting change and clear structure.',
         buttonText: 'Book Session'
       },
-      onlineTraining: {
-        title: 'Online Training + WhatsApp Support',
-        price: '€100',
-        period: 'per month',
-        subtitle: 'Busy people who prefer training independently but want a plan that actually works - plus real accountability.',
-        features: [
-          'A fully customised training plan for your goals',
-          'Weekly plan tweaks to keep you moving forward',
-          'WhatsApp support for quick questions and when challenges come up',
-          'Stay on track, even when life gets busy'
-        ],
-        bottomText: 'Ideal if you want expert structure without weekly 1-on-1 sessions.',
-        buttonText: 'Start Training'
-      },
       rehabTraining: {
         title: 'Rehab Training',
-        price: '€60',
-        period: 'per session (~€240/month)',
         subtitle: 'Anyone recovering from an injury or surgery who wants to rebuild safely - and come back stronger than before.',
         features: [
           'Weekly hands-on physiotherapy session',
@@ -110,24 +92,8 @@ const coaching = {
         bottomText: 'Regain your strength and confidence step by step.',
         buttonText: 'Book Consultation'
       },
-      smallGroupTraining: {
-        title: 'Small Group Training',
-        price: '€160',
-        period: 'per month',
-        subtitle: 'People who love training with others, want that extra push, and thrive on clear structure.',
-        features: [
-          'Train 2x a week in a fun, supportive small group',
-          '3-5 people per group - real attention from your coach',
-          'Rotating focus sessions (full-body, strength, targeted)',
-          'Only 5 spots per group - secure your place!'
-        ],
-        bottomText: 'Perfect if you\'re motivated by community and energy.',
-        buttonText: 'Join Group'
-      },
       innerShiftCoaching: {
         title: 'Inner Shift Coaching',
-        price: '€150',
-        period: '/month (minimum 3-month commitment)',
         subtitle: 'If you\'re done with quick fixes and really want to build habits that last - not just train, but feel in control of stress, nutrition, and recovery too. Perfect for busy professionals, anyone stuck in "start-stop" cycles, or people who want real-life balance that actually works.',
         features: [
           'A clear, practical 3-month habit change roadmap',

@@ -43,10 +43,8 @@ const coaching = {
         recommended: 'REKOMENDUOJAMA',
         mostPopular: 'POPULIARIAUSIA'
       },
-      oneOnOneCoaching: {
+      personalTraining: {
         title: 'Asmeninės treniruotės',
-        price: '50 €',
-        period: 'už treniruotę',
         subtitle: 'Žmonėms, kurie nori nuoseklumo, aiškaus plano ir įpročių, kurie išlieka visam gyvenimui - ne tik trumpam laikotarpiui.',
         features: [
           'Asmeninės treniruotės 1× per savaitę',
@@ -57,24 +55,8 @@ const coaching = {
         bottomText: 'Tinka, jei nori aiškios struktūros, motyvacijos ir pokyčių, kurie išlieka.',
         buttonText: 'Užsakyti Treniruotę'
       },
-      onlineTraining: {
-        title: 'Online Treniruotės + WhatsApp Palaikymas',
-        price: '100 €',
-        period: 'per mėnesį',
-        subtitle: 'Tiems, kurie mėgsta sportuoti savarankiškai, bet nori aiškaus plano, profesionalios priežiūros ir realios atsakomybės.',
-        features: [
-          'Individualus treniruočių planas, pritaikytas tavo tikslams',
-          'Savaitiniai plano atnaujinimai, kad visada judėtum pirmyn',
-          'WhatsApp palaikymas greitiems klausimams - kai tik prireikia',
-          'Niekada neliksi vienas su iššūkiais, net kai gyvenimas įsibėgėja'
-        ],
-        bottomText: 'Puikus pasirinkimas, jei nori laisvės sportuoti, bet sieki rimtų rezultatų su profesionalo palaikymu.',
-        buttonText: 'Pradėti Treniruotis'
-      },
       rehabTraining: {
         title: 'Reabilitacinės Treniruotės',
-        price: '60 €',
-        period: 'už sesiją (~240 €/mėn.)',
         subtitle: 'Žmonėms, atsigaunantiems po traumos ar operacijos, kurie nori saugiai grįžti į formą - ir tapti stipresni nei anksčiau.',
         features: [
           'Kineziterapijos užsiėmimai 1× per savaitę',
@@ -85,24 +67,8 @@ const coaching = {
         bottomText: 'Idealu, jei nori atgauti jėgas ir pasitikėjimą žingsnis po žingsnio.',
         buttonText: 'Užsakyti Konsultaciją'
       },
-      smallGroupTraining: {
-        title: 'Treniruotės Mažoje Grupėje',
-        price: '160 €',
-        period: 'per mėnesį',
-        subtitle: 'Tiems, kurie nori sportuoti bendruomenėje, mėgsta motyvaciją ir jau turi bazinį fizinį pasirengimą.',
-        features: [
-          'Treniruotės 2× per savaitę mažoje, draugiškoje grupėje',
-          '3-5 žmonės grupėje - daug dėmesio kiekvienam',
-          'Kintančios treniruočių temos (viso kūno, jėgos, tikslingos sesijos)',
-          'Tik 5 vietos grupėje - vietų skaičius ribotas, užsitikrink vietą iš anksto!'
-        ],
-        bottomText: 'Puikus variantas, jei tave motyvuoja bendruomenė ir papildoma atsakomybė.',
-        buttonText: 'Prisijungti prie Grupės'
-      },
       innerShiftCoaching: {
         title: 'Vidinis Pokytis',
-        price: '150 €',
-        period: '/mėn. (minimalus įsipareigojimas – 3 mėn.)',
         subtitle: 'Žmonėms, kurie nori realaus, tvaraus įpročių pokyčio - daugiau nei tik treniruotės. Puikiai tinka tiems, kurie įstringa "pradėjau-mečiau" rate, jaučiasi pavargę nuo trumpalaikių sprendimų, arba nori išmokti valdyti stresą, mitybą ir poilsį visam laikui.',
         features: [
           'Aiškus, praktiškas 3 mėn. elgesio keitimo planas',
