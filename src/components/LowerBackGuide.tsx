@@ -105,11 +105,15 @@ const LowerBackGuide: React.FC = () => {
             
             {/* Beautiful Summary */}
             <div className="mb-8 p-6 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-slate-700 dark:to-slate-600 rounded-xl border-l-4 border-blue-500">
-              <p className="text-lg leading-relaxed text-slate-700 dark:text-slate-200">
-                Iki <span className="font-bold text-2xl text-blue-600 dark:text-blue-400">80 %</span> žmonių bent kartą gyvenime patiria nugaros skausmą. 
-                Šiame gide – svarbiausi faktai ir <span className="font-semibold text-indigo-600 dark:text-indigo-400">7 paprasti žingsniai</span>, 
-                kaip suprasti priežastis ir pradėti veikti jau šiandien.
-              </p>
+              <p className="text-lg leading-relaxed text-slate-700 dark:text-slate-200"
+                 dangerouslySetInnerHTML={{
+                   __html: t('homepage.lowerBackGuide.intro')
+                     .replace(/80% of people/, '<span class="font-bold text-2xl text-blue-600 dark:text-blue-400">80%</span> of people')
+                     .replace(/80 % žmonių/, '<span class="font-bold text-2xl text-blue-600 dark:text-blue-400">80 %</span> žmonių')
+                     .replace(/7 simple steps/, '<span class="font-semibold text-indigo-600 dark:text-indigo-400">7 simple steps</span>')
+                     .replace(/7 paprasti žingsniai/, '<span class="font-semibold text-indigo-600 dark:text-indigo-400">7 paprasti žingsniai</span>')
+                 }}
+              />
             </div>
             
             <ul className="space-y-4 mb-8">
