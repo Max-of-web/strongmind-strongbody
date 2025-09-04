@@ -27,15 +27,15 @@ const PricingCard = ({
   const { t } = useTranslation();
 
   const getCardClasses = () => {
-    const baseClasses = "bg-theme-navy bg-opacity-50 rounded-xl border border-white border-opacity-30 shadow-lg text-white transition-all duration-300 ease-out hover:shadow-xl card-hover";
+    const baseClasses = "bg-theme-navy bg-opacity-50 rounded-xl shadow-lg text-white transition-all duration-300 ease-out hover:shadow-xl card-hover";
     
     if (isPremium) {
-      return `${baseClasses} hover:border-theme-tangerine hover:shadow-[0_0_0_2px_rgba(227,154,76,0.25)]`;
+      return `${baseClasses} border border-amber-300/50 shadow-lg shadow-amber-500/25 hover:shadow-xl hover:shadow-amber-500/40 hover:border-amber-300/70`;
     } else if (isHighlighted) {
-      return `${baseClasses} hover:border-theme-tangerine hover:shadow-[0_0_0_2px_rgba(227,154,76,0.25)]`;
+      return `${baseClasses} border border-white border-opacity-30 hover:border-theme-tangerine hover:shadow-[0_0_0_2px_rgba(227,154,76,0.25)]`;
     }
     
-    return `${baseClasses} hover:border-theme-tangerine hover:shadow-[0_0_0_2px_rgba(227,154,76,0.25)]`;
+    return `${baseClasses} border border-white border-opacity-30 hover:border-theme-tangerine hover:shadow-[0_0_0_2px_rgba(227,154,76,0.25)]`;
   };
 
   const getTopBarClasses = () => {
