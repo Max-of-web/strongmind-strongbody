@@ -297,7 +297,7 @@ const Coaching = () => {
                   <div className="flex items-center mb-2">
                     <Youtube size={20} className="mr-3 text-theme-tangerine" />
                     <h4 className="text-white font-semibold">
-                      YouTube
+                      {t('footer.youtubeTraining')}
                     </h4>
                   </div>
                   <p className="text-sm text-gray-300 ml-8">
