@@ -74,7 +74,7 @@ const coaching = {
       rehabTraining: {
         title: 'Reabilitacinės Treniruotės',
         price: '60 €',
-        period: 'už sesiją (~240 €/mėn.)',
+        period: 'už sesiją',
         subtitle: 'Žmonėms, atsigaunantiems po traumos ar operacijos, kurie nori saugiai grįžti į formą - ir tapti stipresni nei anksčiau.',
         features: [
           'Kineziterapijos užsiėmimai 1× per savaitę',
