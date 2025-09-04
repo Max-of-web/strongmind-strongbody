@@ -89,7 +89,7 @@ const Coaching = () => {
                 </p>
                 <div className="flex items-center gap-4 justify-center">
                   <button onClick={scrollToPackages} className="inline-flex items-center justify-center px-6 py-3 bg-transparent text-white border-2 border-theme-tangerine hover:bg-theme-tangerine hover:text-black rounded-md font-bold transition-all duration-300 shadow-md hover:shadow-lg">
-                    {t('coaching.buttons.viewPackages')}
+                    {t('buttons.viewPackages')}
                   </button>
                   <button 
                     onClick={scrollToForm}
