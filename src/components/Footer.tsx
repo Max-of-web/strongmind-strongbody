@@ -61,9 +61,6 @@ const Footer = () => {
                   >
                     YouTube treniruotės (nuolat pildoma)
                   </a>
-                  <p className="text-sm text-gray-300 mt-1">
-                    {t('footer.youtubeNote')}
-                  </p>
                 </div>
               </div>
             </div>
