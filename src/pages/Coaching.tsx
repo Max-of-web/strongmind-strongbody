@@ -296,12 +296,21 @@ const Coaching = () => {
                 <div className="bg-theme-tangerine bg-opacity-20 p-6 rounded-lg border border-theme-tangerine border-opacity-30">
                   <div className="flex items-center mb-2">
                     <Youtube size={20} className="mr-3 text-theme-tangerine" />
-                    <a href="https://youtube.com/playlist?list=PL9FEczFkBjTeQt3GXlvoKfNygvTiZ-qkb" target="_blank" rel="noopener noreferrer" className="text-white hover:text-theme-tangerine transition-colors font-semibold">
+                    <h4 className="text-white font-semibold">
                       YouTube
-                    </a>
+                    </h4>
                   </div>
                   <p className="text-sm text-gray-300 ml-8">
-                    {t('footer.youtubeNote')}
+                    Trumpas treniruotes ir mankštas gali rasti mano{' '}
+                    <a 
+                      href="https://youtube.com/playlist?list=PL9FEczFkBjTeQt3GXlvoKfNygvTiZ-qkb" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-theme-tangerine hover:text-orange-300 underline transition-colors"
+                    >
+                      YouTube kanale
+                    </a>
+                    .
                   </p>
                 </div>
 
