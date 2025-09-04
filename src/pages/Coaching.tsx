@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { MessageSquare, Check, Instagram, MapPin, Youtube } from 'lucide-react';
+import { MessageSquare, Check, Instagram, MapPin } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -134,11 +134,9 @@ const Coaching = () => {
               <div className="md:w-1/2 scroll-fade-in">
                 <h2 className="section-title text-white">{t('coaching.target.sectionTitle')}</h2>
                 
-                {t('language') === 'lt' && (
-                  <p className="mb-4 text-white">
+                {t('language') === 'lt' && <p className="mb-4 text-white">
                     Mano metodas sukurtas žmonėms, kurie nori aiškumo, struktūros ir ilgalaikės sėkmės savo sveikatingumo kelyje:
-                  </p>
-                )}
+                  </p>}
                 
                 <p className="mb-6 text-white">
                   {t('coaching.target.description')}
@@ -292,33 +290,11 @@ const Coaching = () => {
                   </p>
                 </div>
 
-                {/* YouTube */}
-                <div className="bg-theme-tangerine bg-opacity-20 p-6 rounded-lg border border-theme-tangerine border-opacity-30">
-                  <div className="flex items-center mb-2">
-                    <Youtube size={20} className="mr-3 text-theme-tangerine" />
-                    <h4 className="text-white font-semibold">
-                      {t('footer.youtubeTraining')}
-                    </h4>
-                  </div>
-                  <p className="text-sm text-gray-300 ml-8">
-                    Trumpas treniruotes ir mankštas gali rasti mano{' '}
-                    <a 
-                      href="https://youtube.com/playlist?list=PL9FEczFkBjTeQt3GXlvoKfNygvTiZ-qkb" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="text-theme-tangerine hover:text-orange-300 underline transition-colors"
-                    >
-                      YouTube kanale
-                    </a>
-                    .
-                  </p>
-                </div>
-
                 {/* Training Locations */}
                 <div className="bg-theme-tangerine bg-opacity-20 p-6 rounded-lg border border-theme-tangerine border-opacity-30">
                   <div className="flex items-center mb-2">
                     <MapPin size={20} className="mr-3 text-theme-tangerine" />
-                    <h4 className="text-white hover:text-theme-tangerine transition-colors font-semibold">{t('coaching.contact.locations.title')}</h4>
+                    
                   </div>
                   <div className="text-sm text-gray-300 ml-8">
                     <a href="https://maps.app.goo.gl/23ZNRSt67dN6G9o36" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-theme-tangerine transition-colors">
