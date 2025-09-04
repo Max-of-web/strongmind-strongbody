@@ -108,14 +108,21 @@ const PricingCard = ({
                    <CardTitle className="text-xl font-bold mb-2 text-white">
                      {t(`coaching.pricing.${pricingKey}.title`)}
                    </CardTitle>
-                   <div className="flex items-baseline justify-center">
-                     <span className="text-3xl font-bold text-white/90">
-                       {t(`coaching.pricing.${pricingKey}.price`)}
-                     </span>
-                     <span className="ml-1 text-[#D1D5DB] text-base">
-                       {t(`coaching.pricing.${pricingKey}.period`)}
-                     </span>
-                   </div>
+                    <div className="flex items-baseline justify-center">
+                      <span className="text-3xl font-bold text-white/90">
+                        {t(`coaching.pricing.${pricingKey}.price`)}
+                      </span>
+                      <span className="ml-1 text-[#D1D5DB] text-base">
+                        {t(`coaching.pricing.${pricingKey}.period`)}
+                      </span>
+                    </div>
+                    {pricingKey === 'oneOnOneCoaching' && (
+                      <div className="mt-2">
+                        <span className="text-sm text-green-400 font-medium bg-green-400/10 px-2 py-1 rounded-md border border-green-400/20">
+                          45 € už treniruotę perkant 8 treniruočių paketą
+                        </span>
+                      </div>
+                    )}
                  </div>
                  <ChevronDown 
                    className={`h-5 w-5 text-[#D1D5DB] transition-transform duration-300 ease-out ${
