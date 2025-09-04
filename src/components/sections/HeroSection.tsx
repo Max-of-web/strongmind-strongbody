@@ -6,7 +6,7 @@ const HeroSection = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="hero-section">
+    <section id="hero-section" className="hero-section">
       <div className="container-width px-4 md:px-8 flex flex-col justify-center items-start h-full pt-24 md:pt-16">
         <div className="max-w-3xl animate-fade-in-up">
           <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6 text-zinc-50">

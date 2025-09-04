@@ -68,8 +68,23 @@ const Header = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-4">
           <div className="flex items-center space-x-8 mr-4">
-            <Link 
-              to="/"
+            <button 
+              onClick={() => {
+                if (location.pathname === '/') {
+                  const heroSection = document.getElementById('hero-section');
+                  if (heroSection) {
+                    heroSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                } else {
+                  navigate('/', { replace: true });
+                  setTimeout(() => {
+                    const heroSection = document.getElementById('hero-section');
+                    if (heroSection) {
+                      heroSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }, 100);
+                }
+              }}
               className={`text-white hover:text-theme-gold transition-all duration-300 ${
                 location.pathname === '/' 
                   ? 'text-theme-gold font-semibold' 
@@ -80,7 +95,7 @@ const Header = () => {
               } : {}}
             >
               {t('header.home')}
-            </Link>
+            </button>
             <Link 
               to="/coaching" 
               className={`text-white hover:text-theme-gold transition-all duration-300 ${
@@ -132,13 +147,28 @@ const Header = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-black bg-opacity-95 absolute top-full left-0 right-0 py-4 px-4 shadow-md animate-fade-in z-40">
           <nav className="flex flex-col space-y-4">
-            <Link 
-              to="/"
+            <button 
+              onClick={() => {
+                if (location.pathname === '/') {
+                  const heroSection = document.getElementById('hero-section');
+                  if (heroSection) {
+                    heroSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                } else {
+                  navigate('/', { replace: true });
+                  setTimeout(() => {
+                    const heroSection = document.getElementById('hero-section');
+                    if (heroSection) {
+                      heroSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }, 100);
+                }
+                setIsMenuOpen(false);
+              }}
               className="text-white hover:text-theme-gold transition-colors py-2 text-lg" 
-              onClick={() => setIsMenuOpen(false)}
             >
               {t('header.home')}
-            </Link>
+            </button>
             <Link 
               to="/coaching" 
               className="text-white hover:text-theme-gold transition-colors py-2 text-lg" 
