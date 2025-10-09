@@ -21,22 +21,39 @@ export const streamChat = async ({
   onError,
 }: StreamChatOptions): Promise<void> => {
   try {
+    // Fallback to hardcoded anon key if env variable is not available
+    const ANON_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY || 
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBzYWRyc2ZndW1zb29vZHlkcmt3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ1MTc1MTgsImV4cCI6MjA3MDA5MzUxOH0.yBy8vJajiXO9qi-P58gfK00iNfSp1SS1rKLK0qhieRw";
+    
+    console.log("Calling chat function with sessionId:", sessionId);
+    
     const response = await fetch(
       "https://psadrsfgumsooodydrkw.supabase.co/functions/v1/chat",
       {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
+          Authorization: `Bearer ${ANON_KEY}`,
         },
         body: JSON.stringify({ messages, sessionId, language }),
       }
     );
 
     if (!response.ok) {
-      const errorData = await response.json().catch(() => ({}));
-      console.error("Chat API error:", response.status, errorData);
-      throw new Error(errorData.error || `HTTP ${response.status}`);
+      const errorText = await response.text();
+      console.error("Chat API error:", {
+        status: response.status,
+        statusText: response.statusText,
+        body: errorText,
+        headers: Object.fromEntries(response.headers.entries())
+      });
+      
+      try {
+        const errorData = JSON.parse(errorText);
+        throw new Error(errorData.error || `HTTP ${response.status}`);
+      } catch {
+        throw new Error(`HTTP ${response.status}: ${errorText}`);
+      }
     }
 
     if (!response.body) {
