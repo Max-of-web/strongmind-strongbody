@@ -80,6 +80,7 @@ serve(async (req) => {
         .select()
         .single();
       conversationId = newConv?.id;
+      console.log("Created new conversation:", conversationId);
 
       // Log chat_open event
       await supabase.from("chat_analytics").insert({
@@ -87,6 +88,8 @@ serve(async (req) => {
         conversation_id: conversationId,
         metadata: { language, session_id: sessionId },
       });
+    } else {
+      console.log("Using existing conversation:", conversationId);
     }
 
     // Mask PII in user messages before sending to AI
@@ -143,6 +146,7 @@ Never answer non-fitness questions (programming, recipes, etc). Focus on fitness
 `;
 
     // Call Lovable AI Gateway
+    console.log("Calling Lovable AI with", maskedMessages.length, "messages for conversation", conversationId);
     const response = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
       method: "POST",
       headers: {
@@ -237,6 +241,7 @@ Never answer non-fitness questions (programming, recipes, etc). Focus on fitness
           content: fullResponse,
         });
 
+        console.log("Assistant response complete:", fullResponse.length, "characters");
         await writer.write(encoder.encode("data: [DONE]\n\n"));
         await writer.close();
       } catch (error) {

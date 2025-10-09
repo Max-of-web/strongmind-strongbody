@@ -60,21 +60,18 @@ export const ChatPanel = ({
     setIsLoading(true);
 
     let assistantContent = "";
-    const updateAssistant = (chunk: string) => {
-      assistantContent += chunk;
-      
-      // Update or create assistant message
-      if (messages[messages.length - 1]?.role !== "assistant") {
-        onNewMessage("assistant", assistantContent);
-      }
-    };
 
     try {
       await streamChat({
         messages: [...messages, { role: "user", content: userMessage }],
         sessionId,
         language,
-        onDelta: updateAssistant,
+        onDelta: (chunk: string) => {
+          assistantContent += chunk;
+          // Always call onNewMessage with accumulated content
+          // ChatWidget will handle update vs create logic
+          onNewMessage("assistant", assistantContent);
+        },
         onDone: () => {
           setIsLoading(false);
           inputRef.current?.focus();

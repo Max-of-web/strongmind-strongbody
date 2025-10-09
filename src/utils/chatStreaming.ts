@@ -35,6 +35,7 @@ export const streamChat = async ({
 
     if (!response.ok) {
       const errorData = await response.json().catch(() => ({}));
+      console.error("Chat API error:", response.status, errorData);
       throw new Error(errorData.error || `HTTP ${response.status}`);
     }
 

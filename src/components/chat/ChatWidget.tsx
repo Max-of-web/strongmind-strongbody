@@ -58,6 +58,20 @@ export const ChatWidget = () => {
     }
   }, [isOpen, sessionId]);
 
+  useEffect(() => {
+    // Fetch conversation ID after first message
+    if (sessionId && !conversationId && messages.length > 0) {
+      supabase
+        .from("chat_conversations")
+        .select("id")
+        .eq("session_id", sessionId)
+        .maybeSingle()
+        .then(({ data }) => {
+          if (data) setConversationId(data.id);
+        });
+    }
+  }, [sessionId, messages.length, conversationId]);
+
   const logAnalytics = async (eventType: string) => {
     try {
       await supabase.from("chat_analytics").insert({
@@ -74,7 +88,27 @@ export const ChatWidget = () => {
     const session = loadSession();
     if (!session) return;
 
-    const updatedSession = persistMessage(session, role, content);
+    let updatedSession;
+    
+    // Check if we're updating an existing assistant message (streaming)
+    const lastMessage = session.messages[session.messages.length - 1];
+    if (role === "assistant" && lastMessage?.role === "assistant") {
+      // UPDATE existing assistant message
+      updatedSession = {
+        ...session,
+        messages: session.messages.map((msg, idx) => 
+          idx === session.messages.length - 1 
+            ? { ...msg, content, timestamp: Date.now() }
+            : msg
+        ),
+        lastUpdated: Date.now(),
+      };
+      saveSession(updatedSession);
+    } else {
+      // CREATE new message
+      updatedSession = persistMessage(session, role, content);
+    }
+    
     setMessages(updatedSession.messages);
 
     // Check if we should show lead form
