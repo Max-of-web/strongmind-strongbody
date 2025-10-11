@@ -116,45 +116,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #CC0000 !important;
 }
 
-/* Blue outline CTA button */
-.cta-outline-blue {
-  color: #3b82f6 !important;
-  background-color: transparent !important;
-  border: 1.5px solid #3b82f6 !important;
-  border-radius: 1rem !important;
-  padding: 0.5rem 1rem !important;
-  font-size: 0.875rem !important;
-  min-height: 44px !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  transition: all 300ms ease !important;
-}
-
-.cta-outline-blue:hover {
-  background-color: #eff6ff !important;
-}
-
-.cta-outline-blue:active {
-  background-color: #dbeafe !important;
-}
-
-@media (min-width: 640px) {
-  .cta-outline-blue {
-    font-size: 1rem !important;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .cta-outline-blue:hover {
-    background-color: rgba(30, 64, 175, 0.2) !important;
-  }
-  
-  .cta-outline-blue:active {
-    background-color: rgba(30, 64, 175, 0.3) !important;
-  }
-}
-
 /* ... keep existing code (section-padding, container-width, button styles, etc.) */
 .section-padding {
   padding-top: 4rem;
