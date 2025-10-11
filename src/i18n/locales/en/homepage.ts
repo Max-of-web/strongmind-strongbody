@@ -5,7 +5,8 @@ const homepage = {
       title: 'Level up your life – Build Habits, Gain Momentum',
       subtitle: 'Through consistent guidance, smart movement, and practical mindset shifts, I help people take control. This isn\'t about perfection. It\'s about showing up, one real step at a time.',
       ctaButton: 'Book a Discovery Call',
-      getFreeGuideButton: 'Get Free Guide'
+      getFreeGuideButton: 'Get Free Guide',
+      youtubeButton: 'YouTube Workouts'
     },
     features: {
       sectionTitle: 'What Makes This Coaching Different',

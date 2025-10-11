@@ -5,7 +5,8 @@ const homepage = {
       title: 'Patirk, ką reiškia jaustis stipriu savo kūne – žingsnis po žingsnio.',
       subtitle: 'Kineziterapija, reabilitacija po traumų, mažos grupės, asmeninės treniruotės ir aiškiai struktūruotos programos – paremtos mokslu ir pritaikytos tavo gyvenimo būdui.',
       ctaButton: 'Registruotis į treniruotę',
-      getFreeGuideButton: 'Atsisiųsti nemokamą gidą'
+      getFreeGuideButton: 'Atsisiųsti nemokamą gidą',
+      youtubeButton: 'YouTube treniruotės'
     },
     features: {
       sectionTitle: 'Kuo mano požiūris kitoks',

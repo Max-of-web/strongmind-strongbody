@@ -1,6 +1,7 @@
 
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { Youtube } from 'lucide-react';
 
 const HeroSection = () => {
   const { t } = useTranslation();
@@ -15,13 +16,25 @@ const HeroSection = () => {
           <p className="text-lg md:text-xl lg:text-2xl mb-10 text-white">
             {t('homepage.hero.subtitle')}
           </p>
-          <div className="flex flex-wrap gap-4">
-            <Link
-              to="/coaching#contact-section"
-              className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white bg-gradient-to-r from-amber-600 to-yellow-500 rounded-lg shadow-lg hover:from-amber-700 hover:to-yellow-600 transition-all duration-300 transform hover:scale-105"
-            >
-              {t('homepage.hero.ctaButton')}
-            </Link>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Link
+                to="/coaching#contact-section"
+                className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white bg-gradient-to-r from-amber-600 to-yellow-500 rounded-lg shadow-lg hover:from-amber-700 hover:to-yellow-600 transition-all duration-300 transform hover:scale-105"
+              >
+                {t('homepage.hero.ctaButton')}
+              </Link>
+              <a 
+                href="https://youtube.com/playlist?list=PL9FEczFkBjTeQt3GXlvoKfNygvTiZ-qkb" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold bg-white text-gray-900 rounded-lg shadow-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+                aria-label={t('homepage.hero.youtubeButton')}
+              >
+                <Youtube className="w-5 h-5 mr-2 text-[#FF0000]" />
+                {t('homepage.hero.youtubeButton')}
+              </a>
+            </div>
             <a 
               href="#free-guide" 
               className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white border border-white/30 rounded-lg hover:bg-white/10 transition-all duration-300"
