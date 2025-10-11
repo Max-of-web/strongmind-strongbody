@@ -28,10 +28,10 @@ const HeroSection = () => {
                 href="https://youtube.com/playlist?list=PL9FEczFkBjTeQt3GXlvoKfNygvTiZ-qkb" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold bg-white text-black rounded-lg shadow-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+                className="youtube-btn inline-flex items-center justify-center px-6 py-3 text-sm font-semibold rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105"
                 aria-label={t('homepage.hero.youtubeButton')}
               >
-                <Youtube className="w-5 h-5 mr-2 text-[#FF0000]" />
+                <Youtube className="w-5 h-5 mr-2" />
                 {t('homepage.hero.youtubeButton')}
               </a>
             </div>

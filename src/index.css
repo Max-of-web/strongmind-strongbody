@@ -96,6 +96,26 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
 }
 
+/* YouTube button specific styling */
+.youtube-btn {
+  color: #000 !important;
+  background-color: #fff !important;
+  transition: all 300ms ease;
+}
+
+.youtube-btn:hover {
+  background-color: #f9f9f9 !important;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.youtube-btn svg {
+  color: #FF0000 !important;
+}
+
+.youtube-btn:hover svg {
+  color: #CC0000 !important;
+}
+
 /* ... keep existing code (section-padding, container-width, button styles, etc.) */
 .section-padding {
   padding-top: 4rem;
