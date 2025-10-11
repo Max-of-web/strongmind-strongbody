@@ -92,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-section p,
 .hero-section span,
 .hero-section div,
-.hero-section a:not(.bg-theme-navy) {
+.hero-section a:not(.bg-theme-navy):not(.bg-white) {
   color: white;
 }
 
