@@ -70,10 +70,9 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(10, 10, 10, 0.8)), url('/lovable-uploads/c001e4d7-57ea-4185-b82b-b4d66829facf.png');
+  background: linear-gradient(to bottom, rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.8)), url('/lovable-uploads/c001e4d7-57ea-4185-b82b-b4d66829facf.png');
   background-size: cover;
   background-position: center;
-  padding-bottom: max(env(safe-area-inset-bottom), 16px);
 }
 
 @media (max-width: 768px) {
@@ -115,32 +114,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .youtube-btn:hover svg {
   color: #CC0000 !important;
-}
-
-/* Blue outline CTA button specific styling */
-.cta-outline-blue {
-  color: #3B82F6 !important;
-  background-color: transparent !important;
-  border: 1.5px solid #3B82F6 !important;
-  transition: all 300ms ease;
-}
-
-.cta-outline-blue:hover {
-  background-color: #EFF6FF !important;
-}
-
-.cta-outline-blue:active {
-  background-color: #DBEAFE !important;
-}
-
-@media (prefers-color-scheme: dark) {
-  .cta-outline-blue:hover {
-    background-color: rgba(59, 130, 246, 0.2) !important;
-  }
-  
-  .cta-outline-blue:active {
-    background-color: rgba(59, 130, 246, 0.25) !important;
-  }
 }
 
 /* ... keep existing code (section-padding, container-width, button styles, etc.) */

@@ -16,26 +16,28 @@ const HeroSection = () => {
           <p className="text-lg md:text-xl lg:text-2xl mb-10 text-white">
             {t('homepage.hero.subtitle')}
           </p>
-          <div className="flex flex-col sm:flex-row gap-2 items-center">
-            <Link
-              to="/coaching#contact-section"
-              className="inline-flex items-center justify-center min-h-[44px] px-6 py-3 text-base font-semibold text-white bg-gradient-to-r from-amber-600 to-yellow-500 rounded-2xl shadow-lg hover:from-amber-700 hover:to-yellow-600 focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2 active:translate-y-px transition-all duration-300"
-            >
-              {t('homepage.hero.ctaButton')}
-            </Link>
-            <a 
-              href="https://youtube.com/playlist?list=PL9FEczFkBjTeQt3GXlvoKfNygvTiZ-qkb" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="youtube-btn inline-flex items-center justify-center min-h-[44px] px-4 py-2.5 text-sm sm:text-base font-semibold rounded-2xl shadow-lg focus-visible:ring-2 focus-visible:ring-gray-500 focus-visible:ring-offset-2 active:translate-y-px transition-all duration-300"
-              aria-label={t('homepage.hero.youtubeButton')}
-            >
-              <Youtube className="w-5 h-5" />
-              <span className="ml-2">{t('homepage.hero.youtubeButton')}</span>
-            </a>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Link
+                to="/coaching#contact-section"
+                className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white bg-gradient-to-r from-amber-600 to-yellow-500 rounded-lg shadow-lg hover:from-amber-700 hover:to-yellow-600 transition-all duration-300 transform hover:scale-105"
+              >
+                {t('homepage.hero.ctaButton')}
+              </Link>
+              <a 
+                href="https://youtube.com/playlist?list=PL9FEczFkBjTeQt3GXlvoKfNygvTiZ-qkb" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="youtube-btn inline-flex items-center justify-center px-6 py-3 text-sm font-semibold rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105"
+                aria-label={t('homepage.hero.youtubeButton')}
+              >
+                <Youtube className="w-5 h-5 mr-2" />
+                {t('homepage.hero.youtubeButton')}
+              </a>
+            </div>
             <a 
               href="#free-guide" 
-              className="cta-outline-blue inline-flex items-center justify-center min-h-[44px] px-4 py-2.5 text-sm sm:text-base font-semibold rounded-2xl focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 active:translate-y-px transition-all duration-300"
+              className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white border border-white/30 rounded-lg hover:bg-white/10 transition-all duration-300"
             >
               {t('homepage.hero.getFreeGuideButton')}
             </a>
