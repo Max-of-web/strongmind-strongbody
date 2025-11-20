@@ -118,7 +118,7 @@ const homepage = {
       ],
       formTitle: 'Įrašyk el. paštą ir gidas netrukus atkeliaus',
       emailPlaceholder: 'El. paštas',
-      consentText: 'Sutinku gauti naujienlaiškius apie sveikatą ir fizinį aktyvumą.',
+      consentText: 'Pažadu naudoti ir pasidalinti šia informacija su tais, kam ji gali būti naudinga.',
       privacyNote: 'Jūsų kontaktiniai duomenys bus saugomi atsakingai',
       buttonText: 'Atsisiųsti nemokamą gidą',
       sendingText: 'Siunčiama...',

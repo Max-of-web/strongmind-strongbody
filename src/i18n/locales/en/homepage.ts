@@ -118,7 +118,7 @@ const homepage = {
       ],
       formTitle: 'Enter your email and the guide will arrive soon',
       emailPlaceholder: 'Email',
-      consentText: 'I agree to receive newsletters about health and physical activity.',
+      consentText: 'I promise to use and share this information with those who might find it helpful.',
       privacyNote: 'Your email is safe with me. I\'ll never share it with anyone else.',
       buttonText: 'Download Free Guide',
       sendingText: 'Sending...',
