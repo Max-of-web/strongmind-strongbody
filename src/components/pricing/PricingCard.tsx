@@ -116,13 +116,6 @@ const PricingCard = ({
                         {t(`coaching.pricing.${pricingKey}.period`)}
                       </span>
                     </div>
-                    {pricingKey === 'oneOnOneCoaching' && (
-                      <div className="mt-2">
-                        <span className="text-sm text-green-400 font-medium bg-green-400/10 px-2 py-1 rounded-md border border-green-400/20">
-                          45 € už treniruotę perkant 8 treniruočių paketą
-                        </span>
-                      </div>
-                    )}
                     {pricingKey === 'onlineTraining' && (
                       <div className="mt-2">
                         <span className="text-sm text-green-400 font-medium bg-green-400/10 px-2 py-1 rounded-md border border-green-400/20">
