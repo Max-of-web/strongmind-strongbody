@@ -66,20 +66,10 @@ const PricingCard = ({
     return {};
   };
 
-  // Check if translation keys exist for additional content
-  const hasNote = () => {
+  const hasTranslation = (key: string) => {
     try {
-      const note = t(`coaching.pricing.${pricingKey}.note`, { defaultValue: '' });
-      return note !== '';
-    } catch {
-      return false;
-    }
-  };
-
-  const hasBottomText = () => {
-    try {
-      const bottomText = t(`coaching.pricing.${pricingKey}.bottomText`, { defaultValue: '' });
-      return bottomText !== '';
+      const value = t(`coaching.pricing.${pricingKey}.${key}`, { defaultValue: '' });
+      return value !== '';
     } catch {
       return false;
     }

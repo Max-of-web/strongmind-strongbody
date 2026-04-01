@@ -69,59 +69,67 @@ const coaching = {
         mostPopular: 'MOST POPULAR'
       },
       oneOnOneCoaching: {
-        title: '1-on-1 Coaching',
+        title: 'Personal Training',
+        tagline: 'Every movement has a purpose. Every session — monitored and corrected.',
         price: '€50',
-        period: 'per session',
-        subtitle: 'People who want to train smart, stay consistent, and build habits that stick - for good.',
+        period: '/ session',
+        subtitle: 'For those who need quick clarity and correction. When progress stalls, when something hurts, when you want to learn proper form — one session can change a lot.',
         features: [
-          'Weekly personal training that adapts to your needs',
-          'Progress testing every 3 months so you see real results',
-          'Direct WhatsApp support - you\'re never stuck on your own'
+          'Individual session with a physiotherapist',
+          'Real-time technique correction',
+          'Tailored to your goals and body condition'
         ],
-        note: 'Want to train with a friend or two? Small group sessions are more affordable and still personalized. Reach out if you\'re interested!',
-        bottomText: 'Best for real, lasting change and clear structure.',
+        whyItWorks: 'I see what you can\'t — compensatory movements, risky ranges of motion, weak links. And I correct them on the spot.',
+        bottomText: '',
         buttonText: 'Book Session'
       },
       onlineTraining: {
-        title: 'Online Training + WhatsApp Support',
-        price: '€100',
-        period: 'per month',
-        subtitle: 'Busy people who prefer training independently but want a plan that actually works - plus real accountability.',
+        title: 'Online Training',
+        tagline: 'A personalized program and professional support — no matter where you are.',
+        price: '€250',
+        period: '/ month',
+        subtitle: 'For those who want to train with a clear system but can\'t or don\'t want to attend in person. Or those who already have gym experience — but lack structure and progress.',
         features: [
-          'A fully customised training plan for your goals',
-          'Weekly plan tweaks to keep you moving forward',
-          'WhatsApp support for quick questions and when challenges come up',
-          'Stay on track, even when life gets busy'
+          'Individualized training program',
+          'Weekly check-ins and progress tracking',
+          'Technique review via video',
+          'All communication, programming, and progress — in one platform'
         ],
-        bottomText: 'Ideal if you want expert structure without weekly 1-on-1 sessions.',
+        whyItWorks: 'Not a PDF with a list of exercises. The program is adjusted every week based on your progress. You always know what to do and why.',
+        bottomText: '',
         buttonText: 'Start Training'
       },
       rehabTraining: {
-        title: 'Rehab Training',
-        price: '€60',
-        period: 'per session (~€240/month)',
-        subtitle: 'Anyone recovering from an injury or surgery who wants to rebuild safely - and come back stronger than before.',
+        title: 'Move Without Fear.',
+        tagline: 'The Rebuild Method — a rehab and training program for people who want more than just pain relief — they want to return to a full life.',
+        price: '€350',
+        period: '/ month',
+        subtitle: 'For those who\'ve already tried — physiotherapy, massages, rest. The pain keeps coming back. Movement feels scary. And you don\'t know where to start over.',
         features: [
-          'Weekly hands-on physiotherapy session',
-          'EMS/TENS and regular testing if needed',
-          'A rehab plan tailored just for you',
-          'WhatsApp check-ins whenever you need extra guidance'
+          '4 personal training sessions per month',
+          'Full movement and pain assessment',
+          'Individual program on an online platform — always know what to do',
+          'Ongoing support — I respond within 24h'
         ],
-        bottomText: 'Regain your strength and confidence step by step.',
+        whyItWorks: 'I don\'t just work with symptoms — we look for the root cause. Every session, every week has a purpose. You\'re not left alone between meetings.',
+        note: 'Minimum commitment — 3 months, because real change takes time.',
+        bottomText: '',
         buttonText: 'Book Consultation'
       },
       smallGroupTraining: {
         title: 'Small Group Training',
+        tagline: 'Group energy. Individual attention.',
         price: '€160',
-        period: 'per month',
-        subtitle: 'People who love training with others, want that extra push, and thrive on clear structure.',
+        period: '/ 8 sessions',
+        discountText: '(€20 / session)',
+        subtitle: 'For those who want to train with others but don\'t want to lose individual attention. Motivation — together. Technique and programming — personalized.',
         features: [
-          'Train 2x a week in a fun, supportive small group',
-          '3-5 people per group - real attention from your coach',
-          'Rotating focus sessions (full-body, strength, targeted)',
-          'Only 5 spots per group - secure your place!'
+          'Up to 4–6 people per group',
+          'Individual technique and corrections for each person',
+          'Structured program with progressive overload'
         ],
-        bottomText: 'Perfect if you\'re motivated by community and energy.',
+        whyItWorks: 'Not a mass group class where nobody checks your form. Here I see everyone — and correct in real time.',
+        bottomText: '',
         buttonText: 'Join Group'
       },
       innerShiftCoaching: {
