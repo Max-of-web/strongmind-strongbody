@@ -66,20 +66,10 @@ const PricingCard = ({
     return {};
   };
 
-  // Check if translation keys exist for additional content
-  const hasNote = () => {
+  const hasTranslation = (key: string) => {
     try {
-      const note = t(`coaching.pricing.${pricingKey}.note`, { defaultValue: '' });
-      return note !== '';
-    } catch {
-      return false;
-    }
-  };
-
-  const hasBottomText = () => {
-    try {
-      const bottomText = t(`coaching.pricing.${pricingKey}.bottomText`, { defaultValue: '' });
-      return bottomText !== '';
+      const value = t(`coaching.pricing.${pricingKey}.${key}`, { defaultValue: '' });
+      return value !== '';
     } catch {
       return false;
     }
@@ -105,38 +95,29 @@ const PricingCard = ({
             <CardHeader className="pt-6 pb-4 text-center">
                <div className="flex flex-col items-center justify-center text-center">
                  <div className="mb-4">
-                   <CardTitle className="text-xl font-bold mb-2 text-white">
-                     {t(`coaching.pricing.${pricingKey}.title`)}
-                   </CardTitle>
-                    <div className="flex items-baseline justify-center">
-                      <span className="text-3xl font-bold text-white/90">
-                        {t(`coaching.pricing.${pricingKey}.price`)}
-                      </span>
-                      <span className="ml-1 text-[#D1D5DB] text-base">
-                        {t(`coaching.pricing.${pricingKey}.period`)}
-                      </span>
-                    </div>
-                    {pricingKey === 'onlineTraining' && (
-                      <div className="mt-2">
-                        <span className="text-sm text-green-400 font-medium bg-green-400/10 px-2 py-1 rounded-md border border-green-400/20">
-                          90 € mokant už trijų mėnesių paketą
-                        </span>
-                      </div>
+                    <CardTitle className="text-xl font-bold mb-2 text-white">
+                      {t(`coaching.pricing.${pricingKey}.title`)}
+                    </CardTitle>
+                    {hasTranslation('tagline') && (
+                      <p className="text-xs text-[#D1D5DB] mb-2 leading-relaxed">
+                        {t(`coaching.pricing.${pricingKey}.tagline`)}
+                      </p>
                     )}
-                    {pricingKey === 'rehabTraining' && (
-                      <div className="mt-2">
-                        <span className="text-sm text-green-400 font-medium bg-green-400/10 px-2 py-1 rounded-md border border-green-400/20">
-                          55 € mokant už 8 treniruočių paketą
-                        </span>
-                      </div>
-                    )}
-                    {pricingKey === 'smallGroupTraining' && (
-                      <div className="mt-2">
-                        <span className="text-sm text-green-400 font-medium bg-green-400/10 px-2 py-1 rounded-md border border-green-400/20">
-                          arba 160 € mokant už mėnesį
-                        </span>
-                      </div>
-                    )}
+                     <div className="flex items-baseline justify-center">
+                       <span className="text-3xl font-bold text-white/90">
+                         {t(`coaching.pricing.${pricingKey}.price`)}
+                       </span>
+                       <span className="ml-1 text-[#D1D5DB] text-base">
+                         {t(`coaching.pricing.${pricingKey}.period`)}
+                       </span>
+                     </div>
+                     {hasTranslation('discountText') && (
+                       <div className="mt-2">
+                         <span className="text-sm text-green-400 font-medium bg-green-400/10 px-2 py-1 rounded-md border border-green-400/20">
+                           {t(`coaching.pricing.${pricingKey}.discountText`)}
+                         </span>
+                       </div>
+                     )}
                  </div>
                  <ChevronDown 
                    className={`h-5 w-5 text-[#D1D5DB] transition-transform duration-300 ease-out ${
@@ -162,9 +143,18 @@ const PricingCard = ({
                   featureCount={featureCount} 
                 />
               </div>
+
+              {/* Why it works section */}
+              {hasTranslation('whyItWorks') && (
+                <div className="mt-4 p-3 bg-white/5 rounded-lg border border-white/10">
+                  <p className="text-sm text-white/80 italic">
+                    {t(`coaching.pricing.${pricingKey}.whyItWorks`)}
+                  </p>
+                </div>
+              )}
               
               {/* Note section for packages that have it */}
-              {hasNote() && (
+              {hasTranslation('note') && (
                 <div className="mt-4 p-3 bg-green-500/10 rounded-lg border border-green-500/30">
                   <p className="text-sm text-green-200">
                     🟢 {t(`coaching.pricing.${pricingKey}.note`)}
@@ -173,7 +163,7 @@ const PricingCard = ({
               )}
               
               {/* Bottom text section */}
-              {hasBottomText() && (
+              {hasTranslation('bottomText') && (
                 <div className="mt-4 pt-3 border-t border-[#2A2F36]">
                   <p className="text-sm text-gray-100 font-medium">
                     👉 {t(`coaching.pricing.${pricingKey}.bottomText`)}

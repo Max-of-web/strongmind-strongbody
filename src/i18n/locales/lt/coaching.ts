@@ -44,59 +44,67 @@ const coaching = {
         mostPopular: 'POPULIARIAUSIA'
       },
       oneOnOneCoaching: {
-        title: 'Asmeninės treniruotės',
+        title: 'Asmeninės Treniruotės',
+        tagline: 'Kiekvienas judesys turi tikslą. Kiekviena treniruotė — stebima ir koreguojama.',
         price: '50 €',
-        period: 'už treniruotę',
-        subtitle: 'Žmonėms, kurie nori nuoseklumo, aiškaus plano ir įpročių, kurie išlieka visam gyvenimui - ne tik trumpam laikotarpiui.',
+        period: '/ treniruotę',
+        subtitle: 'Tiems, kam reikia greito aiškumo ir korekcijos. Kai stringa progresas, kai skauda, kai nori išmokti teisingai — viena treniruotė gali pakeisti daug.',
         features: [
-          'Asmeninės treniruotės 1× per savaitę',
-          'Progreso testavimas kas 3 mėnesius',
-          'WhatsApp palaikymas visiems klausimams - kad niekada neliktum vienas'
+          'Individuali treniruotė su kineziterapeutu',
+          'Technikos korekcija realiu laiku',
+          'Pritaikyta pagal tavo tikslus ir kūno būklę'
         ],
-        note: 'Nori treniruotis su draugu ar dviem? Mažų grupių treniruotės yra pigesnės, bet vis tiek pritaikytos individualiai. Parašyk, jei įdomu!',
-        bottomText: 'Tinka, jei nori aiškios struktūros, motyvacijos ir pokyčių, kurie išlieka.',
+        whyItWorks: 'Matau tai, ko tu pats nematai — kompensacinius judesius, rizikingas amplitudes, silpnas grandis. Ir koreguoju iš karto.',
+        bottomText: '',
         buttonText: 'Užsakyti Treniruotę'
       },
       onlineTraining: {
-        title: 'Online Treniruotės + WhatsApp Palaikymas',
-        price: '100 €',
-        period: 'per mėnesį',
-        subtitle: 'Tiems, kurie mėgsta sportuoti savarankiškai, bet nori aiškaus plano, profesionalios priežiūros ir realios atsakomybės.',
+        title: 'Online Treniruotės',
+        tagline: 'Individuali programa ir profesionalus palaikymas — nesvarbu, kur esi.',
+        price: '250 €',
+        period: '/ mėn.',
+        subtitle: 'Tiems, kas nori treniruotis pagal aiškią sistemą, bet negali ar nenori lankytis gyvai. Arba jau turi patirties salėje — bet stinga struktūros ir progreso.',
         features: [
-          'Individualus treniruočių planas, pritaikytas tavo tikslams',
-          'Savaitiniai plano atnaujinimai, kad visada judėtum pirmyn',
-          'WhatsApp palaikymas greitiems klausimams - kai tik prireikia',
-          'Niekada neliksi vienas su iššūkiais, net kai gyvenimas įsibėgėja'
+          'Individuali treniruočių programa',
+          'Savaitiniai patikrinimai ir pažangos stebėjimas',
+          'Technikos kontrolė per video',
+          'Visa komunikacija, programa ir pažanga — vienoje platformoje'
         ],
-        bottomText: 'Puikus pasirinkimas, jei nori laisvės sportuoti, bet sieki rimtų rezultatų su profesionalo palaikymu.',
+        whyItWorks: 'Ne PDF su pratimų sąrašu. Programa koreguojama kiekvieną savaitę pagal tavo progresą. Tu visada žinai ką daryti ir kodėl.',
+        bottomText: '',
         buttonText: 'Pradėti Treniruotis'
       },
       rehabTraining: {
-        title: 'Reabilitacinės Treniruotės',
-        price: '60 €',
-        period: 'už sesiją',
-        subtitle: 'Žmonėms, atsigaunantiems po traumos ar operacijos, kurie nori saugiai grįžti į formą - ir tapti stipresni nei anksčiau.',
+        title: 'Judėk be baimės.',
+        tagline: 'The Rebuild Method — reabilitacijos ir treniruočių programa žmonėms, kurie nori ne tik sumažinti skausmą, bet grįžti prie pilnaverčio gyvenimo.',
+        price: '350 €',
+        period: '/ mėn.',
+        subtitle: 'Tiems, kas jau bandė — kineziterapiją, masažus, poilsį. Skausmas grįžta. Judėjimas kelia baimę. Ir nežinai, nuo ko pradėti iš naujo.',
         features: [
-          'Kineziterapijos užsiėmimai 1× per savaitę',
-          'EMS/TENS stimuliacija, testavimas pagal poreikį',
-          'Individualizuotas reabilitacijos planas',
-          'WhatsApp palaikymas, kai reikia patarimo ar drąsos žingsniui pirmyn'
+          '4 asmeninės treniruotės per mėnesį',
+          'Pilnas judėjimo ir skausmo įvertinimas',
+          'Individuali programa online platformoje — visada žinai ką daryti',
+          'Nuolatinis ryšys — atsakau per 24h'
         ],
-        bottomText: 'Idealu, jei nori atgauti jėgas ir pasitikėjimą žingsnis po žingsnio.',
+        whyItWorks: 'Dirbu ne tik su simptomais — ieškome priežasties. Kiekviena treniruotė, kiekviena savaitė turi tikslą. Tu nesi paliktas vienas tarp susitikimų.',
+        note: 'Minimalus įsipareigojimas — 3 mėnesiai, nes realus pokytis reikalauja laiko.',
+        bottomText: '',
         buttonText: 'Užsakyti Konsultaciją'
       },
       smallGroupTraining: {
-        title: 'Treniruotės Mažoje Grupėje',
-        price: '25 €',
-        period: 'už kartą',
-        subtitle: 'Tiems, kurie nori sportuoti bendruomenėje, mėgsta motyvaciją ir jau turi bazinį fizinį pasirengimą.',
+        title: 'Mažos Grupės Treniruotės',
+        tagline: 'Grupės energija. Individualus dėmesys.',
+        price: '160 €',
+        period: '/ 8 treniruotės',
+        discountText: '(20 € / treniruotę)',
+        subtitle: 'Tiems, kas nori treniruotis su kitais, bet nenori prarasti individualaus dėmesio. Motyvacija — kartu. Technika ir programa — asmeniškai.',
         features: [
-          'Treniruotės 2× per savaitę mažoje, draugiškoje grupėje',
-          '3-5 žmonės grupėje - daug dėmesio kiekvienam',
-          'Kintančios treniruočių temos (viso kūno, jėgos, tikslingos sesijos)',
-          'Tik 5 vietos grupėje - vietų skaičius ribotas, užsitikrink vietą iš anksto!'
+          'Iki 4–6 žmonių grupė',
+          'Individuali technika ir korekcijos kiekvienam',
+          'Struktūruota programa su progresuojančiu krūviu'
         ],
-        bottomText: 'Puikus variantas, jei tave motyvuoja bendruomenė ir papildoma atsakomybė.',
+        whyItWorks: 'Ne masinė grupinė treniruotė kur niekas nežiūri ar taisyklingai darai. Čia matau kiekvieną — ir koreguoju realiu laiku.',
+        bottomText: '',
         buttonText: 'Prisijungti prie Grupės'
       },
       innerShiftCoaching: {
