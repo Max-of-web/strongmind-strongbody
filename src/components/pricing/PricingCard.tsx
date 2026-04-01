@@ -138,9 +138,18 @@ const PricingCard = ({
                   featureCount={featureCount} 
                 />
               </div>
+
+              {/* Why it works section */}
+              {hasTranslation('whyItWorks') && (
+                <div className="mt-4 p-3 bg-white/5 rounded-lg border border-white/10">
+                  <p className="text-sm text-white/80 italic">
+                    {t(`coaching.pricing.${pricingKey}.whyItWorks`)}
+                  </p>
+                </div>
+              )}
               
               {/* Note section for packages that have it */}
-              {hasNote() && (
+              {hasTranslation('note') && (
                 <div className="mt-4 p-3 bg-green-500/10 rounded-lg border border-green-500/30">
                   <p className="text-sm text-green-200">
                     🟢 {t(`coaching.pricing.${pricingKey}.note`)}
@@ -149,7 +158,7 @@ const PricingCard = ({
               )}
               
               {/* Bottom text section */}
-              {hasBottomText() && (
+              {hasTranslation('bottomText') && (
                 <div className="mt-4 pt-3 border-t border-[#2A2F36]">
                   <p className="text-sm text-gray-100 font-medium">
                     👉 {t(`coaching.pricing.${pricingKey}.bottomText`)}
