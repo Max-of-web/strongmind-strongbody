@@ -38,89 +38,74 @@ const coaching = {
     pricing: {
       sectionTitle: 'Paketai ir Kainos',
       whoItsFor: 'Kam tai skirta',
-      whatYouGet: 'Kas įeina į paketą',
+      whatYouGet: 'Ką gausi',
       badges: {
         recommended: 'REKOMENDUOJAMA',
         mostPopular: 'POPULIARIAUSIA'
       },
-      oneOnOneCoaching: {
-        title: 'Asmeninės Treniruotės',
-        tagline: 'Kiekvienas judesys turi tikslą. Kiekviena treniruotė — stebima ir koreguojama.',
-        price: '50 €',
-        period: '/ treniruotę',
-        subtitle: 'Tiems, kam reikia greito aiškumo ir korekcijos. Kai stringa progresas, kai skauda, kai nori išmokti teisingai — viena treniruotė gali pakeisti daug.',
-        features: [
-          'Individuali treniruotė su kineziterapeutu',
-          'Technikos korekcija realiu laiku',
-          'Pritaikyta pagal tavo tikslus ir kūno būklę'
-        ],
-        whyItWorks: 'Matau tai, ko tu pats nematai — kompensacinius judesius, rizikingas amplitudes, silpnas grandis. Ir koreguoju iš karto.',
-        bottomText: '',
-        buttonText: 'Užsakyti Treniruotę'
-      },
-      onlineTraining: {
-        title: 'Online Treniruotės',
-        tagline: 'Individuali programa ir profesionalus palaikymas — nesvarbu, kur esi.',
-        price: '250 €',
-        period: '/ mėn.',
-        subtitle: 'Tiems, kas nori treniruotis pagal aiškią sistemą, bet negali ar nenori lankytis gyvai. Arba jau turi patirties salėje — bet stinga struktūros ir progreso.',
-        features: [
-          'Individuali treniruočių programa',
-          'Savaitiniai patikrinimai ir pažangos stebėjimas',
-          'Technikos kontrolė per video',
-          'Visa komunikacija, programa ir pažanga — vienoje platformoje'
-        ],
-        whyItWorks: 'Ne PDF su pratimų sąrašu. Programa koreguojama kiekvieną savaitę pagal tavo progresą. Tu visada žinai ką daryti ir kodėl.',
-        bottomText: '',
-        buttonText: 'Pradėti Treniruotis'
-      },
       rehabTraining: {
-        title: 'Judėk be baimės.',
-        tagline: 'The Rebuild Method — reabilitacijos ir treniruočių programa žmonėms, kurie nori ne tik sumažinti skausmą, bet grįžti prie pilnaverčio gyvenimo.',
+        title: 'The Rebuild Method',
+        tagline: 'Judėk be baimės.',
+        description: 'Reabilitacijos ir treniruočių sistema tiems, kurie nori ne tik sumažinti skausmą, bet sugrįžti į pilnavertį gyvenimą.',
         price: '350 €',
         period: '/ mėn.',
-        subtitle: 'Tiems, kas jau bandė — kineziterapiją, masažus, poilsį. Skausmas grįžta. Judėjimas kelia baimę. Ir nežinai, nuo ko pradėti iš naujo.',
+        subtitle: 'Tiems, kas jau bandė viską – kineziterapiją, masažus, poilsį – bet skausmas vis grįžta. Judėjimas kelia abejonių, ir neaišku, nuo ko pradėti iš naujo.',
         features: [
-          '4 asmeninės treniruotės per mėnesį',
-          'Pilnas judėjimo ir skausmo įvertinimas',
-          'Individuali programa online platformoje — visada žinai ką daryti',
-          'Nuolatinis ryšys — atsakau per 24h'
+          '4 asmenines treniruotes per mėnesį',
+          'Išsamų judėjimo ir skausmo įvertinimą',
+          'Individualią programą online platformoje',
+          'Nuolatinį palaikymą – nepalieku tavęs vieno tarp treniruočių'
         ],
-        whyItWorks: 'Dirbu ne tik su simptomais — ieškome priežasties. Kiekviena treniruotė, kiekviena savaitė turi tikslą. Tu nesi paliktas vienas tarp susitikimų.',
-        note: 'Minimalus įsipareigojimas — 3 mėnesiai, nes realus pokytis reikalauja laiko.',
+        whyItWorks: 'Dirbame ne tik su simptomais, o su priežastimi. Kiekviena treniruotė ir kiekviena savaitė turi aiškų tikslą – todėl progresas tampa matomas ir tvarus.',
+        note: 'Minimalus įsipareigojimas – 3 mėnesiai, nes realus pokytis reikalauja laiko ir nuoseklumo.',
         bottomText: '',
         buttonText: 'Užsakyti Konsultaciją'
       },
+      onlineTraining: {
+        title: 'Online treniruotės',
+        tagline: 'Aiški sistema ir profesionalus palaikymas – nesvarbu, kur esi.',
+        price: '250 €',
+        period: '/ mėn.',
+        subtitle: 'Tiems, kas nori treniruotis savarankiškai, bet su struktūra. Taip pat tiems, kurie jau sportuoja, bet trūksta krypties ir progreso.',
+        features: [
+          'Individualią treniruočių programą',
+          'Savaitinius patikrinimus ir progreso sekimą',
+          'Technikos analizę per video',
+          'Viską vienoje platformoje – aišku, paprasta, struktūruota'
+        ],
+        whyItWorks: 'Tai ne PDF failas su pratimais. Programa nuolat koreguojama pagal tavo progresą – visada žinai, ką darai ir kodėl.',
+        bottomText: '',
+        buttonText: 'Pradėti Treniruotis'
+      },
+      oneOnOneCoaching: {
+        title: 'Asmeninės treniruotės',
+        tagline: 'Kiekvienas judesys turi tikslą. Kiekviena treniruotė – stebima ir koreguojama.',
+        price: '50 €',
+        period: '/ treniruotę',
+        subtitle: 'Tiems, kam reikia aiškumo ir tikslių korekcijų. Kai nežinai kaip pasiekti tikslus ir kaip judėti į priekį.',
+        features: [
+          'Individualią treniruotę su kineziterapeutu',
+          'Technikos korekciją realiu laiku',
+          'Sprendimus, pritaikytus tavo kūnui ir tikslams'
+        ],
+        whyItWorks: 'Matau tai, ko pats dažnai nepastebi – kompensacijas, silpnas grandis, rizikingas amplitudes. Ir koreguoju iš karto.',
+        bottomText: '',
+        buttonText: 'Užsakyti Treniruotę'
+      },
       smallGroupTraining: {
-        title: 'Mažos Grupės Treniruotės',
+        title: 'Small group treniruotės',
         tagline: 'Grupės energija. Individualus dėmesys.',
         price: '160 €',
         period: '/ 8 treniruotės',
-        discountText: '(20 € / treniruotę)',
-        subtitle: 'Tiems, kas nori treniruotis su kitais, bet nenori prarasti individualaus dėmesio. Motyvacija — kartu. Technika ir programa — asmeniškai.',
+        subtitle: 'Tiems, kas nori treniruotis su kitais, bet nenori ištirpti minioje ir prarasti dėmesio.',
         features: [
-          'Iki 4–6 žmonių grupė',
-          'Individuali technika ir korekcijos kiekvienam',
-          'Struktūruota programa su progresuojančiu krūviu'
+          '4–6 žmonių grupę',
+          'Individualias technikos korekcijas',
+          'Struktūruotą programą su tikslu'
         ],
-        whyItWorks: 'Ne masinė grupinė treniruotė kur niekas nežiūri ar taisyklingai darai. Čia matau kiekvieną — ir koreguoju realiu laiku.',
+        whyItWorks: 'Tai ne masinė grupė, kur niekas nestebi, kaip judi. Čia matau kiekvieną ir koreguoju realiu laiku.',
         bottomText: '',
         buttonText: 'Prisijungti prie Grupės'
-      },
-      innerShiftCoaching: {
-        title: 'Vidinis Pokytis',
-        price: '150 €',
-        period: '/mėn. (minimalus įsipareigojimas – 3 mėn.)',
-        subtitle: 'Žmonėms, kurie nori realaus, tvaraus įpročių pokyčio - daugiau nei tik treniruotės. Puikiai tinka tiems, kurie įstringa "pradėjau-mečiau" rate, jaučiasi pavargę nuo trumpalaikių sprendimų, arba nori išmokti valdyti stresą, mitybą ir poilsį visam laikui.',
-        features: [
-          'Aiškus, praktiškas 3 mėn. elgesio keitimo planas',
-          'Savaitiniai susitikimai (balso žinutės arba video - kaip tau patogu)',
-          'WhatsApp palaikymas kasdieniam atskaitingumui ir klausimams',
-          'Konkretūs veiksmai ir įrankiai stresui, miegui, mitybai valdyti - be teorijos, tik tai, kas veikia',
-          'Papildomai: gali derinti su 1-on-1 ar online treniruotėmis - dar geresniems rezultatams'
-        ],
-        bottomText: 'Ši programa skirta tau, jei nori, kad tavo įpročiai, mąstysena ir kūnas pagaliau veiktų kartu - visam laikui.',
-        buttonText: 'Pradėti Vidinį Pokytį'
       }
     },
     process: {

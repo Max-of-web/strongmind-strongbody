@@ -16,34 +16,32 @@ const PricingCards = () => {
   };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {/* 1-on-1 Coaching - Recommended */}
-      <PricingCard 
-        pricingKey="oneOnOneCoaching" 
-        featureCount={3} 
-        isHighlighted={true}
-        onBookingClick={openBookingLink}
-        isExpanded={expandedCard === 'oneOnOneCoaching'}
-        onToggleExpand={() => handleToggleExpand('oneOnOneCoaching')}
-      />
-
-      {/* Online Training + WhatsApp Support - Recommended */}
-      <PricingCard 
-        pricingKey="onlineTraining" 
-        featureCount={4} 
-        isHighlighted={true}
-        onBookingClick={openBookingLink}
-        isExpanded={expandedCard === 'onlineTraining'}
-        onToggleExpand={() => handleToggleExpand('onlineTraining')}
-      />
-
-      {/* Rehab Training */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {/* The Rebuild Method */}
       <PricingCard 
         pricingKey="rehabTraining" 
         featureCount={4} 
         onBookingClick={openBookingLink}
         isExpanded={expandedCard === 'rehabTraining'}
         onToggleExpand={() => handleToggleExpand('rehabTraining')}
+      />
+
+      {/* Online Training */}
+      <PricingCard 
+        pricingKey="onlineTraining" 
+        featureCount={4} 
+        onBookingClick={openBookingLink}
+        isExpanded={expandedCard === 'onlineTraining'}
+        onToggleExpand={() => handleToggleExpand('onlineTraining')}
+      />
+
+      {/* Personal Training */}
+      <PricingCard 
+        pricingKey="oneOnOneCoaching" 
+        featureCount={3} 
+        onBookingClick={openBookingLink}
+        isExpanded={expandedCard === 'oneOnOneCoaching'}
+        onToggleExpand={() => handleToggleExpand('oneOnOneCoaching')}
       />
 
       {/* Small Group Training */}
@@ -54,18 +52,6 @@ const PricingCards = () => {
         isExpanded={expandedCard === 'smallGroupTraining'}
         onToggleExpand={() => handleToggleExpand('smallGroupTraining')}
       />
-
-      {/* Inner Shift Coaching - Premium */}
-      <div className="md:col-span-2 lg:col-span-1 lg:col-start-2">
-        <PricingCard 
-          pricingKey="innerShiftCoaching" 
-          featureCount={5} 
-          isPremium={true}
-          onBookingClick={openBookingLink}
-          isExpanded={expandedCard === 'innerShiftCoaching'}
-          onToggleExpand={() => handleToggleExpand('innerShiftCoaching')}
-        />
-      </div>
     </div>
   );
 };
