@@ -49,7 +49,7 @@ const PricingCards = () => {
       {/* Small Group Training */}
       <PricingCard 
         pricingKey="smallGroupTraining" 
-        featureCount={4} 
+        featureCount={3} 
         onBookingClick={openBookingLink}
         isExpanded={expandedCard === 'smallGroupTraining'}
         onToggleExpand={() => handleToggleExpand('smallGroupTraining')}

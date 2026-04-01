@@ -95,9 +95,14 @@ const PricingCard = ({
             <CardHeader className="pt-6 pb-4 text-center">
                <div className="flex flex-col items-center justify-center text-center">
                  <div className="mb-4">
-                   <CardTitle className="text-xl font-bold mb-2 text-white">
-                     {t(`coaching.pricing.${pricingKey}.title`)}
+                    <CardTitle className="text-xl font-bold mb-2 text-white">
+                      {t(`coaching.pricing.${pricingKey}.title`)}
                     </CardTitle>
+                    {hasTranslation('tagline') && (
+                      <p className="text-xs text-[#D1D5DB] mb-2 leading-relaxed">
+                        {t(`coaching.pricing.${pricingKey}.tagline`)}
+                      </p>
+                    )}
                      <div className="flex items-baseline justify-center">
                        <span className="text-3xl font-bold text-white/90">
                          {t(`coaching.pricing.${pricingKey}.price`)}
