@@ -157,6 +157,11 @@ const coaching = {
           'Vilnius, Re.formatas, Ąžuolyno g. 7'
         ]
       }
+    },
+    youtube: {
+      sectionTitle: 'Nemokamos treniruotės YouTube',
+      subtitle: 'Išbandyk treniruotę prieš registruodamasis. Naujos kas savaitę.',
+      buttonText: 'Atidaryti YouTube grojaraštį'
     }
   },
   buttons: {
