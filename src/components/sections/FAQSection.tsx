@@ -1,4 +1,3 @@
-
 import { useTranslation } from 'react-i18next';
 import {
   Accordion,
@@ -9,9 +8,17 @@ import {
 
 type Item = { q: string; a: string };
 
-const FAQSection = () => {
+interface FAQSectionProps {
+  titleKey?: string;
+  itemsKey?: string;
+}
+
+const FAQSection = ({
+  titleKey = 'homepage.faq.sectionTitle',
+  itemsKey = 'homepage.faq.items',
+}: FAQSectionProps) => {
   const { t } = useTranslation();
-  const raw = t('homepage.faq.items', { returnObjects: true });
+  const raw = t(itemsKey, { returnObjects: true });
   const items: Item[] = Array.isArray(raw) ? (raw as Item[]) : [];
 
   return (
@@ -19,7 +26,7 @@ const FAQSection = () => {
       <div className="container-width max-w-3xl">
         <div className="text-center mb-10 scroll-fade-in">
           <h2 className="section-title mx-auto after:left-1/2 after:-translate-x-1/2">
-            {t('homepage.faq.sectionTitle')}
+            {t(titleKey)}
           </h2>
         </div>
         <Accordion type="single" collapsible className="w-full">

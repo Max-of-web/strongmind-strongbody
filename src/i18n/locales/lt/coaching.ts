@@ -1,8 +1,11 @@
 const coaching = {
   coaching: {
     hero: {
-      title: "Laikas pokyčiams.\nTai paprasčiau nei manai — net jei šiuo metu abejoji.",
-      subtitle: 'Tau nereikia gyventi sporto salėje, kad sustiprėtum ir turėtum daugiau energijos. Kartu sukursime planą, pritaikytą tavo gyvenimui, o rezultatai kalbės patys už save.'
+      title: 'Treniruotės, pritaikytos tavo gyvenimui ir kūnui.',
+      subtitle: 'Kineziterapeuto vedamos asmeninės treniruotės. Stiprėk, judėk be skausmo, išlik nuoseklus.',
+      primaryCta: 'Užsisakyk pažintinį pokalbį',
+      seePackages: 'Žiūrėti paketus',
+      trustLine: 'BSc Kineziterapija · NASM · 100+ klientų'
     },
     services: {
       sectionTitle: 'Kas tavęs laukia',
@@ -25,8 +28,8 @@ const coaching = {
     },
     target: {
       sectionTitle: 'Kam tai skirta',
-      intro: 'Kam tinka:',
-      description: 'Mano metodas sukurtas žmonėms, kurie nori aiškumo, struktūros ir ilgalaikės sėkmės savo sveikatingumo kelyje:',
+      intro: '',
+      description: 'Žmonėms, kurie nori aiškumo, struktūros ir ilgalaikių rezultatų:',
       audiences: [
         'Užimtiems, bet siekiantiems aiškaus plano ir krypties',
         'Tiems, kurie ne kartą pradėjo ir metė – ne dėl motyvacijos stokos, o dėl netinkamos sistemos',
@@ -114,33 +117,41 @@ const coaching = {
         {
           number: '1',
           title: 'Užpildyk formą',
-          description: 'Atsakyk į keletą klausimų, kad galėčiau suprasti tavo tikslus, patirtį ir didžiausius iššūkius.'
+          description: 'Atsakyk į kelis klausimus, kad suprasčiau tavo tikslus ir iššūkius.'
         },
         {
           number: '2',
-          title: 'Peržiūriu tavo atsakymus',
-          description: 'Perskaičiau tavo atsakymus ir, jei matau, kad tikrai galiu padėti – sutarsime dėl pokalbio.'
+          title: 'Pažintinis pokalbis',
+          description: 'Trumpas pokalbis – patikriname, ar tinkame vienas kitam ir parenkame paketą.'
         },
         {
           number: '3',
-          title: 'Pažintinis pokalbis',
-          description: 'Pakalbėsime, kaip galime dirbti kartu, ir pažiūrėsime, ar tinkame vienas kitam. Jei viskas gerai – suplanuosime pirmą sesiją.'
-        },
-        {
-          number: '4',
-          title: 'Pradedame ir darome pažangą',
-          description: 'Pradėsime nuo pradinio vertinimo ir sukursime aiškų veiksmų planą. Toliau – nuoseklus darbas, palaikymas ir tolygus augimas be streso.'
+          title: 'Pradedame treniruotis',
+          description: 'Pradinis vertinimas, aiškus planas, nuolatinis palaikymas – tolygus progresas be streso.'
         }
+      ]
+    },
+    faq: {
+      sectionTitle: 'Dažniausi klausimai',
+      items: [
+        { q: 'Ar reikia ilgalaikio įsipareigojimo?', a: 'Dauguma paketų yra mėnesiniai. The Rebuild Method – minimaliai 3 mėn., nes realus pokytis reikalauja laiko.' },
+        { q: 'Esu visiškas pradedantysis – ar man tinka?', a: 'Taip. Pradedame nuo to, kur esi šiandien. Jokios išankstinės patirties nereikia.' },
+        { q: 'Turiu seną traumą ar skausmą. Ar galiu treniruotis?', a: 'Būtent dėl to ir reikalingas kineziterapeuto vedimas. Programa saugiai pritaikoma tau.' },
+        { q: 'Online ar gyvai – kas geriau?', a: 'Abu duoda rezultatų. Gyvai – Vilniuje, su tiesioginėmis technikos korekcijomis. Online – iš bet kur, su ta pačia struktūra ir palaikymu.' },
+        { q: 'O jei reikės atšaukti?', a: 'Mėnesinius paketus galima pristabdyti ar nutraukti pranešus iki kito apmokėjimo.' }
       ]
     },
     contact: {
       sectionTitle: 'Susisiek',
+      formHeadline: 'Tavo kelias į stipresnį kūną prasideda čia – užpildyk formą',
+      stillHaveQuestions: 'Jei dar turi klausimų, susisiek:',
       intro: 'Turite klausimų prieš teikiant paraišką? Susisiek tiesiogiai per WhatsApp arba užpildykite registracijos formą.',
       whatsAppNote: 'WhatsApp skirtas tik trumpiems klausimams — ne registracijai.',
       instagramNote: 'Sek naujienoms ir patarimams.',
       nextSteps: 'Peržiūriu tavo atsakymus — jei viskas tinka, atsiųsiu asmeninę nuorodą į kalendorių.',
       locations: {
         title: 'Treniruočių Vietos',
+        label: 'Treniruočių vietos',
         intro: 'Galimos individualios treniruotės:',
         places: [
           'Vilnius, Re.formatas, Ąžuolyno g. 7'
