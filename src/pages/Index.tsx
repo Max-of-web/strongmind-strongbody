@@ -12,6 +12,7 @@ import TestimonialsSection from '../components/sections/TestimonialsSection';
 import AboutSection from '../components/sections/AboutSection';
 import FAQSection from '../components/sections/FAQSection';
 import FinalCTASection from '../components/sections/FinalCTASection';
+import YouTubeSection from '../components/sections/YouTubeSection';
 
 const Index = () => {
   useEffect(() => {
@@ -34,6 +35,7 @@ const Index = () => {
       <Header />
       <main>
         <HeroSection />
+        <YouTubeSection />
         <TrustStripSection />
         <ProblemSolutionSection />
         <OutcomesSection />

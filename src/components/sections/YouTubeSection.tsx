@@ -25,7 +25,37 @@ const YouTubeSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-5xl mx-auto scroll-fade-in">
+        {/* Mobile: horizontal swipeable strip */}
+        <div className="md:hidden -mx-4 px-4 overflow-x-auto scroll-fade-in [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+          <div className="flex gap-4 snap-x snap-mandatory pb-2">
+            {VIDEOS.map((v) => (
+              <a
+                key={v.id}
+                href={`https://www.youtube.com/watch?v=${v.id}&list=PL9FEczFkBjTeQt3GXlvoKfNygvTiZ-qkb`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative flex-shrink-0 w-[78%] snap-start overflow-hidden rounded-2xl border border-theme-tangerine/30 shadow-lg transition-all duration-300 active:scale-[0.98]"
+                aria-label={v.title}
+              >
+                <img
+                  src={`https://img.youtube.com/vi/${v.id}/hqdefault.jpg`}
+                  alt={v.title}
+                  loading="lazy"
+                  className="w-full h-44 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-14 h-14 rounded-full bg-theme-tangerine/90 flex items-center justify-center shadow-xl">
+                    <Play size={26} className="text-white ml-1" fill="currentColor" />
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop: 3-col grid */}
+        <div className="hidden md:grid grid-cols-3 gap-5 max-w-5xl mx-auto scroll-fade-in">
           {VIDEOS.map((v) => (
             <a
               key={v.id}
@@ -39,7 +69,7 @@ const YouTubeSection = () => {
                 src={`https://img.youtube.com/vi/${v.id}/hqdefault.jpg`}
                 alt={v.title}
                 loading="lazy"
-                className="w-full h-44 md:h-48 object-cover transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
               <div className="absolute inset-0 flex items-center justify-center">

@@ -1,20 +1,25 @@
-## Update YouTube videos on coaching page
+## Update CTA + add YouTube block to homepage
 
-Replace the three video IDs in `src/components/sections/YouTubeSection.tsx` with the new ones provided.
+### 1. Change LT primary CTA
+In `src/i18n/locales/lt/coaching.ts` line 6, change:
+- From: `primaryCta: 'Užsisakyk pažintinį pokalbį'`
+- To: `primaryCta: 'Pradėk dabar'`
 
-### Change
+This key drives the hero CTA on the coaching page and the post-pricing CTA. EN copy stays as "Book a Discovery Call".
 
-In `src/components/sections/YouTubeSection.tsx`, update the `VIDEOS` array:
+### 2. Add YouTube section to homepage under the hero
+In `src/pages/Index.tsx`:
+- Import `YouTubeSection`.
+- Insert `<YouTubeSection />` between `<HeroSection />` and `<TrustStripSection />`.
 
-```ts
-const VIDEOS = [
-  { id: 'HLXoiRo6Gt8', title: 'Workout 1' },
-  { id: 'k7rjrqNNxuI', title: 'Workout 2' },
-  { id: '8uBRPxEpwy0', title: 'Workout 3' },
-];
-```
+### 3. Make YouTube block horizontal on mobile
+Refactor `src/components/sections/YouTubeSection.tsx` to render two layouts:
+- **Mobile (`md:hidden`)**: a horizontally scrollable, snap-aligned strip — each card ~78% viewport width, hidden scrollbar, edge-to-edge with `-mx-4 px-4` so users can swipe naturally.
+- **Desktop (`hidden md:grid`)**: existing 3-column grid, unchanged.
 
-Thumbnails (`https://img.youtube.com/vi/{id}/hqdefault.jpg`) and watch links update automatically. Playlist button below remains unchanged.
+The section heading, subtitle, and "Open YouTube playlist" CTA below remain shared.
 
-### Files
-- Edit `src/components/sections/YouTubeSection.tsx`
+### Files to edit
+- `src/i18n/locales/lt/coaching.ts` — CTA copy.
+- `src/components/sections/YouTubeSection.tsx` — split into mobile horizontal scroll + desktop grid.
+- `src/pages/Index.tsx` — import and render `YouTubeSection` after the hero.
