@@ -22,24 +22,6 @@ const lt = {
     home: "Pradžia",
     training: "Treniruotės",
     rights: "Visos teisės saugomos."
-  },
-  coaching: {
-    ...coaching.coaching,
-    ...coaching.buttons,
-    contact: {
-      sectionTitle: "Susisiekite",
-      intro: "Turite klausimų prieš teikiant paraišką? Susisiekite tiesiogiai per WhatsApp arba užpildykite registracijos formą.",
-      whatsAppNote: "WhatsApp skirtas tik trumpiems klausimams — ne registracijai.",
-      instagramNote: "Sek naujienoms ir patarimams.",
-      nextSteps: "Peržiūriu tavo atsakymus — jei viskas tinka, atsiųsiu asmeninę nuorodą į kalendorių.",
-      locations: {
-        title: "Treniruočių Vietos",
-        intro: "Galimos individualios treniruotės:",
-        places: [
-          "Vilnius, Re.formatas, Ąžuolyno g. 7"
-        ]
-      }
-    }
   }
 };
 
