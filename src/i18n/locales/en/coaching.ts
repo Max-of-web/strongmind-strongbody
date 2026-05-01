@@ -1,8 +1,11 @@
 const coaching = {
   coaching: {
     hero: {
-      title: 'Ready to change?\nIt\'s easier than you think — even if you doubt it right now.',
-      subtitle: 'You don\'t need to live in the gym to get stronger and feel more energized. We\'ll create a plan that fits your life, and the results will speak for themselves.'
+      title: 'Coaching that fits your life — and your body.',
+      subtitle: 'Physio-led 1:1 coaching. Get stronger, move pain-free, stay consistent.',
+      primaryCta: 'Book a Discovery Call',
+      seePackages: 'See packages',
+      trustLine: 'BSc Physiotherapy · NASM · 100+ clients'
     },
     services: {
       sectionTitle: 'What I Can Offer',
@@ -25,8 +28,8 @@ const coaching = {
     },
     target: {
       sectionTitle: 'Who It\'s For',
-      intro: 'Perfect for:',
-      description: 'My approach is designed for people who want clarity, structure, and long-term success in their health and fitness journey:',
+      intro: '',
+      description: 'For people who want clarity, structure, and long-term results:',
       audiences: [
         'Busy individuals who need a clear plan and direction',
         'Those who have started and stopped before – not because of a lack of motivation, but because the system wasn\'t right',
@@ -40,24 +43,29 @@ const coaching = {
       steps: [
         {
           number: '1',
-          title: 'Fill out the form',
-          description: 'Answer a few questions so I can understand your goals, background, and biggest challenges.'
+          title: 'Apply',
+          description: 'Fill the form so I understand your goals and challenges.'
         },
         {
           number: '2',
-          title: "I'll review your answers",
-          description: "I'll read through your responses and, if I see I can truly help — we'll arrange a call."
+          title: 'Discovery call',
+          description: 'A short chat to see if we\'re a good fit and pick the right package.'
         },
         {
           number: '3',
-          title: 'Intro call',
-          description: "We'll have a chat to discuss how we can work together and see if we're a good fit for each other. If everything feels right — we'll schedule your first session."
-        },
-        {
-          number: '4',
-          title: 'Get started & make progress',
-          description: "We'll begin with an initial assessment and create a clear action plan. From there — consistent work, support, and steady growth without stress."
+          title: 'Start training',
+          description: 'Initial assessment, clear plan, ongoing support — steady progress without stress.'
         }
+      ]
+    },
+    faq: {
+      sectionTitle: 'Frequently asked questions',
+      items: [
+        { q: 'Do I need to commit long-term?', a: 'Most packages are monthly. The Rebuild Method has a 3-month minimum because real change takes time.' },
+        { q: 'I\'m a complete beginner — is this for me?', a: 'Yes. We start exactly where you are. No prior fitness required.' },
+        { q: 'I have an old injury or pain. Can I still train?', a: 'That\'s exactly why physio-led coaching exists. The program adapts safely to you.' },
+        { q: 'Online or in-person — what works best?', a: 'Both deliver results. In-person in Vilnius for hands-on technique. Online from anywhere with the same structure and support.' },
+        { q: 'What if I need to cancel?', a: 'Monthly packages can be paused or cancelled with notice before the next billing cycle.' }
       ]
     },
     pricing: {
@@ -135,12 +143,15 @@ const coaching = {
     },
     contact: {
       sectionTitle: 'Get in Touch',
+      formHeadline: 'Your path to a stronger body starts here — fill out the form',
+      stillHaveQuestions: 'Still have questions? Reach out:',
       intro: 'Have questions before applying? Reach out directly via WhatsApp or fill out the registration form.',
       whatsAppNote: 'WhatsApp is only for short questions — not for registration.',
       instagramNote: 'Follow for updates & tips.',
       nextSteps: 'I\'ll review your answers — if it\'s a good fit, I\'ll send you a personal calendar link.',
       locations: {
         title: 'Training Locations',
+        label: 'Training locations',
         intro: 'Individual training sessions available at:',
         places: [
           'Vilnius, Re.formatas, Ąžuolyno g. 7'
