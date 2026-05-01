@@ -10,32 +10,22 @@ const TestimonialsSection = () => {
   return (
     <section className="section-padding bg-elegant-charcoal">
       <div className="container-width">
-        <div className="text-center mb-12 scroll-fade-in">
+        <div className="text-center mb-10 scroll-fade-in">
           <h2 className="section-title mx-auto after:left-1/2 after:-translate-x-1/2">
             {t('homepage.testimonials.sectionTitle')}
           </h2>
         </div>
-        
-        {/* Group training image to show community aspect */}
-        <div className="mb-12 scroll-fade-in">
-          <div className="relative rounded-lg overflow-hidden shadow-xl max-w-4xl mx-auto">
-            <img
-              src="/lovable-uploads/652c7f10-f762-42d6-b1f0-fe385f04f1f0.png"
-              alt="Group training session showing community and teamwork"
-              className="w-full h-auto"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-elegant-charcoal via-transparent to-transparent" />
-          </div>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-          {(t('homepage.testimonials.testimonials', { returnObjects: true }) as any[]).slice(0, 6).map((testimonial, index: number) => (
-            <TestimonialCard
-              key={index}
-              quote={testimonial.quote}
-              name={testimonial.name}
-            />
-          ))}
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          {(t('homepage.testimonials.testimonials', { returnObjects: true }) as any[])
+            .slice(0, 3)
+            .map((testimonial, index: number) => (
+              <TestimonialCard
+                key={index}
+                quote={testimonial.quote}
+                name={testimonial.name}
+              />
+            ))}
         </div>
         <div className="text-center scroll-fade-in">
           <Link

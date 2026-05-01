@@ -2,85 +2,67 @@
 const homepage = {
   homepage: {
     hero: {
-      title: 'Level up your life – Build Habits, Gain Momentum',
-      subtitle: 'Through consistent guidance, smart movement, and practical mindset shifts, I help people take control. This isn\'t about perfection. It\'s about showing up, one real step at a time.',
+      title: 'Train smarter. Move pain-free. Stay consistent.',
+      subtitle: 'Physio-led 1:1 coaching for adults — online or in Vilnius.',
       ctaButton: 'Book a Discovery Call',
+      secondaryCta: 'See packages',
+      trustLine: 'BSc Physiotherapy · NASM · 100+ clients',
       getFreeGuideButton: 'Get Free Guide',
       youtubeButton: 'YouTube Workouts'
     },
-    features: {
-      sectionTitle: 'What Makes This Coaching Different',
-      dualExpertise: {
-        title: 'Dual Expertise',
-        description: 'Combining physiotherapy knowledge with psychology background for a holistic approach to training.'
-      },
-      adaptivePrograms: {
-        title: 'Adaptive Programs',
-        description: 'Training programs that evolve as you progress, always keeping you challenged and engaged.'
-      },
-      emotionalSupport: {
-        title: 'Emotional Support',
-        description: 'Addressing the mental barriers that often prevent physical progress and long-term success.'
-      },
-      longTermMindset: {
-        title: 'Long-term Mindset',
-        description: 'Building sustainable habits rather than quick fixes, focusing on lifelong health and fitness.'
-      }
-    },
-    achievements: {
-      sectionTitle: 'What You\'ll Achieve',
-      subtitle: 'Through consistent guidance, smart movement, and practical mindset shifts, I help people take control. This isn\'t about perfection. It\'s about showing up, one real step at a time.',
+    trustStrip: {
       items: [
-        'Reduced pain and discomfort through proper movement patterns',
-        'Smarter training approach that adapts to your energy levels',
-        'Sustainable habits that fit into your lifestyle',
-        'Stronger body awareness and connection',
-        'Increased confidence in your movement abilities'
+        'BSc Physiotherapy',
+        'NASM Certificate',
+        'MSc Precision Nutrition',
+        'Personal Trainer (OTA)'
+      ]
+    },
+    problemSolution: {
+      sectionTitle: 'Why most training plans fail you',
+      items: [
+        {
+          problem: 'Pain and injuries get ignored',
+          solution: 'Physio-led programming keeps you safe — even with old injuries.'
+        },
+        {
+          problem: 'Generic plans that don\'t fit your life',
+          solution: 'Your program adapts to your week, energy, and progress.'
+        },
+        {
+          problem: 'Motivation drops after a few weeks',
+          solution: 'Mindset coaching helps you stay consistent when it gets hard.'
+        }
+      ]
+    },
+    outcomes: {
+      sectionTitle: 'What changes in 90 days',
+      items: [
+        'Move without back or knee pain',
+        'Get stronger without burning out',
+        'Build a routine that survives busy weeks',
+        'Train with confidence — not guesswork'
+      ]
+    },
+    packagesTeaser: {
+      sectionTitle: 'Packages built around your need',
+      ctaText: 'See all packages',
+      packages: [
+        { titleKey: 'coaching.pricing.rehabTraining.title', priceKey: 'coaching.pricing.rehabTraining.price', periodKey: 'coaching.pricing.rehabTraining.period' },
+        { titleKey: 'coaching.pricing.onlineTraining.title', priceKey: 'coaching.pricing.onlineTraining.price', periodKey: 'coaching.pricing.onlineTraining.period' },
+        { titleKey: 'coaching.pricing.oneOnOneCoaching.title', priceKey: 'coaching.pricing.oneOnOneCoaching.price', periodKey: 'coaching.pricing.oneOnOneCoaching.period' },
+        { titleKey: 'coaching.pricing.smallGroupTraining.title', priceKey: 'coaching.pricing.smallGroupTraining.price', periodKey: 'coaching.pricing.smallGroupTraining.period' }
       ]
     },
     testimonials: {
-      sectionTitle: 'What Clients Say',
+      sectionTitle: 'What clients say',
       testimonials: [
-        {
-          quote: "Before working with Paulius, I'd given up on finding a solution for my chronic back pain. His approach combines careful attention to form with an understanding of the psychological aspects of pain. I'm now able to exercise without fear and have regained confidence in my body.",
-          name: 'Marta S.'
-        },
-        {
-          quote: "Paulius understands that progress isn't linear. When I struggled with consistency, instead of making me feel guilty, he helped me identify the underlying barriers and create a more realistic approach. This mindset shift was what finally helped me stay consistent.",
-          name: 'Jonas R.'
-        },
-        {
-          quote: "As someone who's tried many personal trainers, I can confidently say Paulius's approach is unique. His focus on building sustainable habits and making small, consistent changes has completely transformed how I approach fitness.",
-          name: 'Laura K.'
-        },
-        {
-          quote: "I appreciated how Paulius adapted my program during particularly stressful work periods. Instead of pushing me to maintain the same intensity, he modified my training to support recovery while still making progress. This flexibility made all the difference.",
-          name: 'Tomas B.'
-        },
-        {
-          quote: "After my injury, I was afraid to push myself. Paulius gradually rebuilt my confidence through careful progression. His knowledge of rehabilitation created the perfect environment for recovery.",
-          name: 'Greta M.'
-        },
-        {
-          quote: "The combination of physical training and mindset coaching has been transformative. I've achieved physical goals I never thought possible, but more importantly, I've developed a sustainable approach to fitness that I can maintain for life.",
-          name: 'Andrius P.'
-        },
-        {
-          quote: "Paulius understood my back pain like no other trainer before. His approach is methodical yet flexible, and I've made more progress in 3 months than in years of traditional therapy.",
-          name: 'Laura K.'
-        },
-        {
-          quote: "What makes Paulius different is how he adapts to your mood and energy. Some days we go hard, others we focus on technique. It's always productive and never feels like wasted time.",
-          name: 'Tomas B.'
-        },
-        {
-          quote: "The mental aspect of his coaching was unexpected but exactly what I needed. I've not only gotten stronger physically but also developed a healthier relationship with exercise.",
-          name: 'Milda P.'
-        },
-        {
-          quote: "After I started working with Paulius, I learned to observe my body more closely — its position, posture, and my emotional state. This helped me understand what I can correct and improve every day. What stuck with me most was his inspiring mindset that I can help myself — that gave me so much confidence. The constant connection also made a big difference: I always knew I'd get answers to all my questions, so I felt motivated and never alone. Now I'm happiest that my pain has decreased, I trust myself more, and I know how to move safely.",
-          name: 'Aleksandras T.'
-        }
+        { quote: "Before working with Paulius, I'd given up on my chronic back pain. Now I exercise without fear and trust my body again.", name: 'Marta S.' },
+        { quote: "Paulius helped me identify the real barriers and build an approach that actually fits my life. That mindset shift made all the difference.", name: 'Jonas R.' },
+        { quote: "I've tried many trainers. Paulius is different — for the first time, fitness feels like something I can sustain.", name: 'Laura K.' },
+        { quote: "After my injury I was afraid to move. Paulius rebuilt my confidence step by step.", name: 'Greta M.' },
+        { quote: "More progress in 3 months than in years of traditional therapy.", name: 'Tomas B.' },
+        { quote: "I didn't just get stronger — I built a healthier relationship with exercise.", name: 'Milda P.' }
       ],
       viewMoreLink: 'View more testimonials'
     },
@@ -93,44 +75,66 @@ const homepage = {
         personalTrainer: 'Personal Trainer (OTA Academy)'
       },
       bio: [
-        "I believe everyone can learn to love movement – as long as they follow their own pace and learn to listen to their body. For me, this wasn't a quick journey. I first discovered the desire to train through personal experience – when I worked on my posture and felt, for the first time, what it means to feel stronger. Training with a physiotherapist inspired me, and from that moment, I wanted to help others feel strong and confident in their bodies.",
-        "Today, I draw not only from physiotherapy but also from change psychology, which I studied in depth. This helps people overcome inner obstacles and stay consistent. That's what makes my method different: it's not about pressure, but about having a clear plan, patience, and someone by your side who sees not only your body, but all of you.",
-        "My goal is for people not just to train, but to transform their relationship with movement – so it becomes a lifelong value."
+        "I believe everyone can learn to love movement — at their own pace. I found training through personal experience, when I first felt what it means to feel strong in my own body.",
+        "I combine physiotherapy with change psychology. The point isn't pressure — it's a clear plan, patience, and someone who sees all of you, not just your body."
+      ]
+    },
+    faq: {
+      sectionTitle: 'Frequently asked questions',
+      items: [
+        { q: 'How much does it cost?', a: 'Packages range from €50 per single session to €350/month for the full rehab program.' },
+        { q: 'Do I need to be fit already?', a: 'No. We start where you are today — no matter your level.' },
+        { q: 'Online or in person?', a: 'Both work. In-person in Vilnius. Online from anywhere, with ongoing support.' },
+        { q: 'What if I have an injury?', a: 'That\'s exactly why you want a physio-led coach. The program adapts safely.' },
+        { q: 'How long until I see results?', a: 'First changes within 2–4 weeks. Sustainable results within 3 months.' }
       ]
     },
     cta: {
-      finalMessage: 'Ready to become the strongest version of yourself - no more doubts? Book your first training session right away.',
-      finalPaymentNote: 'The first session is paid — it\'s your initial assessment and plan session.',
-      finalButtonText: 'Book Training Session',
+      finalMessage: 'Ready to become the strongest version of yourself? Book a discovery call.',
+      finalPaymentNote: 'The first session is paid — your initial assessment and plan.',
+      finalButtonText: 'Book a Discovery Call',
+      whatsappLink: 'Quick question? WhatsApp me →',
       whatsappMessage: 'Short questions? Write on WhatsApp.',
       whatsappNote: 'WhatsApp is only for short questions — not for registration.'
     },
     lowerBackGuide: {
-      sectionTitle: 'Get Your Free Back Pain Guide',
-      intro: 'Up to 80% of people experience back pain at least once in their lives. This guide gives you the key facts and 7 simple steps to understand the causes and start taking action today.',
+      sectionTitle: 'Free guide: back pain',
+      intro: '7 simple steps to understand the cause and start taking action today.',
       benefits: [
         'Why most back pain isn\'t dangerous',
-        'Why movement and even short walks matter',
+        'Why movement and short walks matter',
         'How to track what actually helps',
-        'How stress and thoughts are linked to pain',
-        'Why it\'s important to respect your body\'s limits',
+        'How stress and thoughts link to pain',
+        'Why respecting your body\'s limits matters',
         'What exercises to do in the acute phase'
       ],
       formTitle: 'Enter your email and the guide will arrive soon',
       emailPlaceholder: 'Email',
       consentText: 'I promise to use and share this information with those who might find it helpful.',
-      privacyNote: 'Your email is safe with me. I\'ll never share it with anyone else.',
+      privacyNote: 'Your email is safe with me. I\'ll never share it.',
       buttonText: 'Download Free Guide',
       sendingText: 'Sending...',
       successMessage: 'Guide sent successfully! Check your email.',
       successTitle: 'Great!',
-      successText: 'The guide has been sent to your email. Check your inbox.',
+      successText: 'The guide has been sent to your email.',
       errorMessage: 'Failed to send. Please try again.',
       errorTitle: 'Error',
       emailRequiredError: 'Please enter your email address',
       emailValidError: 'Please enter a valid email address',
       consentRequiredError: 'Please agree to receive newsletters',
-      disclaimer: 'By submitting, you agree to receive the PDF guide via email. You can unsubscribe at any time.'
+      disclaimer: 'By submitting, you agree to receive the PDF guide via email. Unsubscribe anytime.'
+    },
+    features: {
+      sectionTitle: 'What Makes This Coaching Different',
+      dualExpertise: { title: '', description: '' },
+      adaptivePrograms: { title: '', description: '' },
+      emotionalSupport: { title: '', description: '' },
+      longTermMindset: { title: '', description: '' }
+    },
+    achievements: {
+      sectionTitle: 'What you\'ll change',
+      subtitle: '',
+      items: []
     }
   }
 };

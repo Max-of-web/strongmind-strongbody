@@ -3,10 +3,10 @@ import { useTranslation } from 'react-i18next';
 
 const AboutSection = () => {
   const { t } = useTranslation();
-
-  // Get bio paragraphs as array with proper typing
-  const bioParagraphs = t('homepage.about.bio', { returnObjects: true });
-  const bioArray = Array.isArray(bioParagraphs) ? bioParagraphs : [];
+  const bio = t('homepage.about.bio', { returnObjects: true });
+  const bioArray = Array.isArray(bio) ? (bio as string[]) : [];
+  const quals = t('homepage.about.qualifications', { returnObjects: true }) as Record<string, string>;
+  const qualList = quals && typeof quals === 'object' ? Object.values(quals) : [];
 
   return (
     <section id="about" className="section-padding bg-elegant-charcoal">
@@ -23,22 +23,18 @@ const AboutSection = () => {
           </div>
           <div className="md:w-2/3 scroll-fade-in">
             <h2 className="section-title">{t('homepage.about.sectionTitle')}</h2>
-            {bioArray.map((paragraph: string, idx: number) => (
-              <p key={idx} className="mb-6">
-                {paragraph}
-              </p>
+            {bioArray.map((p, i) => (
+              <p key={i} className="mb-4 text-white/90">{p}</p>
             ))}
-            
-            {/* Artistic personality element */}
-            <div className="mt-8 scroll-fade-in">
-              <div className="relative rounded-lg overflow-hidden shadow-lg max-w-md">
-                <img
-                  src="/lovable-uploads/d830177e-dac6-4c7e-ab8e-b7aab18c2027.png"
-                  alt="Unique artistic training approach"
-                  className="w-full h-auto"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-elegant-charcoal via-transparent to-transparent" />
-              </div>
+            <div className="flex flex-wrap gap-2 mt-6">
+              {qualList.map((q, i) => (
+                <span
+                  key={i}
+                  className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-white/[0.06] border border-white/10 text-white/85"
+                >
+                  {q}
+                </span>
+              ))}
             </div>
           </div>
         </div>

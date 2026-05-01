@@ -4,12 +4,15 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import LowerBackGuide from '../components/LowerBackGuide';
 import HeroSection from '../components/sections/HeroSection';
-import FeaturesSection from '../components/sections/FeaturesSection';
-import AchievementsSection from '../components/sections/AchievementsSection';
+import TrustStripSection from '../components/sections/TrustStripSection';
+import ProblemSolutionSection from '../components/sections/ProblemSolutionSection';
+import OutcomesSection from '../components/sections/OutcomesSection';
+import PackagesTeaserSection from '../components/sections/PackagesTeaserSection';
 import TestimonialsSection from '../components/sections/TestimonialsSection';
 import AboutSection from '../components/sections/AboutSection';
+import FAQSection from '../components/sections/FAQSection';
 import FinalCTASection from '../components/sections/FinalCTASection';
-import WhatsAppCTASection from '../components/sections/WhatsAppCTASection';
+
 const Index = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -20,13 +23,9 @@ const Index = () => {
           }
         });
       },
-      {
-        threshold: 0.1,
-      }
+      { threshold: 0.1 }
     );
-    document.querySelectorAll('.scroll-fade-in').forEach((el) => {
-      observer.observe(el);
-    });
+    document.querySelectorAll('.scroll-fade-in').forEach((el) => observer.observe(el));
     return () => observer.disconnect();
   }, []);
 
@@ -35,18 +34,17 @@ const Index = () => {
       <Header />
       <main>
         <HeroSection />
-        <FeaturesSection />
-        <AchievementsSection />
-        
-        {/* Lower Back Guide */}
+        <TrustStripSection />
+        <ProblemSolutionSection />
+        <OutcomesSection />
+        <PackagesTeaserSection />
+        <TestimonialsSection />
+        <AboutSection />
         <section id="free-guide">
           <LowerBackGuide />
         </section>
-
-        <TestimonialsSection />
-        <AboutSection />
+        <FAQSection />
         <FinalCTASection />
-        <WhatsAppCTASection />
       </main>
       <Footer />
     </>
