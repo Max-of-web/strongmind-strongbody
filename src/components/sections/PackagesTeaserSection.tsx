@@ -22,7 +22,7 @@ const PackagesTeaserSection = () => {
           {packages.map((p, i) => (
             <Link
               key={i}
-              to="/coaching#packages"
+              to="/coaching#packages-section"
               className="scroll-fade-in rounded-xl border border-white/10 bg-white/[0.03] p-5 hover:border-theme-tangerine/50 hover:bg-white/[0.06] transition group"
             >
               <p className="text-base md:text-lg font-semibold text-white mb-2 leading-snug">
@@ -39,7 +39,7 @@ const PackagesTeaserSection = () => {
         </div>
         <div className="text-center">
           <Link
-            to="/coaching#packages"
+            to="/coaching#packages-section"
             className="inline-flex items-center gap-2 text-theme-tangerine font-semibold hover:underline"
           >
             {t('homepage.packagesTeaser.ctaText')}

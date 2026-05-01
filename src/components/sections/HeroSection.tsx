@@ -23,7 +23,7 @@ const HeroSection = () => {
               {t('homepage.hero.ctaButton')}
             </Link>
             <Link
-              to="/coaching#packages"
+              to="/coaching#packages-section"
               className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white/90 hover:text-white underline-offset-4 hover:underline transition"
             >
               {t('homepage.hero.secondaryCta')} →
