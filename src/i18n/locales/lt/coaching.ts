@@ -3,7 +3,7 @@ const coaching = {
     hero: {
       title: 'Treniruotės, pritaikytos tavo gyvenimui ir kūnui.',
       subtitle: 'Kineziterapeuto vedamos asmeninės treniruotės. Stiprėk, judėk be skausmo, išlik nuoseklus.',
-      primaryCta: 'Užsisakyk pažintinį pokalbį',
+      primaryCta: 'Pradėk dabar',
       seePackages: 'Žiūrėti paketus',
       trustLine: 'BSc Kineziterapija · NASM · 100+ klientų'
     },
