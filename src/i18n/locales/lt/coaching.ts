@@ -1,8 +1,11 @@
 const coaching = {
   coaching: {
     hero: {
-      title: "Laikas pokyčiams.\nTai paprasčiau nei manai — net jei šiuo metu abejoji.",
-      subtitle: 'Tau nereikia gyventi sporto salėje, kad sustiprėtum ir turėtum daugiau energijos. Kartu sukursime planą, pritaikytą tavo gyvenimui, o rezultatai kalbės patys už save.'
+      title: 'Treniruotės, pritaikytos tavo gyvenimui ir kūnui.',
+      subtitle: 'Kineziterapeuto vedamos asmeninės treniruotės. Stiprėk, judėk be skausmo, išlik nuoseklus.',
+      primaryCta: 'Užsisakyk pažintinį pokalbį',
+      seePackages: 'Žiūrėti paketus',
+      trustLine: 'BSc Kineziterapija · NASM · 100+ klientų'
     },
     services: {
       sectionTitle: 'Kas tavęs laukia',
