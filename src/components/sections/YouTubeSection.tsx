@@ -5,9 +5,9 @@ const PLAYLIST_URL = 'https://youtube.com/playlist?list=PL9FEczFkBjTeQt3GXlvoKfN
 
 // Curated public videos from the playlist
 const VIDEOS = [
-  { id: 'tj0LOdHrQVw', title: 'Mobility flow' },
-  { id: 'UItWltVZZmE', title: 'Core strength' },
-  { id: 'kVwu4Ul3GcU', title: 'Lower body' },
+  { id: 'HLXoiRo6Gt8', title: 'Workout 1' },
+  { id: 'k7rjrqNNxuI', title: 'Workout 2' },
+  { id: '8uBRPxEpwy0', title: 'Workout 3' },
 ];
 
 const YouTubeSection = () => {
