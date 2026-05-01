@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -7,7 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
-import { Globe, CheckCircle, Languages, Loader2 } from 'lucide-react';
+import { Globe, Languages, Loader2 } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import AdminLanguageEditor from '@/components/AdminLanguageEditor';
@@ -15,101 +14,95 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { supabase } from '@/integrations/supabase/client';
 
 const Admin = () => {
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [isSigningIn, setIsSigningIn] = useState(false);
   const { toast } = useToast();
   const navigate = useNavigate();
   const { t } = useTranslation();
   const { language } = useLanguage();
 
-  // Simple authentication check - initially check localStorage for auth status
+  // Check admin role server-side via user_roles table
+  const checkAdminRole = async (userId: string): Promise<boolean> => {
+    const { data, error } = await supabase
+      .from('user_roles')
+      .select('role')
+      .eq('user_id', userId)
+      .eq('role', 'admin')
+      .maybeSingle();
+    if (error) {
+      console.error('Role check error:', error);
+      return false;
+    }
+    return !!data;
+  };
+
   useEffect(() => {
-    const checkAuthStatus = async () => {
-      setIsLoading(true);
-      
-      // First check if we have a Supabase session
-      const { data } = await supabase.auth.getSession();
-      
-      if (data.session) {
+    let mounted = true;
+
+    // Subscribe to auth changes first to avoid missed events
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      if (!mounted) return;
+      if (session?.user) {
         setIsAuthenticated(true);
+        // Defer DB call to avoid deadlocks inside the callback
+        setTimeout(async () => {
+          const admin = await checkAdminRole(session.user.id);
+          if (mounted) setIsAdmin(admin);
+        }, 0);
       } else {
-        // Fallback to localStorage for backward compatibility
-        const authStatus = localStorage.getItem('adminAuth');
-        if (authStatus === 'true') {
-          setIsAuthenticated(true);
-        }
+        setIsAuthenticated(false);
+        setIsAdmin(false);
       }
-      
-      setIsLoading(false);
+    });
+
+    // Then check existing session
+    supabase.auth.getSession().then(async ({ data }) => {
+      if (!mounted) return;
+      if (data.session?.user) {
+        setIsAuthenticated(true);
+        const admin = await checkAdminRole(data.session.user.id);
+        if (mounted) setIsAdmin(admin);
+      }
+      if (mounted) setIsLoading(false);
+    });
+
+    return () => {
+      mounted = false;
+      subscription.unsubscribe();
     };
-    
-    checkAuthStatus();
   }, []);
 
-  // Function to handle login
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Simple password check - in a real app, use proper auth
-    if (password === 'admin123') {
-      // For demo purposes, we'll use anonymous sign-in to Supabase
-      try {
-        const { error } = await supabase.auth.signInWithPassword({
-          email: 'admin@example.com',
-          password: password,
-        });
-        
-        if (error) {
-          // If Supabase auth fails, fallback to localStorage
-          localStorage.setItem('adminAuth', 'true');
-        }
-        
-        setIsAuthenticated(true);
-        
+    setIsSigningIn(true);
+    try {
+      const { error } = await supabase.auth.signInWithPassword({ email, password });
+      if (error) {
         toast({
-          title: t('admin.loginSuccess'),
-          description: t('admin.welcomeMessage'),
+          title: t('admin.loginFailed'),
+          description: error.message,
+          variant: 'destructive',
         });
-      } catch (error) {
-        console.error('Auth error:', error);
-        
-        // Fallback to localStorage
-        localStorage.setItem('adminAuth', 'true');
-        setIsAuthenticated(true);
-        
-        toast({
-          title: t('admin.loginSuccess'),
-          description: t('admin.welcomeMessage'),
-        });
+        return;
       }
-    } else {
       toast({
-        title: t('admin.loginFailed'),
-        description: t('admin.incorrectPassword'),
-        variant: "destructive",
+        title: t('admin.loginSuccess'),
+        description: t('admin.welcomeMessage'),
       });
+    } finally {
+      setIsSigningIn(false);
     }
   };
 
-  // Log out function
   const handleLogout = async () => {
-    try {
-      // Sign out from Supabase
-      await supabase.auth.signOut();
-    } catch (error) {
-      console.error('Error signing out:', error);
-    }
-    
-    // Clear localStorage fallback
-    localStorage.removeItem('adminAuth');
+    await supabase.auth.signOut();
     setIsAuthenticated(false);
-    
-    toast({
-      title: "Logged Out",
-      description: t('admin.logoutMessage'),
-    });
-    
+    setIsAdmin(false);
+    toast({ title: 'Logged Out', description: t('admin.logoutMessage') });
     navigate('/');
   };
 
@@ -143,22 +136,46 @@ const Admin = () => {
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleLogin} className="space-y-4">
-                  <div className="space-y-2">
-                    <Input
-                      type="password"
-                      placeholder={t('admin.password')}
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                      className="form-input"
-                    />
-                  </div>
-                  <Button 
-                    type="submit" 
+                  <Input
+                    type="email"
+                    placeholder="admin@example.com"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    autoComplete="email"
+                    required
+                    className="form-input"
+                  />
+                  <Input
+                    type="password"
+                    placeholder={t('admin.password')}
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    autoComplete="current-password"
+                    required
+                    className="form-input"
+                  />
+                  <Button
+                    type="submit"
+                    disabled={isSigningIn}
                     className="w-full bg-theme-navy dark:bg-theme-lightnavy hover:bg-theme-marine dark:hover:bg-theme-lightmarine"
                   >
-                    {t('admin.loginButton')}
+                    {isSigningIn ? <Loader2 className="h-4 w-4 animate-spin" /> : t('admin.loginButton')}
                   </Button>
                 </form>
+              </CardContent>
+            </Card>
+          ) : !isAdmin ? (
+            <Card className="max-w-md mx-auto mt-10">
+              <CardHeader>
+                <CardTitle>Access denied</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <p className="text-muted-foreground">
+                  Your account does not have admin privileges. Contact the site owner to be granted the admin role.
+                </p>
+                <Button onClick={handleLogout} variant="outline" className="w-full">
+                  Sign out
+                </Button>
               </CardContent>
             </Card>
           ) : (
@@ -168,15 +185,15 @@ const Admin = () => {
                   <Languages className="text-theme-tangerine dark:text-theme-lighttangerine" size={28} />
                   <span>{t('admin.title')}</span>
                 </h1>
-                <Button 
+                <Button
                   onClick={handleLogout}
-                  variant="outline" 
+                  variant="outline"
                   className="border-theme-navy dark:border-theme-lightnavy text-theme-navy dark:text-theme-lightnavy"
                 >
                   {t('admin.logout')}
                 </Button>
               </div>
-              
+
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
@@ -205,10 +222,10 @@ const Admin = () => {
                   </Tabs>
                 </CardContent>
               </Card>
-              
+
               <div className="text-center p-4 mt-8 rounded-lg bg-muted">
                 <p className="text-muted-foreground text-sm">
-                  {t('admin.currentLanguage')}: {language === 'en' ? t('admin.english') : t('admin.lithuanian')} | 
+                  {t('admin.currentLanguage')}: {language === 'en' ? t('admin.english') : t('admin.lithuanian')} |
                   {t('admin.storageNotice')}
                 </p>
               </div>
