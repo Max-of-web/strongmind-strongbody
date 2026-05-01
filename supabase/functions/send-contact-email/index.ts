@@ -283,17 +283,9 @@ const handler = async (req: Request): Promise<Response> => {
   // === SUCCESS RESPONSE ===
   console.log("🎉 === ALL PHASES COMPLETED SUCCESSFULLY ===");
   
-  const successResponse = { 
-    success: true, 
-    message: "Contact form submitted and email sent successfully",
-    emailId: emailResponse.data?.id,
-    phase: "completed",
-    timestamp: new Date().toISOString(),
-    details: {
-      contactName: contactData.name,
-      contactEmail: contactData.email,
-      emailSentTo: emailContent.to
-    }
+  const successResponse = {
+    success: true,
+    message: "Message received.",
   };
   
   console.log("📤 Returning success response:", JSON.stringify(successResponse, null, 2));
