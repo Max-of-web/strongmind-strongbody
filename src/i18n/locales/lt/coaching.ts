@@ -28,8 +28,8 @@ const coaching = {
     },
     target: {
       sectionTitle: 'Kam tai skirta',
-      intro: 'Kam tinka:',
-      description: 'Mano metodas sukurtas žmonėms, kurie nori aiškumo, struktūros ir ilgalaikės sėkmės savo sveikatingumo kelyje:',
+      intro: '',
+      description: 'Žmonėms, kurie nori aiškumo, struktūros ir ilgalaikių rezultatų:',
       audiences: [
         'Užimtiems, bet siekiantiems aiškaus plano ir krypties',
         'Tiems, kurie ne kartą pradėjo ir metė – ne dėl motyvacijos stokos, o dėl netinkamos sistemos',
