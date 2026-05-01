@@ -157,6 +157,11 @@ const coaching = {
           'Vilnius, Re.formatas, Ąžuolyno g. 7'
         ]
       }
+    },
+    youtube: {
+      sectionTitle: 'Free workouts on YouTube',
+      subtitle: 'Try a session before booking. New videos every week.',
+      buttonText: 'Open YouTube playlist'
     }
   },
   buttons: {
