@@ -22,16 +22,16 @@ const homepage = {
       sectionTitle: 'Why most training plans often fail you',
       items: [
         {
-          problem: 'The program isn\'t tailored to your body',
-          solution: 'Most plans ignore pain, injuries, fitness level, or life rhythm. That\'s why progress quickly stops.'
+          headline: 'You\'re not the problem. The problem is a plan that wasn\'t built for you.',
+          body: 'If your training doesn\'t account for your body, pain, and life rhythm, it will stop working sooner or later.'
         },
         {
-          problem: 'Too much intensity, too little structure',
-          solution: 'Motivation matters at the start, but progress comes from a system you can sustain long-term.'
+          headline: 'Motivation isn\'t what delivers results.',
+          body: 'It helps you start. But long-term progress comes from a clear system that works even when motivation is gone.'
         },
         {
-          problem: 'Pain isn\'t just about the body',
-          solution: 'Pain doesn\'t mean your body is "broken" and needs more biomechanics. Often the issue lies in load management, movement habits, and the ability to recover.'
+          headline: 'Pain doesn\'t mean you have to stop moving.',
+          body: 'Usually you don\'t need to move less, but to move smarter — with the right load, technique, and a clear plan.'
         }
       ]
     },
