@@ -6,7 +6,7 @@ const homepage = {
       subtitle: 'Physio-led 1:1 coaching for adults — online or in Vilnius.',
       ctaButton: 'Book a Discovery Call',
       secondaryCta: 'See packages',
-      trustLine: 'BSc Physiotherapy · NASM · 100+ clients',
+      trustLine: '10+ years helping people move pain-free',
       getFreeGuideButton: 'Get Free Guide',
       youtubeButton: 'YouTube Workouts'
     },

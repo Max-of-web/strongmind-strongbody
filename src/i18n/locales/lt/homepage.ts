@@ -6,7 +6,7 @@ const homepage = {
       subtitle: 'Kineziterapeuto vedamos asmeninės treniruotės suaugusiems – online arba Vilniuje.',
       ctaButton: 'Užsisakyk pokalbį',
       secondaryCta: 'Žiūrėti paketus',
-      trustLine: 'BSc Kineziterapija · NASM · 100+ klientų',
+      trustLine: '10+ metų padedu žmonėms judėti be skausmo',
       // legacy keys (kept to avoid runtime errors elsewhere)
       getFreeGuideButton: 'Atsisiųsti nemokamą gidą',
       youtubeButton: 'YouTube treniruotės'
