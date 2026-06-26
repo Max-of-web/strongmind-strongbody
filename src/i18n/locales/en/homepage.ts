@@ -38,10 +38,10 @@ const homepage = {
     outcomes: {
       sectionTitle: 'What to expect working together:',
       items: [
-        'Move with confidence',
-        'Better understand your body and its limits',
-        'Get stronger while learning what works and what doesn\'t',
-        'Have a clear system instead of chaos'
+        'Move without unnecessary fear of pain',
+        'Know exactly what to do every week',
+        'See clear progress instead of guessing',
+        'Have a coach who adjusts the plan based on your results — not a template'
       ]
     },
     packagesTeaser: {
