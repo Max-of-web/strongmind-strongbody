@@ -68,12 +68,6 @@ const homepage = {
     },
     about: {
       sectionTitle: 'About me',
-      qualifications: {
-        physiotherapy: 'BSc Physiotherapy',
-        nasm: 'NASM Certificate',
-        nutrition: 'MSc Precision Nutrition',
-        personalTrainer: 'Personal Trainer (OTA Academy)'
-      },
       bio: [
         "I believe everyone can learn to love movement — at their own pace. I found training through personal experience, when I first felt what it means to feel strong in my own body.",
         "I combine physiotherapy with change psychology. The point isn't pressure — it's a clear plan, patience, and someone who sees all of you, not just your body."
