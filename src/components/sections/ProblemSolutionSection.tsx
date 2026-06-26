@@ -1,6 +1,5 @@
 
 import { useTranslation } from 'react-i18next';
-import { ArrowRight } from 'lucide-react';
 
 type Item = { problem: string; solution: string };
 
@@ -26,13 +25,12 @@ const ProblemSolutionSection = () => {
               <p className="text-sm uppercase tracking-wider text-white/50 mb-2">
                 {String(i + 1).padStart(2, '0')}
               </p>
-              <p className="text-lg font-semibold text-white mb-3 line-through decoration-white/30">
+              <p className="text-lg font-semibold text-white mb-3">
                 {item.problem}
               </p>
-              <div className="flex items-start gap-2 text-white/90">
-                <ArrowRight size={18} className="text-theme-tangerine shrink-0 mt-1" />
-                <p>{item.solution}</p>
-              </div>
+              <p className="text-white/80 leading-relaxed">
+                {item.solution}
+              </p>
             </div>
           ))}
         </div>
