@@ -5,8 +5,6 @@ const AboutSection = () => {
   const { t } = useTranslation();
   const bio = t('homepage.about.bio', { returnObjects: true });
   const bioArray = Array.isArray(bio) ? (bio as string[]) : [];
-  const quals = t('homepage.about.qualifications', { returnObjects: true }) as Record<string, string>;
-  const qualList = quals && typeof quals === 'object' ? Object.values(quals) : [];
 
   return (
     <section id="about" className="section-padding bg-elegant-charcoal">
@@ -26,16 +24,6 @@ const AboutSection = () => {
             {bioArray.map((p, i) => (
               <p key={i} className="mb-4 text-white/90">{p}</p>
             ))}
-            <div className="flex flex-wrap gap-2 mt-6">
-              {qualList.map((q, i) => (
-                <span
-                  key={i}
-                  className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-white/[0.06] border border-white/10 text-white/85"
-                >
-                  {q}
-                </span>
-              ))}
-            </div>
           </div>
         </div>
       </div>
