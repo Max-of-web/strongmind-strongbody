@@ -69,12 +69,6 @@ const homepage = {
     },
     about: {
       sectionTitle: 'Apie mane',
-      qualifications: {
-        physiotherapy: 'BSc Fizioterapija',
-        nasm: 'NASM Sertifikatas',
-        nutrition: 'MSc Tikslusis Maitinimasis',
-        personalTrainer: 'Asmeninis Treneris (OTA Akademija)'
-      },
       bio: [
         "Tikiu, kad kiekvienas gali pamilti judėjimą – jei tik paiso savo tempo. Pats atradau treniruotes per asmeninę patirtį, kai pirmą kartą pajutau, ką reiškia jaustis tvirtu savo kūne.",
         "Dirbu derindamas kineziterapiją su pokyčių psichologija. Čia svarbiausia ne spaudimas, o aiškus planas, kantrybė ir žmogus šalia, kuris mato visą tave."
