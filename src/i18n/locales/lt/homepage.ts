@@ -23,29 +23,29 @@ const homepage = {
       ]
     },
     problemSolution: {
-      sectionTitle: 'Kodėl įprastos treniruotės tau neveikia',
+      sectionTitle: 'Kodėl įprastos treniruotės dažnai neveikia',
       items: [
         {
-          problem: 'Skausmas ir traumos ignoruojamos',
-          solution: 'Kineziterapeuto sukurtos programos – saugu net su senomis traumomis.'
+          problem: 'Programa nepritaikyta tavo kūnui',
+          solution: 'Dauguma planų neatsižvelgia į skausmą, traumas, fizinį pasirengimą ar gyvenimo ritmą. Todėl progresas greitai sustoja.'
         },
         {
-          problem: 'Šabloniniai planai, kurie netinka tau',
-          solution: 'Programa keičiasi pagal tavo savaitę, energiją ir progresą.'
+          problem: 'Per daug intensyvumo, per mažai struktūros',
+          solution: 'Motyvacija svarbu pradžioje, bet progresą sukuria sistema, kurią gali išlaikyti ilgai.'
         },
         {
-          problem: 'Motyvacija dingsta po kelių savaičių',
-          solution: 'Mąstysenos koučingas padeda išlikti nuosekliam, kai sunku.'
+          problem: 'Skausmas nėra tik apie kūną',
+          solution: 'Skausmas nereiškia, kad kūnas „sugedęs“ ir reikia daugiau biomechanikos. Dažnai problema slypi krūvio valdyme, judėjimo įpročiuose ir mokėjime atsistatyti.'
         }
       ]
     },
     outcomes: {
-      sectionTitle: 'Ką pakeisi per 90 dienų',
+      sectionTitle: 'Ko gali tikėtis dirbant kartu:',
       items: [
-        'Judėsi be nugaros ar kelių skausmo',
-        'Tapsi stipresnis be perdegimo',
-        'Susikursi rutiną, kuri išgyvena užimtas savaites',
-        'Treniruosies užtikrintai – be spėliojimų'
+        'Judėsi užtikrintai',
+        'Geriau suprasi savo kūną ir jo ribas',
+        'Sustiprėsi jausdamas, kas veikia, kas ne',
+        'Turėsi aiškią sistemą vietoj chaoso'
       ]
     },
     packagesTeaser: {
