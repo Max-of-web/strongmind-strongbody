@@ -1,5 +1,6 @@
 
 import { useTranslation } from 'react-i18next';
+import { Check } from 'lucide-react';
 
 const OutcomesSection = () => {
   const { t } = useTranslation();
@@ -17,7 +18,7 @@ const OutcomesSection = () => {
         <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
           {items.map((item, i) => (
             <li key={i} className="scroll-fade-in flex items-start gap-3 rounded-lg bg-white/[0.04] p-4">
-              <span className="text-theme-tangerine shrink-0 mt-1 text-lg leading-none">•</span>
+              <Check size={22} className="text-theme-tangerine shrink-0 mt-0.5" />
               <span className="text-white/90">{item}</span>
             </li>
           ))}

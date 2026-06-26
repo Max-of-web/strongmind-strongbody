@@ -1,16 +1,25 @@
-## Plan: Homepage Content Refresh
+## Update CTA + add YouTube block to homepage
 
-### 1. YouTube section heading
-Update the Lithuanian YouTube section title in `src/i18n/locales/lt/coaching.ts`:
-- From: `Nemokamos treniruotės YouTube`
-- To: `Pradėk judėti jau šiandien.`
+### 1. Change LT primary CTA
+In `src/i18n/locales/lt/coaching.ts` line 6, change:
+- From: `primaryCta: 'Užsisakyk pažintinį pokalbį'`
+- To: `primaryCta: 'Pradėk dabar'`
 
-Keep the subtitle and button text unchanged.
+This key drives the hero CTA on the coaching page and the post-pricing CTA. EN copy stays as "Book a Discovery Call".
 
-### 2. Trust strip under hero
-Update `src/i18n/locales/lt/homepage.ts` `trustStrip.items` to the new credentials line provided by the user. The TrustStripSection renders items with `ShieldCheck` icons; since the new text already contains ✓ symbols and is a single long credentials string, we will consolidate it into a shorter set of items that fit the existing flex-wrap layout, or adjust the layout if wrapping is excessive.
+### 2. Add YouTube section to homepage under the hero
+In `src/pages/Index.tsx`:
+- Import `YouTubeSection`.
+- Insert `<YouTubeSection />` between `<HeroSection />` and `<TrustStripSection />`.
 
-### 3. Problem / Solution section
-Update `src/i18n/locales/lt/homepage.ts` `truncate
+### 3. Make YouTube block horizontal on mobile
+Refactor `src/components/sections/YouTubeSection.tsx` to render two layouts:
+- **Mobile (`md:hidden`)**: a horizontally scrollable, snap-aligned strip — each card ~78% viewport width, hidden scrollbar, edge-to-edge with `-mx-4 px-4` so users can swipe naturally.
+- **Desktop (`hidden md:grid`)**: existing 3-column grid, unchanged.
 
-Stop — I need to read the EN coaching file first so I can plan the bilingual sync properly. I should not finalize this plan until I have complete information about both language files.
+The section heading, subtitle, and "Open YouTube playlist" CTA below remain shared.
+
+### Files to edit
+- `src/i18n/locales/lt/coaching.ts` — CTA copy.
+- `src/components/sections/YouTubeSection.tsx` — split into mobile horizontal scroll + desktop grid.
+- `src/pages/Index.tsx` — import and render `YouTubeSection` after the hero.

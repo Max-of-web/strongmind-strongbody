@@ -159,7 +159,7 @@ const coaching = {
       }
     },
     youtube: {
-      sectionTitle: 'Start moving today.',
+      sectionTitle: 'Free workouts on YouTube',
       subtitle: 'Try a session before booking. New videos every week.',
       buttonText: 'Open YouTube playlist'
     }

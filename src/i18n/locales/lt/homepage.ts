@@ -13,39 +13,36 @@ const homepage = {
     },
     trustStrip: {
       items: [
-        'Kineziterapijos bakalauras',
-        'Precision Nutrition magistras',
-        'Clinical Athlete atletų reabilitacija',
-        '10+ metų patirties, milijonas patenkintų pupyčių',
-        'my mom very proud',
-        'NASM certified',
-        'Online Trainer'
+        'BSc Kineziterapija',
+        'NASM sertifikatas',
+        'MSc Tikslusis Maitinimasis',
+        'Asmeninis Treneris (OTA)'
       ]
     },
     problemSolution: {
-      sectionTitle: 'Kodėl įprastos treniruotės dažnai neveikia',
+      sectionTitle: 'Kodėl įprastos treniruotės tau neveikia',
       items: [
         {
-          problem: 'Programa nepritaikyta tavo kūnui',
-          solution: 'Dauguma planų neatsižvelgia į skausmą, traumas, fizinį pasirengimą ar gyvenimo ritmą. Todėl progresas greitai sustoja.'
+          problem: 'Skausmas ir traumos ignoruojamos',
+          solution: 'Kineziterapeuto sukurtos programos – saugu net su senomis traumomis.'
         },
         {
-          problem: 'Per daug intensyvumo, per mažai struktūros',
-          solution: 'Motyvacija svarbu pradžioje, bet progresą sukuria sistema, kurią gali išlaikyti ilgai.'
+          problem: 'Šabloniniai planai, kurie netinka tau',
+          solution: 'Programa keičiasi pagal tavo savaitę, energiją ir progresą.'
         },
         {
-          problem: 'Skausmas nėra tik apie kūną',
-          solution: 'Skausmas nereiškia, kad kūnas „sugedęs“ ir reikia daugiau biomechanikos. Dažnai problema slypi krūvio valdyme, judėjimo įpročiuose ir mokėjime atsistatyti.'
+          problem: 'Motyvacija dingsta po kelių savaičių',
+          solution: 'Mąstysenos koučingas padeda išlikti nuosekliam, kai sunku.'
         }
       ]
     },
     outcomes: {
-      sectionTitle: 'Ko gali tikėtis dirbant kartu:',
+      sectionTitle: 'Ką pakeisi per 90 dienų',
       items: [
-        'Judėsi užtikrintai',
-        'Geriau suprasi savo kūną ir jo ribas',
-        'Sustiprėsi jausdamas, kas veikia, kas ne',
-        'Turėsi aiškią sistemą vietoj chaoso'
+        'Judėsi be nugaros ar kelių skausmo',
+        'Tapsi stipresnis be perdegimo',
+        'Susikursi rutiną, kuri išgyvena užimtas savaites',
+        'Treniruosies užtikrintai – be spėliojimų'
       ]
     },
     packagesTeaser: {

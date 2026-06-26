@@ -13,38 +13,35 @@ const homepage = {
     trustStrip: {
       items: [
         'BSc Physiotherapy',
+        'NASM Certificate',
         'MSc Precision Nutrition',
-        'Clinical Athlete rehabilitation',
-        '10+ years, millions of satisfied butts',
-        'my mom very proud',
-        'NASM certified',
-        'Online Trainer'
+        'Personal Trainer (OTA)'
       ]
     },
     problemSolution: {
-      sectionTitle: 'Why typical training plans fail',
+      sectionTitle: 'Why most training plans fail you',
       items: [
         {
-          problem: 'Programs aren\'t tailored to your body',
-          solution: 'Most plans ignore pain, injuries, fitness level, and lifestyle. So progress stops quickly.'
+          problem: 'Pain and injuries get ignored',
+          solution: 'Physio-led programming keeps you safe — even with old injuries.'
         },
         {
-          problem: 'Too much intensity, too little structure',
-          solution: 'Motivation matters at first, but progress comes from a system you can sustain long-term.'
+          problem: 'Generic plans that don\'t fit your life',
+          solution: 'Your program adapts to your week, energy, and progress.'
         },
         {
-          problem: 'Pain isn\'t just about the body',
-          solution: 'Pain doesn\'t mean your body is "broken" and needs more biomechanics. Often the issue is load management, movement habits, and recovery.'
+          problem: 'Motivation drops after a few weeks',
+          solution: 'Mindset coaching helps you stay consistent when it gets hard.'
         }
       ]
     },
     outcomes: {
-      sectionTitle: 'What to expect when working together:',
+      sectionTitle: 'What changes in 90 days',
       items: [
-        'Move with confidence',
-        'Better understand your body and its limits',
-        'Get stronger by learning what works and what doesn\'t',
-        'Have a clear system instead of chaos'
+        'Move without back or knee pain',
+        'Get stronger without burning out',
+        'Build a routine that survives busy weeks',
+        'Train with confidence — not guesswork'
       ]
     },
     packagesTeaser: {

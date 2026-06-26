@@ -159,7 +159,7 @@ const coaching = {
       }
     },
     youtube: {
-      sectionTitle: 'Pradėk judėti jau šiandien.',
+      sectionTitle: 'Nemokamos treniruotės YouTube',
       subtitle: 'Išbandyk treniruotę prieš registruodamasis. Naujos kas savaitę.',
       buttonText: 'Atidaryti YouTube grojaraštį'
     }
