@@ -47,13 +47,35 @@ const homepage = {
     },
     packagesTeaser: {
       sectionTitle: 'Paketai pagal tavo poreikį',
-      ctaText: 'Žiūrėti visus paketus',
-      packages: [
-        { titleKey: 'coaching.pricing.rehabTraining.title', priceKey: 'coaching.pricing.rehabTraining.price', periodKey: 'coaching.pricing.rehabTraining.period' },
-        { titleKey: 'coaching.pricing.onlineTraining.title', priceKey: 'coaching.pricing.onlineTraining.price', periodKey: 'coaching.pricing.onlineTraining.period' },
-        { titleKey: 'coaching.pricing.oneOnOneCoaching.title', priceKey: 'coaching.pricing.oneOnOneCoaching.price', periodKey: 'coaching.pricing.oneOnOneCoaching.period' },
-        { titleKey: 'coaching.pricing.smallGroupTraining.title', priceKey: 'coaching.pricing.smallGroupTraining.price', periodKey: 'coaching.pricing.smallGroupTraining.period' }
-      ]
+      intro: 'Reabilitacijoje dažnai trūksta ne pratimų — trūksta aiškumo, palaikymo ir supratimo, kaip judėti tarp sesijų. „The Rebuild Method" sukūriau tam, kad žmogus neliktų vienas procese.',
+      primaryCard: {
+        badge: 'Skirta traumų ir skausmo reabilitacijai',
+        title: 'The Rebuild Method',
+        subtitle: 'Jei atsigauni po traumos ar gyveni su pasikartojančiu skausmu ir nori judėti be baimės.',
+        featuresLabel: 'Ką gauni:',
+        features: [
+          'Individualus reabilitacijos planas pagal tavo kūną ir istoriją',
+          'Artima priežiūra ir korekcijos kas savaitę',
+          'Palaikymas tarp sesijų — nelieki vienas',
+          'Mokaisi suprasti skausmą, ne tik jį slopinti'
+        ],
+        closing: 'Tikslas — ne trumpalaikis palengvėjimas, o ilgalaikis pasitikėjimas savo kūnu.',
+        buttonText: 'Pradėkime'
+      },
+      secondaryCard: {
+        title: 'Online treniruotės',
+        subtitle: 'Jei nori aiškios, individualios programos ir struktūros, kad ir kur būtum.',
+        featuresLabel: 'Ką gauni:',
+        features: [
+          'Individuali programa pagal tavo tikslus ir galimybes',
+          'Aiškus savaitės planas — žinai, ką daryti',
+          'Reguliarios korekcijos pagal tavo progresą',
+          'Atsiskaitomybė ir grįžtamasis ryšys'
+        ],
+        closing: 'Rezultatas — nuoseklus progresas be spėliojimų.',
+        buttonText: 'Pradėkime'
+      },
+      viewAllLink: 'Žiūrėti visus paketus'
     },
     testimonials: {
       sectionTitle: 'Ką sako klientai',
