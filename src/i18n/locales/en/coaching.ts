@@ -160,7 +160,7 @@ const coaching = {
     },
     youtube: {
       sectionTitle: 'Let\'s move together',
-      subtitle: 'Try a session before booking. New videos every week.',
+      subtitle: 'Start moving today. Join my workouts.',
       buttonText: 'Open YouTube playlist'
     }
   },
