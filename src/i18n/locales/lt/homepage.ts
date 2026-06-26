@@ -13,10 +13,13 @@ const homepage = {
     },
     trustStrip: {
       items: [
-        'BSc Kineziterapija',
-        'NASM sertifikatas',
-        'MSc Tikslusis Maitinimasis',
-        'Asmeninis Treneris (OTA)'
+        'Kineziterapijos bakalauras',
+        'Precision Nutrition magistras',
+        'Clinical Athlete atletų reabilitacija',
+        '10+ metų patirties, milijonas patenkintų pupyčių',
+        'my mom very proud',
+        'NASM certified',
+        'Online Trainer'
       ]
     },
     problemSolution: {
