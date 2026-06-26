@@ -20,7 +20,7 @@ const homepage = {
       ]
     },
     problemSolution: {
-      sectionTitle: 'Kodėl įprastos treniruotės dažnai neveikia',
+      sectionTitle: 'Kodėl pasiekti ilgalaikių rezultatų taip sunku?',
       items: [
         {
           headline: 'Ne tu esi problema. Problema – planas, kuris nebuvo sukurtas tau.',
