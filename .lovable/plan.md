@@ -1,25 +1,33 @@
-## Update CTA + add YouTube block to homepage
+## Content Updates — Homepage Copy & Trust Points
 
-### 1. Change LT primary CTA
-In `src/i18n/locales/lt/coaching.ts` line 6, change:
-- From: `primaryCta: 'Užsisakyk pažintinį pokalbį'`
-- To: `primaryCta: 'Pradėk dabar'`
+### Scope
+Update Lithuanian homepage copy for the YouTube heading, trust strip, problem/solution block, and outcomes block. Keep English equivalents in sync. Remove the `Check` lucide icon from the outcomes list since the new copy includes `✓` characters.
 
-This key drives the hero CTA on the coaching page and the post-pricing CTA. EN copy stays as "Book a Discovery Call".
+### Files to Change
 
-### 2. Add YouTube section to homepage under the hero
-In `src/pages/Index.tsx`:
-- Import `YouTubeSection`.
-- Insert `<YouTubeSection />` between `<HeroSection />` and `<TrustStripSection />`.
+1. **`src/i18n/locales/lt/coaching.ts`**
+   - `coaching.youtube.sectionTitle`: `Judėkime drauge`
 
-### 3. Make YouTube block horizontal on mobile
-Refactor `src/components/sections/YouTubeSection.tsx` to render two layouts:
-- **Mobile (`md:hidden`)**: a horizontally scrollable, snap-aligned strip — each card ~78% viewport width, hidden scrollbar, edge-to-edge with `-mx-4 px-4` so users can swipe naturally.
-- **Desktop (`hidden md:grid`)**: existing 3-column grid, unchanged.
+2. **`src/i18n/locales/en/coaching.ts`**
+   - `coaching.youtube.sectionTitle`: `Let's move together`
 
-The section heading, subtitle, and "Open YouTube playlist" CTA below remain shared.
+3. **`src/i18n/locales/lt/homepage.ts`**
+   - `homepage.trustStrip.items`: Replace with the 4 new trust points
+   - `homepage.problemSolution.sectionTitle`: `Kodėl įprastos treniruotės dažnai neveikia`
+   - `homepage.problemSolution.items`: Replace all 3 problem/solution pairs
+   - `homepage.outcomes.sectionTitle`: `Ko gali tikėtis dirbant kartu:`
+   - `homepage.outcomes.items`: Replace all 4 outcome bullets (text includes `✓`)
 
-### Files to edit
-- `src/i18n/locales/lt/coaching.ts` — CTA copy.
-- `src/components/sections/YouTubeSection.tsx` — split into mobile horizontal scroll + desktop grid.
-- `src/pages/Index.tsx` — import and render `YouTubeSection` after the hero.
+4. **`src/i18n/locales/en/homepage.ts`**
+   - `homepage.trustStrip.items`: English equivalents of the new trust points
+   - `homepage.problemSolution.sectionTitle`: `Why most training plans often fail`
+   - `homepage.problemSolution.items`: English equivalents of the 3 new pairs
+   - `homepage.outcomes.sectionTitle`: `What to expect working together:`
+   - `homepage.outcomes.items`: English equivalents of the 4 new bullets
+
+5. **`src/components/sections/OutcomesSection.tsx`**
+   - Remove the `<Check>` icon from each list item (the text itself now contains `✓`)
+   - Keep the flex layout and styling intact
+
+### No structural or database changes.
+All changes are locale string swaps and one minor icon removal.
