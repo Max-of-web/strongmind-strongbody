@@ -39,10 +39,10 @@ const homepage = {
     outcomes: {
       sectionTitle: 'Ko gali tikėtis dirbant kartu:',
       items: [
-        'Judėsi užtikrintai',
-        'Geriau suprasi savo kūną ir jo ribas',
-        'Sustiprėsi jausdamas, kas veikia, o kas ne',
-        'Turėsi aiškią sistemą vietoj chaoso'
+        'Judėtum be nereikalingos baimės dėl skausmo',
+        'Tiksliai žinotum, ką daryti kiekvieną savaitę',
+        'Matytum aiškų progresą, o ne spėliotum',
+        'Turėtum trenerį, kuris koreguoja planą pagal tavo rezultatus — ne pagal šabloną'
       ]
     },
     packagesTeaser: {
