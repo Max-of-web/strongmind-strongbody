@@ -159,7 +159,7 @@ const coaching = {
       }
     },
     youtube: {
-      sectionTitle: 'Judėkime drauge',
+      sectionTitle: 'Judėkime kartu',
       subtitle: 'Išbandyk treniruotę prieš registruodamasis. Naujos kas savaitę.',
       buttonText: 'Atidaryti YouTube grojaraštį'
     }
