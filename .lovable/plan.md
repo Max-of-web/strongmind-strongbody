@@ -1,33 +1,29 @@
-## Content Updates — Homepage Copy & Trust Points
+## Scope
+Small follow-up cleanup to last turn's content updates. Homepage only (coaching page untouched per your choice).
 
-### Scope
-Update Lithuanian homepage copy for the YouTube heading, trust strip, problem/solution block, and outcomes block. Keep English equivalents in sync. Remove the `Check` lucide icon from the outcomes list since the new copy includes `✓` characters.
+## Changes
 
-### Files to Change
+### 1. Remove `✓` characters from copy
+- `src/i18n/locales/lt/homepage.ts` and `src/i18n/locales/en/homepage.ts`
+  - `outcomes.items[]`: strip leading `✓ ` from each bullet.
+  - `trustStrip.items[]`: strip any `✓` if present.
+- `src/i18n/locales/lt/coaching.ts` / `en/coaching.ts`: scan and remove `✓` from any user-visible string (only character cleanup, no copy rewrite).
 
-1. **`src/i18n/locales/lt/coaching.ts`**
-   - `coaching.youtube.sectionTitle`: `Judėkime drauge`
+### 2. LT YouTube title
+- `src/i18n/locales/lt/coaching.ts` → `coaching.youtube.sectionTitle`: `'Judėkime drauge'` → `'Judėkime kartu'`.
 
-2. **`src/i18n/locales/en/coaching.ts`**
-   - `coaching.youtube.sectionTitle`: `Let's move together`
+### 3. Trust strip mobile readability
+- `src/components/sections/TrustStripSection.tsx`:
+  - Mobile (default): switch from wrapping pill row to a 2-column grid with the icon + text left-aligned, so long lines like "Precision Nutrition mitybos ir elgesio keitimo terapijos magistras" don't dangle awkwardly. Single column under ~360px.
+  - `md+`: keep current horizontal wrap layout.
+  - Slightly tighter vertical padding on mobile (`py-4 md:py-6`), `text-[11px] md:text-sm` to fit two columns cleanly.
+  - Keep `ShieldCheck` icon as the bullet marker (it's an icon, not the `✓` character you asked to remove).
 
-3. **`src/i18n/locales/lt/homepage.ts`**
-   - `homepage.trustStrip.items`: Replace with the 4 new trust points
-   - `homepage.problemSolution.sectionTitle`: `Kodėl įprastos treniruotės dažnai neveikia`
-   - `homepage.problemSolution.items`: Replace all 3 problem/solution pairs
-   - `homepage.outcomes.sectionTitle`: `Ko gali tikėtis dirbant kartu:`
-   - `homepage.outcomes.items`: Replace all 4 outcome bullets (text includes `✓`)
+## Out of scope
+- No copy rewriting on the Coaching page.
+- No layout changes outside the trust strip.
+- No new sections or removals.
 
-4. **`src/i18n/locales/en/homepage.ts`**
-   - `homepage.trustStrip.items`: English equivalents of the new trust points
-   - `homepage.problemSolution.sectionTitle`: `Why most training plans often fail`
-   - `homepage.problemSolution.items`: English equivalents of the 3 new pairs
-   - `homepage.outcomes.sectionTitle`: `What to expect working together:`
-   - `homepage.outcomes.items`: English equivalents of the 4 new bullets
-
-5. **`src/components/sections/OutcomesSection.tsx`**
-   - Remove the `<Check>` icon from each list item (the text itself now contains `✓`)
-   - Keep the flex layout and styling intact
-
-### No structural or database changes.
-All changes are locale string swaps and one minor icon removal.
+## Verification
+- Take a 411px-wide screenshot of `/` to confirm trust strip reads cleanly on mobile and no stray `✓` remain in Outcomes.
+- Confirm LT/EN both render the YouTube heading correctly.
