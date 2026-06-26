@@ -46,13 +46,35 @@ const homepage = {
     },
     packagesTeaser: {
       sectionTitle: 'Packages built around your need',
-      ctaText: 'See all packages',
-      packages: [
-        { titleKey: 'coaching.pricing.rehabTraining.title', priceKey: 'coaching.pricing.rehabTraining.price', periodKey: 'coaching.pricing.rehabTraining.period' },
-        { titleKey: 'coaching.pricing.onlineTraining.title', priceKey: 'coaching.pricing.onlineTraining.price', periodKey: 'coaching.pricing.onlineTraining.period' },
-        { titleKey: 'coaching.pricing.oneOnOneCoaching.title', priceKey: 'coaching.pricing.oneOnOneCoaching.price', periodKey: 'coaching.pricing.oneOnOneCoaching.period' },
-        { titleKey: 'coaching.pricing.smallGroupTraining.title', priceKey: 'coaching.pricing.smallGroupTraining.price', periodKey: 'coaching.pricing.smallGroupTraining.period' }
-      ]
+      intro: 'Rehabilitation often lacks not exercises — it lacks clarity, support, and understanding of how to move between sessions. I created "The Rebuild Method" so no one is left alone in the process.',
+      primaryCard: {
+        badge: 'Designed for injury and pain rehabilitation',
+        title: 'The Rebuild Method',
+        subtitle: "If you're recovering from an injury or living with recurring pain and want to move without fear.",
+        featuresLabel: 'What you get:',
+        features: [
+          'Individual rehab plan based on your body and history',
+          'Close supervision and weekly adjustments',
+          'Support between sessions — you\'re not left alone',
+          'Learn to understand pain, not just suppress it'
+        ],
+        closing: "The goal isn't short-term relief — it's long-term trust in your body.",
+        buttonText: "Let's start"
+      },
+      secondaryCard: {
+        title: 'Online Training',
+        subtitle: 'If you want a clear, individual program and structure, wherever you are.',
+        featuresLabel: 'What you get:',
+        features: [
+          'Individual program based on your goals and abilities',
+          'Clear weekly plan — you know what to do',
+          'Regular adjustments based on your progress',
+          'Accountability and feedback'
+        ],
+        closing: 'Result — consistent progress without guessing.',
+        buttonText: "Let's start"
+      },
+      viewAllLink: 'See all packages'
     },
     testimonials: {
       sectionTitle: 'What clients say',
