@@ -23,16 +23,16 @@ const homepage = {
       sectionTitle: 'Kodėl įprastos treniruotės dažnai neveikia',
       items: [
         {
-          problem: 'Programa nepritaikyta tavo kūnui',
-          solution: 'Dauguma planų neatsižvelgia į skausmą, traumas, fizinį pasirengimą ar gyvenimo ritmą. Todėl progresas greitai sustoja.'
+          headline: 'Ne tu esi problema. Problema – planas, kuris nebuvo sukurtas tau.',
+          body: 'Jei treniruotės neatsižvelgia į tavo kūną, skausmus ir gyvenimo ritmą, jos anksčiau ar vėliau nustos veikti.'
         },
         {
-          problem: 'Per daug intensyvumo, per mažai struktūros',
-          solution: 'Motyvacija svarbu pradžioje, bet progresą sukuria sistema, kurią gali išlaikyti ilgai.'
+          headline: 'Motyvacija nėra tai, kas atneša rezultatą.',
+          body: 'Ji padeda pradėti. Bet ilgalaikį progresą sukuria aiški sistema, kuri veikia net tada, kai motyvacijos nėra.'
         },
         {
-          problem: 'Skausmas nėra tik apie kūną',
-          solution: 'Skausmas nereiškia, kad kūnas „sugedęs“ ir reikia daugiau biomechanikos. Dažnai problema slypi krūvio valdyme, judėjimo įpročiuose ir mokėjime atsistatyti.'
+          headline: 'Skausmas nereiškia, kad turi nustoti judėti.',
+          body: 'Dažniausiai reikia ne mažiau judėti, o judėti protingiau – su tinkamu krūviu, technika ir aiškiu planu.'
         }
       ]
     },
