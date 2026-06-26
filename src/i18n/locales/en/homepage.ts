@@ -19,7 +19,7 @@ const homepage = {
       ]
     },
     problemSolution: {
-      sectionTitle: 'Why most training plans often fail you',
+      sectionTitle: 'Why is it so hard to achieve lasting results?',
       items: [
         {
           headline: 'You\'re not the problem. The problem is a plan that wasn\'t built for you.',
