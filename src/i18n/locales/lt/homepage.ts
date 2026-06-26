@@ -15,7 +15,7 @@ const homepage = {
       items: [
         'Kineziterapijos bakalauras',
         'Precision Nutrition mitybos ir elgesio keitimo terapijos magistras',
-        'Clinical Athlete atletų reabilitacija | 10+ metų patirties',
+        'Clinical Athlete atletų reabilitacija',
         'NASM certified, Online Trainer'
       ]
     },

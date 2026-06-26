@@ -14,7 +14,7 @@ const homepage = {
       items: [
         'Bachelor of Physiotherapy',
         'MSc Precision Nutrition & Behaviour Change Therapy',
-        'Clinical Athlete rehabilitation | 10+ years experience',
+        'Clinical Athlete rehabilitation',
         'NASM certified, Online Trainer'
       ]
     },
