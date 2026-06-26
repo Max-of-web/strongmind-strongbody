@@ -12,36 +12,36 @@ const homepage = {
     },
     trustStrip: {
       items: [
-        'BSc Physiotherapy',
-        'NASM Certificate',
-        'MSc Precision Nutrition',
-        'Personal Trainer (OTA)'
+        'Bachelor of Physiotherapy',
+        'MSc Precision Nutrition & Behaviour Change Therapy',
+        'Clinical Athlete rehabilitation | 10+ years experience',
+        'NASM certified, Online Trainer'
       ]
     },
     problemSolution: {
-      sectionTitle: 'Why most training plans fail you',
+      sectionTitle: 'Why most training plans often fail you',
       items: [
         {
-          problem: 'Pain and injuries get ignored',
-          solution: 'Physio-led programming keeps you safe — even with old injuries.'
+          problem: 'The program isn\'t tailored to your body',
+          solution: 'Most plans ignore pain, injuries, fitness level, or life rhythm. That\'s why progress quickly stops.'
         },
         {
-          problem: 'Generic plans that don\'t fit your life',
-          solution: 'Your program adapts to your week, energy, and progress.'
+          problem: 'Too much intensity, too little structure',
+          solution: 'Motivation matters at the start, but progress comes from a system you can sustain long-term.'
         },
         {
-          problem: 'Motivation drops after a few weeks',
-          solution: 'Mindset coaching helps you stay consistent when it gets hard.'
+          problem: 'Pain isn\'t just about the body',
+          solution: 'Pain doesn\'t mean your body is "broken" and needs more biomechanics. Often the issue lies in load management, movement habits, and the ability to recover.'
         }
       ]
     },
     outcomes: {
-      sectionTitle: 'What changes in 90 days',
+      sectionTitle: 'What to expect working together:',
       items: [
-        'Move without back or knee pain',
-        'Get stronger without burning out',
-        'Build a routine that survives busy weeks',
-        'Train with confidence — not guesswork'
+        'Move with confidence',
+        'Better understand your body and its limits',
+        'Get stronger while learning what works and what doesn\'t',
+        'Have a clear system instead of chaos'
       ]
     },
     packagesTeaser: {
