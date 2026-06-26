@@ -24,8 +24,8 @@ const PackagesTeaserSection = () => {
     buttonText: string;
   };
 
-  const features = (items: string[]) =>
-    items.map((item, i) => (
+  const features = (items?: string[]) =>
+    (items ?? []).map((item, i) => (
       <li key={i} className="flex items-start gap-3 text-white/90">
         <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-theme-tangerine" />
         <span>{item}</span>
