@@ -173,8 +173,8 @@ const Coaching = () => {
           </div>
         </section>
 
-        {/* Free YouTube workouts */}
-        <YouTubeSection />
+        {/* Package Selector */}
+        <PackageSelectorSection />
 
         {/* Testimonials */}
         <section className="section-padding bg-theme-navy dark:bg-theme-darknavy">
