@@ -9,7 +9,7 @@ import TestimonialCard from '../components/TestimonialCard';
 import PricingCards from '../components/PricingCards';
 import TrustStripSection from '../components/sections/TrustStripSection';
 import FAQSection from '../components/sections/FAQSection';
-import YouTubeSection from '../components/sections/YouTubeSection';
+import PackageSelectorSection from '../components/sections/PackageSelectorSection';
 
 const CALENDLY_URL = 'https://calendar.app.google/LU6UdzQr53kmsKjc6';
 
@@ -173,8 +173,8 @@ const Coaching = () => {
           </div>
         </section>
 
-        {/* Free YouTube workouts */}
-        <YouTubeSection />
+        {/* Package Selector */}
+        <PackageSelectorSection />
 
         {/* Testimonials */}
         <section className="section-padding bg-theme-navy dark:bg-theme-darknavy">
