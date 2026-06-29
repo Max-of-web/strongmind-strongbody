@@ -79,9 +79,6 @@ const Coaching = () => {
                     {t('coaching.hero.seePackages')} ↓
                   </button>
                 </div>
-                <p className="mt-5 text-xs md:text-sm text-white/70 tracking-wide text-center md:text-left">
-                  {t('coaching.hero.trustLine')}
-                </p>
               </div>
             </div>
           </div>
