@@ -162,6 +162,36 @@ const coaching = {
       sectionTitle: 'Let\'s move together',
       subtitle: 'Start moving today. Join my workouts.',
       buttonText: 'Open YouTube playlist'
+    },
+    packageSelector: {
+      sectionTitle: 'Which path fits you best?',
+      sectionSubtitle: 'Pick the situation that sounds most like you',
+      cards: [
+        {
+          situation: 'Pain or injury is holding you back',
+          description: 'You\'ve tried physiotherapy, massage, rest – but the pain keeps returning. Unsure if it\'s safe to exercise.',
+          packageName: 'The Rebuild Method',
+          cta: 'This package fits you'
+        },
+        {
+          situation: 'I train alone but lack direction',
+          description: 'You want a clear plan you can follow from anywhere, but don\'t know where to start.',
+          packageName: 'Online Coaching',
+          cta: 'This package fits you'
+        },
+        {
+          situation: 'I want hands-on work with a coach',
+          description: 'You need real-time corrections and personal attention for every single session.',
+          packageName: 'Personal Training',
+          cta: 'This package fits you'
+        },
+        {
+          situation: 'I like training with others',
+          description: 'Group energy motivates you, but you don\'t want to lose individual attention and technique feedback.',
+          packageName: 'Small Group Training',
+          cta: 'This package fits you'
+        }
+      ]
     }
   },
   buttons: {

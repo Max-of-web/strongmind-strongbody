@@ -162,6 +162,36 @@ const coaching = {
       sectionTitle: 'Judėkime kartu',
       subtitle: 'Pradėk judėti jau šiandien. Įsijunk mano treniruotes',
       buttonText: 'Atidaryti YouTube grojaraštį'
+    },
+    packageSelector: {
+      sectionTitle: 'Kuris kelias tau tinkamiausias?',
+      sectionSubtitle: 'Pasirink situaciją, kuri geriausiai apibūdina tave',
+      cards: [
+        {
+          situation: 'Skausmas ar trauma trukdo judėti',
+          description: 'Jau bandei kineziterapiją, masažus, poilsį – bet skausmas vis grįžta. Nežinai, ar gali saugiai sportuoti.',
+          packageName: 'The Rebuild Method',
+          cta: 'Šis paketas tinka tau'
+        },
+        {
+          situation: 'Sportuoju savarankiškai, bet trūksta krypties',
+          description: 'Nori treniruotis pagal aiškų planą iš bet kurios vietos, bet nežinai, nuo ko pradėti.',
+          packageName: 'Online treniruotės',
+          cta: 'Šis paketas tinka tau'
+        },
+        {
+          situation: 'Noriu tiesioginio darbo su treneriu',
+          description: 'Reikia realaus laiko korekcijų ir asmeninio dėmesio kiekvienai treniruotei.',
+          packageName: 'Asmeninės treniruotės',
+          cta: 'Šis paketas tinka tau'
+        },
+        {
+          situation: 'Mėgstu treniruotis su kitais',
+          description: 'Grupės energija motyvuoja, bet nenori prarasti individualaus dėmesio ir technikos korekcijų.',
+          packageName: 'Small group treniruotės',
+          cta: 'Šis paketas tinka tau'
+        }
+      ]
     }
   },
   buttons: {
