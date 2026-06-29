@@ -9,7 +9,7 @@ import TestimonialCard from '../components/TestimonialCard';
 import PricingCards from '../components/PricingCards';
 import TrustStripSection from '../components/sections/TrustStripSection';
 import FAQSection from '../components/sections/FAQSection';
-import YouTubeSection from '../components/sections/YouTubeSection';
+import PackageSelectorSection from '../components/sections/PackageSelectorSection';
 
 const CALENDLY_URL = 'https://calendar.app.google/LU6UdzQr53kmsKjc6';
 
